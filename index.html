@@ -1,0 +1,785 @@
+
+
+
+
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      <meta http-equiv="x-ua-compatible" content="ie=edge">
+      
+        <meta name="description" content="Community PowerShell module for the Ryver API.">
+      
+      
+        <link rel="canonical" href="https://tlindsay42.github.io/PSRyver/">
+      
+      
+        <meta name="author" content="Troy Lindsay">
+      
+      
+        <meta name="lang:clipboard.copy" content="Copy to clipboard">
+      
+        <meta name="lang:clipboard.copied" content="Copied to clipboard">
+      
+        <meta name="lang:search.language" content="en">
+      
+        <meta name="lang:search.pipeline.stopwords" content="True">
+      
+        <meta name="lang:search.pipeline.trimmer" content="True">
+      
+        <meta name="lang:search.result.none" content="No matching documents">
+      
+        <meta name="lang:search.result.one" content="1 matching document">
+      
+        <meta name="lang:search.result.other" content="# matching documents">
+      
+        <meta name="lang:search.tokenizer" content="[\s\-]+">
+      
+      <link rel="shortcut icon" href="./img/ryver-favicon1.png">
+      <meta name="generator" content="mkdocs-0.17.5, mkdocs-material-2.9.2">
+    
+    
+      
+        <title>PSRyver</title>
+      
+    
+    
+      <link rel="stylesheet" href="./assets/stylesheets/application.ba0fd1a6.css">
+      
+        <link rel="stylesheet" href="./assets/stylesheets/application-palette.6079476c.css">
+      
+      
+        
+        
+        <meta name="theme-color" content="#546e7a">
+      
+    
+    
+      <script src="./assets/javascripts/modernizr.1aa3b519.js"></script>
+    
+    
+      <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+      
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700|Roboto+Mono">
+        <style>body,input{font-family:"Roboto","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono","Courier New",Courier,monospace}</style>
+      
+    
+    <link rel="stylesheet" href="./assets/fonts/material-icons.css">
+    
+    
+  </head>
+  
+    
+    
+    <body dir="ltr" data-md-color-primary="blue-grey" data-md-color-accent="blue">
+  
+    <svg class="md-svg">
+      <defs>
+        
+        
+          <svg xmlns="http://www.w3.org/2000/svg" width="416" height="448"
+    viewBox="0 0 416 448" id="__github">
+  <path fill="currentColor" d="M160 304q0 10-3.125 20.5t-10.75 19-18.125
+        8.5-18.125-8.5-10.75-19-3.125-20.5 3.125-20.5 10.75-19 18.125-8.5
+        18.125 8.5 10.75 19 3.125 20.5zM320 304q0 10-3.125 20.5t-10.75
+        19-18.125 8.5-18.125-8.5-10.75-19-3.125-20.5 3.125-20.5 10.75-19
+        18.125-8.5 18.125 8.5 10.75 19 3.125 20.5zM360
+        304q0-30-17.25-51t-46.75-21q-10.25 0-48.75 5.25-17.75 2.75-39.25
+        2.75t-39.25-2.75q-38-5.25-48.75-5.25-29.5 0-46.75 21t-17.25 51q0 22 8
+        38.375t20.25 25.75 30.5 15 35 7.375 37.25 1.75h42q20.5 0
+        37.25-1.75t35-7.375 30.5-15 20.25-25.75 8-38.375zM416 260q0 51.75-15.25
+        82.75-9.5 19.25-26.375 33.25t-35.25 21.5-42.5 11.875-42.875 5.5-41.75
+        1.125q-19.5 0-35.5-0.75t-36.875-3.125-38.125-7.5-34.25-12.875-30.25-20.25-21.5-28.75q-15.5-30.75-15.5-82.75
+        0-59.25 34-99-6.75-20.5-6.75-42.5 0-29 12.75-54.5 27 0 47.5 9.875t47.25
+        30.875q36.75-8.75 77.25-8.75 37 0 70 8 26.25-20.5
+        46.75-30.25t47.25-9.75q12.75 25.5 12.75 54.5 0 21.75-6.75 42 34 40 34
+        99.5z" />
+</svg>
+        
+      </defs>
+    </svg>
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
+    
+      <a href="#psryver" tabindex="1" class="md-skip">
+        Skip to content
+      </a>
+    
+    
+      <header class="md-header" data-md-component="header">
+  <nav class="md-header-nav md-grid">
+    <div class="md-flex">
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <a href="https://tlindsay42.github.io/PSRyver/" title="PSRyver" class="md-header-nav__button md-logo">
+          
+            <img src="./img/ryver-favicon1.png" width="24" height="24">
+          
+        </a>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <label class="md-icon md-icon--menu md-header-nav__button" for="__drawer"></label>
+      </div>
+      <div class="md-flex__cell md-flex__cell--stretch">
+        <div class="md-flex__ellipsis md-header-nav__title" data-md-component="title">
+          
+            
+              <span class="md-header-nav__topic">
+                PSRyver
+              </span>
+              <span class="md-header-nav__topic">
+                Home
+              </span>
+            
+          
+        </div>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        
+          
+            <label class="md-icon md-icon--search md-header-nav__button" for="__search"></label>
+            
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="query" data-md-state="active">
+      <label class="md-icon md-search__icon" for="__search"></label>
+      <button type="reset" class="md-icon md-search__icon" data-md-component="reset" tabindex="-1">
+        &#xE5CD;
+      </button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="result">
+          <div class="md-search-result__meta">
+            Type to start searching
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+          
+        
+      </div>
+      
+        <div class="md-flex__cell md-flex__cell--shrink">
+          <div class="md-header-nav__source">
+            
+
+
+  
+
+
+  <a href="https://github.com/tlindsay42/PSRyver/" title="Go to repository" class="md-source" data-md-source="github">
+    
+      <div class="md-source__icon">
+        <svg viewBox="0 0 24 24" width="24" height="24">
+          <use xlink:href="#__github" width="24" height="24"></use>
+        </svg>
+      </div>
+    
+    <div class="md-source__repository">
+      tlindsay42/PSRyver
+    </div>
+  </a>
+
+          </div>
+        </div>
+      
+    </div>
+  </nav>
+</header>
+    
+    <div class="md-container">
+      
+        
+      
+      
+      <main class="md-main">
+        <div class="md-main__inner md-grid" data-md-component="container">
+          
+            
+              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    <nav class="md-nav md-nav--primary" data-md-level="0">
+  <label class="md-nav__title md-nav__title--site" for="__drawer">
+    <span class="md-nav__button md-logo">
+      
+        <img src="./img/ryver-favicon1.png" width="48" height="48">
+      
+    </span>
+    PSRyver
+  </label>
+  
+    <div class="md-nav__source">
+      
+
+
+  
+
+
+  <a href="https://github.com/tlindsay42/PSRyver/" title="Go to repository" class="md-source" data-md-source="github">
+    
+      <div class="md-source__icon">
+        <svg viewBox="0 0 24 24" width="24" height="24">
+          <use xlink:href="#__github" width="24" height="24"></use>
+        </svg>
+      </div>
+    
+    <div class="md-source__repository">
+      tlindsay42/PSRyver
+    </div>
+  </a>
+
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+      
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        Home
+      </label>
+    
+    <a href="." title="Home" class="md-nav__link md-nav__link--active">
+      Home
+    </a>
+    
+      
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#prerequisites" title="Prerequisites" class="md-nav__link">
+    Prerequisites
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#getting-started" title="Getting Started" class="md-nav__link">
+    Getting Started
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#examples" title="Examples" class="md-nav__link">
+    Examples
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#send-a-simple-ryver-message" title="Send a Simple Ryver Message" class="md-nav__link">
+    Send a Simple Ryver Message
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#search-for-a-ryver-message" title="Search for a Ryver Message" class="md-nav__link">
+    Search for a Ryver Message
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#send-a-richer-ryver-message" title="Send a Richer Ryver Message" class="md-nav__link">
+    Send a Richer Ryver Message
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#send-multiple-ryver-attachments" title="Send Multiple Ryver Attachments" class="md-nav__link">
+    Send Multiple Ryver Attachments
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#send-a-table-of-key-value-pairs" title="Send a Table of Key Value Pairs" class="md-nav__link">
+    Send a Table of Key Value Pairs
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#store-and-retrieve-configs" title="Store and Retrieve Configs" class="md-nav__link">
+    Store and Retrieve Configs
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#incoming-webhook-uri" title="Incoming Webhook URI" class="md-nav__link">
+    Incoming Webhook URI
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#credentials" title="Credentials" class="md-nav__link">
+    Credentials
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#notes" title="Notes" class="md-nav__link">
+    Notes
+  </a>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+    
+  </li>
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#prerequisites" title="Prerequisites" class="md-nav__link">
+    Prerequisites
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#getting-started" title="Getting Started" class="md-nav__link">
+    Getting Started
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#examples" title="Examples" class="md-nav__link">
+    Examples
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#send-a-simple-ryver-message" title="Send a Simple Ryver Message" class="md-nav__link">
+    Send a Simple Ryver Message
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#search-for-a-ryver-message" title="Search for a Ryver Message" class="md-nav__link">
+    Search for a Ryver Message
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#send-a-richer-ryver-message" title="Send a Richer Ryver Message" class="md-nav__link">
+    Send a Richer Ryver Message
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#send-multiple-ryver-attachments" title="Send Multiple Ryver Attachments" class="md-nav__link">
+    Send Multiple Ryver Attachments
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#send-a-table-of-key-value-pairs" title="Send a Table of Key Value Pairs" class="md-nav__link">
+    Send a Table of Key Value Pairs
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#store-and-retrieve-configs" title="Store and Retrieve Configs" class="md-nav__link">
+    Store and Retrieve Configs
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#incoming-webhook-uri" title="Incoming Webhook URI" class="md-nav__link">
+    Incoming Webhook URI
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#credentials" title="Credentials" class="md-nav__link">
+    Credentials
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#notes" title="Notes" class="md-nav__link">
+    Notes
+  </a>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                  <a href="https://github.com/tlindsay42/PSRyver/blob/master/docs/index.md" title="Edit this page" class="md-icon md-content__icon">&#xE3C9;</a>
+                
+                
+                <h1 id="psryver">PSRyver<a class="headerlink" href="#psryver" title="Permanent link">&para;</a></h1>
+<p><a href="https://ci.appveyor.com/project/tlindsay42/psryver"><img alt="Build status" src="https://ci.appveyor.com/api/projects/status/qwuvmd3cc4iodlc0?svg=true" /></a></p>
+<p>This is a quick and dirty community module to interact with the Ryver API.</p>
+<p>Pull requests and other contributions would be welcome!</p>
+<h2 id="prerequisites">Prerequisites<a class="headerlink" href="#prerequisites" title="Permanent link">&para;</a></h2>
+<ul>
+<li>PowerShell 3 or later</li>
+<li>Valid credentials or an incoming webhook URI from Ryver.</li>
+<li><a href="https://api.ryver.com/ryvhooks_simple_incoming.html">Add an incoming webhook to your team, grab the URI</a></li>
+</ul>
+<h2 id="getting-started">Getting Started<a class="headerlink" href="#getting-started" title="Permanent link">&para;</a></h2>
+<ul>
+<li>Installation</li>
+<li>PowerShell 3 &amp; 4<ul>
+<li>Download the repository</li>
+<li>Unblock the zip</li>
+<li>Extract the PSRyver folder to a module path in <code>$Env:PSModulePath</code> (eg: <code>&quot;$Env:USERPROFILE\Documents\WindowsPowerShell\Modules\&quot;</code>)</li>
+</ul>
+</li>
+<li>PowerShell 5+
+    <div class="codehilite"><pre><span></span><span class="n">Install-Module</span> <span class="n">-Name</span> <span class="s1">&#39;PSRyver&#39;</span>
+<span class="nb">Import-Module</span> <span class="n">-Name</span> <span class="s1">&#39;PSRyver&#39;</span>
+</pre></div></li>
+<li>List the commands in the module
+    <div class="codehilite"><pre><span></span><span class="nb">Get-Command</span> <span class="n">-Module</span> <span class="s1">&#39;PSRyver&#39;</span>
+</pre></div></li>
+<li>Get help
+    <div class="codehilite"><pre><span></span><span class="nb">Get-Help</span> <span class="n">-Name</span> <span class="s1">&#39;Send-RyverMessage&#39;</span> <span class="n">-Full</span>
+<span class="nb">Get-Help</span> <span class="n">-Name</span> <span class="s1">&#39;about_PSRyver&#39;</span>
+</pre></div></li>
+</ul>
+<h2 id="examples">Examples<a class="headerlink" href="#examples" title="Permanent link">&para;</a></h2>
+<h3 id="send-a-simple-ryver-message">Send a Simple Ryver Message<a class="headerlink" href="#send-a-simple-ryver-message" title="Permanent link">&para;</a></h3>
+<ul>
+<li>This example shows a crudely crafted message without any attachments, using parameters from <code>Send-RyverMessage</code> to construct the message.
+  NOTE: This assumes that an incoming webhook URI was setup at <code>&quot;https://${yourTeam}.ryver.com/&quot;</code></li>
+<li>Send a direct message to @tlindsay (not a channel), parsing the text to linkify usernames and channels
+    <div class="codehilite"><pre><span></span><span class="nv">$splat</span> <span class="p">=</span> <span class="p">@{</span>
+    <span class="n">URI</span>     <span class="p">=</span> <span class="s1">&#39;Some incoming webhook URI from Ryver&#39;</span>
+    <span class="n">Channel</span> <span class="p">=</span> <span class="s1">&#39;@tlindsay&#39;</span>
+    <span class="n">Parse</span>   <span class="p">=</span> <span class="s1">&#39;full&#39;</span>
+    <span class="n">Text</span>    <span class="p">=</span> <span class="s1">&#39;Hello @tlindsay, join me in #devnull!&#39;</span>
+<span class="p">}</span>
+<span class="nb">Send-RyverMessage</span> <span class="nv">@splat</span>
+</pre></div></li>
+</ul>
+<!-- ![Simple Send-RyverMessage](/docs/img/SimpleMessage.png) -->
+
+<h3 id="search-for-a-ryver-message">Search for a Ryver Message<a class="headerlink" href="#search-for-a-ryver-message" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Search for a message containing PowerShell, sorting results by timestamp.
+    <div class="codehilite"><pre><span></span><span class="nv">$splat</span> <span class="p">=</span> <span class="p">@{</span>
+    <span class="n">URI</span>    <span class="p">=</span> <span class="s1">&#39;Some incoming webhook URI from Ryver&#39;</span>
+    <span class="n">Query</span>  <span class="p">=</span> <span class="s1">&#39;PowerShell&#39;</span>
+    <span class="n">SortBy</span> <span class="p">=</span> <span class="s1">&#39;timestamp&#39;</span>
+<span class="p">}</span>
+<span class="n">Find-RyverMessage</span> <span class="nv">@splat</span>
+</pre></div></li>
+</ul>
+<!-- ![Find Message](/docs/img/FindMessage.png) -->
+
+<ul>
+<li>Search for a message containing PowerShell</li>
+<li>Results are sorted by best match by default</li>
+<li>Notice the extra properties and previous/next messages
+    <div class="codehilite"><pre><span></span><span class="n">Find-RyverMessage</span> <span class="n">-Token</span> <span class="nv">$Token</span> <span class="p">`</span>
+                  <span class="n">-Query</span> <span class="s1">&#39;PowerShell&#39;</span> <span class="p">|</span>
+    <span class="nb">Select-Object</span> <span class="n">-Property</span> <span class="p">*</span>
+</pre></div></li>
+</ul>
+<!-- ![Find Message Select All](/docs/img/FindMessageSelect.png) -->
+
+<p>You could use this simply to search Ryver from the CLI, or in an automated solution that might avoid posting if certain content is already found in Ryver.</p>
+<h3 id="send-a-richer-ryver-message">Send a Richer Ryver Message<a class="headerlink" href="#send-a-richer-ryver-message" title="Permanent link">&para;</a></h3>
+<ul>
+<li>This is a simple example illustrating some common options when constructing a message attachment giving you a richer message
+    <div class="codehilite"><pre><span></span><span class="nv">$splat</span> <span class="p">=</span> <span class="p">@{</span>
+  <span class="n">Color</span>      <span class="p">=</span> <span class="no">[System.Drawing.Color]</span><span class="p">::</span><span class="n">red</span>
+  <span class="n">Title</span>      <span class="p">=</span> <span class="s1">&#39;The System Is Down&#39;</span>
+  <span class="n">TitleLink</span>  <span class="p">=</span> <span class="s1">&#39;https://www.youtube.com/watch?v=TmpRs7xN06Q&#39;</span>
+  <span class="n">Text</span>       <span class="p">=</span> <span class="s1">&#39;Please Do The Needful&#39;</span>
+  <span class="n">Pretext</span>    <span class="p">=</span> <span class="s1">&#39;Everything is broken&#39;</span>
+  <span class="n">AuthorName</span> <span class="p">=</span> <span class="s1">&#39;SCOM Bot&#39;</span>
+  <span class="n">AuthorIcon</span> <span class="p">=</span> <span class="s1">&#39;https://tlindsay42.github.io/PSRyver/img/wrench.png&#39;</span> <span class="p">`</span>
+  <span class="n">Fallback</span>   <span class="p">=</span> <span class="s1">&#39;Your client is bad&#39;</span>
+<span class="p">}</span>
+<span class="nb">New-RyverMessageAttachment</span> <span class="nv">@splat</span> <span class="p">|</span>
+    <span class="nb">New-RyverMessage</span> <span class="n">-Channel</span> <span class="s1">&#39;@tlindsay&#39;</span> <span class="n">-IconEmoji</span> <span class="err">:</span><span class="n">bomb</span><span class="err">:</span> <span class="p">|</span>
+    <span class="nb">Send-RyverMessage</span> <span class="n">-URI</span> <span class="s1">&#39;Some incoming webhook URI from Ryver&#39;</span>
+</pre></div></li>
+</ul>
+<!-- ![Rich messages](/docs/img/RichMessage.png) -->
+
+<p>Notice that the title is clickable.  You might link to:</p>
+<ul>
+<li>The alert in question</li>
+<li>A logging solution query</li>
+<li>A dashboard</li>
+<li>Some other contextual link</li>
+<li>Strongbad</li>
+</ul>
+<h3 id="send-multiple-ryver-attachments">Send Multiple Ryver Attachments<a class="headerlink" href="#send-multiple-ryver-attachments" title="Permanent link">&para;</a></h3>
+<ul>
+<li>This example demonstrates that you can chain new attachments together to form a multi-attachment message.</li>
+</ul>
+<div class="codehilite"><pre><span></span><span class="nv">$attachment1</span> <span class="p">=</span> <span class="p">@{</span>
+    <span class="n">Color</span>     <span class="p">=</span> <span class="nv">$_PSRyverColorMap</span><span class="p">.</span><span class="n">Red</span>
+    <span class="n">Title</span>     <span class="p">=</span> <span class="s1">&#39;The System Is Down&#39;</span>
+    <span class="n">TitleLink</span> <span class="p">=</span> <span class="s1">&#39;https://www.youtube.com/watch?v=TmpRs7xN06Q&#39;</span>
+    <span class="n">Text</span>      <span class="p">=</span> <span class="s1">&#39;Everybody panic!&#39;</span>
+    <span class="n">Pretext</span>   <span class="p">=</span> <span class="s1">&#39;Everything is broken&#39;</span>
+    <span class="n">Fallback</span>  <span class="p">=</span> <span class="s1">&#39;Your client is bad&#39;</span>
+<span class="p">}</span>
+<span class="nv">$attachment2</span> <span class="p">=</span> <span class="p">@{</span>
+    <span class="n">Color</span>     <span class="p">=</span> <span class="no">[System.Drawing.Color]</span><span class="p">::</span><span class="n">Orange</span>
+    <span class="n">Title</span>     <span class="p">=</span> <span class="s1">&#39;The Other System Is Down&#39;</span>
+    <span class="n">TitleLink</span> <span class="p">=</span> <span class="s1">&#39;https://www.youtube.com/watch?v=TmpRs7xN06Q&#39;</span>
+    <span class="n">Text</span>      <span class="p">=</span> <span class="s1">&#39;Please Do The Needful&#39;</span> <span class="p">`</span>
+    <span class="n">Fallback</span>  <span class="p">=</span> <span class="s1">&#39;Your client is bad&#39;</span>
+<span class="p">}</span>
+<span class="nb">New-RyverMessageAttachment</span> <span class="nv">@attachment1</span> <span class="p">|</span>
+    <span class="nb">New-RyverMessageAttachment</span> <span class="nv">@attachment2</span> <span class="p">|</span>
+    <span class="nb">New-RyverMessage</span> <span class="n">-Channel</span> <span class="s1">&#39;@tlindsay&#39;</span> <span class="n">-IconEmoji</span> <span class="err">:</span><span class="n">bomb</span><span class="err">:</span> <span class="n">-AsUser</span> <span class="n">-Username</span> <span class="s1">&#39;SCOM Bot&#39;</span> <span class="p">|</span>
+    <span class="nb">Send-RyverMessage</span> <span class="n">-URI</span> <span class="s1">&#39;Some incoming webhook URI from Ryver&#39;</span>
+</pre></div>
+
+<!-- ![Multiple Attachments](/docs/img/MultiAttachments.png) -->
+
+<p>Notice that we can chain multiple <code>New-RyverMessageAttachment</code>s together.</p>
+<h3 id="send-a-table-of-key-value-pairs">Send a Table of Key Value Pairs<a class="headerlink" href="#send-a-table-of-key-value-pairs" title="Permanent link">&para;</a></h3>
+<ul>
+<li>This example illustrates a pattern where you might want to send output from a script; you might include errors, successful items, or other output.</li>
+<li>
+<p>Pretend we're in a script, and caught an exception of some sort
+    <div class="codehilite"><pre><span></span><span class="nv">$fail</span> <span class="p">=</span> <span class="no">[PSCustomObject]</span> <span class="p">@{</span>
+    <span class="n">SAMAccountName</span> <span class="p">=</span> <span class="s1">&#39;bob&#39;</span>
+    <span class="n">Operation</span>      <span class="p">=</span> <span class="s1">&#39;Remove privileges&#39;</span>
+    <span class="n">Status</span>         <span class="p">=</span> <span class="s2">&quot;An error message&quot;</span>
+    <span class="n">Timestamp</span>      <span class="p">=</span> <span class="p">(</span> <span class="nb">Get-Date</span> <span class="p">).</span><span class="n">ToString</span><span class="p">()</span>
+<span class="p">}</span>
+
+<span class="c"># Create an array from the properties in our fail object</span>
+<span class="nv">$fields</span> <span class="p">=</span> <span class="p">@()</span>
+<span class="k">foreach</span><span class="p">(</span> <span class="nv">$property</span> <span class="k">in</span> <span class="nv">$fail</span><span class="p">.</span><span class="n">PSObject</span><span class="p">.</span><span class="n">Properties</span><span class="p">.</span><span class="n">Name</span><span class="p">)</span>
+<span class="p">{</span>
+    <span class="nv">$fields</span> <span class="p">+=</span> <span class="p">@{</span>
+        <span class="n">Title</span> <span class="p">=</span> <span class="nv">$property</span>
+        <span class="n">Value</span> <span class="p">=</span> <span class="nv">$fail</span><span class="p">.</span><span class="nv">$property</span>
+        <span class="n">Short</span> <span class="p">=</span> <span class="nv">$true</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+
+<span class="c"># Construct and send the message!</span>
+<span class="nv">$splat</span> <span class="p">=</span> <span class="p">@{</span>
+    <span class="n">Color</span>    <span class="p">=</span> <span class="no">[System.Drawing.Color]</span><span class="p">::</span><span class="n">Orange</span>
+    <span class="n">Title</span>    <span class="p">=</span> <span class="s1">&#39;Failed to process account&#39;</span>
+    <span class="n">Fields</span>   <span class="p">=</span> <span class="nv">$Fields</span>
+    <span class="n">Fallback</span> <span class="p">=</span> <span class="s1">&#39;Your client is bad&#39;</span>
+<span class="p">}</span>
+<span class="nb">New-RyverMessageAttachment</span> <span class="nv">@splat</span> <span class="p">|</span>
+    <span class="nb">New-RyverMessage</span> <span class="n">-Channel</span> <span class="s1">&#39;devnull&#39;</span> <span class="p">|</span>
+    <span class="nb">Send-RyverMessage</span> <span class="n">-URI</span> <span class="s1">&#39;Some incoming webhook URI from Ryver&#39;</span>
+</pre></div></p>
+</li>
+<li>
+<p>We build up a pretend error object, and send each property to a <code>fields</code> array</p>
+</li>
+<li>Creates an attachment with the fields from our error</li>
+<li>Creates a message from that attachment and send it with an incoming webhook URI</li>
+</ul>
+<!-- ![Fields](/docs/img/Fields.png) -->
+
+<h3 id="store-and-retrieve-configs">Store and Retrieve Configs<a class="headerlink" href="#store-and-retrieve-configs" title="Permanent link">&para;</a></h3>
+<ul>
+<li>To save time and typing, you can save your credentials or incoming webhook URI to a config file (protected via DPAPI) and a module variable.</li>
+<li>This is used as the default for commands, and is reloaded if you open a new PowerShell session.</li>
+</ul>
+<h4 id="incoming-webhook-uri">Incoming Webhook URI<a class="headerlink" href="#incoming-webhook-uri" title="Permanent link">&para;</a></h4>
+<div class="codehilite"><pre><span></span><span class="nb">Set-PSRyverConfig</span> <span class="n">-URI</span> <span class="s1">&#39;SomeRyverUri&#39;</span>
+
+<span class="c"># Read the current cofig</span>
+<span class="nb">Get-PSRyverConfig</span>
+</pre></div>
+
+<h4 id="credentials">Credentials<a class="headerlink" href="#credentials" title="Permanent link">&para;</a></h4>
+<div class="codehilite"><pre><span></span><span class="nb">Set-PSRyverConfig</span> <span class="n">-Credential</span> <span class="p">(</span> <span class="nb">Get-Credential</span> <span class="p">)</span>
+
+<span class="c"># Read the current cofig</span>
+<span class="nb">Get-PSRyverConfig</span>
+</pre></div>
+
+<h2 id="notes">Notes<a class="headerlink" href="#notes" title="Permanent link">&para;</a></h2>
+<p>Currently evaluating .NET Core / Cross-platform functionality.  The following will not work initially:</p>
+<ul>
+<li>Serialization of URIs via <code>Set-PSRyverConfig</code>.  Set these values per-session if needed.</li>
+<li><code>[System.Drawing.Color]::SomeColor</code> shortcut.  Use the provided <code>$_PSRyverColorMap</code> hash to simplify this (eg: <code>$_PSRyverColorMap.red</code>)</li>
+</ul>
+<p>This project was ported with <img alt="❤️" class="emojione" src="https://cdn.jsdelivr.net/emojione/assets/svg/2764.svg" title=":heart:" /> from Warren Frame's (ramblingcookiemonster) awesome PSSlack project.  Thanks Warren!</p>
+<p>If you want to go beyond interacting with the Ryver API, you might consider <a href="http://ramblingcookiemonster.github.io/PoshBot/#references">using a bot</a>.</p>
+                
+                  
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+      </main>
+      
+        
+<footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+          <div class="md-footer-copyright__highlight">
+            Copyright &copy;2018 Troy Lindsay. All rights reserved.  Copyright &copy;2016-2018 Warren F. All rights reserved.
+          </div>
+        
+        powered by
+        <a href="https://www.mkdocs.org">MkDocs</a>
+        and
+        <a href="https://squidfunk.github.io/mkdocs-material/">
+          Material for MkDocs</a>
+      </div>
+      
+        
+  <div class="md-footer-social">
+    <link rel="stylesheet" href="./assets/fonts/font-awesome.css">
+    
+      <a href="https://www.troylindsay.io" class="md-footer-social__link fa fa-globe"></a>
+    
+      <a href="https://github.com/tlindsay42" class="md-footer-social__link fa fa-github-alt"></a>
+    
+      <a href="https://twitter.com/troylindsay42" class="md-footer-social__link fa fa-twitter"></a>
+    
+      <a href="https://www.linkedin.com/in/troylindsay" class="md-footer-social__link fa fa-linkedin"></a>
+    
+  </div>
+
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    
+      <script src="./assets/javascripts/application.a59e2a89.js"></script>
+      
+      <script>app.initialize({version:"0.17.5",url:{base:"."}})</script>
+      
+        <script src="./search/require.js"></script>
+      
+        <script src="./search/search.js"></script>
+      
+    
+    
+      
+        <script>!function(e,a,t,n,o,c,i){e.GoogleAnalyticsObject=o,e.ga=e.ga||function(){(e.ga.q=e.ga.q||[]).push(arguments)},e.ga.l=1*new Date,c=a.createElement(t),i=a.getElementsByTagName(t)[0],c.async=1,c.src="https://www.google-analytics.com/analytics.js",i.parentNode.insertBefore(c,i)}(window,document,"script",0,"ga"),ga("create","UA-117909744-4","PSRyver"),ga("set","anonymizeIp",!0),ga("send","pageview");var links=document.getElementsByTagName("a");if(Array.prototype.map.call(links,function(e){e.host!=document.location.host&&e.addEventListener("click",function(){var a=e.getAttribute("data-md-action")||"follow";ga("send","event","outbound",a,e.href)})}),document.forms.search){var query=document.forms.search.query;query.addEventListener("blur",function(){if(this.value){var e=document.location.pathname;ga("send","pageview",e+"?q="+this.value)}})}</script>
+      
+    
+  </body>
+</html>
