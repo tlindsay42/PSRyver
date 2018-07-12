@@ -1,4 +1,5 @@
+site/
 Manifest.xml
-**PSSlack.xml
-**Send-SlackUpdate.ps1
-PSSlack/X11ColorList.txt
+**PSRyver.xml
+**Send-RyverUpdate.ps1
+PSRyver/X11ColorList.txt
