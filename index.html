@@ -531,7 +531,8 @@
 <li>PowerShell 3 &amp; 4<ul>
 <li>Download the repository</li>
 <li>Unblock the zip</li>
-<li>Extract the PSRyver folder to a module path in <code>$Env:PSModulePath</code> (eg: <code>&quot;$Env:USERPROFILE\Documents\WindowsPowerShell\Modules\&quot;</code>)</li>
+<li>Extract the PSRyver folder to a module path in <code>$Env:PSModulePath</code></li>
+<li>Example: <code>&quot;$Env:USERPROFILE\Documents\WindowsPowerShell\Modules\&quot;</code></li>
 </ul>
 </li>
 <li>PowerShell 5+
@@ -711,12 +712,13 @@
 </pre></div>
 
 <h2 id="notes">Notes<a class="headerlink" href="#notes" title="Permanent link">&para;</a></h2>
+<p>This project was ported with <img alt="❤️" class="emojione" src="https://cdn.jsdelivr.net/emojione/assets/svg/2764.svg" title=":heart:" /> from v0.1.0 of <a href="https://github.com/RamblingCookieMonster">Warren Frame's</a> awesome <a href="https://github.com/RamblingCookieMonster/PSSlack/tree/c0bf2b67278d5df455ae769d5912aa25d09fcf72">PSSlack project</a>.  Thanks Warren!</p>
 <p>Currently evaluating .NET Core / Cross-platform functionality.  The following will not work initially:</p>
 <ul>
 <li>Serialization of URIs via <code>Set-PSRyverConfig</code>.  Set these values per-session if needed.</li>
-<li><code>[System.Drawing.Color]::SomeColor</code> shortcut.  Use the provided <code>$_PSRyverColorMap</code> hash to simplify this (eg: <code>$_PSRyverColorMap.Red</code>)</li>
+<li><code>[System.Drawing.Color]::SomeColor</code> shortcut.  Use the provided <code>$_PSRyverColorMap</code> hash to simplify this.</li>
+<li>Example: <code>$_PSRyverColorMap.Red</code></li>
 </ul>
-<p>This project was ported with <img alt="❤️" class="emojione" src="https://cdn.jsdelivr.net/emojione/assets/svg/2764.svg" title=":heart:" /> from <a href="https://github.com/RamblingCookieMonster">Warren Frame's</a> awesome <a href="https://github.com/RamblingCookieMonster/PSSlack">PSSlack project</a>.  Thanks Warren!</p>
 <p>If you want to go beyond interacting with the Ryver API, you might consider <a href="http://ramblingcookiemonster.github.io/PoshBot/#references">using a bot</a>.</p>
                 
                   
