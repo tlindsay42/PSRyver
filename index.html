@@ -522,12 +522,14 @@
 <h2 id="prerequisites">Prerequisites<a class="headerlink" href="#prerequisites" title="Permanent link">&para;</a></h2>
 <ul>
 <li>PowerShell 3 or later</li>
-<li>Valid credentials or an incoming webhook URI from Ryver.</li>
+<li>Valid credentials or an incoming webhook URI from Ryver.<ul>
 <li><a href="https://api.ryver.com/ryvhooks_simple_incoming.html">Add an incoming webhook to your team, grab the URI</a></li>
+</ul>
+</li>
 </ul>
 <h2 id="getting-started">Getting Started<a class="headerlink" href="#getting-started" title="Permanent link">&para;</a></h2>
 <ul>
-<li>Installation</li>
+<li>Installation<ul>
 <li>PowerShell 3 &amp; 4<ul>
 <li>Download the repository</li>
 <li>Unblock the zip</li>
@@ -539,6 +541,8 @@
     <div class="codehilite"><pre><span></span><span class="n">Install-Module</span> <span class="n">-Name</span> <span class="s1">&#39;PSRyver&#39;</span>
 <span class="nb">Import-Module</span> <span class="n">-Name</span> <span class="s1">&#39;PSRyver&#39;</span>
 </pre></div></li>
+</ul>
+</li>
 <li>List the commands in the module
     <div class="codehilite"><pre><span></span><span class="nb">Get-Command</span> <span class="n">-Module</span> <span class="s1">&#39;PSRyver&#39;</span>
 </pre></div></li>
@@ -597,14 +601,14 @@
 <ul>
 <li>This is a simple example illustrating some common options when constructing a message attachment giving you a richer message
     <div class="codehilite"><pre><span></span><span class="nv">$splat</span> <span class="p">=</span> <span class="p">@{</span>
-  <span class="n">Color</span>      <span class="p">=</span> <span class="no">[System.Drawing.Color]</span><span class="p">::</span><span class="n">Red</span>
-  <span class="n">Title</span>      <span class="p">=</span> <span class="s1">&#39;The System Is Down&#39;</span>
-  <span class="n">TitleLink</span>  <span class="p">=</span> <span class="s1">&#39;https://www.youtube.com/watch?v=TmpRs7xN06Q&#39;</span>
-  <span class="n">Text</span>       <span class="p">=</span> <span class="s1">&#39;Please Do The Needful&#39;</span>
-  <span class="n">Pretext</span>    <span class="p">=</span> <span class="s1">&#39;Everything is broken&#39;</span>
-  <span class="n">AuthorName</span> <span class="p">=</span> <span class="s1">&#39;SCOM Bot&#39;</span>
-  <span class="n">AuthorIcon</span> <span class="p">=</span> <span class="s1">&#39;https://tlindsay42.github.io/PSRyver/img/wrench.png&#39;</span>
-  <span class="n">Fallback</span>   <span class="p">=</span> <span class="s1">&#39;Your client is bad&#39;</span>
+    <span class="n">Color</span>      <span class="p">=</span> <span class="no">[System.Drawing.Color]</span><span class="p">::</span><span class="n">Red</span>
+    <span class="n">Title</span>      <span class="p">=</span> <span class="s1">&#39;The System Is Down&#39;</span>
+    <span class="n">TitleLink</span>  <span class="p">=</span> <span class="s1">&#39;https://www.youtube.com/watch?v=TmpRs7xN06Q&#39;</span>
+    <span class="n">Text</span>       <span class="p">=</span> <span class="s1">&#39;Please Do The Needful&#39;</span>
+    <span class="n">Pretext</span>    <span class="p">=</span> <span class="s1">&#39;Everything is broken&#39;</span>
+    <span class="n">AuthorName</span> <span class="p">=</span> <span class="s1">&#39;SCOM Bot&#39;</span>
+    <span class="n">AuthorIcon</span> <span class="p">=</span> <span class="s1">&#39;https://tlindsay42.github.io/PSRyver/img/wrench.png&#39;</span>
+    <span class="n">Fallback</span>   <span class="p">=</span> <span class="s1">&#39;Your client is bad&#39;</span>
 <span class="p">}</span>
 <span class="nb">New-RyverMessageAttachment</span> <span class="nv">@splat</span> <span class="p">|</span>
     <span class="nb">New-RyverMessage</span> <span class="n">-Channel</span> <span class="s1">&#39;@tlindsay42&#39;</span> <span class="n">-IconEmoji</span> <span class="s1">&#39;:bomb:&#39;</span> <span class="p">|</span>
@@ -716,8 +720,10 @@
 <p>Currently evaluating .NET Core / Cross-platform functionality.  The following will not work initially:</p>
 <ul>
 <li>Serialization of URIs via <code>Set-PSRyverConfig</code>.  Set these values per-session if needed.</li>
-<li><code>[System.Drawing.Color]::SomeColor</code> shortcut.  Use the provided <code>$_PSRyverColorMap</code> hash to simplify this.</li>
+<li><code>[System.Drawing.Color]::SomeColor</code> shortcut.  Use the provided <code>$_PSRyverColorMap</code> hash to simplify this.<ul>
 <li>Example: <code>$_PSRyverColorMap.Red</code></li>
+</ul>
+</li>
 </ul>
 <p>If you want to go beyond interacting with the Ryver API, you might consider <a href="http://ramblingcookiemonster.github.io/PoshBot/#references">using a bot</a>.</p>
                 
