@@ -24,7 +24,7 @@ theme:
 
   # 404 page
   static_templates:
-    - '404.html'
+  - '404.html'
 
   # Don't include MkDocs' JavaScript
   include_search_page: false
@@ -46,43 +46,43 @@ theme:
 # Customization
 extra:
   social:
-    - type: 'globe'
-      link: 'https://www.troylindsay.io'
-    - type: 'github-alt'
-      link: 'https://github.com/tlindsay42'
-    - type: 'twitter'
-      link: 'https://twitter.com/troylindsay42'
-    - type: 'linkedin'
-      link: 'https://www.linkedin.com/in/troylindsay'
+  - type: 'globe'
+    link: 'https://www.troylindsay.io'
+  - type: 'github-alt'
+    link: 'https://github.com/tlindsay42'
+  - type: 'twitter'
+    link: 'https://twitter.com/troylindsay42'
+  - type: 'linkedin'
+    link: 'https://www.linkedin.com/in/troylindsay'
 
 # Extensions
 markdown_extensions:
-  - admonition
-  - markdown.extensions.codehilite:
-      guess_lang: false
-  - markdown.extensions.def_list
-  - markdown.extensions.footnotes
-  - markdown.extensions.meta
-  - markdown.extensions.toc:
-      permalink: true
-  - pymdownx.arithmatex
-  - pymdownx.betterem:
-      smart_enable: all
-  - pymdownx.caret
-  - pymdownx.critic
-  - pymdownx.details
-  - pymdownx.emoji:
-      emoji_generator: !!python/name:pymdownx.emoji.to_svg
-  - pymdownx.inlinehilite
-  - pymdownx.keys
-  - pymdownx.magiclink
-  - pymdownx.mark
-  - pymdownx.smartsymbols
-  - pymdownx.superfences
-  - pymdownx.tasklist:
-      custom_checkbox: true
-  - pymdownx.tilde
+- admonition
+- markdown.extensions.codehilite:
+  guess_lang: false
+- markdown.extensions.def_list
+- markdown.extensions.footnotes
+- markdown.extensions.meta
+- markdown.extensions.toc:
+  permalink: true
+- pymdownx.arithmatex
+- pymdownx.betterem:
+  smart_enable: all
+- pymdownx.caret
+- pymdownx.critic
+- pymdownx.details
+- pymdownx.emoji:
+  emoji_generator: !!python/name:pymdownx.emoji.to_svg
+- pymdownx.inlinehilite
+- pymdownx.keys
+- pymdownx.magiclink
+- pymdownx.mark
+- pymdownx.smartsymbols
+- pymdownx.superfences
+- pymdownx.tasklist:
+  custom_checkbox: true
+- pymdownx.tilde
 
 # Page tree
 pages:
-  - Home: 'index.md'
+- Home: 'index.md'
