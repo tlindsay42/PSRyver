@@ -44,7 +44,7 @@ Pull requests and other contributions would be welcome!
 * Send a direct message to @tlindsay42 (not a channel), parsing the text to linkify usernames and channels
     ```powershell
     $splat = @{
-        URI     = 'Some incoming webhook URI from Ryver'
+        Uri     = 'Some incoming webhook URI from Ryver'
         Channel = '@tlindsay42'
         Parse   = 'full'
         Text    = 'Hello @tlindsay42, join me in #devnull!'
@@ -59,7 +59,7 @@ Pull requests and other contributions would be welcome!
 * Search for a message containing PowerShell, sorting results by timestamp.
     ```powershell
     $splat = @{
-        URI    = 'Some incoming webhook URI from Ryver'
+        Uri    = 'Some incoming webhook URI from Ryver'
         Query  = 'PowerShell'
         SortBy = 'timestamp'
     }
@@ -73,9 +73,9 @@ Pull requests and other contributions would be welcome!
 * Notice the extra properties and previous/next messages
     ```powershell
     $splat = @{
-        Token    = $Token
-        Query    = 'PowerShell'
-        Property = '*'
+        Authorization = $Authorization
+        Query         = 'PowerShell'
+        Property      = '*'
     }
     Find-RyverMessage @splat |
         Select-Object -Property '*'
@@ -101,7 +101,7 @@ You could use this simply to search Ryver from the CLI, or in an automated solut
     }
     New-RyverMessageAttachment @splat |
         New-RyverMessage -Channel '@tlindsay42' -IconEmoji ':bomb:' |
-        Send-RyverMessage -URI 'Some incoming webhook URI from Ryver'
+        Send-RyverMessage -Uri 'Some incoming webhook URI from Ryver'
     ```
 
 <!-- ![Rich messages](/docs/img/RichMessage.png) -->
@@ -120,7 +120,7 @@ Notice that the title is clickable.  You might link to:
 
 ```powershell
 $attachment1 = @{
-    Color     = $_PSRyverColorMap.Red
+    Color     = $Script:PSRyverColorMap.Red
     Title     = 'The System Is Down'
     TitleLink = 'https://www.youtube.com/watch?v=TmpRs7xN06Q'
     Text      = 'Everybody panic!'
@@ -137,7 +137,7 @@ $attachment2 = @{
 New-RyverMessageAttachment @attachment1 |
     New-RyverMessageAttachment @attachment2 |
     New-RyverMessage -Channel '@tlindsay42' -IconEmoji ':bomb:' -AsUser -Username 'SCOM Bot' |
-    Send-RyverMessage -URI 'Some incoming webhook URI from Ryver'
+    Send-RyverMessage -Uri 'Some incoming webhook URI from Ryver'
 ```
 
 <!-- ![Multiple Attachments](/docs/img/MultiAttachments.png) -->
@@ -176,7 +176,7 @@ Notice that we can chain multiple `New-RyverMessageAttachment`s together.
     }
     New-RyverMessageAttachment @splat |
         New-RyverMessage -Channel 'devnull' |
-        Send-RyverMessage -URI 'Some incoming webhook URI from Ryver'
+        Send-RyverMessage -Uri 'Some incoming webhook URI from Ryver'
     ```
 
 * We build up a pretend error object, and send each property to a `fields` array
@@ -193,7 +193,7 @@ Notice that we can chain multiple `New-RyverMessageAttachment`s together.
 #### Incoming Webhook URI
 
 ```powershell
-Set-PSRyverConfig -URI 'SomeRyverUri'
+Set-PSRyverConfig -Uri 'SomeRyverUri'
 
 # Read the current cofig
 Get-PSRyverConfig
@@ -210,12 +210,12 @@ Get-PSRyverConfig
 
 ## Notes
 
-This project was ported with :heart: from v0.1.0 of [Warren Frame's](https://github.com/RamblingCookieMonster) awesome [PSSlack project](https://github.com/RamblingCookieMonster/PSSlack/tree/c0bf2b67278d5df455ae769d5912aa25d09fcf72).  Thanks Warren!
+This project was forked with :heart: from v0.1.0 of [Warren Frame's](https://github.com/RamblingCookieMonster) awesome [PSSlack project](https://github.com/RamblingCookieMonster/PSSlack/tree/c0bf2b67278d5df455ae769d5912aa25d09fcf72).  Thanks Warren!
 
 Currently evaluating .NET Core / Cross-platform functionality.  The following will not work initially:
 
 * Serialization of URIs via `Set-PSRyverConfig`.  Set these values per-session if needed.
-* `[System.Drawing.Color]::SomeColor` shortcut.  Use the provided `$_PSRyverColorMap` hash to simplify this.
-    * Example: `$_PSRyverColorMap.Red`
+* `[System.Drawing.Color]::SomeColor` shortcut.  Use the provided `$Script:PSRyverColorMap` hash to simplify this.
+    * Example: `$Script:PSRyverColorMap.Red`
 
 If you want to go beyond interacting with the Ryver API, you might consider [using a bot](http://ramblingcookiemonster.github.io/PoshBot/#references).
