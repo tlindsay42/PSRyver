@@ -120,7 +120,7 @@ Notice that the title is clickable.  You might link to:
 
 ```powershell
 $attachment1 = @{
-    Color     = $_PSRyverColorMap.Red
+    Color     = $Script:PSRyverColorMap.Red
     Title     = 'The System Is Down'
     TitleLink = 'https://www.youtube.com/watch?v=TmpRs7xN06Q'
     Text      = 'Everybody panic!'
@@ -210,12 +210,12 @@ Get-PSRyverConfig
 
 ## Notes
 
-This project was ported with :heart: from v0.1.0 of [Warren Frame's](https://github.com/RamblingCookieMonster) awesome [PSSlack project](https://github.com/RamblingCookieMonster/PSSlack/tree/c0bf2b67278d5df455ae769d5912aa25d09fcf72).  Thanks Warren!
+This project was forked with :heart: from v0.1.0 of [Warren Frame's](https://github.com/RamblingCookieMonster) awesome [PSSlack project](https://github.com/RamblingCookieMonster/PSSlack/tree/c0bf2b67278d5df455ae769d5912aa25d09fcf72).  Thanks Warren!
 
 Currently evaluating .NET Core / Cross-platform functionality.  The following will not work initially:
 
 * Serialization of URIs via `Set-PSRyverConfig`.  Set these values per-session if needed.
-* `[System.Drawing.Color]::SomeColor` shortcut.  Use the provided `$_PSRyverColorMap` hash to simplify this.
-    * Example: `$_PSRyverColorMap.Red`
+* `[System.Drawing.Color]::SomeColor` shortcut.  Use the provided `$Script:PSRyverColorMap` hash to simplify this.
+    * Example: `$Script:PSRyverColorMap.Red`
 
 If you want to go beyond interacting with the Ryver API, you might consider [using a bot](http://ramblingcookiemonster.github.io/PoshBot/#references).
