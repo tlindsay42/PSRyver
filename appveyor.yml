@@ -1,20 +1,43 @@
 # See http://www.appveyor.com/docs/appveyor-yml for many more options
 
-#Publish to PowerShell Gallery with this key
+version: 0.0.{build}
+
+pull_requests:
+  do_not_increment_build_number: true
+
+branches:
+  except:
+  - gh-pages
+
+skip_tags: true
+
+image: Visual Studio 2017
+
+for:
+- matrix:
+    only:
+    - PowerShell: 6
+  build_script:
+  - pwsh: ./build.ps1
+- matrix:
+    only:
+    - PowerShell: 5
+  build_script:
+  - ps: ./build.ps1
+  # - ps: . .\build.ps1 -Task 'Deploy'
+
+clone_depth: 50
+
 environment:
-  NuGetApiKey:
-    secure: oqMFzG8F65K5l572V7VzlZIWU7xnSYDLtSXECJAAURrXe8M2+BAp9vHLT+1h1lR0
+  NUGET_API_KEY:
+    secure: u2jbw68/5JWUmA5z8fBok8TNO0BAJ41CSNGUJeVAtrIgDJ7p7TqW6dTbFmytP9UG
+  matrix:
+  - PowerShell: 5
+  - PowerShell: 6
 
-# Allow WMF5 (i.e. PowerShellGallery functionality)
-os: WMF 5
+# nuget:
+#   project_feed: true
 
-# Skip on updates to the readme.
-# We can force this by adding [skip ci] or [ci skip] anywhere in commit message
-skip_commits:
-  message: /updated readme.*|update readme.*s/
+test: off
 
-build: false
-
-#Kick off the CI/CD pipeline
-test_script:
-  - ps: . .\build.ps1 -Task 'Deploy'
+deploy: off
