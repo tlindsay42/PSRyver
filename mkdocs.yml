@@ -88,3 +88,4 @@ pages:
 - Home: 'index.md'
 - Cmdlet Documentation:
   - Get-RyverForum: 'Public\Get-RyverForum.md'
+  - Get-RyverTeam: 'Public\Get-RyverTeam.md'
