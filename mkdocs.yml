@@ -87,5 +87,6 @@ markdown_extensions:
 pages:
 - Home: 'index.md'
 - Cmdlet Documentation:
+  - Export-PSRyverConfig: 'Public\Export-PSRyverConfig.md'
   - Get-RyverForum: 'Public\Get-RyverForum.md'
   - Get-RyverTeam: 'Public\Get-RyverTeam.md'
