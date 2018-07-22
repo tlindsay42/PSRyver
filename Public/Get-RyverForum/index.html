@@ -290,6 +290,30 @@
           
           
 
+
+  <li class="md-nav__item">
+    <a href="../Get-PSRyverConfig/" title="Get-PSRyverConfig" class="md-nav__link">
+      Get-PSRyverConfig
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Get-PSRyverConfigPath/" title="Get-PSRyverConfigPath" class="md-nav__link">
+      Get-PSRyverConfigPath
+    </a>
+  </li>
+
+        
+          
+          
+          
+
   
 
 
@@ -410,6 +434,20 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#-first" title="-First" class="md-nav__link">
+    -First
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#-includetotalcount" title="-IncludeTotalCount" class="md-nav__link">
+    -IncludeTotalCount
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#-name" title="-Name" class="md-nav__link">
     -Name
   </a>
@@ -419,6 +457,13 @@
           <li class="md-nav__item">
   <a href="#-raw" title="-Raw" class="md-nav__link">
     -Raw
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#-skip" title="-Skip" class="md-nav__link">
+    -Skip
   </a>
   
 </li>
@@ -508,6 +553,42 @@
   <li class="md-nav__item">
     <a href="../Get-RyverTeam/" title="Get-RyverTeam" class="md-nav__link">
       Get-RyverTeam
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Import-PSRyverConfig/" title="Import-PSRyverConfig" class="md-nav__link">
+      Import-PSRyverConfig
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Set-PSRyverConfig/" title="Set-PSRyverConfig" class="md-nav__link">
+      Set-PSRyverConfig
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Set-PSRyverConfigPath/" title="Set-PSRyverConfigPath" class="md-nav__link">
+      Set-PSRyverConfigPath
     </a>
   </li>
 
@@ -737,6 +818,20 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#-first" title="-First" class="md-nav__link">
+    -First
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#-includetotalcount" title="-IncludeTotalCount" class="md-nav__link">
+    -IncludeTotalCount
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#-name" title="-Name" class="md-nav__link">
     -Name
   </a>
@@ -746,6 +841,13 @@
           <li class="md-nav__item">
   <a href="#-raw" title="-Raw" class="md-nav__link">
     -Raw
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#-skip" title="-Skip" class="md-nav__link">
+    -Skip
   </a>
   
 </li>
@@ -839,7 +941,8 @@
 <h2 id="synopsis">SYNOPSIS<a class="headerlink" href="#synopsis" title="Permanent link">&para;</a></h2>
 <p>Query for Ryver public forum channels.</p>
 <h2 id="syntax">SYNTAX<a class="headerlink" href="#syntax" title="Permanent link">&para;</a></h2>
-<div class="codehilite"><pre><span></span>Get-RyverForum [[-Name] &lt;String&gt;] [-Detailed] [-Raw] [[-Credential] &lt;PSCredential&gt;] [&lt;CommonParameters&gt;]
+<div class="codehilite"><pre><span></span>Get-RyverForum [[-Name] &lt;String&gt;] [-Detailed] [-Raw] [[-Credential] &lt;PSCredential&gt;] [-IncludeTotalCount]
+ [-Skip &lt;UInt64&gt;] [-First &lt;UInt64&gt;] [&lt;CommonParameters&gt;]
 </pre></div>
 
 <h2 id="description">DESCRIPTION<a class="headerlink" href="#description" title="Permanent link">&para;</a></h2>
@@ -906,6 +1009,32 @@ positional parameters and returns the raw, unformatted output.</p>
 <span class="l l-Scalar l-Scalar-Plain">Accept wildcard characters</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">False</span>
 </pre></div>
 
+<h3 id="-first">-First<a class="headerlink" href="#-first" title="Permanent link">&para;</a></h3>
+<p>{{Fill First Description}}</p>
+<div class="codehilite"><pre><span></span><span class="l l-Scalar l-Scalar-Plain">Type</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">UInt64</span>
+<span class="l l-Scalar l-Scalar-Plain">Parameter Sets</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">(All)</span>
+<span class="l l-Scalar l-Scalar-Plain">Aliases</span><span class="p p-Indicator">:</span>
+
+<span class="l l-Scalar l-Scalar-Plain">Required</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">False</span>
+<span class="l l-Scalar l-Scalar-Plain">Position</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">Named</span>
+<span class="l l-Scalar l-Scalar-Plain">Default value</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">None</span>
+<span class="l l-Scalar l-Scalar-Plain">Accept pipeline input</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">False</span>
+<span class="l l-Scalar l-Scalar-Plain">Accept wildcard characters</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">False</span>
+</pre></div>
+
+<h3 id="-includetotalcount">-IncludeTotalCount<a class="headerlink" href="#-includetotalcount" title="Permanent link">&para;</a></h3>
+<p>{{Fill IncludeTotalCount Description}}</p>
+<div class="codehilite"><pre><span></span><span class="l l-Scalar l-Scalar-Plain">Type</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">SwitchParameter</span>
+<span class="l l-Scalar l-Scalar-Plain">Parameter Sets</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">(All)</span>
+<span class="l l-Scalar l-Scalar-Plain">Aliases</span><span class="p p-Indicator">:</span>
+
+<span class="l l-Scalar l-Scalar-Plain">Required</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">False</span>
+<span class="l l-Scalar l-Scalar-Plain">Position</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">Named</span>
+<span class="l l-Scalar l-Scalar-Plain">Default value</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">None</span>
+<span class="l l-Scalar l-Scalar-Plain">Accept pipeline input</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">False</span>
+<span class="l l-Scalar l-Scalar-Plain">Accept wildcard characters</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">False</span>
+</pre></div>
+
 <h3 id="-name">-Name<a class="headerlink" href="#-name" title="Permanent link">&para;</a></h3>
 <p>Specifies the public forum channel name. 
 Case insensitive.</p>
@@ -929,6 +1058,19 @@ Case insensitive.</p>
 <span class="l l-Scalar l-Scalar-Plain">Required</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">False</span>
 <span class="l l-Scalar l-Scalar-Plain">Position</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">3</span>
 <span class="l l-Scalar l-Scalar-Plain">Default value</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">False</span>
+<span class="l l-Scalar l-Scalar-Plain">Accept pipeline input</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">False</span>
+<span class="l l-Scalar l-Scalar-Plain">Accept wildcard characters</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">False</span>
+</pre></div>
+
+<h3 id="-skip">-Skip<a class="headerlink" href="#-skip" title="Permanent link">&para;</a></h3>
+<p>{{Fill Skip Description}}</p>
+<div class="codehilite"><pre><span></span><span class="l l-Scalar l-Scalar-Plain">Type</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">UInt64</span>
+<span class="l l-Scalar l-Scalar-Plain">Parameter Sets</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">(All)</span>
+<span class="l l-Scalar l-Scalar-Plain">Aliases</span><span class="p p-Indicator">:</span>
+
+<span class="l l-Scalar l-Scalar-Plain">Required</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">False</span>
+<span class="l l-Scalar l-Scalar-Plain">Position</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">Named</span>
+<span class="l l-Scalar l-Scalar-Plain">Default value</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">None</span>
 <span class="l l-Scalar l-Scalar-Plain">Accept pipeline input</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">False</span>
 <span class="l l-Scalar l-Scalar-Plain">Accept wildcard characters</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">False</span>
 </pre></div>
@@ -969,7 +1111,7 @@ For more information, see about_CommonParameters (<a href="http://go.microsoft.c
     <div class="md-footer-nav">
       <nav class="md-footer-nav__inner md-grid">
         
-          <a href="../Export-PSRyverConfig/" title="Export-PSRyverConfig" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+          <a href="../Get-PSRyverConfigPath/" title="Get-PSRyverConfigPath" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
             <div class="md-flex__cell md-flex__cell--shrink">
               <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
             </div>
@@ -978,7 +1120,7 @@ For more information, see about_CommonParameters (<a href="http://go.microsoft.c
                 <span class="md-footer-nav__direction">
                   Previous
                 </span>
-                Export-PSRyverConfig
+                Get-PSRyverConfigPath
               </span>
             </div>
           </a>

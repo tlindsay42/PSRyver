@@ -171,8 +171,158 @@
             "title": "RELATED LINKS"
         },
         {
+            "location": "/Public/Get-PSRyverConfig/",
+            "text": "Get-PSRyverConfig\n\u00b6\n\n\nSYNOPSIS\n\u00b6\n\n\nGet the PSRyver module configuration.\n\n\nSYNTAX\n\u00b6\n\n\nGet-PSRyverConfig [<CommonParameters>]\n\n\n\n\nDESCRIPTION\n\u00b6\n\n\nGet the PSRyver module configuration stored in the $Script:PSRyver variable.\n\n\nEXAMPLES\n\u00b6\n\n\nEXAMPLE 1\n\u00b6\n\n\nGet-PSRyverConfig\n\n\n\n\nReturns the value of the $Script:PSRyver module configuration variable.\n\n\nPARAMETERS\n\u00b6\n\n\nCommonParameters\n\u00b6\n\n\nThis cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.\nFor more information, see about_CommonParameters (\nhttp://go.microsoft.com/fwlink/?LinkID=113216\n).\n\n\nINPUTS\n\u00b6\n\n\nNone\n\u00b6\n\n\nYou cannot pipe input to this cmdlet.\n\n\n\n\n\nOUTPUTS\n\u00b6\n\n\nSystem.Management.Automation.PSObject\n\u00b6\n\n\nNOTES\n\u00b6\n\n\n\n\nTroy Lindsay\n\n\nTwitter: @troylindsay42\n\n\nGitHub: tlindsay42\n\n\n\n\nRELATED LINKS\n\u00b6\n\n\nhttps://tlindsay42.github.io/PSRyver/Public/Get-PSRyverConfig/\n\n\nhttps://github.com/PSRyver/blob/master/PSRyver/Public/Get-PSRyverConfig.ps1\n\n\nSet-PSRyverConfig\n\n\nInitialize-PSRyverConfig\n\n\nRemove-PSRyverConfig",
+            "title": "Get-PSRyverConfig"
+        },
+        {
+            "location": "/Public/Get-PSRyverConfig/#get-psryverconfig",
+            "text": "",
+            "title": "Get-PSRyverConfig"
+        },
+        {
+            "location": "/Public/Get-PSRyverConfig/#synopsis",
+            "text": "Get the PSRyver module configuration.",
+            "title": "SYNOPSIS"
+        },
+        {
+            "location": "/Public/Get-PSRyverConfig/#syntax",
+            "text": "Get-PSRyverConfig [<CommonParameters>]",
+            "title": "SYNTAX"
+        },
+        {
+            "location": "/Public/Get-PSRyverConfig/#description",
+            "text": "Get the PSRyver module configuration stored in the $Script:PSRyver variable.",
+            "title": "DESCRIPTION"
+        },
+        {
+            "location": "/Public/Get-PSRyverConfig/#examples",
+            "text": "",
+            "title": "EXAMPLES"
+        },
+        {
+            "location": "/Public/Get-PSRyverConfig/#example-1",
+            "text": "Get-PSRyverConfig  Returns the value of the $Script:PSRyver module configuration variable.",
+            "title": "EXAMPLE 1"
+        },
+        {
+            "location": "/Public/Get-PSRyverConfig/#parameters",
+            "text": "",
+            "title": "PARAMETERS"
+        },
+        {
+            "location": "/Public/Get-PSRyverConfig/#commonparameters",
+            "text": "This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.\nFor more information, see about_CommonParameters ( http://go.microsoft.com/fwlink/?LinkID=113216 ).",
+            "title": "CommonParameters"
+        },
+        {
+            "location": "/Public/Get-PSRyverConfig/#inputs",
+            "text": "",
+            "title": "INPUTS"
+        },
+        {
+            "location": "/Public/Get-PSRyverConfig/#none",
+            "text": "You cannot pipe input to this cmdlet.",
+            "title": "None"
+        },
+        {
+            "location": "/Public/Get-PSRyverConfig/#outputs",
+            "text": "",
+            "title": "OUTPUTS"
+        },
+        {
+            "location": "/Public/Get-PSRyverConfig/#systemmanagementautomationpsobject",
+            "text": "",
+            "title": "System.Management.Automation.PSObject"
+        },
+        {
+            "location": "/Public/Get-PSRyverConfig/#notes",
+            "text": "Troy Lindsay  Twitter: @troylindsay42  GitHub: tlindsay42",
+            "title": "NOTES"
+        },
+        {
+            "location": "/Public/Get-PSRyverConfig/#related-links",
+            "text": "https://tlindsay42.github.io/PSRyver/Public/Get-PSRyverConfig/  https://github.com/PSRyver/blob/master/PSRyver/Public/Get-PSRyverConfig.ps1  Set-PSRyverConfig  Initialize-PSRyverConfig  Remove-PSRyverConfig",
+            "title": "RELATED LINKS"
+        },
+        {
+            "location": "/Public/Get-PSRyverConfigPath/",
+            "text": "Get-PSRyverConfigPath\n\u00b6\n\n\nSYNOPSIS\n\u00b6\n\n\nRetrieves the PSRyver config file path.\n\n\nSYNTAX\n\u00b6\n\n\nGet-PSRyverConfigPath [<CommonParameters>]\n\n\n\n\nDESCRIPTION\n\u00b6\n\n\nRetrieves the PSRyver config file path.\n\n\nEXAMPLES\n\u00b6\n\n\nEXAMPLE 1\n\u00b6\n\n\nGet-PSRyverConfigPath\n\n\n\n\nRetrieves the PSRyver config file path.\n\n\nPARAMETERS\n\u00b6\n\n\nCommonParameters\n\u00b6\n\n\nThis cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.\nFor more information, see about_CommonParameters (\nhttp://go.microsoft.com/fwlink/?LinkID=113216\n).\n\n\nINPUTS\n\u00b6\n\n\nNone\n\u00b6\n\n\nYou cannot pipe input to this cmdlet.\n\n\n\n\n\nOUTPUTS\n\u00b6\n\n\nSystem.IO.FileInfo\n\u00b6\n\n\nNOTES\n\u00b6\n\n\n\n\nTroy Lindsay\n\n\nTwitter: @troylindsay42\n\n\nGitHub: tlindsay42\n\n\n\n\nRELATED LINKS\n\u00b6\n\n\nhttps://tlindsay42.github.io/PSRyver/Public/Get-PSRyverConfigPath/\n\n\nhttps://github.com/PSRyver/blob/master/PSRyver/Public/Get-PSRyverConfigPath.ps1\n\n\nSet-PSRyverConfigPath",
+            "title": "Get-PSRyverConfigPath"
+        },
+        {
+            "location": "/Public/Get-PSRyverConfigPath/#get-psryverconfigpath",
+            "text": "",
+            "title": "Get-PSRyverConfigPath"
+        },
+        {
+            "location": "/Public/Get-PSRyverConfigPath/#synopsis",
+            "text": "Retrieves the PSRyver config file path.",
+            "title": "SYNOPSIS"
+        },
+        {
+            "location": "/Public/Get-PSRyverConfigPath/#syntax",
+            "text": "Get-PSRyverConfigPath [<CommonParameters>]",
+            "title": "SYNTAX"
+        },
+        {
+            "location": "/Public/Get-PSRyverConfigPath/#description",
+            "text": "Retrieves the PSRyver config file path.",
+            "title": "DESCRIPTION"
+        },
+        {
+            "location": "/Public/Get-PSRyverConfigPath/#examples",
+            "text": "",
+            "title": "EXAMPLES"
+        },
+        {
+            "location": "/Public/Get-PSRyverConfigPath/#example-1",
+            "text": "Get-PSRyverConfigPath  Retrieves the PSRyver config file path.",
+            "title": "EXAMPLE 1"
+        },
+        {
+            "location": "/Public/Get-PSRyverConfigPath/#parameters",
+            "text": "",
+            "title": "PARAMETERS"
+        },
+        {
+            "location": "/Public/Get-PSRyverConfigPath/#commonparameters",
+            "text": "This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.\nFor more information, see about_CommonParameters ( http://go.microsoft.com/fwlink/?LinkID=113216 ).",
+            "title": "CommonParameters"
+        },
+        {
+            "location": "/Public/Get-PSRyverConfigPath/#inputs",
+            "text": "",
+            "title": "INPUTS"
+        },
+        {
+            "location": "/Public/Get-PSRyverConfigPath/#none",
+            "text": "You cannot pipe input to this cmdlet.",
+            "title": "None"
+        },
+        {
+            "location": "/Public/Get-PSRyverConfigPath/#outputs",
+            "text": "",
+            "title": "OUTPUTS"
+        },
+        {
+            "location": "/Public/Get-PSRyverConfigPath/#systemiofileinfo",
+            "text": "",
+            "title": "System.IO.FileInfo"
+        },
+        {
+            "location": "/Public/Get-PSRyverConfigPath/#notes",
+            "text": "Troy Lindsay  Twitter: @troylindsay42  GitHub: tlindsay42",
+            "title": "NOTES"
+        },
+        {
+            "location": "/Public/Get-PSRyverConfigPath/#related-links",
+            "text": "https://tlindsay42.github.io/PSRyver/Public/Get-PSRyverConfigPath/  https://github.com/PSRyver/blob/master/PSRyver/Public/Get-PSRyverConfigPath.ps1  Set-PSRyverConfigPath",
+            "title": "RELATED LINKS"
+        },
+        {
             "location": "/Public/Get-RyverForum/",
-            "text": "Get-RyverForum\n\u00b6\n\n\nSYNOPSIS\n\u00b6\n\n\nQuery for Ryver public forum channels.\n\n\nSYNTAX\n\u00b6\n\n\nGet-RyverForum [[-Name] <String>] [-Detailed] [-Raw] [[-Credential] <PSCredential>] [<CommonParameters>]\n\n\n\n\nDESCRIPTION\n\u00b6\n\n\nQuery for Ryver public forum channels.\n\n\nEXAMPLES\n\u00b6\n\n\nEXAMPLE 1\n\u00b6\n\n\nGet-RyverForum -Name 'All Hands'\n\n\n\n\nQueries for the 'All Hands' public forum channel.\n\n\nEXAMPLE 2\n\u00b6\n\n\nGet-RyverForum -Name 'All Hand*' -Credential ( Get-Credential )\n\n\n\n\nUpdates the $Script:PSRyver.Authorization value storing the basic\nauthentication authorization header to use for all requests and then queries\nfor all public forum channels starting with the string 'All Hand', such as\n'All Hands' and 'All handsome guys like that Troy fellow'.\n=D\n\n\nEXAMPLE 3\n\u00b6\n\n\n'All Hands' | Get-RyverForum -Detailed\n\n\n\n\nQueries for detailed information about the 'All Hands' public forum channel via\nthe pipeline.\n\n\nEXAMPLE 4\n\u00b6\n\n\n'*and*' | Get-RyverForum -Raw\n\n\n\n\nQueries for all public forum channels containing the string 'and', such as\n'All Hands' and 'The Land of Magical Unicorns' and returns the raw, unformatted\noutput.\n\n\nEXAMPLE 5\n\u00b6\n\n\nGet-RyverForum 'All Hands' $true $true\n\n\n\n\nQueries for detailed information about the 'All Hands' public forum channel via\npositional parameters and returns the raw, unformatted output.\n\n\nPARAMETERS\n\u00b6\n\n\n-Credential\n\u00b6\n\n\nCredentials to use for the Ryver API.\n\n\nDefault value is the value set by Set-PSRyverConfig.\n\n\nType\n:\n \nPSCredential\n\n\nParameter Sets\n:\n \n(All)\n\n\nAliases\n:\n\n\n\nRequired\n:\n \nFalse\n\n\nPosition\n:\n \n4\n\n\nDefault value\n:\n \nNone\n\n\nAccept pipeline input\n:\n \nFalse\n\n\nAccept wildcard characters\n:\n \nFalse\n\n\n\n\n\n-Detailed\n\u00b6\n\n\nSpecifies whether to retrieve additional details about each object.\n\n\nType\n:\n \nSwitchParameter\n\n\nParameter Sets\n:\n \n(All)\n\n\nAliases\n:\n\n\n\nRequired\n:\n \nFalse\n\n\nPosition\n:\n \n2\n\n\nDefault value\n:\n \nFalse\n\n\nAccept pipeline input\n:\n \nFalse\n\n\nAccept wildcard characters\n:\n \nFalse\n\n\n\n\n\n-Name\n\u00b6\n\n\nSpecifies the public forum channel name. \nCase insensitive.\n\n\nType\n:\n \nString\n\n\nParameter Sets\n:\n \n(All)\n\n\nAliases\n:\n\n\n\nRequired\n:\n \nFalse\n\n\nPosition\n:\n \n1\n\n\nDefault value\n:\n \nNone\n\n\nAccept pipeline input\n:\n \nTrue (ByValue)\n\n\nAccept wildcard characters\n:\n \nTrue\n\n\n\n\n\n-Raw\n\u00b6\n\n\nSpecifies that objects should not be formatted.\n\n\nType\n:\n \nSwitchParameter\n\n\nParameter Sets\n:\n \n(All)\n\n\nAliases\n:\n\n\n\nRequired\n:\n \nFalse\n\n\nPosition\n:\n \n3\n\n\nDefault value\n:\n \nFalse\n\n\nAccept pipeline input\n:\n \nFalse\n\n\nAccept wildcard characters\n:\n \nFalse\n\n\n\n\n\nCommonParameters\n\u00b6\n\n\nThis cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.\nFor more information, see about_CommonParameters (\nhttp://go.microsoft.com/fwlink/?LinkID=113216\n).\n\n\nINPUTS\n\u00b6\n\n\nSystem.String\n\u00b6\n\n\nOUTPUTS\n\u00b6\n\n\nSystem.Management.Automation.PSObject\n\u00b6\n\n\nNOTES\n\u00b6\n\n\n\n\nTroy Lindsay\n\n\nTwitter: @troylindsay42\n\n\nGitHub: tlindsay42\n\n\n\n\nRELATED LINKS\n\u00b6\n\n\nhttps://tlindsay42.github.io/PSRyver/Public/Get-RyverForum/\n\n\nhttps://github.com/PSRyver/blob/master/PSRyver/Public/Get-RyverForum.ps1",
+            "text": "Get-RyverForum\n\u00b6\n\n\nSYNOPSIS\n\u00b6\n\n\nQuery for Ryver public forum channels.\n\n\nSYNTAX\n\u00b6\n\n\nGet-RyverForum [[-Name] <String>] [-Detailed] [-Raw] [[-Credential] <PSCredential>] [-IncludeTotalCount]\n [-Skip <UInt64>] [-First <UInt64>] [<CommonParameters>]\n\n\n\n\nDESCRIPTION\n\u00b6\n\n\nQuery for Ryver public forum channels.\n\n\nEXAMPLES\n\u00b6\n\n\nEXAMPLE 1\n\u00b6\n\n\nGet-RyverForum -Name 'All Hands'\n\n\n\n\nQueries for the 'All Hands' public forum channel.\n\n\nEXAMPLE 2\n\u00b6\n\n\nGet-RyverForum -Name 'All Hand*' -Credential ( Get-Credential )\n\n\n\n\nUpdates the $Script:PSRyver.Authorization value storing the basic\nauthentication authorization header to use for all requests and then queries\nfor all public forum channels starting with the string 'All Hand', such as\n'All Hands' and 'All handsome guys like that Troy fellow'.\n=D\n\n\nEXAMPLE 3\n\u00b6\n\n\n'All Hands' | Get-RyverForum -Detailed\n\n\n\n\nQueries for detailed information about the 'All Hands' public forum channel via\nthe pipeline.\n\n\nEXAMPLE 4\n\u00b6\n\n\n'*and*' | Get-RyverForum -Raw\n\n\n\n\nQueries for all public forum channels containing the string 'and', such as\n'All Hands' and 'The Land of Magical Unicorns' and returns the raw, unformatted\noutput.\n\n\nEXAMPLE 5\n\u00b6\n\n\nGet-RyverForum 'All Hands' $true $true\n\n\n\n\nQueries for detailed information about the 'All Hands' public forum channel via\npositional parameters and returns the raw, unformatted output.\n\n\nPARAMETERS\n\u00b6\n\n\n-Credential\n\u00b6\n\n\nCredentials to use for the Ryver API.\n\n\nDefault value is the value set by Set-PSRyverConfig.\n\n\nType\n:\n \nPSCredential\n\n\nParameter Sets\n:\n \n(All)\n\n\nAliases\n:\n\n\n\nRequired\n:\n \nFalse\n\n\nPosition\n:\n \n4\n\n\nDefault value\n:\n \nNone\n\n\nAccept pipeline input\n:\n \nFalse\n\n\nAccept wildcard characters\n:\n \nFalse\n\n\n\n\n\n-Detailed\n\u00b6\n\n\nSpecifies whether to retrieve additional details about each object.\n\n\nType\n:\n \nSwitchParameter\n\n\nParameter Sets\n:\n \n(All)\n\n\nAliases\n:\n\n\n\nRequired\n:\n \nFalse\n\n\nPosition\n:\n \n2\n\n\nDefault value\n:\n \nFalse\n\n\nAccept pipeline input\n:\n \nFalse\n\n\nAccept wildcard characters\n:\n \nFalse\n\n\n\n\n\n-First\n\u00b6\n\n\n{{Fill First Description}}\n\n\nType\n:\n \nUInt64\n\n\nParameter Sets\n:\n \n(All)\n\n\nAliases\n:\n\n\n\nRequired\n:\n \nFalse\n\n\nPosition\n:\n \nNamed\n\n\nDefault value\n:\n \nNone\n\n\nAccept pipeline input\n:\n \nFalse\n\n\nAccept wildcard characters\n:\n \nFalse\n\n\n\n\n\n-IncludeTotalCount\n\u00b6\n\n\n{{Fill IncludeTotalCount Description}}\n\n\nType\n:\n \nSwitchParameter\n\n\nParameter Sets\n:\n \n(All)\n\n\nAliases\n:\n\n\n\nRequired\n:\n \nFalse\n\n\nPosition\n:\n \nNamed\n\n\nDefault value\n:\n \nNone\n\n\nAccept pipeline input\n:\n \nFalse\n\n\nAccept wildcard characters\n:\n \nFalse\n\n\n\n\n\n-Name\n\u00b6\n\n\nSpecifies the public forum channel name. \nCase insensitive.\n\n\nType\n:\n \nString\n\n\nParameter Sets\n:\n \n(All)\n\n\nAliases\n:\n\n\n\nRequired\n:\n \nFalse\n\n\nPosition\n:\n \n1\n\n\nDefault value\n:\n \nNone\n\n\nAccept pipeline input\n:\n \nTrue (ByValue)\n\n\nAccept wildcard characters\n:\n \nTrue\n\n\n\n\n\n-Raw\n\u00b6\n\n\nSpecifies that objects should not be formatted.\n\n\nType\n:\n \nSwitchParameter\n\n\nParameter Sets\n:\n \n(All)\n\n\nAliases\n:\n\n\n\nRequired\n:\n \nFalse\n\n\nPosition\n:\n \n3\n\n\nDefault value\n:\n \nFalse\n\n\nAccept pipeline input\n:\n \nFalse\n\n\nAccept wildcard characters\n:\n \nFalse\n\n\n\n\n\n-Skip\n\u00b6\n\n\n{{Fill Skip Description}}\n\n\nType\n:\n \nUInt64\n\n\nParameter Sets\n:\n \n(All)\n\n\nAliases\n:\n\n\n\nRequired\n:\n \nFalse\n\n\nPosition\n:\n \nNamed\n\n\nDefault value\n:\n \nNone\n\n\nAccept pipeline input\n:\n \nFalse\n\n\nAccept wildcard characters\n:\n \nFalse\n\n\n\n\n\nCommonParameters\n\u00b6\n\n\nThis cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.\nFor more information, see about_CommonParameters (\nhttp://go.microsoft.com/fwlink/?LinkID=113216\n).\n\n\nINPUTS\n\u00b6\n\n\nSystem.String\n\u00b6\n\n\nOUTPUTS\n\u00b6\n\n\nSystem.Management.Automation.PSObject\n\u00b6\n\n\nNOTES\n\u00b6\n\n\n\n\nTroy Lindsay\n\n\nTwitter: @troylindsay42\n\n\nGitHub: tlindsay42\n\n\n\n\nRELATED LINKS\n\u00b6\n\n\nhttps://tlindsay42.github.io/PSRyver/Public/Get-RyverForum/\n\n\nhttps://github.com/PSRyver/blob/master/PSRyver/Public/Get-RyverForum.ps1",
             "title": "Get-RyverForum"
         },
         {
@@ -187,7 +337,7 @@
         },
         {
             "location": "/Public/Get-RyverForum/#syntax",
-            "text": "Get-RyverForum [[-Name] <String>] [-Detailed] [-Raw] [[-Credential] <PSCredential>] [<CommonParameters>]",
+            "text": "Get-RyverForum [[-Name] <String>] [-Detailed] [-Raw] [[-Credential] <PSCredential>] [-IncludeTotalCount]\n [-Skip <UInt64>] [-First <UInt64>] [<CommonParameters>]",
             "title": "SYNTAX"
         },
         {
@@ -241,6 +391,16 @@
             "title": "-Detailed"
         },
         {
+            "location": "/Public/Get-RyverForum/#-first",
+            "text": "{{Fill First Description}}  Type :   UInt64  Parameter Sets :   (All)  Aliases :  Required :   False  Position :   Named  Default value :   None  Accept pipeline input :   False  Accept wildcard characters :   False",
+            "title": "-First"
+        },
+        {
+            "location": "/Public/Get-RyverForum/#-includetotalcount",
+            "text": "{{Fill IncludeTotalCount Description}}  Type :   SwitchParameter  Parameter Sets :   (All)  Aliases :  Required :   False  Position :   Named  Default value :   None  Accept pipeline input :   False  Accept wildcard characters :   False",
+            "title": "-IncludeTotalCount"
+        },
+        {
             "location": "/Public/Get-RyverForum/#-name",
             "text": "Specifies the public forum channel name. \nCase insensitive.  Type :   String  Parameter Sets :   (All)  Aliases :  Required :   False  Position :   1  Default value :   None  Accept pipeline input :   True (ByValue)  Accept wildcard characters :   True",
             "title": "-Name"
@@ -249,6 +409,11 @@
             "location": "/Public/Get-RyverForum/#-raw",
             "text": "Specifies that objects should not be formatted.  Type :   SwitchParameter  Parameter Sets :   (All)  Aliases :  Required :   False  Position :   3  Default value :   False  Accept pipeline input :   False  Accept wildcard characters :   False",
             "title": "-Raw"
+        },
+        {
+            "location": "/Public/Get-RyverForum/#-skip",
+            "text": "{{Fill Skip Description}}  Type :   UInt64  Parameter Sets :   (All)  Aliases :  Required :   False  Position :   Named  Default value :   None  Accept pipeline input :   False  Accept wildcard characters :   False",
+            "title": "-Skip"
         },
         {
             "location": "/Public/Get-RyverForum/#commonparameters",
@@ -401,8 +566,323 @@
             "title": "RELATED LINKS"
         },
         {
+            "location": "/Public/Import-PSRyverConfig/",
+            "text": "Import-PSRyverConfig\n\u00b6\n\n\nSYNOPSIS\n\u00b6\n\n\nImport a PSRyver module configuration from file.\n\n\nSYNTAX\n\u00b6\n\n\nImport-PSRyverConfig [[-Path] <FileInfo>] [-WhatIf] [-Confirm] [<CommonParameters>]\n\n\n\n\nDESCRIPTION\n\u00b6\n\n\nImport a PSRyver module configuration from file and set the $Script:PSRyver\nmodule configuration variable.\n\n\nEXAMPLES\n\u00b6\n\n\nEXAMPLE 1\n\u00b6\n\n\n\n\n\n\n\nPARAMETERS\n\u00b6\n\n\n-Path\n\u00b6\n\n\nSpecifies the PSRyver config file to import.\n\n\nType\n:\n \nFileInfo\n\n\nParameter Sets\n:\n \n(All)\n\n\nAliases\n:\n\n\n\nRequired\n:\n \nFalse\n\n\nPosition\n:\n \n1\n\n\nDefault value\n:\n \n$Script:PSRyverConfigFilePath\n\n\nAccept pipeline input\n:\n \nTrue (ByValue)\n\n\nAccept wildcard characters\n:\n \nFalse\n\n\n\n\n\n-Confirm\n\u00b6\n\n\nPrompts you for confirmation before running the cmdlet.\n\n\nType\n:\n \nSwitchParameter\n\n\nParameter Sets\n:\n \n(All)\n\n\nAliases\n:\n \ncf\n\n\n\nRequired\n:\n \nFalse\n\n\nPosition\n:\n \nNamed\n\n\nDefault value\n:\n \nNone\n\n\nAccept pipeline input\n:\n \nFalse\n\n\nAccept wildcard characters\n:\n \nFalse\n\n\n\n\n\n-WhatIf\n\u00b6\n\n\nShows what would happen if the cmdlet runs.\nThe cmdlet is not run.\n\n\nType\n:\n \nSwitchParameter\n\n\nParameter Sets\n:\n \n(All)\n\n\nAliases\n:\n \nwi\n\n\n\nRequired\n:\n \nFalse\n\n\nPosition\n:\n \nNamed\n\n\nDefault value\n:\n \nNone\n\n\nAccept pipeline input\n:\n \nFalse\n\n\nAccept wildcard characters\n:\n \nFalse\n\n\n\n\n\nCommonParameters\n\u00b6\n\n\nThis cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.\nFor more information, see about_CommonParameters (\nhttp://go.microsoft.com/fwlink/?LinkID=113216\n).\n\n\nINPUTS\n\u00b6\n\n\nSystem.IO.FileInfo\n\u00b6\n\n\nOUTPUTS\n\u00b6\n\n\nSystem.Void\n\u00b6\n\n\nNOTES\n\u00b6\n\n\n\n\nTroy Lindsay\n\n\nTwitter: @troylindsay42\n\n\nGitHub: tlindsay42\n\n\n\n\nRELATED LINKS\n\u00b6\n\n\nhttps://tlindsay42.github.io/PSRyver/Public/Import-PSRyverConfig/\n\n\nhttps://github.com/PSRyver/blob/master/PSRyver/Public/Import-PSRyverConfig.ps1\n\n\nExport-PSRyverConfig\n\n\nRead-PSRyverConfig\n\n\nGet-PSRyverConfig\n\n\nSet-PSRyverConfig\n\n\nGet-PSRyverConfigPath\n\n\nSet-PSRyverConfigPath",
+            "title": "Import-PSRyverConfig"
+        },
+        {
+            "location": "/Public/Import-PSRyverConfig/#import-psryverconfig",
+            "text": "",
+            "title": "Import-PSRyverConfig"
+        },
+        {
+            "location": "/Public/Import-PSRyverConfig/#synopsis",
+            "text": "Import a PSRyver module configuration from file.",
+            "title": "SYNOPSIS"
+        },
+        {
+            "location": "/Public/Import-PSRyverConfig/#syntax",
+            "text": "Import-PSRyverConfig [[-Path] <FileInfo>] [-WhatIf] [-Confirm] [<CommonParameters>]",
+            "title": "SYNTAX"
+        },
+        {
+            "location": "/Public/Import-PSRyverConfig/#description",
+            "text": "Import a PSRyver module configuration from file and set the $Script:PSRyver\nmodule configuration variable.",
+            "title": "DESCRIPTION"
+        },
+        {
+            "location": "/Public/Import-PSRyverConfig/#examples",
+            "text": "",
+            "title": "EXAMPLES"
+        },
+        {
+            "location": "/Public/Import-PSRyverConfig/#example-1",
+            "text": "",
+            "title": "EXAMPLE 1"
+        },
+        {
+            "location": "/Public/Import-PSRyverConfig/#parameters",
+            "text": "",
+            "title": "PARAMETERS"
+        },
+        {
+            "location": "/Public/Import-PSRyverConfig/#-path",
+            "text": "Specifies the PSRyver config file to import.  Type :   FileInfo  Parameter Sets :   (All)  Aliases :  Required :   False  Position :   1  Default value :   $Script:PSRyverConfigFilePath  Accept pipeline input :   True (ByValue)  Accept wildcard characters :   False",
+            "title": "-Path"
+        },
+        {
+            "location": "/Public/Import-PSRyverConfig/#-confirm",
+            "text": "Prompts you for confirmation before running the cmdlet.  Type :   SwitchParameter  Parameter Sets :   (All)  Aliases :   cf  Required :   False  Position :   Named  Default value :   None  Accept pipeline input :   False  Accept wildcard characters :   False",
+            "title": "-Confirm"
+        },
+        {
+            "location": "/Public/Import-PSRyverConfig/#-whatif",
+            "text": "Shows what would happen if the cmdlet runs.\nThe cmdlet is not run.  Type :   SwitchParameter  Parameter Sets :   (All)  Aliases :   wi  Required :   False  Position :   Named  Default value :   None  Accept pipeline input :   False  Accept wildcard characters :   False",
+            "title": "-WhatIf"
+        },
+        {
+            "location": "/Public/Import-PSRyverConfig/#commonparameters",
+            "text": "This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.\nFor more information, see about_CommonParameters ( http://go.microsoft.com/fwlink/?LinkID=113216 ).",
+            "title": "CommonParameters"
+        },
+        {
+            "location": "/Public/Import-PSRyverConfig/#inputs",
+            "text": "",
+            "title": "INPUTS"
+        },
+        {
+            "location": "/Public/Import-PSRyverConfig/#systemiofileinfo",
+            "text": "",
+            "title": "System.IO.FileInfo"
+        },
+        {
+            "location": "/Public/Import-PSRyverConfig/#outputs",
+            "text": "",
+            "title": "OUTPUTS"
+        },
+        {
+            "location": "/Public/Import-PSRyverConfig/#systemvoid",
+            "text": "",
+            "title": "System.Void"
+        },
+        {
+            "location": "/Public/Import-PSRyverConfig/#notes",
+            "text": "Troy Lindsay  Twitter: @troylindsay42  GitHub: tlindsay42",
+            "title": "NOTES"
+        },
+        {
+            "location": "/Public/Import-PSRyverConfig/#related-links",
+            "text": "https://tlindsay42.github.io/PSRyver/Public/Import-PSRyverConfig/  https://github.com/PSRyver/blob/master/PSRyver/Public/Import-PSRyverConfig.ps1  Export-PSRyverConfig  Read-PSRyverConfig  Get-PSRyverConfig  Set-PSRyverConfig  Get-PSRyverConfigPath  Set-PSRyverConfigPath",
+            "title": "RELATED LINKS"
+        },
+        {
+            "location": "/Public/Set-PSRyverConfig/",
+            "text": "Set-PSRyverConfig\n\u00b6\n\n\nSYNOPSIS\n\u00b6\n\n\nSets parameters in the PSRyver module configuration.\n\n\nSYNTAX\n\u00b6\n\n\nSet-PSRyverConfig [[-RestApiBaseUri] <String>] [[-Credential] <PSCredential>] [[-IncomingWebhookUri] <String>]\n [[-Proxy] <String>] [-MapUser] [-ForceVerbose] [-WhatIf] [-Confirm] [<CommonParameters>]\n\n\n\n\nDESCRIPTION\n\u00b6\n\n\nSets parameters in the PSRyver module configuration, which are stored in the\n$Script:PSRyver variable.\n\n\nEXAMPLES\n\u00b6\n\n\nEXAMPLE 1\n\u00b6\n\n\nSet-PSRyverConfig https://example.ryver.com/api/1/odata.svc ( Get-Credential )\n\n\n\n\nUses positional parameters to set the $Script:PSRyver.RestApiBaseUri value\nstoring the default REST API URI and the $Script:PSRyver.Authorization value\nstoring the basic authentication authorization header to use for all requests.\n\n\nThe values of all other settings are left intact.\n\n\nEXAMPLE 2\n\u00b6\n\n\nSet-PSRyverConfig -IncomingWebhookUri https://example.ryver.com/application/webhook/4z-_G76nj7Fic-M\n\n\n\n\nSets the $Script:PSRyver.IncomingWebhookUri value storing the default\nincoming webhook URI to use for all requests.\n\n\nThe values of all other settings are left intact.\n\n\nEXAMPLE 3\n\u00b6\n\n\n[PSCustomObject] @{ Proxy = 'https://192.168.1.1/'; MapUser = $true; ForceVerbose = $true } | Set-PSRyverConfig\n\n\n\n\nConfigures the default proxy, enables user mapping, and prevents sensitive\nvalues from being redacted.\n\n\nThe values of all other settings are left intact.\n\n\nPARAMETERS\n\u00b6\n\n\n-Credential\n\u00b6\n\n\nSpecify the Credentials to use for basic authentication.\n\n\nOnly serialized to disk as the base64 encoded authorization header value on\nWindows via DPAPI.\n\n\nType\n:\n \nPSCredential\n\n\nParameter Sets\n:\n \n(All)\n\n\nAliases\n:\n\n\n\nRequired\n:\n \nFalse\n\n\nPosition\n:\n \n2\n\n\nDefault value\n:\n \nNone\n\n\nAccept pipeline input\n:\n \nTrue (ByPropertyName)\n\n\nAccept wildcard characters\n:\n \nFalse\n\n\n\n\n\n-ForceVerbose\n\u00b6\n\n\nIf set to true, we allow verbose output that may include sensitive data\n\n\n*** WARNING ***\nIf you set this to true, your Ryver token will be visible as plain text in\nverbose output.\n\n\nType\n:\n \nSwitchParameter\n\n\nParameter Sets\n:\n \n(All)\n\n\nAliases\n:\n\n\n\nRequired\n:\n \nFalse\n\n\nPosition\n:\n \n6\n\n\nDefault value\n:\n \nFalse\n\n\nAccept pipeline input\n:\n \nTrue (ByPropertyName)\n\n\nAccept wildcard characters\n:\n \nFalse\n\n\n\n\n\n-IncomingWebhookUri\n\u00b6\n\n\nSpecifies the incoming webhook URI. \nOnly serialized to disk on Windows via DPAPI.\n\n\nType\n:\n \nString\n\n\nParameter Sets\n:\n \n(All)\n\n\nAliases\n:\n\n\n\nRequired\n:\n \nFalse\n\n\nPosition\n:\n \n3\n\n\nDefault value\n:\n \nNone\n\n\nAccept pipeline input\n:\n \nTrue (ByPropertyName)\n\n\nAccept wildcard characters\n:\n \nFalse\n\n\n\n\n\n-MapUser\n\u00b6\n\n\nWhether to generate a map of Ryver user ID to name on module load, for use in\nRyver File commands\n\n\nType\n:\n \nSwitchParameter\n\n\nParameter Sets\n:\n \n(All)\n\n\nAliases\n:\n\n\n\nRequired\n:\n \nFalse\n\n\nPosition\n:\n \n5\n\n\nDefault value\n:\n \nFalse\n\n\nAccept pipeline input\n:\n \nTrue (ByPropertyName)\n\n\nAccept wildcard characters\n:\n \nFalse\n\n\n\n\n\n-Proxy\n\u00b6\n\n\nProxy to use.\n\n\nType\n:\n \nString\n\n\nParameter Sets\n:\n \n(All)\n\n\nAliases\n:\n\n\n\nRequired\n:\n \nFalse\n\n\nPosition\n:\n \n4\n\n\nDefault value\n:\n \nNone\n\n\nAccept pipeline input\n:\n \nTrue (ByPropertyName)\n\n\nAccept wildcard characters\n:\n \nFalse\n\n\n\n\n\n-RestApiBaseUri\n\u00b6\n\n\nSpecifies the REST API URI. \nOnly serialized to disk on Windows via DPAPI.\n\n\nType\n:\n \nString\n\n\nParameter Sets\n:\n \n(All)\n\n\nAliases\n:\n\n\n\nRequired\n:\n \nFalse\n\n\nPosition\n:\n \n1\n\n\nDefault value\n:\n \nNone\n\n\nAccept pipeline input\n:\n \nTrue (ByPropertyName)\n\n\nAccept wildcard characters\n:\n \nFalse\n\n\n\n\n\n-Confirm\n\u00b6\n\n\nPrompts you for confirmation before running the cmdlet.\n\n\nType\n:\n \nSwitchParameter\n\n\nParameter Sets\n:\n \n(All)\n\n\nAliases\n:\n \ncf\n\n\n\nRequired\n:\n \nFalse\n\n\nPosition\n:\n \nNamed\n\n\nDefault value\n:\n \nNone\n\n\nAccept pipeline input\n:\n \nFalse\n\n\nAccept wildcard characters\n:\n \nFalse\n\n\n\n\n\n-WhatIf\n\u00b6\n\n\nShows what would happen if the cmdlet runs.\nThe cmdlet is not run.\n\n\nType\n:\n \nSwitchParameter\n\n\nParameter Sets\n:\n \n(All)\n\n\nAliases\n:\n \nwi\n\n\n\nRequired\n:\n \nFalse\n\n\nPosition\n:\n \nNamed\n\n\nDefault value\n:\n \nNone\n\n\nAccept pipeline input\n:\n \nFalse\n\n\nAccept wildcard characters\n:\n \nFalse\n\n\n\n\n\nCommonParameters\n\u00b6\n\n\nThis cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.\nFor more information, see about_CommonParameters (\nhttp://go.microsoft.com/fwlink/?LinkID=113216\n).\n\n\nINPUTS\n\u00b6\n\n\nSystem.Management.Automation.PSCustomObject\n\u00b6\n\n\nOUTPUTS\n\u00b6\n\n\nSystem.Void\n\u00b6\n\n\nNOTES\n\u00b6\n\n\n\n\nTroy Lindsay\n\n\nTwitter: @troylindsay42\n\n\nGitHub: tlindsay42\n\n\n\n\nRELATED LINKS\n\u00b6\n\n\nhttps://tlindsay42.github.io/PSRyver/Public/Set-PSRyverConfig/\n\n\nhttps://github.com/PSRyver/blob/master/PSRyver/Public/Set-PSRyverConfig.ps1\n\n\nGet-PSRyverConfig\n\n\nExport-PSRyverConfig\n\n\nRemove-PSRyverConfig\n\n\nInitialize-PSRyverConfig",
+            "title": "Set-PSRyverConfig"
+        },
+        {
+            "location": "/Public/Set-PSRyverConfig/#set-psryverconfig",
+            "text": "",
+            "title": "Set-PSRyverConfig"
+        },
+        {
+            "location": "/Public/Set-PSRyverConfig/#synopsis",
+            "text": "Sets parameters in the PSRyver module configuration.",
+            "title": "SYNOPSIS"
+        },
+        {
+            "location": "/Public/Set-PSRyverConfig/#syntax",
+            "text": "Set-PSRyverConfig [[-RestApiBaseUri] <String>] [[-Credential] <PSCredential>] [[-IncomingWebhookUri] <String>]\n [[-Proxy] <String>] [-MapUser] [-ForceVerbose] [-WhatIf] [-Confirm] [<CommonParameters>]",
+            "title": "SYNTAX"
+        },
+        {
+            "location": "/Public/Set-PSRyverConfig/#description",
+            "text": "Sets parameters in the PSRyver module configuration, which are stored in the\n$Script:PSRyver variable.",
+            "title": "DESCRIPTION"
+        },
+        {
+            "location": "/Public/Set-PSRyverConfig/#examples",
+            "text": "",
+            "title": "EXAMPLES"
+        },
+        {
+            "location": "/Public/Set-PSRyverConfig/#example-1",
+            "text": "Set-PSRyverConfig https://example.ryver.com/api/1/odata.svc ( Get-Credential )  Uses positional parameters to set the $Script:PSRyver.RestApiBaseUri value\nstoring the default REST API URI and the $Script:PSRyver.Authorization value\nstoring the basic authentication authorization header to use for all requests.  The values of all other settings are left intact.",
+            "title": "EXAMPLE 1"
+        },
+        {
+            "location": "/Public/Set-PSRyverConfig/#example-2",
+            "text": "Set-PSRyverConfig -IncomingWebhookUri https://example.ryver.com/application/webhook/4z-_G76nj7Fic-M  Sets the $Script:PSRyver.IncomingWebhookUri value storing the default\nincoming webhook URI to use for all requests.  The values of all other settings are left intact.",
+            "title": "EXAMPLE 2"
+        },
+        {
+            "location": "/Public/Set-PSRyverConfig/#example-3",
+            "text": "[PSCustomObject] @{ Proxy = 'https://192.168.1.1/'; MapUser = $true; ForceVerbose = $true } | Set-PSRyverConfig  Configures the default proxy, enables user mapping, and prevents sensitive\nvalues from being redacted.  The values of all other settings are left intact.",
+            "title": "EXAMPLE 3"
+        },
+        {
+            "location": "/Public/Set-PSRyverConfig/#parameters",
+            "text": "",
+            "title": "PARAMETERS"
+        },
+        {
+            "location": "/Public/Set-PSRyverConfig/#-credential",
+            "text": "Specify the Credentials to use for basic authentication.  Only serialized to disk as the base64 encoded authorization header value on\nWindows via DPAPI.  Type :   PSCredential  Parameter Sets :   (All)  Aliases :  Required :   False  Position :   2  Default value :   None  Accept pipeline input :   True (ByPropertyName)  Accept wildcard characters :   False",
+            "title": "-Credential"
+        },
+        {
+            "location": "/Public/Set-PSRyverConfig/#-forceverbose",
+            "text": "If set to true, we allow verbose output that may include sensitive data  *** WARNING ***\nIf you set this to true, your Ryver token will be visible as plain text in\nverbose output.  Type :   SwitchParameter  Parameter Sets :   (All)  Aliases :  Required :   False  Position :   6  Default value :   False  Accept pipeline input :   True (ByPropertyName)  Accept wildcard characters :   False",
+            "title": "-ForceVerbose"
+        },
+        {
+            "location": "/Public/Set-PSRyverConfig/#-incomingwebhookuri",
+            "text": "Specifies the incoming webhook URI. \nOnly serialized to disk on Windows via DPAPI.  Type :   String  Parameter Sets :   (All)  Aliases :  Required :   False  Position :   3  Default value :   None  Accept pipeline input :   True (ByPropertyName)  Accept wildcard characters :   False",
+            "title": "-IncomingWebhookUri"
+        },
+        {
+            "location": "/Public/Set-PSRyverConfig/#-mapuser",
+            "text": "Whether to generate a map of Ryver user ID to name on module load, for use in\nRyver File commands  Type :   SwitchParameter  Parameter Sets :   (All)  Aliases :  Required :   False  Position :   5  Default value :   False  Accept pipeline input :   True (ByPropertyName)  Accept wildcard characters :   False",
+            "title": "-MapUser"
+        },
+        {
+            "location": "/Public/Set-PSRyverConfig/#-proxy",
+            "text": "Proxy to use.  Type :   String  Parameter Sets :   (All)  Aliases :  Required :   False  Position :   4  Default value :   None  Accept pipeline input :   True (ByPropertyName)  Accept wildcard characters :   False",
+            "title": "-Proxy"
+        },
+        {
+            "location": "/Public/Set-PSRyverConfig/#-restapibaseuri",
+            "text": "Specifies the REST API URI. \nOnly serialized to disk on Windows via DPAPI.  Type :   String  Parameter Sets :   (All)  Aliases :  Required :   False  Position :   1  Default value :   None  Accept pipeline input :   True (ByPropertyName)  Accept wildcard characters :   False",
+            "title": "-RestApiBaseUri"
+        },
+        {
+            "location": "/Public/Set-PSRyverConfig/#-confirm",
+            "text": "Prompts you for confirmation before running the cmdlet.  Type :   SwitchParameter  Parameter Sets :   (All)  Aliases :   cf  Required :   False  Position :   Named  Default value :   None  Accept pipeline input :   False  Accept wildcard characters :   False",
+            "title": "-Confirm"
+        },
+        {
+            "location": "/Public/Set-PSRyverConfig/#-whatif",
+            "text": "Shows what would happen if the cmdlet runs.\nThe cmdlet is not run.  Type :   SwitchParameter  Parameter Sets :   (All)  Aliases :   wi  Required :   False  Position :   Named  Default value :   None  Accept pipeline input :   False  Accept wildcard characters :   False",
+            "title": "-WhatIf"
+        },
+        {
+            "location": "/Public/Set-PSRyverConfig/#commonparameters",
+            "text": "This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.\nFor more information, see about_CommonParameters ( http://go.microsoft.com/fwlink/?LinkID=113216 ).",
+            "title": "CommonParameters"
+        },
+        {
+            "location": "/Public/Set-PSRyverConfig/#inputs",
+            "text": "",
+            "title": "INPUTS"
+        },
+        {
+            "location": "/Public/Set-PSRyverConfig/#systemmanagementautomationpscustomobject",
+            "text": "",
+            "title": "System.Management.Automation.PSCustomObject"
+        },
+        {
+            "location": "/Public/Set-PSRyverConfig/#outputs",
+            "text": "",
+            "title": "OUTPUTS"
+        },
+        {
+            "location": "/Public/Set-PSRyverConfig/#systemvoid",
+            "text": "",
+            "title": "System.Void"
+        },
+        {
+            "location": "/Public/Set-PSRyverConfig/#notes",
+            "text": "Troy Lindsay  Twitter: @troylindsay42  GitHub: tlindsay42",
+            "title": "NOTES"
+        },
+        {
+            "location": "/Public/Set-PSRyverConfig/#related-links",
+            "text": "https://tlindsay42.github.io/PSRyver/Public/Set-PSRyverConfig/  https://github.com/PSRyver/blob/master/PSRyver/Public/Set-PSRyverConfig.ps1  Get-PSRyverConfig  Export-PSRyverConfig  Remove-PSRyverConfig  Initialize-PSRyverConfig",
+            "title": "RELATED LINKS"
+        },
+        {
+            "location": "/Public/Set-PSRyverConfigPath/",
+            "text": "Set-PSRyverConfigPath\n\u00b6\n\n\nSYNOPSIS\n\u00b6\n\n\nSets the PSRyver config file path.\n\n\nSYNTAX\n\u00b6\n\n\nSet-PSRyverConfigPath [-Path] <FileInfo> [-WhatIf] [-Confirm] [<CommonParameters>]\n\n\n\n\nDESCRIPTION\n\u00b6\n\n\nSets the PSRyver config file path.\n\n\nEXAMPLES\n\u00b6\n\n\nEXAMPLE 1\n\u00b6\n\n\nSet-PSRyverConfigPath -Path '~/.psryver.xml'\n\n\n\n\nSets the PSRyver config file path.\n\n\nEXAMPLE 2\n\u00b6\n\n\n'~/.psryver.xml' | Set-PSRyverConfigPath\n\n\n\n\nSets the PSRyver config file path via the pipeline.\n\n\nEXAMPLE 3\n\u00b6\n\n\nSet-PSRyverConfigPath '~/.psryver.xml'\n\n\n\n\nSets the PSRyver config file path via positional parameter.\n\n\nPARAMETERS\n\u00b6\n\n\n-Path\n\u00b6\n\n\nSpecifies the PSRyver config file path that will be used as the default.\n\n\nType\n:\n \nFileInfo\n\n\nParameter Sets\n:\n \n(All)\n\n\nAliases\n:\n\n\n\nRequired\n:\n \nTrue\n\n\nPosition\n:\n \n1\n\n\nDefault value\n:\n \nNone\n\n\nAccept pipeline input\n:\n \nTrue (ByValue)\n\n\nAccept wildcard characters\n:\n \nFalse\n\n\n\n\n\n-Confirm\n\u00b6\n\n\nPrompts you for confirmation before running the cmdlet.\n\n\nType\n:\n \nSwitchParameter\n\n\nParameter Sets\n:\n \n(All)\n\n\nAliases\n:\n \ncf\n\n\n\nRequired\n:\n \nFalse\n\n\nPosition\n:\n \nNamed\n\n\nDefault value\n:\n \nNone\n\n\nAccept pipeline input\n:\n \nFalse\n\n\nAccept wildcard characters\n:\n \nFalse\n\n\n\n\n\n-WhatIf\n\u00b6\n\n\nShows what would happen if the cmdlet runs.\nThe cmdlet is not run.\n\n\nType\n:\n \nSwitchParameter\n\n\nParameter Sets\n:\n \n(All)\n\n\nAliases\n:\n \nwi\n\n\n\nRequired\n:\n \nFalse\n\n\nPosition\n:\n \nNamed\n\n\nDefault value\n:\n \nNone\n\n\nAccept pipeline input\n:\n \nFalse\n\n\nAccept wildcard characters\n:\n \nFalse\n\n\n\n\n\nCommonParameters\n\u00b6\n\n\nThis cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.\nFor more information, see about_CommonParameters (\nhttp://go.microsoft.com/fwlink/?LinkID=113216\n).\n\n\nINPUTS\n\u00b6\n\n\nSystem.IO.FileInfo\n\u00b6\n\n\nOUTPUTS\n\u00b6\n\n\nSystem.IO.FileInfo\n\u00b6\n\n\nNOTES\n\u00b6\n\n\n\n\nTroy Lindsay\n\n\nTwitter: @troylindsay42\n\n\nGitHub: tlindsay42\n\n\n\n\nRELATED LINKS\n\u00b6\n\n\nhttps://tlindsay42.github.io/PSRyver/Public/Set-PSRyverConfigPath/\n\n\nhttps://github.com/PSRyver/blob/master/PSRyver/Public/Set-PSRyverConfigPath.ps1\n\n\nGet-PSRyverConfigPath",
+            "title": "Set-PSRyverConfigPath"
+        },
+        {
+            "location": "/Public/Set-PSRyverConfigPath/#set-psryverconfigpath",
+            "text": "",
+            "title": "Set-PSRyverConfigPath"
+        },
+        {
+            "location": "/Public/Set-PSRyverConfigPath/#synopsis",
+            "text": "Sets the PSRyver config file path.",
+            "title": "SYNOPSIS"
+        },
+        {
+            "location": "/Public/Set-PSRyverConfigPath/#syntax",
+            "text": "Set-PSRyverConfigPath [-Path] <FileInfo> [-WhatIf] [-Confirm] [<CommonParameters>]",
+            "title": "SYNTAX"
+        },
+        {
+            "location": "/Public/Set-PSRyverConfigPath/#description",
+            "text": "Sets the PSRyver config file path.",
+            "title": "DESCRIPTION"
+        },
+        {
+            "location": "/Public/Set-PSRyverConfigPath/#examples",
+            "text": "",
+            "title": "EXAMPLES"
+        },
+        {
+            "location": "/Public/Set-PSRyverConfigPath/#example-1",
+            "text": "Set-PSRyverConfigPath -Path '~/.psryver.xml'  Sets the PSRyver config file path.",
+            "title": "EXAMPLE 1"
+        },
+        {
+            "location": "/Public/Set-PSRyverConfigPath/#example-2",
+            "text": "'~/.psryver.xml' | Set-PSRyverConfigPath  Sets the PSRyver config file path via the pipeline.",
+            "title": "EXAMPLE 2"
+        },
+        {
+            "location": "/Public/Set-PSRyverConfigPath/#example-3",
+            "text": "Set-PSRyverConfigPath '~/.psryver.xml'  Sets the PSRyver config file path via positional parameter.",
+            "title": "EXAMPLE 3"
+        },
+        {
+            "location": "/Public/Set-PSRyverConfigPath/#parameters",
+            "text": "",
+            "title": "PARAMETERS"
+        },
+        {
+            "location": "/Public/Set-PSRyverConfigPath/#-path",
+            "text": "Specifies the PSRyver config file path that will be used as the default.  Type :   FileInfo  Parameter Sets :   (All)  Aliases :  Required :   True  Position :   1  Default value :   None  Accept pipeline input :   True (ByValue)  Accept wildcard characters :   False",
+            "title": "-Path"
+        },
+        {
+            "location": "/Public/Set-PSRyverConfigPath/#-confirm",
+            "text": "Prompts you for confirmation before running the cmdlet.  Type :   SwitchParameter  Parameter Sets :   (All)  Aliases :   cf  Required :   False  Position :   Named  Default value :   None  Accept pipeline input :   False  Accept wildcard characters :   False",
+            "title": "-Confirm"
+        },
+        {
+            "location": "/Public/Set-PSRyverConfigPath/#-whatif",
+            "text": "Shows what would happen if the cmdlet runs.\nThe cmdlet is not run.  Type :   SwitchParameter  Parameter Sets :   (All)  Aliases :   wi  Required :   False  Position :   Named  Default value :   None  Accept pipeline input :   False  Accept wildcard characters :   False",
+            "title": "-WhatIf"
+        },
+        {
+            "location": "/Public/Set-PSRyverConfigPath/#commonparameters",
+            "text": "This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.\nFor more information, see about_CommonParameters ( http://go.microsoft.com/fwlink/?LinkID=113216 ).",
+            "title": "CommonParameters"
+        },
+        {
+            "location": "/Public/Set-PSRyverConfigPath/#inputs",
+            "text": "",
+            "title": "INPUTS"
+        },
+        {
+            "location": "/Public/Set-PSRyverConfigPath/#systemiofileinfo",
+            "text": "",
+            "title": "System.IO.FileInfo"
+        },
+        {
+            "location": "/Public/Set-PSRyverConfigPath/#outputs",
+            "text": "",
+            "title": "OUTPUTS"
+        },
+        {
+            "location": "/Public/Set-PSRyverConfigPath/#systemiofileinfo_1",
+            "text": "",
+            "title": "System.IO.FileInfo"
+        },
+        {
+            "location": "/Public/Set-PSRyverConfigPath/#notes",
+            "text": "Troy Lindsay  Twitter: @troylindsay42  GitHub: tlindsay42",
+            "title": "NOTES"
+        },
+        {
+            "location": "/Public/Set-PSRyverConfigPath/#related-links",
+            "text": "https://tlindsay42.github.io/PSRyver/Public/Set-PSRyverConfigPath/  https://github.com/PSRyver/blob/master/PSRyver/Public/Set-PSRyverConfigPath.ps1  Get-PSRyverConfigPath",
+            "title": "RELATED LINKS"
+        },
+        {
             "location": "/Private/Assert-RyverApiConfig/",
-            "text": "Assert-RyverApiConfig\n\u00b6\n\n\nSYNOPSIS\n\u00b6\n\n\nValidates the Ryver REST API configuration.\n\n\nSYNTAX\n\u00b6\n\n\nAssert-RyverApiConfig [<CommonParameters>]\n\n\n\n\nDESCRIPTION\n\u00b6\n\n\nValidates that the $Script:PSPRyver.RestApiBaseUri and\n$Script:PSPRyver.Authorization values are set to valid\nspecifications, and throws terminating errors if not.\n\n\nEXAMPLES\n\u00b6\n\n\nEXAMPLE 1\n\u00b6\n\n\nAssert-RyverApiConfig\n\n\n\n\nValidates that the $Script:PSPRyver.RestApiBaseUri and\n$Script:PSPRyver.Authorization values are set to valid\nspecifications, and throws terminating errors if not.\n\n\nPARAMETERS\n\u00b6\n\n\nCommonParameters\n\u00b6\n\n\nThis cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.\nFor more information, see about_CommonParameters (\nhttp://go.microsoft.com/fwlink/?LinkID=113216\n).\n\n\nINPUTS\n\u00b6\n\n\nNone\n\u00b6\n\n\nYou cannot pipe input to this cmdlet.\n\n\n\n\n\nOUTPUTS\n\u00b6\n\n\nSystem.Boolean\n\u00b6\n\n\nNOTES\n\u00b6\n\n\n\n\nTroy Lindsay\n\n\nTwitter: @troylindsay42\n\n\nGitHub: tlindsay42\n\n\n\n\nRELATED LINKS\n\u00b6\n\n\nhttps://tlindsay42.github.io/PSRyver/Private/Assert-RyverApiConfig/\n\n\nhttps://github.com/PSRyver/blob/master/PSRyver/Private/Assert-RyverApiConfig.ps1",
+            "text": "Assert-RyverApiConfig\n\u00b6\n\n\nSYNOPSIS\n\u00b6\n\n\nValidates the PSRyver REST API configuration.\n\n\nSYNTAX\n\u00b6\n\n\nAssert-RyverApiConfig [<CommonParameters>]\n\n\n\n\nDESCRIPTION\n\u00b6\n\n\nValidates that the $Script:PSPRyver.RestApiBaseUri and\n$Script:PSPRyver.Authorization values are set to valid\nspecifications, and throws terminating errors if not.\n\n\nEXAMPLES\n\u00b6\n\n\nEXAMPLE 1\n\u00b6\n\n\nAssert-RyverApiConfig\n\n\n\n\nValidates that the $Script:PSPRyver.RestApiBaseUri and\n$Script:PSPRyver.Authorization values are set to valid\nspecifications, and throws terminating errors if not.\n\n\nPARAMETERS\n\u00b6\n\n\nCommonParameters\n\u00b6\n\n\nThis cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.\nFor more information, see about_CommonParameters (\nhttp://go.microsoft.com/fwlink/?LinkID=113216\n).\n\n\nINPUTS\n\u00b6\n\n\nNone\n\u00b6\n\n\nYou cannot pipe input to this cmdlet.\n\n\n\n\n\nOUTPUTS\n\u00b6\n\n\nSystem.Void\n\u00b6\n\n\nNOTES\n\u00b6\n\n\n\n\nTroy Lindsay\n\n\nTwitter: @troylindsay42\n\n\nGitHub: tlindsay42\n\n\n\n\nRELATED LINKS\n\u00b6\n\n\nhttps://tlindsay42.github.io/PSRyver/Private/Assert-RyverApiConfig/\n\n\nhttps://github.com/PSRyver/blob/master/PSRyver/Private/Assert-RyverApiConfig.ps1",
             "title": "Assert-RyverApiConfig"
         },
         {
@@ -412,7 +892,7 @@
         },
         {
             "location": "/Private/Assert-RyverApiConfig/#synopsis",
-            "text": "Validates the Ryver REST API configuration.",
+            "text": "Validates the PSRyver REST API configuration.",
             "title": "SYNOPSIS"
         },
         {
@@ -461,9 +941,9 @@
             "title": "OUTPUTS"
         },
         {
-            "location": "/Private/Assert-RyverApiConfig/#systemboolean",
+            "location": "/Private/Assert-RyverApiConfig/#systemvoid",
             "text": "",
-            "title": "System.Boolean"
+            "title": "System.Void"
         },
         {
             "location": "/Private/Assert-RyverApiConfig/#notes",
@@ -567,7 +1047,7 @@
         },
         {
             "location": "/Private/ConvertFrom-UnixTime/",
-            "text": "ConvertFrom-UnixTime\n\u00b6\n\n\nSYNOPSIS\n\u00b6\n\n\nConvert UNIX time to datetime objects.\n\n\nSYNTAX\n\u00b6\n\n\nConvertFrom-UnixTime [-UnixTime] <Int32> [<CommonParameters>]\n\n\n\n\nDESCRIPTION\n\u00b6\n\n\nConvert UNIX time to datetime objects.\n\n\nEXAMPLES\n\u00b6\n\n\nEXAMPLE 1\n\u00b6\n\n\nConvertFrom-UnixTime -UnixTime 1532186850\n\n\n\n\nReturns 'Saturday, July 21, 2018 15:27:30'.\n\n\nEXAMPLE 2\n\u00b6\n\n\n1532186850 | ConvertFrom-UnixTime\n\n\n\n\nProcesses the pipeline value and returns\n'Saturday, July 21, 2018 15:27:30'.\n\n\nEXAMPLE 3\n\u00b6\n\n\nConvertFrom-UnixTime 1532186850\n\n\n\n\nUses positional parameter and returns\n'Saturday, July 21, 2018 15:27:30'.\n\n\nPARAMETERS\n\u00b6\n\n\n-UnixTime\n\u00b6\n\n\nThe UNIX formatted date & time.\n\n\nType\n:\n \nInt32\n\n\nParameter Sets\n:\n \n(All)\n\n\nAliases\n:\n\n\n\nRequired\n:\n \nTrue\n\n\nPosition\n:\n \n1\n\n\nDefault value\n:\n \n0\n\n\nAccept pipeline input\n:\n \nTrue (ByValue)\n\n\nAccept wildcard characters\n:\n \nFalse\n\n\n\n\n\nCommonParameters\n\u00b6\n\n\nThis cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.\nFor more information, see about_CommonParameters (\nhttp://go.microsoft.com/fwlink/?LinkID=113216\n).\n\n\nINPUTS\n\u00b6\n\n\nSystem.Int32\n\u00b6\n\n\nOUTPUTS\n\u00b6\n\n\nSystem.DateTime\n\u00b6\n\n\nNOTES\n\u00b6\n\n\n\n\nTroy Lindsay\n\n\nTwitter: @troylindsay42\n\n\nGitHub: tlindsay42\n\n\n\n\nRELATED LINKS\n\u00b6\n\n\nhttps://tlindsay42.github.io/PSRyver/Private/ConvertFrom-UnixTime/\n\n\nhttps://github.com/PSRyver/blob/master/PSRyver/Private/ConvertFrom-UnixTime.ps1\n\n\nhttp://powershell.com/cs/blogs/tips/archive/2012/03/09/converting-unix-time.aspx",
+            "text": "ConvertFrom-UnixTime\n\u00b6\n\n\nSYNOPSIS\n\u00b6\n\n\nConvert UNIX time to datetime objects.\n\n\nSYNTAX\n\u00b6\n\n\nConvertFrom-UnixTime [-UnixTime] <Int32> [<CommonParameters>]\n\n\n\n\nDESCRIPTION\n\u00b6\n\n\nConvert UNIX time to System.DateTime objects.\n\n\nEXAMPLES\n\u00b6\n\n\nEXAMPLE 1\n\u00b6\n\n\nConvertFrom-UnixTime -UnixTime 1532186850\n\n\n\n\nReturns 'Saturday, July 21, 2018 15:27:30'.\n\n\nEXAMPLE 2\n\u00b6\n\n\n1532186850 | ConvertFrom-UnixTime\n\n\n\n\nProcesses the pipeline value and returns\n'Saturday, July 21, 2018 15:27:30'.\n\n\nEXAMPLE 3\n\u00b6\n\n\nConvertFrom-UnixTime 1532186850\n\n\n\n\nUses positional parameter and returns\n'Saturday, July 21, 2018 15:27:30'.\n\n\nPARAMETERS\n\u00b6\n\n\n-UnixTime\n\u00b6\n\n\nThe UNIX formatted date & time.\n\n\nType\n:\n \nInt32\n\n\nParameter Sets\n:\n \n(All)\n\n\nAliases\n:\n\n\n\nRequired\n:\n \nTrue\n\n\nPosition\n:\n \n1\n\n\nDefault value\n:\n \n0\n\n\nAccept pipeline input\n:\n \nTrue (ByValue)\n\n\nAccept wildcard characters\n:\n \nFalse\n\n\n\n\n\nCommonParameters\n\u00b6\n\n\nThis cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.\nFor more information, see about_CommonParameters (\nhttp://go.microsoft.com/fwlink/?LinkID=113216\n).\n\n\nINPUTS\n\u00b6\n\n\nSystem.Int32\n\u00b6\n\n\nOUTPUTS\n\u00b6\n\n\nSystem.DateTime\n\u00b6\n\n\nNOTES\n\u00b6\n\n\n\n\nTroy Lindsay\n\n\nTwitter: @troylindsay42\n\n\nGitHub: tlindsay42\n\n\n\n\nRELATED LINKS\n\u00b6\n\n\nhttps://tlindsay42.github.io/PSRyver/Private/ConvertFrom-UnixTime/\n\n\nhttps://github.com/PSRyver/blob/master/PSRyver/Private/ConvertFrom-UnixTime.ps1\n\n\nhttp://powershell.com/cs/blogs/tips/archive/2012/03/09/converting-unix-time.aspx",
             "title": "ConvertFrom-UnixTime"
         },
         {
@@ -587,7 +1067,7 @@
         },
         {
             "location": "/Private/ConvertFrom-UnixTime/#description",
-            "text": "Convert UNIX time to datetime objects.",
+            "text": "Convert UNIX time to System.DateTime objects.",
             "title": "DESCRIPTION"
         },
         {

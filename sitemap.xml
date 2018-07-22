@@ -11,12 +11,37 @@
      <changefreq>daily</changefreq>
     </url>
     <url>
+     <loc>https://tlindsay42.github.io/PSRyver/Public/Get-PSRyverConfig/</loc>
+     <lastmod>2018-07-22</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>https://tlindsay42.github.io/PSRyver/Public/Get-PSRyverConfigPath/</loc>
+     <lastmod>2018-07-22</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
      <loc>https://tlindsay42.github.io/PSRyver/Public/Get-RyverForum/</loc>
      <lastmod>2018-07-22</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>https://tlindsay42.github.io/PSRyver/Public/Get-RyverTeam/</loc>
+     <lastmod>2018-07-22</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>https://tlindsay42.github.io/PSRyver/Public/Import-PSRyverConfig/</loc>
+     <lastmod>2018-07-22</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>https://tlindsay42.github.io/PSRyver/Public/Set-PSRyverConfig/</loc>
+     <lastmod>2018-07-22</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>https://tlindsay42.github.io/PSRyver/Public/Set-PSRyverConfigPath/</loc>
      <lastmod>2018-07-22</lastmod>
      <changefreq>daily</changefreq>
     </url>
