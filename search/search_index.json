@@ -2,7 +2,7 @@
     "docs": [
         {
             "location": "/",
-            "text": "PSRyver\n\u00b6\n\n\n\n\nThis is a quick and dirty community module to interact with the Ryver API.\n\n\nPull requests and other contributions would be welcome!\n\n\nPrerequisites\n\u00b6\n\n\n\n\nPowerShell 3 or later\n\n\nValid credentials or an incoming webhook URI from Ryver.\n\n\nAdd an incoming webhook to your team, grab the URI\n\n\n\n\n\n\n\n\nGetting Started\n\u00b6\n\n\n\n\nInstallation\n\n\nPowerShell 3 & 4\n\n\nDownload the repository\n\n\nUnblock the zip\n\n\nExtract the PSRyver folder to a module path in \n$Env:PSModulePath\n\n\nExample: \n\"$Env:USERPROFILE\\Documents\\WindowsPowerShell\\Modules\\\"\n\n\n\n\n\n\n\n\n\n\nPowerShell 5+\n    \nInstall-Module\n \n-Name\n \n'PSRyver'\n\n\nImport-Module\n \n-Name\n \n'PSRyver'\n\n\n\n\n\n\n\n\nList the commands in the module\n    \nGet-Command\n \n-Module\n \n'PSRyver'\n\n\n\n\nGet help\n    \nGet-Help\n \n-Name\n \n'Send-RyverMessage'\n \n-Full\n\n\nGet-Help\n \n-Name\n \n'about_PSRyver'\n\n\n\n\n\n\nExamples\n\u00b6\n\n\nSend a Simple Ryver Message\n\u00b6\n\n\n\n\nThis example shows a crudely crafted message without any attachments, using parameters from \nSend-RyverMessage\n to construct the message.\n  NOTE: This assumes that an incoming webhook URI was setup at \n\"https://${yourTeam}.ryver.com/\"\n\n\nSend a direct message to @tlindsay42 (not a channel), parsing the text to linkify usernames and channels\n    \n$splat\n \n=\n \n@{\n\n    \nURI\n     \n=\n \n'Some incoming webhook URI from Ryver'\n\n    \nChannel\n \n=\n \n'@tlindsay42'\n\n    \nParse\n   \n=\n \n'full'\n\n    \nText\n    \n=\n \n'Hello @tlindsay42, join me in #devnull!'\n\n\n}\n\n\nSend-RyverMessage\n \n@splat\n\n\n\n\n\n\n\n\n\nSearch for a Ryver Message\n\u00b6\n\n\n\n\nSearch for a message containing PowerShell, sorting results by timestamp.\n    \n$splat\n \n=\n \n@{\n\n    \nURI\n    \n=\n \n'Some incoming webhook URI from Ryver'\n\n    \nQuery\n  \n=\n \n'PowerShell'\n\n    \nSortBy\n \n=\n \n'timestamp'\n\n\n}\n\n\nFind-RyverMessage\n \n@splat\n\n\n\n\n\n\n\n\n\n\n\nSearch for a message containing PowerShell\n\n\nResults are sorted by best match by default\n\n\nNotice the extra properties and previous/next messages\n    \n$splat\n \n=\n \n@{\n\n    \nToken\n    \n=\n \n$Token\n\n    \nQuery\n    \n=\n \n'PowerShell'\n\n    \nProperty\n \n=\n \n'*'\n\n\n}\n\n\nFind-RyverMessage\n \n@splat\n \n|\n\n    \nSelect-Object\n \n-Property\n \n'*'\n\n\n\n\n\n\n\n\n\nYou could use this simply to search Ryver from the CLI, or in an automated solution that might avoid posting if certain content is already found in Ryver.\n\n\nSend a Richer Ryver Message\n\u00b6\n\n\n\n\nThis is a simple example illustrating some common options when constructing a message attachment giving you a richer message\n    \n$splat\n \n=\n \n@{\n\n    \nColor\n      \n=\n \n[System.Drawing.Color]\n::\nRed\n\n    \nTitle\n      \n=\n \n'The System Is Down'\n\n    \nTitleLink\n  \n=\n \n'https://www.youtube.com/watch?v=TmpRs7xN06Q'\n\n    \nText\n       \n=\n \n'Please Do The Needful'\n\n    \nPretext\n    \n=\n \n'Everything is broken'\n\n    \nAuthorName\n \n=\n \n'SCOM Bot'\n\n    \nAuthorIcon\n \n=\n \n'https://tlindsay42.github.io/PSRyver/img/wrench.png'\n\n    \nFallback\n   \n=\n \n'Your client is bad'\n\n\n}\n\n\nNew-RyverMessageAttachment\n \n@splat\n \n|\n\n    \nNew-RyverMessage\n \n-Channel\n \n'@tlindsay42'\n \n-IconEmoji\n \n':bomb:'\n \n|\n\n    \nSend-RyverMessage\n \n-URI\n \n'Some incoming webhook URI from Ryver'\n\n\n\n\n\n\n\n\n\nNotice that the title is clickable.  You might link to:\n\n\n\n\nThe alert in question\n\n\nA logging solution query\n\n\nA dashboard\n\n\nSome other contextual link\n\n\nStrongbad\n\n\n\n\nSend Multiple Ryver Attachments\n\u00b6\n\n\n\n\nThis example demonstrates that you can chain new attachments together to form a multi-attachment message.\n\n\n\n\n$attachment1\n \n=\n \n@{\n\n    \nColor\n     \n=\n \n$_PSRyverColorMap\n.\nRed\n\n    \nTitle\n     \n=\n \n'The System Is Down'\n\n    \nTitleLink\n \n=\n \n'https://www.youtube.com/watch?v=TmpRs7xN06Q'\n\n    \nText\n      \n=\n \n'Everybody panic!'\n\n    \nPretext\n   \n=\n \n'Everything is broken'\n\n    \nFallback\n  \n=\n \n'Your client is bad'\n\n\n}\n\n\n$attachment2\n \n=\n \n@{\n\n    \nColor\n     \n=\n \n[System.Drawing.Color]\n::\nOrange\n\n    \nTitle\n     \n=\n \n'The Other System Is Down'\n\n    \nTitleLink\n \n=\n \n'https://www.youtube.com/watch?v=TmpRs7xN06Q'\n\n    \nText\n      \n=\n \n'Please Do The Needful'\n\n    \nFallback\n  \n=\n \n'Your client is bad'\n\n\n}\n\n\nNew-RyverMessageAttachment\n \n@attachment1\n \n|\n\n    \nNew-RyverMessageAttachment\n \n@attachment2\n \n|\n\n    \nNew-RyverMessage\n \n-Channel\n \n'@tlindsay42'\n \n-IconEmoji\n \n':bomb:'\n \n-AsUser\n \n-Username\n \n'SCOM Bot'\n \n|\n\n    \nSend-RyverMessage\n \n-URI\n \n'Some incoming webhook URI from Ryver'\n\n\n\n\n\n\n\n\nNotice that we can chain multiple \nNew-RyverMessageAttachment\ns together.\n\n\nSend a Table of Key Value Pairs\n\u00b6\n\n\n\n\nThis example illustrates a pattern where you might want to send output from a script; you might include errors, successful items, or other output.\n\n\n\n\nPretend we're in a script, and caught an exception of some sort\n    \n$fail\n \n=\n \n[PSCustomObject]\n \n@{\n\n    \nSAMAccountName\n \n=\n \n'bob'\n\n    \nOperation\n      \n=\n \n'Remove privileges'\n\n    \nStatus\n         \n=\n \n\"An error message\"\n\n    \nTimestamp\n      \n=\n \n(\n \nGet-Date\n \n).\nToString\n()\n\n\n}\n\n\n\n# Create an array from the properties in our fail object\n\n\n$fields\n \n=\n \n@()\n\n\nforeach\n(\n \n$property\n \nin\n \n$fail\n.\nPSObject\n.\nProperties\n.\nName\n)\n\n\n{\n\n    \n$fields\n \n+=\n \n@{\n\n        \nTitle\n \n=\n \n$property\n\n        \nValue\n \n=\n \n$fail\n.\n$property\n\n        \nShort\n \n=\n \n$true\n\n    \n}\n\n\n}\n\n\n\n# Construct and send the message!\n\n\n$splat\n \n=\n \n@{\n\n    \nColor\n    \n=\n \n[System.Drawing.Color]\n::\nOrange\n\n    \nTitle\n    \n=\n \n'Failed to process account'\n\n    \nFields\n   \n=\n \n$Fields\n\n    \nFallback\n \n=\n \n'Your client is bad'\n\n\n}\n\n\nNew-RyverMessageAttachment\n \n@splat\n \n|\n\n    \nNew-RyverMessage\n \n-Channel\n \n'devnull'\n \n|\n\n    \nSend-RyverMessage\n \n-URI\n \n'Some incoming webhook URI from Ryver'\n\n\n\n\n\n\n\n\nWe build up a pretend error object, and send each property to a \nfields\n array\n\n\n\n\nCreates an attachment with the fields from our error\n\n\nCreates a message from that attachment and send it with an incoming webhook URI\n\n\n\n\n\n\n\nStore and Retrieve Configs\n\u00b6\n\n\n\n\nTo save time and typing, you can save your credentials or incoming webhook URI to a config file (protected via DPAPI) and a module variable.\n\n\nThis is used as the default for commands, and is reloaded if you open a new PowerShell session.\n\n\n\n\nIncoming Webhook URI\n\u00b6\n\n\nSet-PSRyverConfig\n \n-URI\n \n'SomeRyverUri'\n\n\n\n# Read the current cofig\n\n\nGet-PSRyverConfig\n\n\n\n\n\nCredentials\n\u00b6\n\n\nSet-PSRyverConfig\n \n-Credential\n \n(\n \nGet-Credential\n \n)\n\n\n\n# Read the current cofig\n\n\nGet-PSRyverConfig\n\n\n\n\n\nNotes\n\u00b6\n\n\nThis project was ported with \n from v0.1.0 of \nWarren Frame's\n awesome \nPSSlack project\n.  Thanks Warren!\n\n\nCurrently evaluating .NET Core / Cross-platform functionality.  The following will not work initially:\n\n\n\n\nSerialization of URIs via \nSet-PSRyverConfig\n.  Set these values per-session if needed.\n\n\n[System.Drawing.Color]::SomeColor\n shortcut.  Use the provided \n$_PSRyverColorMap\n hash to simplify this.\n\n\nExample: \n$_PSRyverColorMap.Red\n\n\n\n\n\n\n\n\nIf you want to go beyond interacting with the Ryver API, you might consider \nusing a bot\n.",
+            "text": "PSRyver\n\u00b6\n\n\n\n\nThis is a quick and dirty community module to interact with the Ryver API.\n\n\nPull requests and other contributions would be welcome!\n\n\nPrerequisites\n\u00b6\n\n\n\n\nPowerShell 3 or later\n\n\nValid credentials or an incoming webhook URI from Ryver.\n\n\nAdd an incoming webhook to your team, grab the URI\n\n\n\n\n\n\n\n\nGetting Started\n\u00b6\n\n\n\n\nInstallation\n\n\nPowerShell 3 & 4\n\n\nDownload the repository\n\n\nUnblock the zip\n\n\nExtract the PSRyver folder to a module path in \n$Env:PSModulePath\n\n\nExample: \n\"$Env:USERPROFILE\\Documents\\WindowsPowerShell\\Modules\\\"\n\n\n\n\n\n\n\n\n\n\nPowerShell 5+\n    \nInstall-Module\n \n-Name\n \n'PSRyver'\n\n\nImport-Module\n \n-Name\n \n'PSRyver'\n\n\n\n\n\n\n\n\nList the commands in the module\n    \nGet-Command\n \n-Module\n \n'PSRyver'\n\n\n\n\nGet help\n    \nGet-Help\n \n-Name\n \n'Send-RyverMessage'\n \n-Full\n\n\nGet-Help\n \n-Name\n \n'about_PSRyver'\n\n\n\n\n\n\nExamples\n\u00b6\n\n\nSend a Simple Ryver Message\n\u00b6\n\n\n\n\nThis example shows a crudely crafted message without any attachments, using parameters from \nSend-RyverMessage\n to construct the message.\n  NOTE: This assumes that an incoming webhook URI was setup at \n\"https://${yourTeam}.ryver.com/\"\n\n\nSend a direct message to @tlindsay42 (not a channel), parsing the text to linkify usernames and channels\n    \n$splat\n \n=\n \n@{\n\n    \nURI\n     \n=\n \n'Some incoming webhook URI from Ryver'\n\n    \nChannel\n \n=\n \n'@tlindsay42'\n\n    \nParse\n   \n=\n \n'full'\n\n    \nText\n    \n=\n \n'Hello @tlindsay42, join me in #devnull!'\n\n\n}\n\n\nSend-RyverMessage\n \n@splat\n\n\n\n\n\n\n\n\n\nSearch for a Ryver Message\n\u00b6\n\n\n\n\nSearch for a message containing PowerShell, sorting results by timestamp.\n    \n$splat\n \n=\n \n@{\n\n    \nURI\n    \n=\n \n'Some incoming webhook URI from Ryver'\n\n    \nQuery\n  \n=\n \n'PowerShell'\n\n    \nSortBy\n \n=\n \n'timestamp'\n\n\n}\n\n\nFind-RyverMessage\n \n@splat\n\n\n\n\n\n\n\n\n\n\n\nSearch for a message containing PowerShell\n\n\nResults are sorted by best match by default\n\n\nNotice the extra properties and previous/next messages\n    \n$splat\n \n=\n \n@{\n\n    \nToken\n    \n=\n \n$Token\n\n    \nQuery\n    \n=\n \n'PowerShell'\n\n    \nProperty\n \n=\n \n'*'\n\n\n}\n\n\nFind-RyverMessage\n \n@splat\n \n|\n\n    \nSelect-Object\n \n-Property\n \n'*'\n\n\n\n\n\n\n\n\n\nYou could use this simply to search Ryver from the CLI, or in an automated solution that might avoid posting if certain content is already found in Ryver.\n\n\nSend a Richer Ryver Message\n\u00b6\n\n\n\n\nThis is a simple example illustrating some common options when constructing a message attachment giving you a richer message\n    \n$splat\n \n=\n \n@{\n\n    \nColor\n      \n=\n \n[System.Drawing.Color]\n::\nRed\n\n    \nTitle\n      \n=\n \n'The System Is Down'\n\n    \nTitleLink\n  \n=\n \n'https://www.youtube.com/watch?v=TmpRs7xN06Q'\n\n    \nText\n       \n=\n \n'Please Do The Needful'\n\n    \nPretext\n    \n=\n \n'Everything is broken'\n\n    \nAuthorName\n \n=\n \n'SCOM Bot'\n\n    \nAuthorIcon\n \n=\n \n'https://tlindsay42.github.io/PSRyver/img/wrench.png'\n\n    \nFallback\n   \n=\n \n'Your client is bad'\n\n\n}\n\n\nNew-RyverMessageAttachment\n \n@splat\n \n|\n\n    \nNew-RyverMessage\n \n-Channel\n \n'@tlindsay42'\n \n-IconEmoji\n \n':bomb:'\n \n|\n\n    \nSend-RyverMessage\n \n-URI\n \n'Some incoming webhook URI from Ryver'\n\n\n\n\n\n\n\n\n\nNotice that the title is clickable.  You might link to:\n\n\n\n\nThe alert in question\n\n\nA logging solution query\n\n\nA dashboard\n\n\nSome other contextual link\n\n\nStrongbad\n\n\n\n\nSend Multiple Ryver Attachments\n\u00b6\n\n\n\n\nThis example demonstrates that you can chain new attachments together to form a multi-attachment message.\n\n\n\n\n$attachment1\n \n=\n \n@{\n\n    \nColor\n     \n=\n \n$Script:PSRyverColorMap\n.\nRed\n\n    \nTitle\n     \n=\n \n'The System Is Down'\n\n    \nTitleLink\n \n=\n \n'https://www.youtube.com/watch?v=TmpRs7xN06Q'\n\n    \nText\n      \n=\n \n'Everybody panic!'\n\n    \nPretext\n   \n=\n \n'Everything is broken'\n\n    \nFallback\n  \n=\n \n'Your client is bad'\n\n\n}\n\n\n$attachment2\n \n=\n \n@{\n\n    \nColor\n     \n=\n \n[System.Drawing.Color]\n::\nOrange\n\n    \nTitle\n     \n=\n \n'The Other System Is Down'\n\n    \nTitleLink\n \n=\n \n'https://www.youtube.com/watch?v=TmpRs7xN06Q'\n\n    \nText\n      \n=\n \n'Please Do The Needful'\n\n    \nFallback\n  \n=\n \n'Your client is bad'\n\n\n}\n\n\nNew-RyverMessageAttachment\n \n@attachment1\n \n|\n\n    \nNew-RyverMessageAttachment\n \n@attachment2\n \n|\n\n    \nNew-RyverMessage\n \n-Channel\n \n'@tlindsay42'\n \n-IconEmoji\n \n':bomb:'\n \n-AsUser\n \n-Username\n \n'SCOM Bot'\n \n|\n\n    \nSend-RyverMessage\n \n-URI\n \n'Some incoming webhook URI from Ryver'\n\n\n\n\n\n\n\n\nNotice that we can chain multiple \nNew-RyverMessageAttachment\ns together.\n\n\nSend a Table of Key Value Pairs\n\u00b6\n\n\n\n\nThis example illustrates a pattern where you might want to send output from a script; you might include errors, successful items, or other output.\n\n\n\n\nPretend we're in a script, and caught an exception of some sort\n    \n$fail\n \n=\n \n[PSCustomObject]\n \n@{\n\n    \nSAMAccountName\n \n=\n \n'bob'\n\n    \nOperation\n      \n=\n \n'Remove privileges'\n\n    \nStatus\n         \n=\n \n\"An error message\"\n\n    \nTimestamp\n      \n=\n \n(\n \nGet-Date\n \n).\nToString\n()\n\n\n}\n\n\n\n# Create an array from the properties in our fail object\n\n\n$fields\n \n=\n \n@()\n\n\nforeach\n(\n \n$property\n \nin\n \n$fail\n.\nPSObject\n.\nProperties\n.\nName\n)\n\n\n{\n\n    \n$fields\n \n+=\n \n@{\n\n        \nTitle\n \n=\n \n$property\n\n        \nValue\n \n=\n \n$fail\n.\n$property\n\n        \nShort\n \n=\n \n$true\n\n    \n}\n\n\n}\n\n\n\n# Construct and send the message!\n\n\n$splat\n \n=\n \n@{\n\n    \nColor\n    \n=\n \n[System.Drawing.Color]\n::\nOrange\n\n    \nTitle\n    \n=\n \n'Failed to process account'\n\n    \nFields\n   \n=\n \n$Fields\n\n    \nFallback\n \n=\n \n'Your client is bad'\n\n\n}\n\n\nNew-RyverMessageAttachment\n \n@splat\n \n|\n\n    \nNew-RyverMessage\n \n-Channel\n \n'devnull'\n \n|\n\n    \nSend-RyverMessage\n \n-URI\n \n'Some incoming webhook URI from Ryver'\n\n\n\n\n\n\n\n\nWe build up a pretend error object, and send each property to a \nfields\n array\n\n\n\n\nCreates an attachment with the fields from our error\n\n\nCreates a message from that attachment and send it with an incoming webhook URI\n\n\n\n\n\n\n\nStore and Retrieve Configs\n\u00b6\n\n\n\n\nTo save time and typing, you can save your credentials or incoming webhook URI to a config file (protected via DPAPI) and a module variable.\n\n\nThis is used as the default for commands, and is reloaded if you open a new PowerShell session.\n\n\n\n\nIncoming Webhook URI\n\u00b6\n\n\nSet-PSRyverConfig\n \n-URI\n \n'SomeRyverUri'\n\n\n\n# Read the current cofig\n\n\nGet-PSRyverConfig\n\n\n\n\n\nCredentials\n\u00b6\n\n\nSet-PSRyverConfig\n \n-Credential\n \n(\n \nGet-Credential\n \n)\n\n\n\n# Read the current cofig\n\n\nGet-PSRyverConfig\n\n\n\n\n\nNotes\n\u00b6\n\n\nThis project was forked with \n from v0.1.0 of \nWarren Frame's\n awesome \nPSSlack project\n.  Thanks Warren!\n\n\nCurrently evaluating .NET Core / Cross-platform functionality.  The following will not work initially:\n\n\n\n\nSerialization of URIs via \nSet-PSRyverConfig\n.  Set these values per-session if needed.\n\n\n[System.Drawing.Color]::SomeColor\n shortcut.  Use the provided \n$Script:PSRyverColorMap\n hash to simplify this.\n\n\nExample: \n$Script:PSRyverColorMap.Red\n\n\n\n\n\n\n\n\nIf you want to go beyond interacting with the Ryver API, you might consider \nusing a bot\n.",
             "title": "Home"
         },
         {
@@ -42,7 +42,7 @@
         },
         {
             "location": "/#send-multiple-ryver-attachments",
-            "text": "This example demonstrates that you can chain new attachments together to form a multi-attachment message.   $attachment1   =   @{ \n     Color       =   $_PSRyverColorMap . Red \n     Title       =   'The System Is Down' \n     TitleLink   =   'https://www.youtube.com/watch?v=TmpRs7xN06Q' \n     Text        =   'Everybody panic!' \n     Pretext     =   'Everything is broken' \n     Fallback    =   'Your client is bad'  }  $attachment2   =   @{ \n     Color       =   [System.Drawing.Color] :: Orange \n     Title       =   'The Other System Is Down' \n     TitleLink   =   'https://www.youtube.com/watch?v=TmpRs7xN06Q' \n     Text        =   'Please Do The Needful' \n     Fallback    =   'Your client is bad'  }  New-RyverMessageAttachment   @attachment1   | \n     New-RyverMessageAttachment   @attachment2   | \n     New-RyverMessage   -Channel   '@tlindsay42'   -IconEmoji   ':bomb:'   -AsUser   -Username   'SCOM Bot'   | \n     Send-RyverMessage   -URI   'Some incoming webhook URI from Ryver'    Notice that we can chain multiple  New-RyverMessageAttachment s together.",
+            "text": "This example demonstrates that you can chain new attachments together to form a multi-attachment message.   $attachment1   =   @{ \n     Color       =   $Script:PSRyverColorMap . Red \n     Title       =   'The System Is Down' \n     TitleLink   =   'https://www.youtube.com/watch?v=TmpRs7xN06Q' \n     Text        =   'Everybody panic!' \n     Pretext     =   'Everything is broken' \n     Fallback    =   'Your client is bad'  }  $attachment2   =   @{ \n     Color       =   [System.Drawing.Color] :: Orange \n     Title       =   'The Other System Is Down' \n     TitleLink   =   'https://www.youtube.com/watch?v=TmpRs7xN06Q' \n     Text        =   'Please Do The Needful' \n     Fallback    =   'Your client is bad'  }  New-RyverMessageAttachment   @attachment1   | \n     New-RyverMessageAttachment   @attachment2   | \n     New-RyverMessage   -Channel   '@tlindsay42'   -IconEmoji   ':bomb:'   -AsUser   -Username   'SCOM Bot'   | \n     Send-RyverMessage   -URI   'Some incoming webhook URI from Ryver'    Notice that we can chain multiple  New-RyverMessageAttachment s together.",
             "title": "Send Multiple Ryver Attachments"
         },
         {
@@ -67,8 +67,338 @@
         },
         {
             "location": "/#notes",
-            "text": "This project was ported with   from v0.1.0 of  Warren Frame's  awesome  PSSlack project .  Thanks Warren!  Currently evaluating .NET Core / Cross-platform functionality.  The following will not work initially:   Serialization of URIs via  Set-PSRyverConfig .  Set these values per-session if needed.  [System.Drawing.Color]::SomeColor  shortcut.  Use the provided  $_PSRyverColorMap  hash to simplify this.  Example:  $_PSRyverColorMap.Red     If you want to go beyond interacting with the Ryver API, you might consider  using a bot .",
+            "text": "This project was forked with   from v0.1.0 of  Warren Frame's  awesome  PSSlack project .  Thanks Warren!  Currently evaluating .NET Core / Cross-platform functionality.  The following will not work initially:   Serialization of URIs via  Set-PSRyverConfig .  Set these values per-session if needed.  [System.Drawing.Color]::SomeColor  shortcut.  Use the provided  $Script:PSRyverColorMap  hash to simplify this.  Example:  $Script:PSRyverColorMap.Red     If you want to go beyond interacting with the Ryver API, you might consider  using a bot .",
             "title": "Notes"
+        },
+        {
+            "location": "/Public/Export-PSRyverConfig/",
+            "text": "Export-PSRyverConfig\n\u00b6\n\n\nSYNOPSIS\n\u00b6\n\n\nSave the PSRyver module configuration to file.\n\n\nSYNTAX\n\u00b6\n\n\nExport-PSRyverConfig [[-Path] <FileInfo>] [-WhatIf] [-Confirm] [<CommonParameters>]\n\n\n\n\nDESCRIPTION\n\u00b6\n\n\nSave the PSRyver module configuration to file.\n\n\nEXAMPLES\n\u00b6\n\n\nEXAMPLE 1\n\u00b6\n\n\nExport-PSRyverConfig\n\n\n\n\nSaves the PSRyver module configuration stored in $Script:PSRyver to the default\nfile path stored in $Script:PSRyverConfigFilePath, which can be accessed via\nGet-PSRyverConfigPath and set via Set-PSRyverConfigPath. \nThe default location\nis '~/.psryver.xml'\n\n\nEXAMPLE 2\n\u00b6\n\n\nExport-PSRyverConfig -Path '~/.psryver.xml'\n\n\n\n\nSaves the PSRyver module configuration stored in $Script:PSRyver to the\nspecified path of '~/.psryver.xml'.\n\n\nEXAMPLE 3\n\u00b6\n\n\n'~/.psryver.xml' | Export-PSRyverConfig\n\n\n\n\nSaves the PSRyver module configuration stored in $Script:PSRyver to the\nspecified path of '~/.psryver.xml', which is set via the pipeline.\n\n\nPARAMETERS\n\u00b6\n\n\n-Path\n\u00b6\n\n\nSpecifies the PSRyver config file to export.\n\n\nType\n:\n \nFileInfo\n\n\nParameter Sets\n:\n \n(All)\n\n\nAliases\n:\n\n\n\nRequired\n:\n \nFalse\n\n\nPosition\n:\n \n1\n\n\nDefault value\n:\n \n$Script:PSRyverConfigFilePath\n\n\nAccept pipeline input\n:\n \nTrue (ByPropertyName, ByValue)\n\n\nAccept wildcard characters\n:\n \nFalse\n\n\n\n\n\n-Confirm\n\u00b6\n\n\nPrompts you for confirmation before running the cmdlet.\n\n\nType\n:\n \nSwitchParameter\n\n\nParameter Sets\n:\n \n(All)\n\n\nAliases\n:\n \ncf\n\n\n\nRequired\n:\n \nFalse\n\n\nPosition\n:\n \nNamed\n\n\nDefault value\n:\n \nNone\n\n\nAccept pipeline input\n:\n \nFalse\n\n\nAccept wildcard characters\n:\n \nFalse\n\n\n\n\n\n-WhatIf\n\u00b6\n\n\nShows what would happen if the cmdlet runs.\nThe cmdlet is not run.\n\n\nType\n:\n \nSwitchParameter\n\n\nParameter Sets\n:\n \n(All)\n\n\nAliases\n:\n \nwi\n\n\n\nRequired\n:\n \nFalse\n\n\nPosition\n:\n \nNamed\n\n\nDefault value\n:\n \nNone\n\n\nAccept pipeline input\n:\n \nFalse\n\n\nAccept wildcard characters\n:\n \nFalse\n\n\n\n\n\nCommonParameters\n\u00b6\n\n\nThis cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.\nFor more information, see about_CommonParameters (\nhttp://go.microsoft.com/fwlink/?LinkID=113216\n).\n\n\nINPUTS\n\u00b6\n\n\nSystem.IO.FileInfo\n\u00b6\n\n\nOUTPUTS\n\u00b6\n\n\nSystem.Void\n\u00b6\n\n\nNOTES\n\u00b6\n\n\n\n\nTroy Lindsay\n\n\nTwitter: @troylindsay42\n\n\nGitHub: tlindsay42\n\n\n\n\nRELATED LINKS\n\u00b6\n\n\nhttps://tlindsay42.github.io/PSRyver/Public/Export-PSRyverConfig/\n\n\nhttps://github.com/PSRyver/blob/master/PSRyver/Public/Export-PSRyverConfig.ps1\n\n\nImport-PSRyverConfig\n\n\nRead-PSRyverConfig\n\n\nGet-PSRyverConfig\n\n\nSet-PSRyverConfig\n\n\nGet-PSRyverConfigPath\n\n\nSet-PSRyverConfigPath",
+            "title": "Export-PSRyverConfig"
+        },
+        {
+            "location": "/Public/Export-PSRyverConfig/#export-psryverconfig",
+            "text": "",
+            "title": "Export-PSRyverConfig"
+        },
+        {
+            "location": "/Public/Export-PSRyverConfig/#synopsis",
+            "text": "Save the PSRyver module configuration to file.",
+            "title": "SYNOPSIS"
+        },
+        {
+            "location": "/Public/Export-PSRyverConfig/#syntax",
+            "text": "Export-PSRyverConfig [[-Path] <FileInfo>] [-WhatIf] [-Confirm] [<CommonParameters>]",
+            "title": "SYNTAX"
+        },
+        {
+            "location": "/Public/Export-PSRyverConfig/#description",
+            "text": "Save the PSRyver module configuration to file.",
+            "title": "DESCRIPTION"
+        },
+        {
+            "location": "/Public/Export-PSRyverConfig/#examples",
+            "text": "",
+            "title": "EXAMPLES"
+        },
+        {
+            "location": "/Public/Export-PSRyverConfig/#example-1",
+            "text": "Export-PSRyverConfig  Saves the PSRyver module configuration stored in $Script:PSRyver to the default\nfile path stored in $Script:PSRyverConfigFilePath, which can be accessed via\nGet-PSRyverConfigPath and set via Set-PSRyverConfigPath. \nThe default location\nis '~/.psryver.xml'",
+            "title": "EXAMPLE 1"
+        },
+        {
+            "location": "/Public/Export-PSRyverConfig/#example-2",
+            "text": "Export-PSRyverConfig -Path '~/.psryver.xml'  Saves the PSRyver module configuration stored in $Script:PSRyver to the\nspecified path of '~/.psryver.xml'.",
+            "title": "EXAMPLE 2"
+        },
+        {
+            "location": "/Public/Export-PSRyverConfig/#example-3",
+            "text": "'~/.psryver.xml' | Export-PSRyverConfig  Saves the PSRyver module configuration stored in $Script:PSRyver to the\nspecified path of '~/.psryver.xml', which is set via the pipeline.",
+            "title": "EXAMPLE 3"
+        },
+        {
+            "location": "/Public/Export-PSRyverConfig/#parameters",
+            "text": "",
+            "title": "PARAMETERS"
+        },
+        {
+            "location": "/Public/Export-PSRyverConfig/#-path",
+            "text": "Specifies the PSRyver config file to export.  Type :   FileInfo  Parameter Sets :   (All)  Aliases :  Required :   False  Position :   1  Default value :   $Script:PSRyverConfigFilePath  Accept pipeline input :   True (ByPropertyName, ByValue)  Accept wildcard characters :   False",
+            "title": "-Path"
+        },
+        {
+            "location": "/Public/Export-PSRyverConfig/#-confirm",
+            "text": "Prompts you for confirmation before running the cmdlet.  Type :   SwitchParameter  Parameter Sets :   (All)  Aliases :   cf  Required :   False  Position :   Named  Default value :   None  Accept pipeline input :   False  Accept wildcard characters :   False",
+            "title": "-Confirm"
+        },
+        {
+            "location": "/Public/Export-PSRyverConfig/#-whatif",
+            "text": "Shows what would happen if the cmdlet runs.\nThe cmdlet is not run.  Type :   SwitchParameter  Parameter Sets :   (All)  Aliases :   wi  Required :   False  Position :   Named  Default value :   None  Accept pipeline input :   False  Accept wildcard characters :   False",
+            "title": "-WhatIf"
+        },
+        {
+            "location": "/Public/Export-PSRyverConfig/#commonparameters",
+            "text": "This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.\nFor more information, see about_CommonParameters ( http://go.microsoft.com/fwlink/?LinkID=113216 ).",
+            "title": "CommonParameters"
+        },
+        {
+            "location": "/Public/Export-PSRyverConfig/#inputs",
+            "text": "",
+            "title": "INPUTS"
+        },
+        {
+            "location": "/Public/Export-PSRyverConfig/#systemiofileinfo",
+            "text": "",
+            "title": "System.IO.FileInfo"
+        },
+        {
+            "location": "/Public/Export-PSRyverConfig/#outputs",
+            "text": "",
+            "title": "OUTPUTS"
+        },
+        {
+            "location": "/Public/Export-PSRyverConfig/#systemvoid",
+            "text": "",
+            "title": "System.Void"
+        },
+        {
+            "location": "/Public/Export-PSRyverConfig/#notes",
+            "text": "Troy Lindsay  Twitter: @troylindsay42  GitHub: tlindsay42",
+            "title": "NOTES"
+        },
+        {
+            "location": "/Public/Export-PSRyverConfig/#related-links",
+            "text": "https://tlindsay42.github.io/PSRyver/Public/Export-PSRyverConfig/  https://github.com/PSRyver/blob/master/PSRyver/Public/Export-PSRyverConfig.ps1  Import-PSRyverConfig  Read-PSRyverConfig  Get-PSRyverConfig  Set-PSRyverConfig  Get-PSRyverConfigPath  Set-PSRyverConfigPath",
+            "title": "RELATED LINKS"
+        },
+        {
+            "location": "/Public/Get-RyverForum/",
+            "text": "Get-RyverForum\n\u00b6\n\n\nSYNOPSIS\n\u00b6\n\n\nQuery for Ryver public forum channels.\n\n\nSYNTAX\n\u00b6\n\n\nGet-RyverForum [[-Name] <String>] [-Detailed] [-Raw] [[-Credential] <PSCredential>] [<CommonParameters>]\n\n\n\n\nDESCRIPTION\n\u00b6\n\n\nQuery for Ryver public forum channels.\n\n\nEXAMPLES\n\u00b6\n\n\nEXAMPLE 1\n\u00b6\n\n\nGet-RyverForum -Name 'All Hands'\n\n\n\n\nQueries for the 'All Hands' public forum channel.\n\n\nEXAMPLE 2\n\u00b6\n\n\nGet-RyverForum -Name 'All Hand*' -Credential ( Get-Credential )\n\n\n\n\nUpdates the $Script:PSRyver.Authorization value storing the basic\nauthentication authorization header to use for all requests and then queries\nfor all public forum channels starting with the string 'All Hand', such as\n'All Hands' and 'All handsome guys like that Troy fellow'.\n=D\n\n\nEXAMPLE 3\n\u00b6\n\n\n'All Hands' | Get-RyverForum -Detailed\n\n\n\n\nQueries for detailed information about the 'All Hands' public forum channel via\nthe pipeline.\n\n\nEXAMPLE 4\n\u00b6\n\n\n'*and*' | Get-RyverForum -Raw\n\n\n\n\nQueries for all public forum channels containing the string 'and', such as\n'All Hands' and 'The Land of Magical Unicorns' and returns the raw, unformatted\noutput.\n\n\nEXAMPLE 5\n\u00b6\n\n\nGet-RyverForum 'All Hands' $true $true\n\n\n\n\nQueries for detailed information about the 'All Hands' public forum channel via\npositional parameters and returns the raw, unformatted output.\n\n\nPARAMETERS\n\u00b6\n\n\n-Credential\n\u00b6\n\n\nCredentials to use for the Ryver API.\n\n\nDefault value is the value set by Set-PSRyverConfig.\n\n\nType\n:\n \nPSCredential\n\n\nParameter Sets\n:\n \n(All)\n\n\nAliases\n:\n\n\n\nRequired\n:\n \nFalse\n\n\nPosition\n:\n \n4\n\n\nDefault value\n:\n \nNone\n\n\nAccept pipeline input\n:\n \nFalse\n\n\nAccept wildcard characters\n:\n \nFalse\n\n\n\n\n\n-Detailed\n\u00b6\n\n\nSpecifies whether to retrieve additional details about each object.\n\n\nType\n:\n \nSwitchParameter\n\n\nParameter Sets\n:\n \n(All)\n\n\nAliases\n:\n\n\n\nRequired\n:\n \nFalse\n\n\nPosition\n:\n \n2\n\n\nDefault value\n:\n \nFalse\n\n\nAccept pipeline input\n:\n \nFalse\n\n\nAccept wildcard characters\n:\n \nFalse\n\n\n\n\n\n-Name\n\u00b6\n\n\nSpecifies the public forum channel name. \nCase insensitive.\n\n\nType\n:\n \nString\n\n\nParameter Sets\n:\n \n(All)\n\n\nAliases\n:\n\n\n\nRequired\n:\n \nFalse\n\n\nPosition\n:\n \n1\n\n\nDefault value\n:\n \nNone\n\n\nAccept pipeline input\n:\n \nTrue (ByValue)\n\n\nAccept wildcard characters\n:\n \nTrue\n\n\n\n\n\n-Raw\n\u00b6\n\n\nSpecifies that objects should not be formatted.\n\n\nType\n:\n \nSwitchParameter\n\n\nParameter Sets\n:\n \n(All)\n\n\nAliases\n:\n\n\n\nRequired\n:\n \nFalse\n\n\nPosition\n:\n \n3\n\n\nDefault value\n:\n \nFalse\n\n\nAccept pipeline input\n:\n \nFalse\n\n\nAccept wildcard characters\n:\n \nFalse\n\n\n\n\n\nCommonParameters\n\u00b6\n\n\nThis cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.\nFor more information, see about_CommonParameters (\nhttp://go.microsoft.com/fwlink/?LinkID=113216\n).\n\n\nINPUTS\n\u00b6\n\n\nSystem.String\n\u00b6\n\n\nOUTPUTS\n\u00b6\n\n\nSystem.Management.Automation.PSObject\n\u00b6\n\n\nNOTES\n\u00b6\n\n\n\n\nTroy Lindsay\n\n\nTwitter: @troylindsay42\n\n\nGitHub: tlindsay42\n\n\n\n\nRELATED LINKS\n\u00b6\n\n\nhttps://tlindsay42.github.io/PSRyver/Public/Get-RyverForum/\n\n\nhttps://github.com/PSRyver/blob/master/PSRyver/Public/Get-RyverForum.ps1",
+            "title": "Get-RyverForum"
+        },
+        {
+            "location": "/Public/Get-RyverForum/#get-ryverforum",
+            "text": "",
+            "title": "Get-RyverForum"
+        },
+        {
+            "location": "/Public/Get-RyverForum/#synopsis",
+            "text": "Query for Ryver public forum channels.",
+            "title": "SYNOPSIS"
+        },
+        {
+            "location": "/Public/Get-RyverForum/#syntax",
+            "text": "Get-RyverForum [[-Name] <String>] [-Detailed] [-Raw] [[-Credential] <PSCredential>] [<CommonParameters>]",
+            "title": "SYNTAX"
+        },
+        {
+            "location": "/Public/Get-RyverForum/#description",
+            "text": "Query for Ryver public forum channels.",
+            "title": "DESCRIPTION"
+        },
+        {
+            "location": "/Public/Get-RyverForum/#examples",
+            "text": "",
+            "title": "EXAMPLES"
+        },
+        {
+            "location": "/Public/Get-RyverForum/#example-1",
+            "text": "Get-RyverForum -Name 'All Hands'  Queries for the 'All Hands' public forum channel.",
+            "title": "EXAMPLE 1"
+        },
+        {
+            "location": "/Public/Get-RyverForum/#example-2",
+            "text": "Get-RyverForum -Name 'All Hand*' -Credential ( Get-Credential )  Updates the $Script:PSRyver.Authorization value storing the basic\nauthentication authorization header to use for all requests and then queries\nfor all public forum channels starting with the string 'All Hand', such as\n'All Hands' and 'All handsome guys like that Troy fellow'.\n=D",
+            "title": "EXAMPLE 2"
+        },
+        {
+            "location": "/Public/Get-RyverForum/#example-3",
+            "text": "'All Hands' | Get-RyverForum -Detailed  Queries for detailed information about the 'All Hands' public forum channel via\nthe pipeline.",
+            "title": "EXAMPLE 3"
+        },
+        {
+            "location": "/Public/Get-RyverForum/#example-4",
+            "text": "'*and*' | Get-RyverForum -Raw  Queries for all public forum channels containing the string 'and', such as\n'All Hands' and 'The Land of Magical Unicorns' and returns the raw, unformatted\noutput.",
+            "title": "EXAMPLE 4"
+        },
+        {
+            "location": "/Public/Get-RyverForum/#example-5",
+            "text": "Get-RyverForum 'All Hands' $true $true  Queries for detailed information about the 'All Hands' public forum channel via\npositional parameters and returns the raw, unformatted output.",
+            "title": "EXAMPLE 5"
+        },
+        {
+            "location": "/Public/Get-RyverForum/#parameters",
+            "text": "",
+            "title": "PARAMETERS"
+        },
+        {
+            "location": "/Public/Get-RyverForum/#-credential",
+            "text": "Credentials to use for the Ryver API.  Default value is the value set by Set-PSRyverConfig.  Type :   PSCredential  Parameter Sets :   (All)  Aliases :  Required :   False  Position :   4  Default value :   None  Accept pipeline input :   False  Accept wildcard characters :   False",
+            "title": "-Credential"
+        },
+        {
+            "location": "/Public/Get-RyverForum/#-detailed",
+            "text": "Specifies whether to retrieve additional details about each object.  Type :   SwitchParameter  Parameter Sets :   (All)  Aliases :  Required :   False  Position :   2  Default value :   False  Accept pipeline input :   False  Accept wildcard characters :   False",
+            "title": "-Detailed"
+        },
+        {
+            "location": "/Public/Get-RyverForum/#-name",
+            "text": "Specifies the public forum channel name. \nCase insensitive.  Type :   String  Parameter Sets :   (All)  Aliases :  Required :   False  Position :   1  Default value :   None  Accept pipeline input :   True (ByValue)  Accept wildcard characters :   True",
+            "title": "-Name"
+        },
+        {
+            "location": "/Public/Get-RyverForum/#-raw",
+            "text": "Specifies that objects should not be formatted.  Type :   SwitchParameter  Parameter Sets :   (All)  Aliases :  Required :   False  Position :   3  Default value :   False  Accept pipeline input :   False  Accept wildcard characters :   False",
+            "title": "-Raw"
+        },
+        {
+            "location": "/Public/Get-RyverForum/#commonparameters",
+            "text": "This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.\nFor more information, see about_CommonParameters ( http://go.microsoft.com/fwlink/?LinkID=113216 ).",
+            "title": "CommonParameters"
+        },
+        {
+            "location": "/Public/Get-RyverForum/#inputs",
+            "text": "",
+            "title": "INPUTS"
+        },
+        {
+            "location": "/Public/Get-RyverForum/#systemstring",
+            "text": "",
+            "title": "System.String"
+        },
+        {
+            "location": "/Public/Get-RyverForum/#outputs",
+            "text": "",
+            "title": "OUTPUTS"
+        },
+        {
+            "location": "/Public/Get-RyverForum/#systemmanagementautomationpsobject",
+            "text": "",
+            "title": "System.Management.Automation.PSObject"
+        },
+        {
+            "location": "/Public/Get-RyverForum/#notes",
+            "text": "Troy Lindsay  Twitter: @troylindsay42  GitHub: tlindsay42",
+            "title": "NOTES"
+        },
+        {
+            "location": "/Public/Get-RyverForum/#related-links",
+            "text": "https://tlindsay42.github.io/PSRyver/Public/Get-RyverForum/  https://github.com/PSRyver/blob/master/PSRyver/Public/Get-RyverForum.ps1",
+            "title": "RELATED LINKS"
+        },
+        {
+            "location": "/Public/Get-RyverTeam/",
+            "text": "Get-RyverTeam\n\u00b6\n\n\nSYNOPSIS\n\u00b6\n\n\nQuery for Ryver private team channels.\n\n\nSYNTAX\n\u00b6\n\n\nGet-RyverTeam [[-Name] <String>] [-Detailed] [-Raw] [[-Credential] <PSCredential>] [<CommonParameters>]\n\n\n\n\nDESCRIPTION\n\u00b6\n\n\nQuery for Ryver private team channels.\n\n\nEXAMPLES\n\u00b6\n\n\nEXAMPLE 1\n\u00b6\n\n\nGet-RyverTeam -Name 'Members Only!'\n\n\n\n\nQueries for the 'Members Only!' private team channel.\n\n\nEXAMPLE 2\n\u00b6\n\n\nGet-RyverTeam -Name '*Only*' -Credential ( Get-Credential )\n\n\n\n\nUpdates the $Script:PSRyver.Authorization value storing the basic\nauthentication authorization header to use for all requests and then queries\nfor all private team channels containing the string 'Only', such as\n'Members Only!' and 'Ninjas only'.\n\n\nEXAMPLE 3\n\u00b6\n\n\n'Members Only!' | Get-RyverTeam -Raw\n\n\n\n\nQueries for the 'Members Only!' private team channel via the pipeline and\nreturns the raw, unformatted output.\n\n\nEXAMPLE 4\n\u00b6\n\n\n'*Member*' | Get-RyverTeam -Detailed\n\n\n\n\nQueries for detailed information about all private team channels containing the\nstring 'Member', such as 'Members Only!' and 'Illuminati Membership Committee'.\n\n\nEXAMPLE 5\n\u00b6\n\n\nGet-RyverTeam 'Members Only!' $true $true\n\n\n\n\nQueries for detailed information about the 'Members Only!' private team channel\nvia positional parameters and returns the raw, unformatted output.\n\n\nPARAMETERS\n\u00b6\n\n\n-Credential\n\u00b6\n\n\nCredentials to use for the Ryver API.\n\n\nDefault value is the value set by Set-PSRyverConfig.\n\n\nType\n:\n \nPSCredential\n\n\nParameter Sets\n:\n \n(All)\n\n\nAliases\n:\n\n\n\nRequired\n:\n \nFalse\n\n\nPosition\n:\n \n4\n\n\nDefault value\n:\n \nNone\n\n\nAccept pipeline input\n:\n \nFalse\n\n\nAccept wildcard characters\n:\n \nFalse\n\n\n\n\n\n-Detailed\n\u00b6\n\n\nSpecifies whether to retrieve additional details about each object.\n\n\nType\n:\n \nSwitchParameter\n\n\nParameter Sets\n:\n \n(All)\n\n\nAliases\n:\n\n\n\nRequired\n:\n \nFalse\n\n\nPosition\n:\n \n2\n\n\nDefault value\n:\n \nFalse\n\n\nAccept pipeline input\n:\n \nFalse\n\n\nAccept wildcard characters\n:\n \nFalse\n\n\n\n\n\n-Name\n\u00b6\n\n\nPrivate team channel name. \nCase insensitive.\n\n\nType\n:\n \nString\n\n\nParameter Sets\n:\n \n(All)\n\n\nAliases\n:\n\n\n\nRequired\n:\n \nFalse\n\n\nPosition\n:\n \n1\n\n\nDefault value\n:\n \nNone\n\n\nAccept pipeline input\n:\n \nTrue (ByValue)\n\n\nAccept wildcard characters\n:\n \nTrue\n\n\n\n\n\n-Raw\n\u00b6\n\n\nSpecifies that objects should not be formatted.\n\n\nType\n:\n \nSwitchParameter\n\n\nParameter Sets\n:\n \n(All)\n\n\nAliases\n:\n\n\n\nRequired\n:\n \nFalse\n\n\nPosition\n:\n \n3\n\n\nDefault value\n:\n \nFalse\n\n\nAccept pipeline input\n:\n \nFalse\n\n\nAccept wildcard characters\n:\n \nFalse\n\n\n\n\n\nCommonParameters\n\u00b6\n\n\nThis cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.\nFor more information, see about_CommonParameters (\nhttp://go.microsoft.com/fwlink/?LinkID=113216\n).\n\n\nINPUTS\n\u00b6\n\n\nSystem.String\n\u00b6\n\n\nOUTPUTS\n\u00b6\n\n\nSystem.Management.Automation.PSObject\n\u00b6\n\n\nNOTES\n\u00b6\n\n\n\n\nTroy Lindsay\n\n\nTwitter: @troylindsay42\n\n\nGitHub: tlindsay42\n\n\n\n\nRELATED LINKS\n\u00b6\n\n\nhttps://tlindsay42.github.io/PSRyver/Public/Get-RyverTeam/\n\n\nhttps://github.com/PSRyver/blob/master/PSRyver/Public/Get-RyverTeam.ps1",
+            "title": "Get-RyverTeam"
+        },
+        {
+            "location": "/Public/Get-RyverTeam/#get-ryverteam",
+            "text": "",
+            "title": "Get-RyverTeam"
+        },
+        {
+            "location": "/Public/Get-RyverTeam/#synopsis",
+            "text": "Query for Ryver private team channels.",
+            "title": "SYNOPSIS"
+        },
+        {
+            "location": "/Public/Get-RyverTeam/#syntax",
+            "text": "Get-RyverTeam [[-Name] <String>] [-Detailed] [-Raw] [[-Credential] <PSCredential>] [<CommonParameters>]",
+            "title": "SYNTAX"
+        },
+        {
+            "location": "/Public/Get-RyverTeam/#description",
+            "text": "Query for Ryver private team channels.",
+            "title": "DESCRIPTION"
+        },
+        {
+            "location": "/Public/Get-RyverTeam/#examples",
+            "text": "",
+            "title": "EXAMPLES"
+        },
+        {
+            "location": "/Public/Get-RyverTeam/#example-1",
+            "text": "Get-RyverTeam -Name 'Members Only!'  Queries for the 'Members Only!' private team channel.",
+            "title": "EXAMPLE 1"
+        },
+        {
+            "location": "/Public/Get-RyverTeam/#example-2",
+            "text": "Get-RyverTeam -Name '*Only*' -Credential ( Get-Credential )  Updates the $Script:PSRyver.Authorization value storing the basic\nauthentication authorization header to use for all requests and then queries\nfor all private team channels containing the string 'Only', such as\n'Members Only!' and 'Ninjas only'.",
+            "title": "EXAMPLE 2"
+        },
+        {
+            "location": "/Public/Get-RyverTeam/#example-3",
+            "text": "'Members Only!' | Get-RyverTeam -Raw  Queries for the 'Members Only!' private team channel via the pipeline and\nreturns the raw, unformatted output.",
+            "title": "EXAMPLE 3"
+        },
+        {
+            "location": "/Public/Get-RyverTeam/#example-4",
+            "text": "'*Member*' | Get-RyverTeam -Detailed  Queries for detailed information about all private team channels containing the\nstring 'Member', such as 'Members Only!' and 'Illuminati Membership Committee'.",
+            "title": "EXAMPLE 4"
+        },
+        {
+            "location": "/Public/Get-RyverTeam/#example-5",
+            "text": "Get-RyverTeam 'Members Only!' $true $true  Queries for detailed information about the 'Members Only!' private team channel\nvia positional parameters and returns the raw, unformatted output.",
+            "title": "EXAMPLE 5"
+        },
+        {
+            "location": "/Public/Get-RyverTeam/#parameters",
+            "text": "",
+            "title": "PARAMETERS"
+        },
+        {
+            "location": "/Public/Get-RyverTeam/#-credential",
+            "text": "Credentials to use for the Ryver API.  Default value is the value set by Set-PSRyverConfig.  Type :   PSCredential  Parameter Sets :   (All)  Aliases :  Required :   False  Position :   4  Default value :   None  Accept pipeline input :   False  Accept wildcard characters :   False",
+            "title": "-Credential"
+        },
+        {
+            "location": "/Public/Get-RyverTeam/#-detailed",
+            "text": "Specifies whether to retrieve additional details about each object.  Type :   SwitchParameter  Parameter Sets :   (All)  Aliases :  Required :   False  Position :   2  Default value :   False  Accept pipeline input :   False  Accept wildcard characters :   False",
+            "title": "-Detailed"
+        },
+        {
+            "location": "/Public/Get-RyverTeam/#-name",
+            "text": "Private team channel name. \nCase insensitive.  Type :   String  Parameter Sets :   (All)  Aliases :  Required :   False  Position :   1  Default value :   None  Accept pipeline input :   True (ByValue)  Accept wildcard characters :   True",
+            "title": "-Name"
+        },
+        {
+            "location": "/Public/Get-RyverTeam/#-raw",
+            "text": "Specifies that objects should not be formatted.  Type :   SwitchParameter  Parameter Sets :   (All)  Aliases :  Required :   False  Position :   3  Default value :   False  Accept pipeline input :   False  Accept wildcard characters :   False",
+            "title": "-Raw"
+        },
+        {
+            "location": "/Public/Get-RyverTeam/#commonparameters",
+            "text": "This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.\nFor more information, see about_CommonParameters ( http://go.microsoft.com/fwlink/?LinkID=113216 ).",
+            "title": "CommonParameters"
+        },
+        {
+            "location": "/Public/Get-RyverTeam/#inputs",
+            "text": "",
+            "title": "INPUTS"
+        },
+        {
+            "location": "/Public/Get-RyverTeam/#systemstring",
+            "text": "",
+            "title": "System.String"
+        },
+        {
+            "location": "/Public/Get-RyverTeam/#outputs",
+            "text": "",
+            "title": "OUTPUTS"
+        },
+        {
+            "location": "/Public/Get-RyverTeam/#systemmanagementautomationpsobject",
+            "text": "",
+            "title": "System.Management.Automation.PSObject"
+        },
+        {
+            "location": "/Public/Get-RyverTeam/#notes",
+            "text": "Troy Lindsay  Twitter: @troylindsay42  GitHub: tlindsay42",
+            "title": "NOTES"
+        },
+        {
+            "location": "/Public/Get-RyverTeam/#related-links",
+            "text": "https://tlindsay42.github.io/PSRyver/Public/Get-RyverTeam/  https://github.com/PSRyver/blob/master/PSRyver/Public/Get-RyverTeam.ps1",
+            "title": "RELATED LINKS"
         }
     ]
 }

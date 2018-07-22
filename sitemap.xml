@@ -2,7 +2,22 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
      <loc>https://tlindsay42.github.io/PSRyver/</loc>
-     <lastmod>2018-07-12</lastmod>
+     <lastmod>2018-07-22</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>https://tlindsay42.github.io/PSRyver/Public/Export-PSRyverConfig/</loc>
+     <lastmod>2018-07-22</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>https://tlindsay42.github.io/PSRyver/Public/Get-RyverForum/</loc>
+     <lastmod>2018-07-22</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>https://tlindsay42.github.io/PSRyver/Public/Get-RyverTeam/</loc>
+     <lastmod>2018-07-22</lastmod>
      <changefreq>daily</changefreq>
     </url>
 </urlset>

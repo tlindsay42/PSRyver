@@ -380,6 +380,66 @@
   </li>
 
     
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2" type="checkbox" id="nav-2">
+    
+    <label class="md-nav__link" for="nav-2">
+      Cmdlet Documentation
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-2">
+        Cmdlet Documentation
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="Public/Export-PSRyverConfig/" title="Export-PSRyverConfig" class="md-nav__link">
+      Export-PSRyverConfig
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="Public/Get-RyverForum/" title="Get-RyverForum" class="md-nav__link">
+      Get-RyverForum
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="Public/Get-RyverTeam/" title="Get-RyverTeam" class="md-nav__link">
+      Get-RyverTeam
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
   </ul>
 </nav>
                   </div>
@@ -632,7 +692,7 @@
 <li>This example demonstrates that you can chain new attachments together to form a multi-attachment message.</li>
 </ul>
 <div class="codehilite"><pre><span></span><span class="nv">$attachment1</span> <span class="p">=</span> <span class="p">@{</span>
-    <span class="n">Color</span>     <span class="p">=</span> <span class="nv">$_PSRyverColorMap</span><span class="p">.</span><span class="n">Red</span>
+    <span class="n">Color</span>     <span class="p">=</span> <span class="nv">$Script:PSRyverColorMap</span><span class="p">.</span><span class="n">Red</span>
     <span class="n">Title</span>     <span class="p">=</span> <span class="s1">&#39;The System Is Down&#39;</span>
     <span class="n">TitleLink</span> <span class="p">=</span> <span class="s1">&#39;https://www.youtube.com/watch?v=TmpRs7xN06Q&#39;</span>
     <span class="n">Text</span>      <span class="p">=</span> <span class="s1">&#39;Everybody panic!&#39;</span>
@@ -718,12 +778,12 @@
 </pre></div>
 
 <h2 id="notes">Notes<a class="headerlink" href="#notes" title="Permanent link">&para;</a></h2>
-<p>This project was ported with <img alt="❤️" class="emojione" src="https://cdn.jsdelivr.net/emojione/assets/svg/2764.svg" title=":heart:" /> from v0.1.0 of <a href="https://github.com/RamblingCookieMonster">Warren Frame's</a> awesome <a href="https://github.com/RamblingCookieMonster/PSSlack/tree/c0bf2b67278d5df455ae769d5912aa25d09fcf72">PSSlack project</a>.  Thanks Warren!</p>
+<p>This project was forked with <img alt="❤️" class="emojione" src="https://cdn.jsdelivr.net/emojione/assets/svg/2764.svg" title=":heart:" /> from v0.1.0 of <a href="https://github.com/RamblingCookieMonster">Warren Frame's</a> awesome <a href="https://github.com/RamblingCookieMonster/PSSlack/tree/c0bf2b67278d5df455ae769d5912aa25d09fcf72">PSSlack project</a>.  Thanks Warren!</p>
 <p>Currently evaluating .NET Core / Cross-platform functionality.  The following will not work initially:</p>
 <ul>
 <li>Serialization of URIs via <code>Set-PSRyverConfig</code>.  Set these values per-session if needed.</li>
-<li><code>[System.Drawing.Color]::SomeColor</code> shortcut.  Use the provided <code>$_PSRyverColorMap</code> hash to simplify this.<ul>
-<li>Example: <code>$_PSRyverColorMap.Red</code></li>
+<li><code>[System.Drawing.Color]::SomeColor</code> shortcut.  Use the provided <code>$Script:PSRyverColorMap</code> hash to simplify this.<ul>
+<li>Example: <code>$Script:PSRyverColorMap.Red</code></li>
 </ul>
 </li>
 </ul>
@@ -744,6 +804,27 @@
       
         
 <footer class="md-footer">
+  
+    <div class="md-footer-nav">
+      <nav class="md-footer-nav__inner md-grid">
+        
+        
+          <a href="Public/Export-PSRyverConfig/" title="Export-PSRyverConfig" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Next
+                </span>
+                Export-PSRyverConfig
+              </span>
+            </div>
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-forward md-footer-nav__button"></i>
+            </div>
+          </a>
+        
+      </nav>
+    </div>
   
   <div class="md-footer-meta md-typeset">
     <div class="md-footer-meta__inner md-grid">
