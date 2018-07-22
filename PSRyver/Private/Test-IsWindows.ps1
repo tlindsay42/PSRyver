@@ -28,7 +28,9 @@ function Test-IsWindows {
     .FUNCTIONALITY
         PowerShell Language
     #>
-    [CmdletBinding()]
+    [CmdletBinding(
+        HelpUri = 'https://tlindsay42.github.io/PSRyver/Private/Test-IsWindows/'
+    )]
     [OutputType( [Boolean] )]
     param ()
 

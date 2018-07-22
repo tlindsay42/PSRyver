@@ -50,7 +50,9 @@ function Remove-SensitiveData {
     .FUNCTIONALITY
         PowerShell Language
     #>
-    [CmdletBinding()]
+    [CmdletBinding(
+        HelpUri = 'https://tlindsay42.github.io/PSRyver/Private/Remove-SensitiveData/'
+    )]
     [OutputType( [Object[]] )]
     [OutputType( [Object] )]
     param (

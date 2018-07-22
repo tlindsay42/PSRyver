@@ -35,7 +35,9 @@ function ConvertTo-Authorization {
     .LINK
         https://github.com/PSRyver/blob/master/PSRyver/Private/ConvertTo-Authorization.ps1
     #>
-    [CmdletBinding()]
+    [CmdletBinding(
+        HelpUri = 'https://tlindsay42.github.io/PSRyver/Private/ConvertTo-Authorization/'
+    )]
     [OutputType( [String] )]
     param (
         <#

@@ -40,7 +40,9 @@ function ConvertFrom-UnixTime {
     .FUNCTIONALITY
         Ryver
     #>
-    [CmdletBinding()]
+    [CmdletBinding(
+        HelpUri = 'https://tlindsay42.github.io/PSRyver/Private/ConvertFrom-UnixTime/'
+    )]
     [OutputType( [DateTime] )]
     param (
         # The UNIX formatted date & time.

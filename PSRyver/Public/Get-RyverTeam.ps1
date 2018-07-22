@@ -49,7 +49,9 @@ function Get-RyverTeam {
         .FUNCTIONALITY
         Ryver
     #>
-    [CmdletBinding()]
+    [CmdletBinding(
+        HelpUri = 'https://tlindsay42.github.io/PSRyver/Public/Get-RyverTeam/'
+    )]
     [OutputType( [PSCustomObject] )]
     param (
         # Private team channel name.  Case insensitive.

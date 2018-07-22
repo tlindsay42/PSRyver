@@ -31,7 +31,9 @@ function Get-PSRyverConfig {
     .FUNCTIONALITY
         Ryver
     #>
-    [CmdletBinding()]
+    [CmdletBinding(
+        HelpUri = 'https://tlindsay42.github.io/PSRyver/Public/Get-PSRyverConfig/'
+    )]
     [OutputType( [PSCustomObject] )]
     param ()
 

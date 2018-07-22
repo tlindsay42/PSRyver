@@ -33,7 +33,9 @@ function Assert-RyverApiConfig {
         Ryver
     #>
 
-    [CmdletBinding()]
+    [CmdletBinding(
+        HelpUri = 'https://tlindsay42.github.io/PSRyver/Private/Assert-RyverApiConfig/'
+    )]
     [OutputType( [Void] )]
     param ()
 

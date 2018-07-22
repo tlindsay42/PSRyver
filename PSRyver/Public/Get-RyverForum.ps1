@@ -50,7 +50,9 @@ function Get-RyverForum {
         .FUNCTIONALITY
         Ryver
     #>
-    [CmdletBinding()]
+    [CmdletBinding(
+        HelpUri = 'https://tlindsay42.github.io/PSRyver/Public/Get-RyverForum/'
+    )]
     [OutputType( [PSCustomObject] )]
     param (
         # Specifies the public forum channel name.  Case insensitive.

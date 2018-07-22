@@ -58,7 +58,11 @@ function Export-PSRyverConfig {
     .FUNCTIONALITY
         Ryver
     #>
-    [CmdletBinding( SupportsShouldProcess = $true, ConfirmImpact = 'High' )]
+    [CmdletBinding(
+        HelpUri = 'https://tlindsay42.github.io/PSRyver/Public/Export-PSRyverConfig/',
+        SupportsShouldProcess = $true,
+        ConfirmImpact = 'High'
+    )]
     [OutputType( [Void] )]
     param (
         # Specifies the PSRyver config file to export.

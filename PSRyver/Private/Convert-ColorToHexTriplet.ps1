@@ -39,7 +39,9 @@ function Convert-ColorToHexTriplet {
     .FUNCTIONALITY
         PowerShell Language
     #>
-    [CmdletBinding()]
+    [CmdletBinding(
+        HelpUri = 'https://tlindsay42.github.io/PSRyver/Private/Convert-ColorToHexTriplet/'
+    )]
     [OutputType( [String] )]
     param (
         # Specifies the color to convert.

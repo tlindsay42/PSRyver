@@ -32,7 +32,9 @@ function ConvertTo-UnixTime {
     .LINK
         https://github.com/PSRyver/blob/master/PSRyver/Private/ConvertTo-UnixTime.ps1
     #>
-    [CmdletBinding()]
+    [CmdletBinding(
+        HelpUri = 'https://tlindsay42.github.io/PSRyver/Private/ConvertTo-UnixTime/'
+    )]
     [OutputType( [Int32] )]
     param (
         # The System.DateTime formatted date & time.
