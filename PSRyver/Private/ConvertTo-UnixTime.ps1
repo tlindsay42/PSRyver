@@ -4,10 +4,10 @@ function ConvertTo-UnixTime {
         Convert datetime objects to UNIX time.
 
     .DESCRIPTION
-        Convert datetime objects to UNIX time.
+        Convert System.DateTime objects to UNIX time.
 
     .INPUTS
-        System.Management.Automation.PSObject
+        System.DateTime
 
     .NOTES
         - Troy Lindsay
@@ -33,8 +33,9 @@ function ConvertTo-UnixTime {
         https://github.com/PSRyver/blob/master/PSRyver/Private/ConvertTo-UnixTime.ps1
     #>
     [CmdletBinding()]
-    [OutputType( [Int] )]
+    [OutputType( [Int32] )]
     param (
+        # The System.DateTime formatted date & time.
         [Parameter(
             Mandatory = $true,
             Position = 0,
@@ -55,7 +56,7 @@ function ConvertTo-UnixTime {
 
     process {
         $unixEpochStart = New-Object -TypeName 'DateTime' -ArgumentList 1970, 1, 1, 0, 0, 0, ( [DateTimeKind]::Utc )
-        [Int]( $Date.ToUniversalTime() - $unixEpochStart ).TotalSeconds
+        [Int32] ( $Date.ToUniversalTime() - $unixEpochStart ).TotalSeconds
     }
 
     end {

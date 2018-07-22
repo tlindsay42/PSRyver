@@ -4,7 +4,7 @@ function ConvertFrom-UnixTime {
         Convert UNIX time to datetime objects.
 
     .DESCRIPTION
-        Convert UNIX time to datetime objects.
+        Convert UNIX time to System.DateTime objects.
 
     .INPUTS
         System.Int32
@@ -40,8 +40,10 @@ function ConvertFrom-UnixTime {
     .FUNCTIONALITY
         Ryver
     #>
+    [CmdletBinding()]
     [OutputType( [DateTime] )]
     param (
+        # The UNIX formatted date & time.
         [Parameter(
             Mandatory = $true,
             Position = 0,

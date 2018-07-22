@@ -35,6 +35,8 @@ function ConvertTo-Authorization {
     .LINK
         https://github.com/PSRyver/blob/master/PSRyver/Private/ConvertTo-Authorization.ps1
     #>
+    [CmdletBinding()]
+    [OutputType( [String] )]
     param (
         <#
         Specifies the credential to convert to a base64 encoded basic authentication

@@ -1,12 +1,16 @@
 function Assert-RyverApiConfig {
     <#
     .SYNOPSIS
-        Validates the Ryver REST API configuration.
+        Validates the PSRyver REST API configuration.
 
     .DESCRIPTION
         Validates that the $Script:PSPRyver.RestApiBaseUri and
         $Script:PSPRyver.Authorization values are set to valid
         specifications, and throws terminating errors if not.
+
+    .INPUTS
+        None
+            You cannot pipe input to this cmdlet.
 
     .NOTES
         - Troy Lindsay
@@ -30,7 +34,7 @@ function Assert-RyverApiConfig {
     #>
 
     [CmdletBinding()]
-    [OutputType( [Boolean] )]
+    [OutputType( [Void] )]
     param ()
 
     begin {
