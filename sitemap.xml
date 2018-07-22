@@ -20,4 +20,39 @@
      <lastmod>2018-07-22</lastmod>
      <changefreq>daily</changefreq>
     </url>
+    <url>
+     <loc>https://tlindsay42.github.io/PSRyver/Private/Assert-RyverApiConfig/</loc>
+     <lastmod>2018-07-22</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>https://tlindsay42.github.io/PSRyver/Private/Convert-ColorToHexTriplet/</loc>
+     <lastmod>2018-07-22</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>https://tlindsay42.github.io/PSRyver/Private/ConvertFrom-UnixTime/</loc>
+     <lastmod>2018-07-22</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>https://tlindsay42.github.io/PSRyver/Private/ConvertTo-Authorization/</loc>
+     <lastmod>2018-07-22</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>https://tlindsay42.github.io/PSRyver/Private/ConvertTo-UnixTime/</loc>
+     <lastmod>2018-07-22</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>https://tlindsay42.github.io/PSRyver/Private/Remove-SensitiveData/</loc>
+     <lastmod>2018-07-22</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>https://tlindsay42.github.io/PSRyver/Private/Test-IsWindows/</loc>
+     <lastmod>2018-07-22</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
 </urlset>

@@ -399,6 +399,631 @@
             "location": "/Public/Get-RyverTeam/#related-links",
             "text": "https://tlindsay42.github.io/PSRyver/Public/Get-RyverTeam/  https://github.com/PSRyver/blob/master/PSRyver/Public/Get-RyverTeam.ps1",
             "title": "RELATED LINKS"
+        },
+        {
+            "location": "/Private/Assert-RyverApiConfig/",
+            "text": "Assert-RyverApiConfig\n\u00b6\n\n\nSYNOPSIS\n\u00b6\n\n\nValidates the Ryver REST API configuration.\n\n\nSYNTAX\n\u00b6\n\n\nAssert-RyverApiConfig [<CommonParameters>]\n\n\n\n\nDESCRIPTION\n\u00b6\n\n\nValidates that the $Script:PSPRyver.RestApiBaseUri and\n$Script:PSPRyver.Authorization values are set to valid\nspecifications, and throws terminating errors if not.\n\n\nEXAMPLES\n\u00b6\n\n\nEXAMPLE 1\n\u00b6\n\n\nAssert-RyverApiConfig\n\n\n\n\nValidates that the $Script:PSPRyver.RestApiBaseUri and\n$Script:PSPRyver.Authorization values are set to valid\nspecifications, and throws terminating errors if not.\n\n\nPARAMETERS\n\u00b6\n\n\nCommonParameters\n\u00b6\n\n\nThis cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.\nFor more information, see about_CommonParameters (\nhttp://go.microsoft.com/fwlink/?LinkID=113216\n).\n\n\nINPUTS\n\u00b6\n\n\nNone\n\u00b6\n\n\nYou cannot pipe input to this cmdlet.\n\n\n\n\n\nOUTPUTS\n\u00b6\n\n\nSystem.Boolean\n\u00b6\n\n\nNOTES\n\u00b6\n\n\n\n\nTroy Lindsay\n\n\nTwitter: @troylindsay42\n\n\nGitHub: tlindsay42\n\n\n\n\nRELATED LINKS\n\u00b6\n\n\nhttps://tlindsay42.github.io/PSRyver/Private/Assert-RyverApiConfig/\n\n\nhttps://github.com/PSRyver/blob/master/PSRyver/Private/Assert-RyverApiConfig.ps1",
+            "title": "Assert-RyverApiConfig"
+        },
+        {
+            "location": "/Private/Assert-RyverApiConfig/#assert-ryverapiconfig",
+            "text": "",
+            "title": "Assert-RyverApiConfig"
+        },
+        {
+            "location": "/Private/Assert-RyverApiConfig/#synopsis",
+            "text": "Validates the Ryver REST API configuration.",
+            "title": "SYNOPSIS"
+        },
+        {
+            "location": "/Private/Assert-RyverApiConfig/#syntax",
+            "text": "Assert-RyverApiConfig [<CommonParameters>]",
+            "title": "SYNTAX"
+        },
+        {
+            "location": "/Private/Assert-RyverApiConfig/#description",
+            "text": "Validates that the $Script:PSPRyver.RestApiBaseUri and\n$Script:PSPRyver.Authorization values are set to valid\nspecifications, and throws terminating errors if not.",
+            "title": "DESCRIPTION"
+        },
+        {
+            "location": "/Private/Assert-RyverApiConfig/#examples",
+            "text": "",
+            "title": "EXAMPLES"
+        },
+        {
+            "location": "/Private/Assert-RyverApiConfig/#example-1",
+            "text": "Assert-RyverApiConfig  Validates that the $Script:PSPRyver.RestApiBaseUri and\n$Script:PSPRyver.Authorization values are set to valid\nspecifications, and throws terminating errors if not.",
+            "title": "EXAMPLE 1"
+        },
+        {
+            "location": "/Private/Assert-RyverApiConfig/#parameters",
+            "text": "",
+            "title": "PARAMETERS"
+        },
+        {
+            "location": "/Private/Assert-RyverApiConfig/#commonparameters",
+            "text": "This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.\nFor more information, see about_CommonParameters ( http://go.microsoft.com/fwlink/?LinkID=113216 ).",
+            "title": "CommonParameters"
+        },
+        {
+            "location": "/Private/Assert-RyverApiConfig/#inputs",
+            "text": "",
+            "title": "INPUTS"
+        },
+        {
+            "location": "/Private/Assert-RyverApiConfig/#none",
+            "text": "You cannot pipe input to this cmdlet.",
+            "title": "None"
+        },
+        {
+            "location": "/Private/Assert-RyverApiConfig/#outputs",
+            "text": "",
+            "title": "OUTPUTS"
+        },
+        {
+            "location": "/Private/Assert-RyverApiConfig/#systemboolean",
+            "text": "",
+            "title": "System.Boolean"
+        },
+        {
+            "location": "/Private/Assert-RyverApiConfig/#notes",
+            "text": "Troy Lindsay  Twitter: @troylindsay42  GitHub: tlindsay42",
+            "title": "NOTES"
+        },
+        {
+            "location": "/Private/Assert-RyverApiConfig/#related-links",
+            "text": "https://tlindsay42.github.io/PSRyver/Private/Assert-RyverApiConfig/  https://github.com/PSRyver/blob/master/PSRyver/Private/Assert-RyverApiConfig.ps1",
+            "title": "RELATED LINKS"
+        },
+        {
+            "location": "/Private/Convert-ColorToHexTriplet/",
+            "text": "Convert-ColorToHexTriplet\n\u00b6\n\n\nSYNOPSIS\n\u00b6\n\n\nConverts a color object to a RGB hex triplet.\n\n\nSYNTAX\n\u00b6\n\n\nConvert-ColorToHexTriplet [-Color] <Color> [<CommonParameters>]\n\n\n\n\nDESCRIPTION\n\u00b6\n\n\nConverts a System.Drawing.Color object to a hexadecimal code representing that\ncolor.\n\n\nEXAMPLES\n\u00b6\n\n\nEXAMPLE 1\n\u00b6\n\n\nConvert-ColorToHexTriplet -Color ( [System.Drawing.Color]::Red )\n\n\n\n\nReturns '#FF0000'.\n\n\nEXAMPLE 2\n\u00b6\n\n\n[System.Drawing.Color]::Azure | Convert-ColorToHexTriplet\n\n\n\n\nSpecifies the color to convert via the pipeline and returns '#F0FFFF'.\n\n\nEXAMPLE 3\n\u00b6\n\n\nConvert-ColorToHexTriplet ( [System.Drawing.Color]::BlancheDalmond )\n\n\n\n\nSpecifies the color to convert via positional parameter and returns '#FFEBCD'.\n\n\nPARAMETERS\n\u00b6\n\n\n-Color\n\u00b6\n\n\nSpecifies the color to convert.\n\n\nType\n:\n \nColor\n\n\nParameter Sets\n:\n \n(All)\n\n\nAliases\n:\n\n\n\nRequired\n:\n \nTrue\n\n\nPosition\n:\n \n1\n\n\nDefault value\n:\n \nNone\n\n\nAccept pipeline input\n:\n \nTrue (ByValue)\n\n\nAccept wildcard characters\n:\n \nFalse\n\n\n\n\n\nCommonParameters\n\u00b6\n\n\nThis cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.\nFor more information, see about_CommonParameters (\nhttp://go.microsoft.com/fwlink/?LinkID=113216\n).\n\n\nINPUTS\n\u00b6\n\n\nSystem.Drawing.Color\n\u00b6\n\n\nOUTPUTS\n\u00b6\n\n\nSystem.String\n\u00b6\n\n\nNOTES\n\u00b6\n\n\n\n\nTroy Lindsay\n\n\nTwitter: @troylindsay42\n\n\nGitHub: tlindsay42\n\n\n\n\nRELATED LINKS\n\u00b6\n\n\nhttps://tlindsay42.github.io/PSRyver/Private/Convert-ColorToHexTriplet/\n\n\nhttps://github.com/PSRyver/blob/master/PSRyver/Private/Convert-ColorToHexTriplet.ps1\n\n\nhttps://en.wikipedia.org/wiki/Web_colors#Hex_triplet",
+            "title": "Convert-ColorToHexTriplet"
+        },
+        {
+            "location": "/Private/Convert-ColorToHexTriplet/#convert-colortohextriplet",
+            "text": "",
+            "title": "Convert-ColorToHexTriplet"
+        },
+        {
+            "location": "/Private/Convert-ColorToHexTriplet/#synopsis",
+            "text": "Converts a color object to a RGB hex triplet.",
+            "title": "SYNOPSIS"
+        },
+        {
+            "location": "/Private/Convert-ColorToHexTriplet/#syntax",
+            "text": "Convert-ColorToHexTriplet [-Color] <Color> [<CommonParameters>]",
+            "title": "SYNTAX"
+        },
+        {
+            "location": "/Private/Convert-ColorToHexTriplet/#description",
+            "text": "Converts a System.Drawing.Color object to a hexadecimal code representing that\ncolor.",
+            "title": "DESCRIPTION"
+        },
+        {
+            "location": "/Private/Convert-ColorToHexTriplet/#examples",
+            "text": "",
+            "title": "EXAMPLES"
+        },
+        {
+            "location": "/Private/Convert-ColorToHexTriplet/#example-1",
+            "text": "Convert-ColorToHexTriplet -Color ( [System.Drawing.Color]::Red )  Returns '#FF0000'.",
+            "title": "EXAMPLE 1"
+        },
+        {
+            "location": "/Private/Convert-ColorToHexTriplet/#example-2",
+            "text": "[System.Drawing.Color]::Azure | Convert-ColorToHexTriplet  Specifies the color to convert via the pipeline and returns '#F0FFFF'.",
+            "title": "EXAMPLE 2"
+        },
+        {
+            "location": "/Private/Convert-ColorToHexTriplet/#example-3",
+            "text": "Convert-ColorToHexTriplet ( [System.Drawing.Color]::BlancheDalmond )  Specifies the color to convert via positional parameter and returns '#FFEBCD'.",
+            "title": "EXAMPLE 3"
+        },
+        {
+            "location": "/Private/Convert-ColorToHexTriplet/#parameters",
+            "text": "",
+            "title": "PARAMETERS"
+        },
+        {
+            "location": "/Private/Convert-ColorToHexTriplet/#-color",
+            "text": "Specifies the color to convert.  Type :   Color  Parameter Sets :   (All)  Aliases :  Required :   True  Position :   1  Default value :   None  Accept pipeline input :   True (ByValue)  Accept wildcard characters :   False",
+            "title": "-Color"
+        },
+        {
+            "location": "/Private/Convert-ColorToHexTriplet/#commonparameters",
+            "text": "This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.\nFor more information, see about_CommonParameters ( http://go.microsoft.com/fwlink/?LinkID=113216 ).",
+            "title": "CommonParameters"
+        },
+        {
+            "location": "/Private/Convert-ColorToHexTriplet/#inputs",
+            "text": "",
+            "title": "INPUTS"
+        },
+        {
+            "location": "/Private/Convert-ColorToHexTriplet/#systemdrawingcolor",
+            "text": "",
+            "title": "System.Drawing.Color"
+        },
+        {
+            "location": "/Private/Convert-ColorToHexTriplet/#outputs",
+            "text": "",
+            "title": "OUTPUTS"
+        },
+        {
+            "location": "/Private/Convert-ColorToHexTriplet/#systemstring",
+            "text": "",
+            "title": "System.String"
+        },
+        {
+            "location": "/Private/Convert-ColorToHexTriplet/#notes",
+            "text": "Troy Lindsay  Twitter: @troylindsay42  GitHub: tlindsay42",
+            "title": "NOTES"
+        },
+        {
+            "location": "/Private/Convert-ColorToHexTriplet/#related-links",
+            "text": "https://tlindsay42.github.io/PSRyver/Private/Convert-ColorToHexTriplet/  https://github.com/PSRyver/blob/master/PSRyver/Private/Convert-ColorToHexTriplet.ps1  https://en.wikipedia.org/wiki/Web_colors#Hex_triplet",
+            "title": "RELATED LINKS"
+        },
+        {
+            "location": "/Private/ConvertFrom-UnixTime/",
+            "text": "ConvertFrom-UnixTime\n\u00b6\n\n\nSYNOPSIS\n\u00b6\n\n\nConvert UNIX time to datetime objects.\n\n\nSYNTAX\n\u00b6\n\n\nConvertFrom-UnixTime [-UnixTime] <Int32> [<CommonParameters>]\n\n\n\n\nDESCRIPTION\n\u00b6\n\n\nConvert UNIX time to datetime objects.\n\n\nEXAMPLES\n\u00b6\n\n\nEXAMPLE 1\n\u00b6\n\n\nConvertFrom-UnixTime -UnixTime 1532186850\n\n\n\n\nReturns 'Saturday, July 21, 2018 15:27:30'.\n\n\nEXAMPLE 2\n\u00b6\n\n\n1532186850 | ConvertFrom-UnixTime\n\n\n\n\nProcesses the pipeline value and returns\n'Saturday, July 21, 2018 15:27:30'.\n\n\nEXAMPLE 3\n\u00b6\n\n\nConvertFrom-UnixTime 1532186850\n\n\n\n\nUses positional parameter and returns\n'Saturday, July 21, 2018 15:27:30'.\n\n\nPARAMETERS\n\u00b6\n\n\n-UnixTime\n\u00b6\n\n\nThe UNIX formatted date & time.\n\n\nType\n:\n \nInt32\n\n\nParameter Sets\n:\n \n(All)\n\n\nAliases\n:\n\n\n\nRequired\n:\n \nTrue\n\n\nPosition\n:\n \n1\n\n\nDefault value\n:\n \n0\n\n\nAccept pipeline input\n:\n \nTrue (ByValue)\n\n\nAccept wildcard characters\n:\n \nFalse\n\n\n\n\n\nCommonParameters\n\u00b6\n\n\nThis cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.\nFor more information, see about_CommonParameters (\nhttp://go.microsoft.com/fwlink/?LinkID=113216\n).\n\n\nINPUTS\n\u00b6\n\n\nSystem.Int32\n\u00b6\n\n\nOUTPUTS\n\u00b6\n\n\nSystem.DateTime\n\u00b6\n\n\nNOTES\n\u00b6\n\n\n\n\nTroy Lindsay\n\n\nTwitter: @troylindsay42\n\n\nGitHub: tlindsay42\n\n\n\n\nRELATED LINKS\n\u00b6\n\n\nhttps://tlindsay42.github.io/PSRyver/Private/ConvertFrom-UnixTime/\n\n\nhttps://github.com/PSRyver/blob/master/PSRyver/Private/ConvertFrom-UnixTime.ps1\n\n\nhttp://powershell.com/cs/blogs/tips/archive/2012/03/09/converting-unix-time.aspx",
+            "title": "ConvertFrom-UnixTime"
+        },
+        {
+            "location": "/Private/ConvertFrom-UnixTime/#convertfrom-unixtime",
+            "text": "",
+            "title": "ConvertFrom-UnixTime"
+        },
+        {
+            "location": "/Private/ConvertFrom-UnixTime/#synopsis",
+            "text": "Convert UNIX time to datetime objects.",
+            "title": "SYNOPSIS"
+        },
+        {
+            "location": "/Private/ConvertFrom-UnixTime/#syntax",
+            "text": "ConvertFrom-UnixTime [-UnixTime] <Int32> [<CommonParameters>]",
+            "title": "SYNTAX"
+        },
+        {
+            "location": "/Private/ConvertFrom-UnixTime/#description",
+            "text": "Convert UNIX time to datetime objects.",
+            "title": "DESCRIPTION"
+        },
+        {
+            "location": "/Private/ConvertFrom-UnixTime/#examples",
+            "text": "",
+            "title": "EXAMPLES"
+        },
+        {
+            "location": "/Private/ConvertFrom-UnixTime/#example-1",
+            "text": "ConvertFrom-UnixTime -UnixTime 1532186850  Returns 'Saturday, July 21, 2018 15:27:30'.",
+            "title": "EXAMPLE 1"
+        },
+        {
+            "location": "/Private/ConvertFrom-UnixTime/#example-2",
+            "text": "1532186850 | ConvertFrom-UnixTime  Processes the pipeline value and returns\n'Saturday, July 21, 2018 15:27:30'.",
+            "title": "EXAMPLE 2"
+        },
+        {
+            "location": "/Private/ConvertFrom-UnixTime/#example-3",
+            "text": "ConvertFrom-UnixTime 1532186850  Uses positional parameter and returns\n'Saturday, July 21, 2018 15:27:30'.",
+            "title": "EXAMPLE 3"
+        },
+        {
+            "location": "/Private/ConvertFrom-UnixTime/#parameters",
+            "text": "",
+            "title": "PARAMETERS"
+        },
+        {
+            "location": "/Private/ConvertFrom-UnixTime/#-unixtime",
+            "text": "The UNIX formatted date & time.  Type :   Int32  Parameter Sets :   (All)  Aliases :  Required :   True  Position :   1  Default value :   0  Accept pipeline input :   True (ByValue)  Accept wildcard characters :   False",
+            "title": "-UnixTime"
+        },
+        {
+            "location": "/Private/ConvertFrom-UnixTime/#commonparameters",
+            "text": "This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.\nFor more information, see about_CommonParameters ( http://go.microsoft.com/fwlink/?LinkID=113216 ).",
+            "title": "CommonParameters"
+        },
+        {
+            "location": "/Private/ConvertFrom-UnixTime/#inputs",
+            "text": "",
+            "title": "INPUTS"
+        },
+        {
+            "location": "/Private/ConvertFrom-UnixTime/#systemint32",
+            "text": "",
+            "title": "System.Int32"
+        },
+        {
+            "location": "/Private/ConvertFrom-UnixTime/#outputs",
+            "text": "",
+            "title": "OUTPUTS"
+        },
+        {
+            "location": "/Private/ConvertFrom-UnixTime/#systemdatetime",
+            "text": "",
+            "title": "System.DateTime"
+        },
+        {
+            "location": "/Private/ConvertFrom-UnixTime/#notes",
+            "text": "Troy Lindsay  Twitter: @troylindsay42  GitHub: tlindsay42",
+            "title": "NOTES"
+        },
+        {
+            "location": "/Private/ConvertFrom-UnixTime/#related-links",
+            "text": "https://tlindsay42.github.io/PSRyver/Private/ConvertFrom-UnixTime/  https://github.com/PSRyver/blob/master/PSRyver/Private/ConvertFrom-UnixTime.ps1  http://powershell.com/cs/blogs/tips/archive/2012/03/09/converting-unix-time.aspx",
+            "title": "RELATED LINKS"
+        },
+        {
+            "location": "/Private/ConvertTo-Authorization/",
+            "text": "ConvertTo-Authorization\n\u00b6\n\n\nSYNOPSIS\n\u00b6\n\n\nConvert credential objects to basic authorization headers.\n\n\nSYNTAX\n\u00b6\n\n\nConvertTo-Authorization [-Credential] <PSCredential> [<CommonParameters>]\n\n\n\n\nDESCRIPTION\n\u00b6\n\n\nConvert credential objects to basic authorization headers.\n\n\nEXAMPLES\n\u00b6\n\n\nEXAMPLE 1\n\u00b6\n\n\nConvertTo-Authorization -Credential ( Get-Credential )\n\n\n\n\nConverts the credential to a base64 encoded basic authentication authorization\nheader value.\n\n\nEXAMPLE 2\n\u00b6\n\n\n( Get-Credential ) | ConvertTo-Authorization\n\n\n\n\nConverts the credential set via the pipeline to a base64 encoded basic\nauthentication authorization header value.\n\n\nEXAMPLE 3\n\u00b6\n\n\nConvertTo-Authorization ( Get-Credential )\n\n\n\n\nConverts the credential set via positional parameter to a base64 encoded basic\nauthentication authorization header value.\n\n\nPARAMETERS\n\u00b6\n\n\n-Credential\n\u00b6\n\n\nSpecifies the credential to convert to a base64 encoded basic authentication\nauthorization header value.\n\n\nType\n:\n \nPSCredential\n\n\nParameter Sets\n:\n \n(All)\n\n\nAliases\n:\n\n\n\nRequired\n:\n \nTrue\n\n\nPosition\n:\n \n1\n\n\nDefault value\n:\n \nNone\n\n\nAccept pipeline input\n:\n \nTrue (ByValue)\n\n\nAccept wildcard characters\n:\n \nFalse\n\n\n\n\n\nCommonParameters\n\u00b6\n\n\nThis cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.\nFor more information, see about_CommonParameters (\nhttp://go.microsoft.com/fwlink/?LinkID=113216\n).\n\n\nINPUTS\n\u00b6\n\n\nSystem.Management.Automation.PSCredential\n\u00b6\n\n\nOUTPUTS\n\u00b6\n\n\nSystem.String\n\u00b6\n\n\nNOTES\n\u00b6\n\n\n\n\nTroy Lindsay\n\n\nTwitter: @troylindsay42\n\n\nGitHub: tlindsay42\n\n\n\n\nRELATED LINKS\n\u00b6\n\n\nhttps://tlindsay42.github.io/PSRyver/Private/ConvertTo-Authorization/\n\n\nhttps://github.com/PSRyver/blob/master/PSRyver/Private/ConvertTo-Authorization.ps1",
+            "title": "ConvertTo-Authorization"
+        },
+        {
+            "location": "/Private/ConvertTo-Authorization/#convertto-authorization",
+            "text": "",
+            "title": "ConvertTo-Authorization"
+        },
+        {
+            "location": "/Private/ConvertTo-Authorization/#synopsis",
+            "text": "Convert credential objects to basic authorization headers.",
+            "title": "SYNOPSIS"
+        },
+        {
+            "location": "/Private/ConvertTo-Authorization/#syntax",
+            "text": "ConvertTo-Authorization [-Credential] <PSCredential> [<CommonParameters>]",
+            "title": "SYNTAX"
+        },
+        {
+            "location": "/Private/ConvertTo-Authorization/#description",
+            "text": "Convert credential objects to basic authorization headers.",
+            "title": "DESCRIPTION"
+        },
+        {
+            "location": "/Private/ConvertTo-Authorization/#examples",
+            "text": "",
+            "title": "EXAMPLES"
+        },
+        {
+            "location": "/Private/ConvertTo-Authorization/#example-1",
+            "text": "ConvertTo-Authorization -Credential ( Get-Credential )  Converts the credential to a base64 encoded basic authentication authorization\nheader value.",
+            "title": "EXAMPLE 1"
+        },
+        {
+            "location": "/Private/ConvertTo-Authorization/#example-2",
+            "text": "( Get-Credential ) | ConvertTo-Authorization  Converts the credential set via the pipeline to a base64 encoded basic\nauthentication authorization header value.",
+            "title": "EXAMPLE 2"
+        },
+        {
+            "location": "/Private/ConvertTo-Authorization/#example-3",
+            "text": "ConvertTo-Authorization ( Get-Credential )  Converts the credential set via positional parameter to a base64 encoded basic\nauthentication authorization header value.",
+            "title": "EXAMPLE 3"
+        },
+        {
+            "location": "/Private/ConvertTo-Authorization/#parameters",
+            "text": "",
+            "title": "PARAMETERS"
+        },
+        {
+            "location": "/Private/ConvertTo-Authorization/#-credential",
+            "text": "Specifies the credential to convert to a base64 encoded basic authentication\nauthorization header value.  Type :   PSCredential  Parameter Sets :   (All)  Aliases :  Required :   True  Position :   1  Default value :   None  Accept pipeline input :   True (ByValue)  Accept wildcard characters :   False",
+            "title": "-Credential"
+        },
+        {
+            "location": "/Private/ConvertTo-Authorization/#commonparameters",
+            "text": "This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.\nFor more information, see about_CommonParameters ( http://go.microsoft.com/fwlink/?LinkID=113216 ).",
+            "title": "CommonParameters"
+        },
+        {
+            "location": "/Private/ConvertTo-Authorization/#inputs",
+            "text": "",
+            "title": "INPUTS"
+        },
+        {
+            "location": "/Private/ConvertTo-Authorization/#systemmanagementautomationpscredential",
+            "text": "",
+            "title": "System.Management.Automation.PSCredential"
+        },
+        {
+            "location": "/Private/ConvertTo-Authorization/#outputs",
+            "text": "",
+            "title": "OUTPUTS"
+        },
+        {
+            "location": "/Private/ConvertTo-Authorization/#systemstring",
+            "text": "",
+            "title": "System.String"
+        },
+        {
+            "location": "/Private/ConvertTo-Authorization/#notes",
+            "text": "Troy Lindsay  Twitter: @troylindsay42  GitHub: tlindsay42",
+            "title": "NOTES"
+        },
+        {
+            "location": "/Private/ConvertTo-Authorization/#related-links",
+            "text": "https://tlindsay42.github.io/PSRyver/Private/ConvertTo-Authorization/  https://github.com/PSRyver/blob/master/PSRyver/Private/ConvertTo-Authorization.ps1",
+            "title": "RELATED LINKS"
+        },
+        {
+            "location": "/Private/ConvertTo-UnixTime/",
+            "text": "ConvertTo-UnixTime\n\u00b6\n\n\nSYNOPSIS\n\u00b6\n\n\nConvert datetime objects to UNIX time.\n\n\nSYNTAX\n\u00b6\n\n\nConvertTo-UnixTime [-Date] <DateTime> [<CommonParameters>]\n\n\n\n\nDESCRIPTION\n\u00b6\n\n\nConvert System.DateTime objects to UNIX time.\n\n\nEXAMPLES\n\u00b6\n\n\nEXAMPLE 1\n\u00b6\n\n\nConvertTo-UnixTime -Date ( Get-Date -Date '2018-07-21 10:33:18' )\n\n\n\n\nReturns '1532187198'.\n\n\nEXAMPLE 2\n\u00b6\n\n\n( Get-Date -Date '2018-07-21 10:33:18' ) | ConvertTo-UnixTime\n\n\n\n\nProcesses the pipeline value and returns '1532187198'.\n\n\nEXAMPLE 3\n\u00b6\n\n\nConvertTo-UnixTime ( Get-Date -Date '2018-07-21 10:33:18' )\n\n\n\n\nUses positional parameter and returns '1532187198'.\n\n\nPARAMETERS\n\u00b6\n\n\n-Date\n\u00b6\n\n\nThe System.DateTime formatted date & time.\n\n\nType\n:\n \nDateTime\n\n\nParameter Sets\n:\n \n(All)\n\n\nAliases\n:\n\n\n\nRequired\n:\n \nTrue\n\n\nPosition\n:\n \n1\n\n\nDefault value\n:\n \nNone\n\n\nAccept pipeline input\n:\n \nTrue (ByValue)\n\n\nAccept wildcard characters\n:\n \nFalse\n\n\n\n\n\nCommonParameters\n\u00b6\n\n\nThis cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.\nFor more information, see about_CommonParameters (\nhttp://go.microsoft.com/fwlink/?LinkID=113216\n).\n\n\nINPUTS\n\u00b6\n\n\nSystem.DateTime\n\u00b6\n\n\nOUTPUTS\n\u00b6\n\n\nSystem.Int32\n\u00b6\n\n\nNOTES\n\u00b6\n\n\n\n\nTroy Lindsay\n\n\nTwitter: @troylindsay42\n\n\nGitHub: tlindsay42\n\n\n\n\nRELATED LINKS\n\u00b6\n\n\nhttps://tlindsay42.github.io/PSRyver/Private/ConvertTo-UnixTime/\n\n\nhttps://github.com/PSRyver/blob/master/PSRyver/Private/ConvertTo-UnixTime.ps1",
+            "title": "ConvertTo-UnixTime"
+        },
+        {
+            "location": "/Private/ConvertTo-UnixTime/#convertto-unixtime",
+            "text": "",
+            "title": "ConvertTo-UnixTime"
+        },
+        {
+            "location": "/Private/ConvertTo-UnixTime/#synopsis",
+            "text": "Convert datetime objects to UNIX time.",
+            "title": "SYNOPSIS"
+        },
+        {
+            "location": "/Private/ConvertTo-UnixTime/#syntax",
+            "text": "ConvertTo-UnixTime [-Date] <DateTime> [<CommonParameters>]",
+            "title": "SYNTAX"
+        },
+        {
+            "location": "/Private/ConvertTo-UnixTime/#description",
+            "text": "Convert System.DateTime objects to UNIX time.",
+            "title": "DESCRIPTION"
+        },
+        {
+            "location": "/Private/ConvertTo-UnixTime/#examples",
+            "text": "",
+            "title": "EXAMPLES"
+        },
+        {
+            "location": "/Private/ConvertTo-UnixTime/#example-1",
+            "text": "ConvertTo-UnixTime -Date ( Get-Date -Date '2018-07-21 10:33:18' )  Returns '1532187198'.",
+            "title": "EXAMPLE 1"
+        },
+        {
+            "location": "/Private/ConvertTo-UnixTime/#example-2",
+            "text": "( Get-Date -Date '2018-07-21 10:33:18' ) | ConvertTo-UnixTime  Processes the pipeline value and returns '1532187198'.",
+            "title": "EXAMPLE 2"
+        },
+        {
+            "location": "/Private/ConvertTo-UnixTime/#example-3",
+            "text": "ConvertTo-UnixTime ( Get-Date -Date '2018-07-21 10:33:18' )  Uses positional parameter and returns '1532187198'.",
+            "title": "EXAMPLE 3"
+        },
+        {
+            "location": "/Private/ConvertTo-UnixTime/#parameters",
+            "text": "",
+            "title": "PARAMETERS"
+        },
+        {
+            "location": "/Private/ConvertTo-UnixTime/#-date",
+            "text": "The System.DateTime formatted date & time.  Type :   DateTime  Parameter Sets :   (All)  Aliases :  Required :   True  Position :   1  Default value :   None  Accept pipeline input :   True (ByValue)  Accept wildcard characters :   False",
+            "title": "-Date"
+        },
+        {
+            "location": "/Private/ConvertTo-UnixTime/#commonparameters",
+            "text": "This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.\nFor more information, see about_CommonParameters ( http://go.microsoft.com/fwlink/?LinkID=113216 ).",
+            "title": "CommonParameters"
+        },
+        {
+            "location": "/Private/ConvertTo-UnixTime/#inputs",
+            "text": "",
+            "title": "INPUTS"
+        },
+        {
+            "location": "/Private/ConvertTo-UnixTime/#systemdatetime",
+            "text": "",
+            "title": "System.DateTime"
+        },
+        {
+            "location": "/Private/ConvertTo-UnixTime/#outputs",
+            "text": "",
+            "title": "OUTPUTS"
+        },
+        {
+            "location": "/Private/ConvertTo-UnixTime/#systemint32",
+            "text": "",
+            "title": "System.Int32"
+        },
+        {
+            "location": "/Private/ConvertTo-UnixTime/#notes",
+            "text": "Troy Lindsay  Twitter: @troylindsay42  GitHub: tlindsay42",
+            "title": "NOTES"
+        },
+        {
+            "location": "/Private/ConvertTo-UnixTime/#related-links",
+            "text": "https://tlindsay42.github.io/PSRyver/Private/ConvertTo-UnixTime/  https://github.com/PSRyver/blob/master/PSRyver/Private/ConvertTo-UnixTime.ps1",
+            "title": "RELATED LINKS"
+        },
+        {
+            "location": "/Private/Remove-SensitiveData/",
+            "text": "Remove-SensitiveData\n\u00b6\n\n\nSYNOPSIS\n\u00b6\n\n\nRedact sensitive property values.\n\n\nSYNTAX\n\u00b6\n\n\nRemove-SensitiveData [-InputObject] <Object[]> [[-SensitiveProperties] <String[]>] [-ForceVerbose]\n [<CommonParameters>]\n\n\n\n\nDESCRIPTION\n\u00b6\n\n\nRedact sensitive property values prior to printing to the console.\n\n\nEXAMPLES\n\u00b6\n\n\nEXAMPLE 1\n\u00b6\n\n\nRemove-SensitiveData -InputObject [PSCustomObject] @{ IncomingWebhookUri = $incomingWebhookUri }\n\n\n\n\nReturns the input object with the value of the IncomingWebhookUri key set to\n'[REDACTED]', unless the $Script:PSRyver.ForceVerbose PSRyver module\nconfiguration parameter is set to $true, in which case the value would not be\nmasked.\n\n\nEXAMPLE 2\n\u00b6\n\n\n[PSCustomObject] @{ PlainText = 'do not display' } | Remove-SensitiveData -SensitiveProperties 'PlainText'\n\n\n\n\nReturns the object input via the pipeline with the value of the 'PlainText' key\nset to '[REDACTED]', because the SensitiveProperties parameter specified this\nkey as sensitive.\n\n\nEXAMPLE 3\n\u00b6\n\n\nRemove-SensitiveData -InputObject [PSCustomObject] @{ Authorization = $authorization } -ForceVerbose\n\n\n\n\nReturns the input object with the value of the Authorization key intact\nregardless of whether or not the $Script:PSRyver.ForceVerbose PSRyver module\nconfiguration parameter is set to $true, because the ForceVerbose parameter\nmandated this.\n\n\nEXAMPLE 4\n\u00b6\n\n\nRemove-SensitiveData [PSCustomObject] @{ Authorization = $authorization }\n\n\n\n\nUses a positional parameter Returns the hashtable with the Uri value set to '[REDACTED]'.\n\n\nPARAMETERS\n\u00b6\n\n\n-ForceVerbose\n\u00b6\n\n\nPrevents sensitive property values from being redacted for troubleshooting\npurposes.\n\n\n*** WARNING ***\nThis will expose your sensitive property values.\n\n\nType\n:\n \nSwitchParameter\n\n\nParameter Sets\n:\n \n(All)\n\n\nAliases\n:\n\n\n\nRequired\n:\n \nFalse\n\n\nPosition\n:\n \n3\n\n\nDefault value\n:\n \nFalse\n\n\nAccept pipeline input\n:\n \nFalse\n\n\nAccept wildcard characters\n:\n \nFalse\n\n\n\n\n\n-InputObject\n\u00b6\n\n\nSpecifies the objects to evaluate for sensitive property keys.\n\n\nType\n:\n \nObject[]\n\n\nParameter Sets\n:\n \n(All)\n\n\nAliases\n:\n\n\n\nRequired\n:\n \nTrue\n\n\nPosition\n:\n \n1\n\n\nDefault value\n:\n \nNone\n\n\nAccept pipeline input\n:\n \nTrue (ByValue)\n\n\nAccept wildcard characters\n:\n \nFalse\n\n\n\n\n\n-SensitiveProperties\n\u00b6\n\n\nSpecifies the properties that should be redacted.\n\n\nType\n:\n \nString[]\n\n\nParameter Sets\n:\n \n(All)\n\n\nAliases\n:\n\n\n\nRequired\n:\n \nFalse\n\n\nPosition\n:\n \n2\n\n\nDefault value\n:\n \n@\n(\n\n            \n'Credential',\n\n            \n'Authorization',\n\n            \n'IncomingWebhookUri',\n\n            \n'Token'\n\n        \n)\n\n\nAccept pipeline input\n:\n \nFalse\n\n\nAccept wildcard characters\n:\n \nFalse\n\n\n\n\n\nCommonParameters\n\u00b6\n\n\nThis cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.\nFor more information, see about_CommonParameters (\nhttp://go.microsoft.com/fwlink/?LinkID=113216\n).\n\n\nINPUTS\n\u00b6\n\n\nSystem.Object[]\n\u00b6\n\n\nSystem.Object\n\u00b6\n\n\nOUTPUTS\n\u00b6\n\n\nSystem.Object[]\n\u00b6\n\n\nSystem.Object\n\u00b6\n\n\nNOTES\n\u00b6\n\n\n\n\nTroy Lindsay\n\n\nTwitter: @troylindsay42\n\n\nGitHub: tlindsay42\n\n\n\n\nRELATED LINKS\n\u00b6\n\n\nhttps://tlindsay42.github.io/PSRyver/Private/Remove-SensitiveData/\n\n\nhttps://github.com/PSRyver/blob/master/PSRyver/Private/Remove-SensitiveData.ps1",
+            "title": "Remove-SensitiveData"
+        },
+        {
+            "location": "/Private/Remove-SensitiveData/#remove-sensitivedata",
+            "text": "",
+            "title": "Remove-SensitiveData"
+        },
+        {
+            "location": "/Private/Remove-SensitiveData/#synopsis",
+            "text": "Redact sensitive property values.",
+            "title": "SYNOPSIS"
+        },
+        {
+            "location": "/Private/Remove-SensitiveData/#syntax",
+            "text": "Remove-SensitiveData [-InputObject] <Object[]> [[-SensitiveProperties] <String[]>] [-ForceVerbose]\n [<CommonParameters>]",
+            "title": "SYNTAX"
+        },
+        {
+            "location": "/Private/Remove-SensitiveData/#description",
+            "text": "Redact sensitive property values prior to printing to the console.",
+            "title": "DESCRIPTION"
+        },
+        {
+            "location": "/Private/Remove-SensitiveData/#examples",
+            "text": "",
+            "title": "EXAMPLES"
+        },
+        {
+            "location": "/Private/Remove-SensitiveData/#example-1",
+            "text": "Remove-SensitiveData -InputObject [PSCustomObject] @{ IncomingWebhookUri = $incomingWebhookUri }  Returns the input object with the value of the IncomingWebhookUri key set to\n'[REDACTED]', unless the $Script:PSRyver.ForceVerbose PSRyver module\nconfiguration parameter is set to $true, in which case the value would not be\nmasked.",
+            "title": "EXAMPLE 1"
+        },
+        {
+            "location": "/Private/Remove-SensitiveData/#example-2",
+            "text": "[PSCustomObject] @{ PlainText = 'do not display' } | Remove-SensitiveData -SensitiveProperties 'PlainText'  Returns the object input via the pipeline with the value of the 'PlainText' key\nset to '[REDACTED]', because the SensitiveProperties parameter specified this\nkey as sensitive.",
+            "title": "EXAMPLE 2"
+        },
+        {
+            "location": "/Private/Remove-SensitiveData/#example-3",
+            "text": "Remove-SensitiveData -InputObject [PSCustomObject] @{ Authorization = $authorization } -ForceVerbose  Returns the input object with the value of the Authorization key intact\nregardless of whether or not the $Script:PSRyver.ForceVerbose PSRyver module\nconfiguration parameter is set to $true, because the ForceVerbose parameter\nmandated this.",
+            "title": "EXAMPLE 3"
+        },
+        {
+            "location": "/Private/Remove-SensitiveData/#example-4",
+            "text": "Remove-SensitiveData [PSCustomObject] @{ Authorization = $authorization }  Uses a positional parameter Returns the hashtable with the Uri value set to '[REDACTED]'.",
+            "title": "EXAMPLE 4"
+        },
+        {
+            "location": "/Private/Remove-SensitiveData/#parameters",
+            "text": "",
+            "title": "PARAMETERS"
+        },
+        {
+            "location": "/Private/Remove-SensitiveData/#-forceverbose",
+            "text": "Prevents sensitive property values from being redacted for troubleshooting\npurposes.  *** WARNING ***\nThis will expose your sensitive property values.  Type :   SwitchParameter  Parameter Sets :   (All)  Aliases :  Required :   False  Position :   3  Default value :   False  Accept pipeline input :   False  Accept wildcard characters :   False",
+            "title": "-ForceVerbose"
+        },
+        {
+            "location": "/Private/Remove-SensitiveData/#-inputobject",
+            "text": "Specifies the objects to evaluate for sensitive property keys.  Type :   Object[]  Parameter Sets :   (All)  Aliases :  Required :   True  Position :   1  Default value :   None  Accept pipeline input :   True (ByValue)  Accept wildcard characters :   False",
+            "title": "-InputObject"
+        },
+        {
+            "location": "/Private/Remove-SensitiveData/#-sensitiveproperties",
+            "text": "Specifies the properties that should be redacted.  Type :   String[]  Parameter Sets :   (All)  Aliases :  Required :   False  Position :   2  Default value :   @ ( \n             'Credential', \n             'Authorization', \n             'IncomingWebhookUri', \n             'Token' \n         )  Accept pipeline input :   False  Accept wildcard characters :   False",
+            "title": "-SensitiveProperties"
+        },
+        {
+            "location": "/Private/Remove-SensitiveData/#commonparameters",
+            "text": "This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.\nFor more information, see about_CommonParameters ( http://go.microsoft.com/fwlink/?LinkID=113216 ).",
+            "title": "CommonParameters"
+        },
+        {
+            "location": "/Private/Remove-SensitiveData/#inputs",
+            "text": "",
+            "title": "INPUTS"
+        },
+        {
+            "location": "/Private/Remove-SensitiveData/#systemobject",
+            "text": "",
+            "title": "System.Object[]"
+        },
+        {
+            "location": "/Private/Remove-SensitiveData/#systemobject_1",
+            "text": "",
+            "title": "System.Object"
+        },
+        {
+            "location": "/Private/Remove-SensitiveData/#outputs",
+            "text": "",
+            "title": "OUTPUTS"
+        },
+        {
+            "location": "/Private/Remove-SensitiveData/#systemobject_2",
+            "text": "",
+            "title": "System.Object[]"
+        },
+        {
+            "location": "/Private/Remove-SensitiveData/#systemobject_3",
+            "text": "",
+            "title": "System.Object"
+        },
+        {
+            "location": "/Private/Remove-SensitiveData/#notes",
+            "text": "Troy Lindsay  Twitter: @troylindsay42  GitHub: tlindsay42",
+            "title": "NOTES"
+        },
+        {
+            "location": "/Private/Remove-SensitiveData/#related-links",
+            "text": "https://tlindsay42.github.io/PSRyver/Private/Remove-SensitiveData/  https://github.com/PSRyver/blob/master/PSRyver/Private/Remove-SensitiveData.ps1",
+            "title": "RELATED LINKS"
+        },
+        {
+            "location": "/Private/Test-IsWindows/",
+            "text": "Test-IsWindows\n\u00b6\n\n\nSYNOPSIS\n\u00b6\n\n\nIs this running on a Windows system?\n\n\nSYNTAX\n\u00b6\n\n\nTest-IsWindows [<CommonParameters>]\n\n\n\n\nDESCRIPTION\n\u00b6\n\n\nIs this running on a Windows system?\n\n\nEXAMPLES\n\u00b6\n\n\nEXAMPLE 1\n\u00b6\n\n\nTest-IsWindows\n\n\n\n\nReturns $true if called from a Windows system and $false if not.\n\n\nPARAMETERS\n\u00b6\n\n\nCommonParameters\n\u00b6\n\n\nThis cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.\nFor more information, see about_CommonParameters (\nhttp://go.microsoft.com/fwlink/?LinkID=113216\n).\n\n\nINPUTS\n\u00b6\n\n\nNone\n\u00b6\n\n\nYou cannot pipe input to this cmdlet.\n\n\n\n\n\nOUTPUTS\n\u00b6\n\n\nSystem.Boolean\n\u00b6\n\n\nNOTES\n\u00b6\n\n\n\n\nTroy Lindsay\n\n\nTwitter: @troylindsay42\n\n\nGitHub: tlindsay42\n\n\n\n\nRELATED LINKS\n\u00b6\n\n\nhttps://tlindsay42.github.io/PSRyver/Private/Test-IsWindows/\n\n\nhttps://github.com/PSRyver/blob/master/PSRyver/Private/Test-IsWindows.ps1",
+            "title": "Test-IsWindows"
+        },
+        {
+            "location": "/Private/Test-IsWindows/#test-iswindows",
+            "text": "",
+            "title": "Test-IsWindows"
+        },
+        {
+            "location": "/Private/Test-IsWindows/#synopsis",
+            "text": "Is this running on a Windows system?",
+            "title": "SYNOPSIS"
+        },
+        {
+            "location": "/Private/Test-IsWindows/#syntax",
+            "text": "Test-IsWindows [<CommonParameters>]",
+            "title": "SYNTAX"
+        },
+        {
+            "location": "/Private/Test-IsWindows/#description",
+            "text": "Is this running on a Windows system?",
+            "title": "DESCRIPTION"
+        },
+        {
+            "location": "/Private/Test-IsWindows/#examples",
+            "text": "",
+            "title": "EXAMPLES"
+        },
+        {
+            "location": "/Private/Test-IsWindows/#example-1",
+            "text": "Test-IsWindows  Returns $true if called from a Windows system and $false if not.",
+            "title": "EXAMPLE 1"
+        },
+        {
+            "location": "/Private/Test-IsWindows/#parameters",
+            "text": "",
+            "title": "PARAMETERS"
+        },
+        {
+            "location": "/Private/Test-IsWindows/#commonparameters",
+            "text": "This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.\nFor more information, see about_CommonParameters ( http://go.microsoft.com/fwlink/?LinkID=113216 ).",
+            "title": "CommonParameters"
+        },
+        {
+            "location": "/Private/Test-IsWindows/#inputs",
+            "text": "",
+            "title": "INPUTS"
+        },
+        {
+            "location": "/Private/Test-IsWindows/#none",
+            "text": "You cannot pipe input to this cmdlet.",
+            "title": "None"
+        },
+        {
+            "location": "/Private/Test-IsWindows/#outputs",
+            "text": "",
+            "title": "OUTPUTS"
+        },
+        {
+            "location": "/Private/Test-IsWindows/#systemboolean",
+            "text": "",
+            "title": "System.Boolean"
+        },
+        {
+            "location": "/Private/Test-IsWindows/#notes",
+            "text": "Troy Lindsay  Twitter: @troylindsay42  GitHub: tlindsay42",
+            "title": "NOTES"
+        },
+        {
+            "location": "/Private/Test-IsWindows/#related-links",
+            "text": "https://tlindsay42.github.io/PSRyver/Private/Test-IsWindows/  https://github.com/PSRyver/blob/master/PSRyver/Private/Test-IsWindows.ps1",
+            "title": "RELATED LINKS"
         }
     ]
 }
