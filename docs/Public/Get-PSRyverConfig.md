@@ -1,10 +1,3 @@
----
-external help file: PSRyver-help.xml
-Module Name: PSRyver
-online version: https://tlindsay42.github.io/PSRyver/Public/Get-PSRyverConfig/
-schema: 2.0.0
----
-
 # Get-PSRyverConfig
 
 ## SYNOPSIS
