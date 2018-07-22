@@ -1,7 +1,7 @@
 # Assert-RyverApiConfig
 
 ## SYNOPSIS
-Validates the Ryver REST API configuration.
+Validates the PSRyver REST API configuration.
 
 ## SYNTAX
 
@@ -38,7 +38,7 @@ For more information, see about_CommonParameters (http://go.microsoft.com/fwlink
 
 ## OUTPUTS
 
-### System.Boolean
+### System.Void
 
 ## NOTES
 - Troy Lindsay

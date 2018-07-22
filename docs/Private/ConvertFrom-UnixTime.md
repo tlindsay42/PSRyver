@@ -10,7 +10,7 @@ ConvertFrom-UnixTime [-UnixTime] <Int32> [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-Convert UNIX time to datetime objects.
+Convert UNIX time to System.DateTime objects.
 
 ## EXAMPLES
 
