@@ -49,3 +49,7 @@ For more information, see about_CommonParameters (http://go.microsoft.com/fwlink
 
 [Set-PSRyverConfig]()
 
+[Initialize-PSRyverConfig]()
+
+[Remove-PSRyverConfig]()
+

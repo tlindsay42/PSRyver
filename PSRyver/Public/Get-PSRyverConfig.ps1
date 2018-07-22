@@ -28,6 +28,12 @@ function Get-PSRyverConfig {
     .LINK
         Set-PSRyverConfig
 
+    .LINK
+        Initialize-PSRyverConfig
+
+    .LINK
+        Remove-PSRyverConfig
+
     .FUNCTIONALITY
         Ryver
     #>
