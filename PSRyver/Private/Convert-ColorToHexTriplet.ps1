@@ -16,8 +16,16 @@ function Convert-ColorToHexTriplet {
         - GitHub: tlindsay42
 
     .EXAMPLE
-        Convert-ColorToHexTriplet -Color [System.Drawing.Color]::Red
+        Convert-ColorToHexTriplet -Color ( [System.Drawing.Color]::Red )
         Returns '#FF0000'.
+
+    .EXAMPLE
+        [System.Drawing.Color]::Azure | Convert-ColorToHexTriplet
+        Specifies the color to convert via the pipeline and returns '#F0FFFF'.
+
+    .EXAMPLE
+        Convert-ColorToHexTriplet ( [System.Drawing.Color]::BlancheDalmond )
+        Specifies the color to convert via positional parameter and returns '#FFEBCD'.
 
     .LINK
         https://tlindsay42.github.io/PSRyver/Private/Convert-ColorToHexTriplet/

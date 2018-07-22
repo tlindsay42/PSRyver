@@ -19,6 +19,16 @@ function ConvertTo-Authorization {
         Converts the credential to a base64 encoded basic authentication authorization
         header value.
 
+    .EXAMPLE
+        ( Get-Credential ) | ConvertTo-Authorization
+        Converts the credential set via the pipeline to a base64 encoded basic
+        authentication authorization header value.
+
+    .EXAMPLE
+        ConvertTo-Authorization ( Get-Credential )
+        Converts the credential set via positional parameter to a base64 encoded basic
+        authentication authorization header value.
+
     .LINK
         https://tlindsay42.github.io/PSRyver/Private/ConvertTo-Authorization/
 
