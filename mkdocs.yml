@@ -87,6 +87,14 @@ markdown_extensions:
 pages:
 - Home: 'index.md'
 - Cmdlet Documentation:
-  - Export-PSRyverConfig: 'Public\Export-PSRyverConfig.md'
-  - Get-RyverForum: 'Public\Get-RyverForum.md'
-  - Get-RyverTeam: 'Public\Get-RyverTeam.md'
+  - Export-PSRyverConfig: 'Public/Export-PSRyverConfig.md'
+  - Get-RyverForum: 'Public/Get-RyverForum.md'
+  - Get-RyverTeam: 'Public/Get-RyverTeam.md'
+- Private Functions:
+  - Assert-RyverApiConfig: 'Private/Assert-RyverApiConfig.md'
+  - Convert-ColorToHexTriplet: 'Private/Convert-ColorToHexTriplet.md'
+  - ConvertFrom-UnixTime: 'Private/ConvertFrom-UnixTime.md'
+  - ConvertTo-Authorization: 'Private/ConvertTo-Authorization.md'
+  - ConvertTo-UnixTime: 'Private/ConvertTo-UnixTime.md'
+  - Remove-SensitiveData: 'Private/Remove-SensitiveData.md'
+  - Test-IsWindows: 'Private/Test-IsWindows.md'
