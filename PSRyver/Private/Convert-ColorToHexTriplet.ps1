@@ -1,4 +1,4 @@
-﻿function Convert-ColorToHexTriplet {
+function Convert-ColorToHexTriplet {
     <#
     .SYNOPSIS
         Converts a color object to a RGB hex triplet.

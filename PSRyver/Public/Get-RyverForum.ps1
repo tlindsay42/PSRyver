@@ -1,4 +1,4 @@
-﻿function Get-RyverForum {
+function Get-RyverForum {
     <#
         .SYNOPSIS
         Query for Ryver public forum channels.

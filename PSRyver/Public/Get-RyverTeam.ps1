@@ -1,4 +1,4 @@
-﻿function Get-RyverTeam {
+function Get-RyverTeam {
     <#
         .SYNOPSIS
         Query for Ryver private team channels.

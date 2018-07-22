@@ -1,4 +1,4 @@
-﻿function ConvertTo-UnixTime {
+function ConvertTo-UnixTime {
     <#
     .SYNOPSIS
         Convert datetime objects to UNIX time.
