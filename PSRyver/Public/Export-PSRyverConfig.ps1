@@ -91,7 +91,7 @@ function Export-PSRyverConfig {
     process {
         $proceed = $true
         if ( ( Test-Path -Path $Path ) -eq $true ) {
-            $proceed = $PSCmdlet.ShouldProcess( $Path, 'Overwrite the existing PSRyver config file?' )
+            $proceed = $PSCmdlet.ShouldProcess( $Path, 'Overwrite the existing PSRyver config file' )
         }
 
         if ( $proceed ) {

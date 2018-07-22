@@ -73,7 +73,7 @@ function Import-PSRyverConfig {
     process {
         $proceed = $true
         if ( $Script:PSRyver ) {
-            $proceed = $PSCmdlet.ShouldProcess( '$Script:PSRyver', 'Overwrite the existing PSRyver config?' )
+            $proceed = $PSCmdlet.ShouldProcess( '$Script:PSRyver', 'Overwrite the existing PSRyver config' )
         }
 
         if ( $proceed ) {
