@@ -88,8 +88,13 @@ pages:
 - Home: 'index.md'
 - Cmdlet Documentation:
   - Export-PSRyverConfig: 'Public/Export-PSRyverConfig.md'
+  - Get-PSRyverConfig: 'Public/Get-PSRyverConfig.md'
+  - Get-PSRyverConfigPath: 'Public/Get-PSRyverConfigPath.md'
   - Get-RyverForum: 'Public/Get-RyverForum.md'
   - Get-RyverTeam: 'Public/Get-RyverTeam.md'
+  - Import-PSRyverConfig: 'Public/Import-PSRyverConfig.md'
+  - Set-PSRyverConfig: 'Public/Set-PSRyverConfig.md'
+  - Set-PSRyverConfigPath: 'Public/Set-PSRyverConfigPath.md'
 - Private Functions:
   - Assert-RyverApiConfig: 'Private/Assert-RyverApiConfig.md'
   - Convert-ColorToHexTriplet: 'Private/Convert-ColorToHexTriplet.md'
