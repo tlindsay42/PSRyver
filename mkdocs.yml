@@ -103,5 +103,6 @@ pages:
   - ConvertFrom-UnixTime: 'Private/ConvertFrom-UnixTime.md'
   - ConvertTo-Authorization: 'Private/ConvertTo-Authorization.md'
   - ConvertTo-UnixTime: 'Private/ConvertTo-UnixTime.md'
+  - Format-RyverV1ChannelObject: 'Private/Format-RyverV1ChannelObject.md'
   - Remove-SensitiveData: 'Private/Remove-SensitiveData.md'
   - Test-IsWindows: 'Private/Test-IsWindows.md'
