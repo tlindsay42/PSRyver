@@ -157,7 +157,7 @@ function Get-RyverTeam {
         }
 
         while ( $return.Count -lt $last -and $skip -lt $count ) {
-            $response = Send-RyverApi @splat
+            $response = Invoke-RyverRestMethod @splat
             $count = $response.D.__Count
 
             Write-Verbose -Message "Found '${count}' objects."
