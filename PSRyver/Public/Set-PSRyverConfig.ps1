@@ -55,6 +55,9 @@ function Set-PSRyverConfig {
     .LINK
         Initialize-PSRyverConfig
 
+    .LINK
+        Import-PSRyverConfig
+
     .FUNCTIONALITY
         Ryver
     #>
@@ -148,7 +151,14 @@ function Set-PSRyverConfig {
 
     process {
         if ( -not $Script:PSRyver ) {
-            Initialize-PSRyverConfig
+            $splat = @{
+                Message     = (
+                    "Module configuration variable, '`$Script:PSRyver' not found.  " +
+                    "Please run either 'Import-PSRyverConfig' or 'Initialize-PSRyverConfig' to recreate it and then try again."
+                )
+                ErrorAction = 'Stop'
+            }
+            Write-Error @splat
         }
 
         switch ( $PSBoundParameters.Keys ) {
