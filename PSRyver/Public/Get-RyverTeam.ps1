@@ -50,8 +50,10 @@ function Get-RyverTeam {
         Ryver
     #>
     [CmdletBinding(
-        HelpUri = 'https://tlindsay42.github.io/PSRyver/Public/Get-RyverTeam/'
+        HelpUri = 'https://tlindsay42.github.io/PSRyver/Public/Get-RyverTeam/',
+        SupportsPaging = $true
     )]
+    [OutputType( [PSCustomObject[]] )]
     [OutputType( [PSCustomObject] )]
     param (
         # Private team channel name.  Case insensitive.
@@ -86,6 +88,7 @@ function Get-RyverTeam {
     begin {
         #region init
         $function = $MyInvocation.MyCommand.Name
+        $return = @()
         $detailedProperties = @(
             'board/id',
             'createUser/*',
@@ -99,6 +102,8 @@ function Get-RyverTeam {
         )
         $detailedPropertiesSelect = ( $detailedProperties | ForEach-Object -Process { [System.Web.HttpUtility]::UrlEncodeUnicode( $_ ) } ) -join ','
         $detailedPropertiesExpand = ( $detailedProperties | ForEach-Object -Process { $_.Split( '/' )[0] } ) -join ','
+        $first = $PSCmdlet.PagingParameters.Skip
+        $last = $first + $PSCmdlet.PagingParameters.First
         #endregion
 
         Write-Verbose -Message (
@@ -106,17 +111,25 @@ function Get-RyverTeam {
             ( $PSBoundParameters | Remove-SensitiveData | Format-Table -AutoSize -Wrap | Out-String )
         )
 
+        Write-Verbose -Message "First: ${first}"
+
         if ( $PSBoundParameters.ContainsKey( 'Credential' ) ) {
             $Script:PSRyver.Authorization = ConvertTo-Authorization -Credential $Credential
             Remove-Variable -Name 'Credential'
         }
 
         Assert-RyverApiConfig
+
+        if ( $PSCmdlet.PagingParameters.First -eq 0 ) {
+            Write-Verbose -Message "The 'First' parameter is set to accept zero results- terminating."
+            break
+        }
     }
 
     process {
         #region init
         $skip = 0
+        $count = [UInt64]::MaxValue
         $urlEncodedName = [System.Web.HttpUtility]::UrlEncodeUnicode( $Name )
         $objects = @()
         #endregion
@@ -143,10 +156,11 @@ function Get-RyverTeam {
             ErrorAction = 'Stop'
         }
 
-        do {
+        while ( $return.Count -lt $last -and $skip -lt $count ) {
             $response = Send-RyverApi @splat
+            $count = $response.D.__Count
 
-            Write-Verbose -Message "Found '$( $response.D.__Count )' objects."
+            Write-Verbose -Message "Found '${count}' objects."
             Write-Verbose -Message "Queried for objects '${skip}-$( $skip + $Script:MaxPageSize )'."
 
             $tempObjects = $response |
@@ -165,25 +179,48 @@ function Get-RyverTeam {
             }
 
             $objects += $tempObjects
-            Write-Verbose -Message "Gathered '$( ( $objects | Measure-Object ).Count )' objects."
 
             $skip += $Script:MaxPageSize
             $splat.Path = $path -replace '\$skip=\d+', "`$skip=${skip}"
-        }
-        while ( $skip -lt $response.D.__Count )
 
-        if ( $Raw -eq $true ) {
-            $objects
-        }
-        else {
-            $objects |
-                Format-RyverV1ChannelObject
+            if ( $Raw -eq $true ) {
+                $return += $objects
+            }
+            else {
+                $return += $objects |
+                    Format-RyverV1ChannelObject
+            }
         }
 
-        Write-Verbose -Message "Returned '$( ( $objects | Measure-Object ).Count )' objects."
+        Write-Verbose -Message "Added '$( ( $objects | Measure-Object ).Count )' objects in this Process cycle."
     }
 
     end {
+        $count = ( $return | Measure-Object ).Count
+        if ( $count -gt 0 ) {
+            if ( $PSCmdlet.PagingParameters.Skip -ge $count ) {
+                Write-Verbose -Message "Insufficient results: '${count}' to satisfy the 'Skip' parameter value: '${first}'."
+                $return = $null
+            }
+            else {
+                $last = $first + [Math]::Min( $PSCmdlet.PagingParameters.First, $count - $PSCmdlet.PagingParameters.Skip ) - 1
+                Write-Verbose -Message "Last: ${last}"
+
+                if ( $first -le $last ) {
+                    $return = $return[$first..$last]
+                    $return
+                }
+                else {
+                    $return = $null
+                }
+            }
+        }
+
+        if ( $PSCmdlet.PagingParameters.IncludeTotalCount ) {
+            $count = ( $return | Measure-Object ).Count
+            $PSCmdlet.PagingParameters.NewTotalCount( $count, 1.0 )
+        }
+
         Write-Verbose -Message "Ending: '${function}'."
     }
 }
