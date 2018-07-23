@@ -17,8 +17,39 @@ module configuration variable.
 
 ### EXAMPLE 1
 ```
-
+Import-PSRyverConfig
 ```
+
+Loads the PSRyver module configuration to $Script:PSRyver from the default file
+path stored in $Script:PSRyverConfigFilePath.
+which can be accessed via
+Get-PSRyverConfigPath and set via Set-PSRyverConfigPath.
+
+The default location is '~/.psryver.xml'
+
+### EXAMPLE 2
+```
+Import-PSRyverConfig -Path '~/.psryver.xml'
+```
+
+Loads the PSRyver module configuration from '~/.psryver.xml' to
+$Script:PSRyver.
+
+### EXAMPLE 3
+```
+'~/.psryver.xml' | Export-PSRyverConfig
+```
+
+Loads the PSRyver module configuration from '~/.psryver.xml', specified via the
+pipeline, to $Script:PSRyver.
+
+### EXAMPLE 4
+```
+Import-PSRyverConfig '~/.psryver.xml'
+```
+
+Loads the PSRyver module configuration from '~/.psryver.xml', specified via
+positional parameter, to $Script:PSRyver.
 
 ## PARAMETERS
 

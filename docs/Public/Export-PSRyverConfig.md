@@ -41,6 +41,14 @@ specified path of '~/.psryver.xml'.
 Saves the PSRyver module configuration stored in $Script:PSRyver to the
 specified path of '~/.psryver.xml', which is set via the pipeline.
 
+### EXAMPLE 4
+```
+Export-PSRyverConfig '~/.psryver.xml'
+```
+
+Saves the PSRyver module configuration stored in $Script:PSRyver to the
+specified path of '~/.psryver.xml' via positional parameter.
+
 ## PARAMETERS
 
 ### -Path

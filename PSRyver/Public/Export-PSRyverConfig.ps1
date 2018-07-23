@@ -31,6 +31,11 @@ function Export-PSRyverConfig {
         Saves the PSRyver module configuration stored in $Script:PSRyver to the
         specified path of '~/.psryver.xml', which is set via the pipeline.
 
+    .EXAMPLE
+        Export-PSRyverConfig '~/.psryver.xml'
+        Saves the PSRyver module configuration stored in $Script:PSRyver to the
+        specified path of '~/.psryver.xml' via positional parameter.
+
     .LINK
         https://tlindsay42.github.io/PSRyver/Public/Export-PSRyverConfig/
 

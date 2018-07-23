@@ -16,6 +16,27 @@ function Import-PSRyverConfig {
         - GitHub: tlindsay42
 
     .EXAMPLE
+        Import-PSRyverConfig
+        Loads the PSRyver module configuration to $Script:PSRyver from the default file
+        path stored in $Script:PSRyverConfigFilePath. which can be accessed via
+        Get-PSRyverConfigPath and set via Set-PSRyverConfigPath.
+
+        The default location is '~/.psryver.xml'
+
+    .EXAMPLE
+        Import-PSRyverConfig -Path '~/.psryver.xml'
+        Loads the PSRyver module configuration from '~/.psryver.xml' to
+        $Script:PSRyver.
+
+    .EXAMPLE
+        '~/.psryver.xml' | Export-PSRyverConfig
+        Loads the PSRyver module configuration from '~/.psryver.xml', specified via the
+        pipeline, to $Script:PSRyver.
+
+    .EXAMPLE
+        Import-PSRyverConfig '~/.psryver.xml'
+        Loads the PSRyver module configuration from '~/.psryver.xml', specified via
+        positional parameter, to $Script:PSRyver.
 
     .LINK
         https://tlindsay42.github.io/PSRyver/Public/Import-PSRyverConfig/
