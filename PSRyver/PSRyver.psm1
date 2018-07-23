@@ -24,7 +24,7 @@ else {
 }
 
 $Script:PSRyverUserMap = @{}
-if ( $Script:PSRyver.MapUser ) {
+if ( $Script:PSRyver.MapUser -eq $true ) {
     $Script:PSRyverUserMap = Get-RyverUserMap -Update
 }
 
