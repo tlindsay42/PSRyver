@@ -13,7 +13,7 @@
         <meta name="description" content="Community PowerShell module for the Ryver API.">
       
       
-        <link rel="canonical" href="https://tlindsay42.github.io/PSRyver/Public/Import-PSRyverConfig/">
+        <link rel="canonical" href="https://tlindsay42.github.io/PSRyver/Public/Initialize-PSRyverConfig/">
       
       
         <meta name="author" content="Troy Lindsay">
@@ -42,7 +42,7 @@
     
     
       
-        <title>Import-PSRyverConfig - PSRyver</title>
+        <title>Initialize-PSRyverConfig - PSRyver</title>
       
     
     
@@ -104,7 +104,7 @@
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
     <label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
     
-      <a href="#import-psryverconfig" tabindex="1" class="md-skip">
+      <a href="#initialize-psryverconfig" tabindex="1" class="md-skip">
         Skip to content
       </a>
     
@@ -130,7 +130,7 @@
                 PSRyver
               </span>
               <span class="md-header-nav__topic">
-                Import-PSRyverConfig
+                Initialize-PSRyverConfig
               </span>
             
           
@@ -338,6 +338,18 @@
           
           
 
+
+  <li class="md-nav__item">
+    <a href="../Import-PSRyverConfig/" title="Import-PSRyverConfig" class="md-nav__link">
+      Import-PSRyverConfig
+    </a>
+  </li>
+
+        
+          
+          
+          
+
   
 
 
@@ -349,11 +361,11 @@
     
     
       <label class="md-nav__link md-nav__link--active" for="__toc">
-        Import-PSRyverConfig
+        Initialize-PSRyverConfig
       </label>
     
-    <a href="./" title="Import-PSRyverConfig" class="md-nav__link md-nav__link--active">
-      Import-PSRyverConfig
+    <a href="./" title="Initialize-PSRyverConfig" class="md-nav__link md-nav__link--active">
+      Initialize-PSRyverConfig
     </a>
     
       
@@ -437,8 +449,43 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#-path" title="-Path" class="md-nav__link">
-    -Path
+  <a href="#-credential" title="-Credential" class="md-nav__link">
+    -Credential
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#-forceverbose" title="-ForceVerbose" class="md-nav__link">
+    -ForceVerbose
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#-incomingwebhookuri" title="-IncomingWebhookUri" class="md-nav__link">
+    -IncomingWebhookUri
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#-mapuser" title="-MapUser" class="md-nav__link">
+    -MapUser
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#-proxy" title="-Proxy" class="md-nav__link">
+    -Proxy
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#-restapibaseuri" title="-RestApiBaseUri" class="md-nav__link">
+    -RestApiBaseUri
   </a>
   
 </li>
@@ -478,8 +525,8 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#systemiofileinfo" title="System.IO.FileInfo" class="md-nav__link">
-    System.IO.FileInfo
+  <a href="#none" title="None" class="md-nav__link">
+    None
   </a>
   
 </li>
@@ -531,18 +578,6 @@
   
 </nav>
     
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../Initialize-PSRyverConfig/" title="Initialize-PSRyverConfig" class="md-nav__link">
-      Initialize-PSRyverConfig
-    </a>
   </li>
 
         
@@ -822,8 +857,43 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#-path" title="-Path" class="md-nav__link">
-    -Path
+  <a href="#-credential" title="-Credential" class="md-nav__link">
+    -Credential
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#-forceverbose" title="-ForceVerbose" class="md-nav__link">
+    -ForceVerbose
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#-incomingwebhookuri" title="-IncomingWebhookUri" class="md-nav__link">
+    -IncomingWebhookUri
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#-mapuser" title="-MapUser" class="md-nav__link">
+    -MapUser
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#-proxy" title="-Proxy" class="md-nav__link">
+    -Proxy
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#-restapibaseuri" title="-RestApiBaseUri" class="md-nav__link">
+    -RestApiBaseUri
   </a>
   
 </li>
@@ -863,8 +933,8 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#systemiofileinfo" title="System.IO.FileInfo" class="md-nav__link">
-    System.IO.FileInfo
+  <a href="#none" title="None" class="md-nav__link">
+    None
   </a>
   
 </li>
@@ -924,58 +994,134 @@
             <article class="md-content__inner md-typeset">
               
                 
-                  <a href="https://github.com/tlindsay42/PSRyver/blob/master/docs/Public/Import-PSRyverConfig.md" title="Edit this page" class="md-icon md-content__icon">&#xE3C9;</a>
+                  <a href="https://github.com/tlindsay42/PSRyver/blob/master/docs/Public/Initialize-PSRyverConfig.md" title="Edit this page" class="md-icon md-content__icon">&#xE3C9;</a>
                 
                 
-                <h1 id="import-psryverconfig">Import-PSRyverConfig<a class="headerlink" href="#import-psryverconfig" title="Permanent link">&para;</a></h1>
+                <h1 id="initialize-psryverconfig">Initialize-PSRyverConfig<a class="headerlink" href="#initialize-psryverconfig" title="Permanent link">&para;</a></h1>
 <h2 id="synopsis">SYNOPSIS<a class="headerlink" href="#synopsis" title="Permanent link">&para;</a></h2>
-<p>Import a PSRyver module configuration from file.</p>
+<p>Initialize the PSRyver module configuration parameters.</p>
 <h2 id="syntax">SYNTAX<a class="headerlink" href="#syntax" title="Permanent link">&para;</a></h2>
-<div class="codehilite"><pre><span></span>Import-PSRyverConfig [[-Path] &lt;FileInfo&gt;] [-WhatIf] [-Confirm] [&lt;CommonParameters&gt;]
+<div class="codehilite"><pre><span></span>Initialize-PSRyverConfig [[-RestApiBaseUri] &lt;String&gt;] [[-Credential] &lt;PSCredential&gt;]
+ [[-IncomingWebhookUri] &lt;String&gt;] [[-Proxy] &lt;String&gt;] [-MapUser] [-ForceVerbose] [-WhatIf] [-Confirm]
+ [&lt;CommonParameters&gt;]
 </pre></div>
 
 <h2 id="description">DESCRIPTION<a class="headerlink" href="#description" title="Permanent link">&para;</a></h2>
-<p>Import a PSRyver module configuration from file and set the $Script:PSRyver
-module configuration variable.</p>
+<p>Initialize the PSRyver module configuration parameters stored in the
+$Script:PSRyver variable.</p>
 <h2 id="examples">EXAMPLES<a class="headerlink" href="#examples" title="Permanent link">&para;</a></h2>
 <h3 id="example-1">EXAMPLE 1<a class="headerlink" href="#example-1" title="Permanent link">&para;</a></h3>
-<div class="codehilite"><pre><span></span>Import-PSRyverConfig
+<div class="codehilite"><pre><span></span>Initialize-PSRyverConfig
 </pre></div>
 
-<p>Loads the PSRyver module configuration to $Script:PSRyver from the default file
-path stored in $Script:PSRyverConfigFilePath.
-which can be accessed via
-Get-PSRyverConfigPath and set via Set-PSRyverConfigPath.</p>
-<p>The default location is '~/.psryver.xml'</p>
+<p>Initializes the $Script:PSRyver variable with all module configuration settings
+set to their default values.</p>
 <h3 id="example-2">EXAMPLE 2<a class="headerlink" href="#example-2" title="Permanent link">&para;</a></h3>
-<div class="codehilite"><pre><span></span>Import-PSRyverConfig -Path &#39;~/.psryver.xml&#39;
+<div class="codehilite"><pre><span></span>Initialize-PSRyverConfig https://example.ryver.com/api/1/odata.svc ( Get-Credential )
 </pre></div>
 
-<p>Loads the PSRyver module configuration from '~/.psryver.xml' to
-$Script:PSRyver.</p>
+<p>Uses positional parameters to set the $Script:PSRyver.RestApiBaseUri value
+storing the default REST API URI and the $Script:PSRyver.Authorization value
+storing the basic authentication authorization header to use for all requests.</p>
+<p>The values of all other settings initialized with their default values.</p>
 <h3 id="example-3">EXAMPLE 3<a class="headerlink" href="#example-3" title="Permanent link">&para;</a></h3>
-<div class="codehilite"><pre><span></span>&#39;~/.psryver.xml&#39; | Export-PSRyverConfig
+<div class="codehilite"><pre><span></span>Initialize-PSRyverConfig -IncomingWebhookUri https://example.ryver.com/application/webhook/4z-_G76nj7Fic-M
 </pre></div>
 
-<p>Loads the PSRyver module configuration from '~/.psryver.xml', specified via the
-pipeline, to $Script:PSRyver.</p>
+<p>Sets the $Script:PSRyver.IncomingWebhookUri value storing the default
+incoming webhook URI to use for all requests.</p>
+<p>The values of all other settings initialized with their default values.</p>
 <h3 id="example-4">EXAMPLE 4<a class="headerlink" href="#example-4" title="Permanent link">&para;</a></h3>
-<div class="codehilite"><pre><span></span>Import-PSRyverConfig &#39;~/.psryver.xml&#39;
+<div class="codehilite"><pre><span></span>[PSCustomObject] @{ Proxy = &#39;https://192.168.1.1/&#39;; MapUser = $true; ForceVerbose = $true } | Initialize-PSRyverConfig
 </pre></div>
 
-<p>Loads the PSRyver module configuration from '~/.psryver.xml', specified via
-positional parameter, to $Script:PSRyver.</p>
+<p>Configures the default proxy, enables user mapping, and prevents sensitive
+values from being redacted.</p>
+<p>The values of all other settings initialized with their default values.</p>
 <h2 id="parameters">PARAMETERS<a class="headerlink" href="#parameters" title="Permanent link">&para;</a></h2>
-<h3 id="-path">-Path<a class="headerlink" href="#-path" title="Permanent link">&para;</a></h3>
-<p>Specifies the PSRyver config file to import.</p>
-<div class="codehilite"><pre><span></span><span class="l l-Scalar l-Scalar-Plain">Type</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">FileInfo</span>
+<h3 id="-credential">-Credential<a class="headerlink" href="#-credential" title="Permanent link">&para;</a></h3>
+<p>Specify the Credentials to use for basic authentication.</p>
+<p>Only serialized to disk as the base64 encoded authorization header value on
+Windows via DPAPI.</p>
+<div class="codehilite"><pre><span></span><span class="l l-Scalar l-Scalar-Plain">Type</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">PSCredential</span>
+<span class="l l-Scalar l-Scalar-Plain">Parameter Sets</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">(All)</span>
+<span class="l l-Scalar l-Scalar-Plain">Aliases</span><span class="p p-Indicator">:</span>
+
+<span class="l l-Scalar l-Scalar-Plain">Required</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">False</span>
+<span class="l l-Scalar l-Scalar-Plain">Position</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">2</span>
+<span class="l l-Scalar l-Scalar-Plain">Default value</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">None</span>
+<span class="l l-Scalar l-Scalar-Plain">Accept pipeline input</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">True (ByPropertyName)</span>
+<span class="l l-Scalar l-Scalar-Plain">Accept wildcard characters</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">False</span>
+</pre></div>
+
+<h3 id="-forceverbose">-ForceVerbose<a class="headerlink" href="#-forceverbose" title="Permanent link">&para;</a></h3>
+<p>Prevents sensitive property values from being redacted for troubleshooting
+purposes.</p>
+<p>*** WARNING ***
+This will expose your sensitive property values.</p>
+<div class="codehilite"><pre><span></span><span class="l l-Scalar l-Scalar-Plain">Type</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">SwitchParameter</span>
+<span class="l l-Scalar l-Scalar-Plain">Parameter Sets</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">(All)</span>
+<span class="l l-Scalar l-Scalar-Plain">Aliases</span><span class="p p-Indicator">:</span>
+
+<span class="l l-Scalar l-Scalar-Plain">Required</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">False</span>
+<span class="l l-Scalar l-Scalar-Plain">Position</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">6</span>
+<span class="l l-Scalar l-Scalar-Plain">Default value</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">False</span>
+<span class="l l-Scalar l-Scalar-Plain">Accept pipeline input</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">True (ByPropertyName)</span>
+<span class="l l-Scalar l-Scalar-Plain">Accept wildcard characters</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">False</span>
+</pre></div>
+
+<h3 id="-incomingwebhookuri">-IncomingWebhookUri<a class="headerlink" href="#-incomingwebhookuri" title="Permanent link">&para;</a></h3>
+<p>Specifies the incoming webhook URI. 
+Only serialized to disk on Windows via DPAPI.</p>
+<div class="codehilite"><pre><span></span><span class="l l-Scalar l-Scalar-Plain">Type</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">String</span>
+<span class="l l-Scalar l-Scalar-Plain">Parameter Sets</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">(All)</span>
+<span class="l l-Scalar l-Scalar-Plain">Aliases</span><span class="p p-Indicator">:</span>
+
+<span class="l l-Scalar l-Scalar-Plain">Required</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">False</span>
+<span class="l l-Scalar l-Scalar-Plain">Position</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">3</span>
+<span class="l l-Scalar l-Scalar-Plain">Default value</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">None</span>
+<span class="l l-Scalar l-Scalar-Plain">Accept pipeline input</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">True (ByPropertyName)</span>
+<span class="l l-Scalar l-Scalar-Plain">Accept wildcard characters</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">False</span>
+</pre></div>
+
+<h3 id="-mapuser">-MapUser<a class="headerlink" href="#-mapuser" title="Permanent link">&para;</a></h3>
+<p>Specifies whether to generate a map of Ryver user ID to name on module load,
+for use in Ryver File commands.</p>
+<div class="codehilite"><pre><span></span><span class="l l-Scalar l-Scalar-Plain">Type</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">SwitchParameter</span>
+<span class="l l-Scalar l-Scalar-Plain">Parameter Sets</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">(All)</span>
+<span class="l l-Scalar l-Scalar-Plain">Aliases</span><span class="p p-Indicator">:</span>
+
+<span class="l l-Scalar l-Scalar-Plain">Required</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">False</span>
+<span class="l l-Scalar l-Scalar-Plain">Position</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">5</span>
+<span class="l l-Scalar l-Scalar-Plain">Default value</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">False</span>
+<span class="l l-Scalar l-Scalar-Plain">Accept pipeline input</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">True (ByPropertyName)</span>
+<span class="l l-Scalar l-Scalar-Plain">Accept wildcard characters</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">False</span>
+</pre></div>
+
+<h3 id="-proxy">-Proxy<a class="headerlink" href="#-proxy" title="Permanent link">&para;</a></h3>
+<p>Proxy to use with Invoke-RestMethod</p>
+<div class="codehilite"><pre><span></span><span class="l l-Scalar l-Scalar-Plain">Type</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">String</span>
+<span class="l l-Scalar l-Scalar-Plain">Parameter Sets</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">(All)</span>
+<span class="l l-Scalar l-Scalar-Plain">Aliases</span><span class="p p-Indicator">:</span>
+
+<span class="l l-Scalar l-Scalar-Plain">Required</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">False</span>
+<span class="l l-Scalar l-Scalar-Plain">Position</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">4</span>
+<span class="l l-Scalar l-Scalar-Plain">Default value</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">None</span>
+<span class="l l-Scalar l-Scalar-Plain">Accept pipeline input</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">True (ByPropertyName)</span>
+<span class="l l-Scalar l-Scalar-Plain">Accept wildcard characters</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">False</span>
+</pre></div>
+
+<h3 id="-restapibaseuri">-RestApiBaseUri<a class="headerlink" href="#-restapibaseuri" title="Permanent link">&para;</a></h3>
+<p>Specifies the REST API URI. 
+Only serialized to disk on Windows via DPAPI.</p>
+<div class="codehilite"><pre><span></span><span class="l l-Scalar l-Scalar-Plain">Type</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">String</span>
 <span class="l l-Scalar l-Scalar-Plain">Parameter Sets</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">(All)</span>
 <span class="l l-Scalar l-Scalar-Plain">Aliases</span><span class="p p-Indicator">:</span>
 
 <span class="l l-Scalar l-Scalar-Plain">Required</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">False</span>
 <span class="l l-Scalar l-Scalar-Plain">Position</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">1</span>
-<span class="l l-Scalar l-Scalar-Plain">Default value</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">$Script:PSRyverConfigFilePath</span>
-<span class="l l-Scalar l-Scalar-Plain">Accept pipeline input</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">True (ByValue)</span>
+<span class="l l-Scalar l-Scalar-Plain">Default value</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">None</span>
+<span class="l l-Scalar l-Scalar-Plain">Accept pipeline input</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">True (ByPropertyName)</span>
 <span class="l l-Scalar l-Scalar-Plain">Accept wildcard characters</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">False</span>
 </pre></div>
 
@@ -1010,7 +1156,11 @@ The cmdlet is not run.</p>
 <p>This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.
 For more information, see about_CommonParameters (<a href="http://go.microsoft.com/fwlink/?LinkID=113216">http://go.microsoft.com/fwlink/?LinkID=113216</a>).</p>
 <h2 id="inputs">INPUTS<a class="headerlink" href="#inputs" title="Permanent link">&para;</a></h2>
-<h3 id="systemiofileinfo">System.IO.FileInfo<a class="headerlink" href="#systemiofileinfo" title="Permanent link">&para;</a></h3>
+<h3 id="none">None<a class="headerlink" href="#none" title="Permanent link">&para;</a></h3>
+<div class="codehilite"><pre><span></span>You cannot pipe input to this cmdlet.
+</pre></div>
+
+
 <h2 id="outputs">OUTPUTS<a class="headerlink" href="#outputs" title="Permanent link">&para;</a></h2>
 <h3 id="systemvoid">System.Void<a class="headerlink" href="#systemvoid" title="Permanent link">&para;</a></h3>
 <h2 id="notes">NOTES<a class="headerlink" href="#notes" title="Permanent link">&para;</a></h2>
@@ -1020,14 +1170,13 @@ For more information, see about_CommonParameters (<a href="http://go.microsoft.c
 <li>GitHub: tlindsay42</li>
 </ul>
 <h2 id="related-links">RELATED LINKS<a class="headerlink" href="#related-links" title="Permanent link">&para;</a></h2>
-<p><a href="https://tlindsay42.github.io/PSRyver/Public/Import-PSRyverConfig/">https://tlindsay42.github.io/PSRyver/Public/Import-PSRyverConfig/</a></p>
-<p><a href="https://github.com/PSRyver/blob/master/PSRyver/Public/Import-PSRyverConfig.ps1">https://github.com/PSRyver/blob/master/PSRyver/Public/Import-PSRyverConfig.ps1</a></p>
-<p><a href="">Export-PSRyverConfig</a></p>
-<p><a href="">Read-PSRyverConfig</a></p>
+<p><a href="https://tlindsay42.github.io/PSRyver/Public/Initialize-PSRyverConfig/">https://tlindsay42.github.io/PSRyver/Public/Initialize-PSRyverConfig/</a></p>
+<p><a href="https://github.com/PSRyver/blob/master/PSRyver/Public/Initialize-PSRyverConfig.ps1">https://github.com/PSRyver/blob/master/PSRyver/Public/Initialize-PSRyverConfig.ps1</a></p>
 <p><a href="">Get-PSRyverConfig</a></p>
 <p><a href="">Set-PSRyverConfig</a></p>
-<p><a href="">Get-PSRyverConfigPath</a></p>
-<p><a href="">Set-PSRyverConfigPath</a></p>
+<p><a href="">Remove-PSRyverConfig</a></p>
+<p><a href="">Export-PSRyverConfig</a></p>
+<p><a href="">Import-PSRyverConfig</a></p>
                 
                   
                 
@@ -1048,7 +1197,7 @@ For more information, see about_CommonParameters (<a href="http://go.microsoft.c
     <div class="md-footer-nav">
       <nav class="md-footer-nav__inner md-grid">
         
-          <a href="../Get-RyverTeam/" title="Get-RyverTeam" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+          <a href="../Import-PSRyverConfig/" title="Import-PSRyverConfig" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
             <div class="md-flex__cell md-flex__cell--shrink">
               <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
             </div>
@@ -1057,19 +1206,19 @@ For more information, see about_CommonParameters (<a href="http://go.microsoft.c
                 <span class="md-footer-nav__direction">
                   Previous
                 </span>
-                Get-RyverTeam
+                Import-PSRyverConfig
               </span>
             </div>
           </a>
         
         
-          <a href="../Initialize-PSRyverConfig/" title="Initialize-PSRyverConfig" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+          <a href="../Invoke-RyverRestMethod/" title="Invoke-RyverRestMethod" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
             <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
               <span class="md-flex__ellipsis">
                 <span class="md-footer-nav__direction">
                   Next
                 </span>
-                Initialize-PSRyverConfig
+                Invoke-RyverRestMethod
               </span>
             </div>
             <div class="md-flex__cell md-flex__cell--shrink">
