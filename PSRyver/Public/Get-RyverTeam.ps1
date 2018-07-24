@@ -144,10 +144,18 @@ function Get-RyverTeam {
         $path += '&$select=*'
 
         if ( $Detailed -eq $true ) {
-            $path += ",${detailedPropertiesSelect}" + "&`$expand=${detailedPropertiesExpand}"
+            $path += (
+                ",${detailedPropertiesSelect}" +
+                "&`$expand=${detailedPropertiesExpand}"
+            )
         }
 
-        $path += "&`$top=$( $Script:PSRyver.MaxPageSize )" + "&`$skip=${skip}" + '&$orderby=name+asc' + '&$inlinecount=allpages'
+        $path += (
+            "&`$top=$( $Script:PSRyver.MaxPageSize )" +
+            "&`$skip=${skip}" +
+            '&$orderby=name+asc' +
+            '&$inlinecount=allpages'
+        )
         #endregion
 
         $splat = @{
