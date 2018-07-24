@@ -124,7 +124,7 @@ Accept wildcard characters: False
 ```
 
 ### -Name
-Specifies the public forum channel name.
+Specifies the public forum channel name. 
 Case insensitive.
 
 ```yaml

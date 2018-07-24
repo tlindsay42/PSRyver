@@ -122,7 +122,7 @@ Accept wildcard characters: False
 ```
 
 ### -Name
-Private team channel name.
+Private team channel name. 
 Case insensitive.
 
 ```yaml
