@@ -1,53 +1,53 @@
 function Get-RyverForum {
     <#
-        .SYNOPSIS
+    .SYNOPSIS
         Query for Ryver public forum channels.
 
-        .DESCRIPTION
+    .DESCRIPTION
         Query for Ryver public forum channels.
 
-        .INPUTS
+    .INPUTS
         System.String
 
-        .NOTES
+    .NOTES
         - Troy Lindsay
         - Twitter: @troylindsay42
         - GitHub: tlindsay42
 
-        .EXAMPLE
+    .EXAMPLE
         Get-RyverForum -Name 'All Hands'
         Queries for the 'All Hands' public forum channel.
 
-        .EXAMPLE
+    .EXAMPLE
         Get-RyverForum -Name 'All Hand*' -Credential ( Get-Credential )
         Updates the $Script:PSRyver.Authorization value storing the basic
         authentication authorization header to use for all requests and then queries
         for all public forum channels starting with the string 'All Hand', such as
         'All Hands' and 'All handsome guys like that Troy fellow'. =D
 
-        .EXAMPLE
+    .EXAMPLE
         'All Hands' | Get-RyverForum -Detailed
         Queries for detailed information about the 'All Hands' public forum channel via
         the pipeline.
 
-        .EXAMPLE
+    .EXAMPLE
         '*and*' | Get-RyverForum -Raw
         Queries for all public forum channels containing the string 'and', such as
         'All Hands' and 'The Land of Magical Unicorns' and returns the raw, unformatted
         output.
 
-        .EXAMPLE
+    .EXAMPLE
         Get-RyverForum 'All Hands' $true $true
         Queries for detailed information about the 'All Hands' public forum channel via
         positional parameters and returns the raw, unformatted output.
 
-        .LINK
+    .LINK
         https://tlindsay42.github.io/PSRyver/Public/Get-RyverForum/
 
-        .LINK
+    .LINK
         https://github.com/PSRyver/blob/master/PSRyver/Public/Get-RyverForum.ps1
 
-        .FUNCTIONALITY
+    .FUNCTIONALITY
         Ryver
     #>
     [CmdletBinding(

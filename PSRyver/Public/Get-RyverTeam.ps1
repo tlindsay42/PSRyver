@@ -1,52 +1,52 @@
 function Get-RyverTeam {
     <#
-        .SYNOPSIS
+    .SYNOPSIS
         Query for Ryver private team channels.
 
-        .DESCRIPTION
+    .DESCRIPTION
         Query for Ryver private team channels.
 
-        .INPUTS
+    .INPUTS
         System.String
 
-        .NOTES
+    .NOTES
         - Troy Lindsay
         - Twitter: @troylindsay42
         - GitHub: tlindsay42
 
-        .EXAMPLE
+    .EXAMPLE
         Get-RyverTeam -Name 'Members Only!'
         Queries for the 'Members Only!' private team channel.
 
-        .EXAMPLE
+    .EXAMPLE
         Get-RyverTeam -Name '*Only*' -Credential ( Get-Credential )
         Updates the $Script:PSRyver.Authorization value storing the basic
         authentication authorization header to use for all requests and then queries
         for all private team channels containing the string 'Only', such as
         'Members Only!' and 'Ninjas only'.
 
-        .EXAMPLE
+    .EXAMPLE
         'Members Only!' | Get-RyverTeam -Raw
         Queries for the 'Members Only!' private team channel via the pipeline and
         returns the raw, unformatted output.
 
-        .EXAMPLE
+    .EXAMPLE
         '*Member*' | Get-RyverTeam -Detailed
         Queries for detailed information about all private team channels containing the
         string 'Member', such as 'Members Only!' and 'Illuminati Membership Committee'.
 
-        .EXAMPLE
+    .EXAMPLE
         Get-RyverTeam 'Members Only!' $true $true
         Queries for detailed information about the 'Members Only!' private team channel
         via positional parameters and returns the raw, unformatted output.
 
-        .LINK
+    .LINK
         https://tlindsay42.github.io/PSRyver/Public/Get-RyverTeam/
 
-        .LINK
+    .LINK
         https://github.com/PSRyver/blob/master/PSRyver/Public/Get-RyverTeam.ps1
 
-        .FUNCTIONALITY
+    .FUNCTIONALITY
         Ryver
     #>
     [CmdletBinding(
