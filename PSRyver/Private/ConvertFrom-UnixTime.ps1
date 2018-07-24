@@ -63,7 +63,7 @@ function ConvertFrom-UnixTime {
             ( $PSBoundParameters | Remove-SensitiveData | Format-Table -AutoSize | Out-String )
         )
 
-        $startDate = Get-Date –Date '01/01/1970'
+        $startDate = Get-Date -Date '01/01/1970'
     }
 
     process {
