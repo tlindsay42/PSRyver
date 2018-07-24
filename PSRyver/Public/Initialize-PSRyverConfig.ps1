@@ -141,7 +141,16 @@ function Initialize-PSRyverConfig {
             ValueFromPipelineByPropertyName = $true
         )]
         [Switch]
-        $ForceVerbose = $false
+        $ForceVerbose = $false,
+
+        # Maximum number of results per query.
+        [Parameter(
+            Position = 6,
+            ValueFromPipelineByPropertyName = $true
+        )]
+        [ValidateRange( 25, 50 )]
+        [UInt16]
+        $MaxPageSize = 25
     )
 
     begin {
@@ -168,6 +177,7 @@ function Initialize-PSRyverConfig {
                 Proxy              = [Uri] $Proxy
                 MapUser            = [Boolean] $MapUser
                 ForceVerbose       = [Boolean] $ForceVerbose
+                MaxPageSize        = [UInt16] $MaxPageSize
             }
 
             if ( $PSBoundParameters.ContainsKey( 'Credential' ) ) {

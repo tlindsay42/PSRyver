@@ -137,7 +137,8 @@ function Export-PSRyverConfig {
                 },
                 'Proxy',
                 'MapUser',
-                'ForceVerbose'
+                'ForceVerbose',
+                'MaxPageSize'
             ) |
                 Export-Clixml -Path $Path -Force -ErrorAction 'Stop'
         }

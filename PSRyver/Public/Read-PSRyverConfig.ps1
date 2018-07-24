@@ -130,7 +130,8 @@ function Read-PSRyverConfig {
             },
             'Proxy',
             'MapUser',
-            'ForceVerbose'
+            'ForceVerbose',
+            'MaxPageSize'
         )
     }
 

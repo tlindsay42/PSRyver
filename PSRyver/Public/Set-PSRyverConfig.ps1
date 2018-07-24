@@ -135,7 +135,16 @@ function Set-PSRyverConfig {
             ValueFromPipelineByPropertyName = $true
         )]
         [Switch]
-        $ForceVerbose
+        $ForceVerbose,
+
+        # Maximum number of results per query.
+        [Parameter(
+            Position = 6,
+            ValueFromPipelineByPropertyName = $true
+        )]
+        [ValidateRange( 25, 50 )]
+        [UInt16]
+        $MaxPageSize = 25
     )
 
     begin {
@@ -210,6 +219,17 @@ function Set-PSRyverConfig {
 
                 if ( $proceed ) {
                     [Boolean] $Script:PSRyver.MapUser = $MapUser
+                }
+            }
+
+            'MaxPageSize' {
+                $proceed = $true
+                if ( $Script:PSRyver.MaxPageSize -ne $MaxPageSize ) {
+                    $proceed = $PSCmdlet.ShouldProcess( '$Script:PSRyver.MaxPageSize', $prompt )
+                }
+
+                if ( $proceed ) {
+                    [UInt16] $Script:PSRyver.MaxPageSize = $MaxPageSize
                 }
             }
 

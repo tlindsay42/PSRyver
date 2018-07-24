@@ -7,7 +7,8 @@ Sets parameters in the PSRyver module configuration.
 
 ```
 Set-PSRyverConfig [[-RestApiBaseUri] <String>] [[-Credential] <PSCredential>] [[-IncomingWebhookUri] <String>]
- [[-Proxy] <String>] [-MapUser] [-ForceVerbose] [-WhatIf] [-Confirm] [<CommonParameters>]
+ [[-Proxy] <String>] [-MapUser] [-ForceVerbose] [[-MaxPageSize] <UInt16>] [-WhatIf] [-Confirm]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -114,6 +115,21 @@ Aliases:
 Required: False
 Position: 5
 Default value: False
+Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -MaxPageSize
+Maximum number of results per query.
+
+```yaml
+Type: UInt16
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: 7
+Default value: 25
 Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```

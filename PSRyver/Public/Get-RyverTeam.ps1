@@ -147,7 +147,7 @@ function Get-RyverTeam {
             $path += ",${detailedPropertiesSelect}" + "&`$expand=${detailedPropertiesExpand}"
         }
 
-        $path += "&`$top=${Script:MaxPageSize}" + "&`$skip=${skip}" + '&$orderby=name+asc' + '&$inlinecount=allpages'
+        $path += "&`$top=$( $Script:PSRyver.MaxPageSize )" + "&`$skip=${skip}" + '&$orderby=name+asc' + '&$inlinecount=allpages'
         #endregion
 
         $splat = @{
@@ -161,7 +161,7 @@ function Get-RyverTeam {
             $count = $response.D.__Count
 
             Write-Verbose -Message "Found '${count}' objects."
-            Write-Verbose -Message "Queried for objects '${skip}-$( $skip + $Script:MaxPageSize )'."
+            Write-Verbose -Message "Queried for objects '${skip}-$( $skip + $Script:PSRyver.MaxPageSize )'."
 
             $tempObjects = $response |
                 Select-Object -ExpandProperty 'D' |
@@ -180,7 +180,7 @@ function Get-RyverTeam {
 
             $objects += $tempObjects
 
-            $skip += $Script:MaxPageSize
+            $skip += $Script:PSRyver.MaxPageSize
             $splat.Path = $path -replace '\$skip=\d+', "`$skip=${skip}"
 
             if ( $Raw -eq $true ) {

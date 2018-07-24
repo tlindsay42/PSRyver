@@ -5,8 +5,6 @@ $public = Join-Path -Path $moduleRoot -ChildPath 'Public' |
     Get-ChildItem -Filter $glob -ErrorAction 'Stop'
 $private = Join-Path -Path $moduleRoot -ChildPath 'Private' |
     Get-ChildItem -Filter $glob -ErrorAction 'Stop'
-
-Set-Variable -Name 'MaxPageSize' -Value 50 -Option 'Constant' -Scope 'Script' -Force
 #endregion
 
 # Source the definition files
