@@ -8,8 +8,7 @@ function Initialize-PSRyverConfig {
         $Script:PSRyver variable.
 
     .INPUTS
-        None
-            You cannot pipe input to this cmdlet.
+        System.Management.Automation.PSCustomObject
 
     .NOTES
         - Troy Lindsay

@@ -210,8 +210,7 @@ For more information, see about_CommonParameters (http://go.microsoft.com/fwlink
 
 ## INPUTS
 
-### None
-    You cannot pipe input to this cmdlet.
+### System.Management.Automation.PSCustomObject
 
 ## OUTPUTS
 
