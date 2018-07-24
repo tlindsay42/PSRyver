@@ -188,7 +188,7 @@ function Get-RyverTeam {
             }
             else {
                 $return += $objects |
-                    Format-RyverV1ChannelObject
+                    Format-RyverChannelObject
             }
         }
 

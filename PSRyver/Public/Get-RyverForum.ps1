@@ -189,7 +189,7 @@ function Get-RyverForum {
             }
             else {
                 $return += $objects |
-                    Format-RyverV1ChannelObject
+                    Format-RyverChannelObject
             }
         }
 

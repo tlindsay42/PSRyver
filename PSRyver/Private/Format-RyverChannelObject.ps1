@@ -1,4 +1,4 @@
-function Format-RyverV1ChannelObject {
+function Format-RyverChannelObject {
     <#
     .SYNOPSIS
         Parse forum & team channel objects.
@@ -18,28 +18,28 @@ function Format-RyverV1ChannelObject {
         - GitHub: tlindsay42
 
     .EXAMPLE
-        Format-RyverV1ChannelObject -InputObject $objects
+        Format-RyverChannelObject -InputObject $objects
         Parses the forum or team channel objects.
 
     .EXAMPLE
-        $objects | Format-RyverV1ChannelObject
+        $objects | Format-RyverChannelObject
         Parses the forum or team channel objects via the pipeline.
 
     .EXAMPLE
-        Format-RyverV1ChannelObject $objects
+        Format-RyverChannelObject $objects
         Parses the forum or team channel objects via positional parameter.
 
     .LINK
-        https://tlindsay42.github.io/PSRyver/Private/Format-RyverV1ChannelObject/
+        https://tlindsay42.github.io/PSRyver/Private/Format-RyverChannelObject/
 
     .LINK
-        https://github.com/PSRyver/blob/master/PSRyver/Private/Format-RyverV1ChannelObject.ps1
+        https://github.com/PSRyver/blob/master/PSRyver/Private/Format-RyverChannelObject.ps1
 
     .FUNCTIONALITY
         Ryver
     #>
     [CmdletBinding(
-        HelpUri = 'https://tlindsay42.github.io/PSRyver/Private/Format-RyverV1ChannelObject/'
+        HelpUri = 'https://tlindsay42.github.io/PSRyver/Private/Format-RyverChannelObject/'
     )]
     [OutputType( [PSCustomObject[]] )]
     [OutputType( [PSCustomObject] )]

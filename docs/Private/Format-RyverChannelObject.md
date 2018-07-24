@@ -1,4 +1,4 @@
-# Format-RyverV1ChannelObject
+# Format-RyverChannelObject
 
 ## SYNOPSIS
 Parse forum & team channel objects.
@@ -6,7 +6,7 @@ Parse forum & team channel objects.
 ## SYNTAX
 
 ```
-Format-RyverV1ChannelObject [-InputObject] <PSObject[]> [<CommonParameters>]
+Format-RyverChannelObject [-InputObject] <PSObject[]> [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -16,21 +16,21 @@ Parse public forum & private team channel objects.
 
 ### EXAMPLE 1
 ```
-Format-RyverV1ChannelObject -InputObject $objects
+Format-RyverChannelObject -InputObject $objects
 ```
 
 Parses the forum or team channel objects.
 
 ### EXAMPLE 2
 ```
-$objects | Format-RyverV1ChannelObject
+$objects | Format-RyverChannelObject
 ```
 
 Parses the forum or team channel objects via the pipeline.
 
 ### EXAMPLE 3
 ```
-Format-RyverV1ChannelObject $objects
+Format-RyverChannelObject $objects
 ```
 
 Parses the forum or team channel objects via positional parameter.
@@ -75,7 +75,7 @@ For more information, see about_CommonParameters (http://go.microsoft.com/fwlink
 
 ## RELATED LINKS
 
-[https://tlindsay42.github.io/PSRyver/Private/Format-RyverV1ChannelObject/](https://tlindsay42.github.io/PSRyver/Private/Format-RyverV1ChannelObject/)
+[https://tlindsay42.github.io/PSRyver/Private/Format-RyverChannelObject/](https://tlindsay42.github.io/PSRyver/Private/Format-RyverChannelObject/)
 
-[https://github.com/PSRyver/blob/master/PSRyver/Private/Format-RyverV1ChannelObject.ps1](https://github.com/PSRyver/blob/master/PSRyver/Private/Format-RyverV1ChannelObject.ps1)
+[https://github.com/PSRyver/blob/master/PSRyver/Private/Format-RyverChannelObject.ps1](https://github.com/PSRyver/blob/master/PSRyver/Private/Format-RyverChannelObject.ps1)
 
