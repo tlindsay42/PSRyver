@@ -81,6 +81,15 @@ function Invoke-RyverRestMethod {
             'Report',
             'MkCalendar'
         )]
+        [ValidateScript( {
+                if ( $PSVersionTable.PSVersion.Major -lt 6 -and $_ -in 'PropPatch', 'ACL', 'PropFind', 'Copy', 'Move', 'MkCol', 'Report', 'MkCalendar' ) {
+                    throw "Method: '${_}' is not supported prior to PowerShell version 6."
+                }
+                else {
+                    $true
+                }
+            }
+        )]
         [String]
         $Method = 'Get',
 
@@ -137,6 +146,10 @@ function Invoke-RyverRestMethod {
             if ( $Body.Length -gt 0 ) {
                 $splat.Add( 'Body', $Body )
             }
+        }
+        elseif ( $Method -in 'PropPatch', 'ACL', 'PropFind', 'Copy', 'Move', 'MkCol', 'Report', 'MkCalendar' ) {
+            $splat.Remove( 'Method' )
+            $splat.Add( 'CustomMethod', $Method )
         }
 
         if ( $Script:PSRyver.Proxy ) {
