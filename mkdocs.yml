@@ -94,6 +94,7 @@ pages:
   - Get-RyverTeam: 'Public/Get-RyverTeam.md'
   - Import-PSRyverConfig: 'Public/Import-PSRyverConfig.md'
   - Initialize-PSRyverConfig: 'Public/Initialize-PSRyverConfig.md'
+  - Invoke-RyverRestMethod: 'Public/Invoke-RyverRestMethod.md'
   - Read-PSRyverConfig: 'Public/Read-PSRyverConfig.md'
   - Remove-PSRyverConfig: 'Public/Remove-PSRyverConfig.md'
   - Set-PSRyverConfig: 'Public/Set-PSRyverConfig.md'
