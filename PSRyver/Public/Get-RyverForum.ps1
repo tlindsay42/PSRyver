@@ -192,13 +192,7 @@ function Get-RyverForum {
             $skip += $Script:PSRyver.MaxPageSize
             $splat.Path = $path -replace '\$skip=\d+', "`$skip=${skip}"
 
-            if ( $Raw -eq $true ) {
-                $return += $objects
-            }
-            else {
-                $return += $objects |
-                    Format-RyverChannelObject
-            }
+            $return += $objects
         }
 
         Write-Verbose -Message "Added '$( ( $objects | Measure-Object ).Count )' objects in this Process cycle."
@@ -217,7 +211,14 @@ function Get-RyverForum {
 
                 if ( $first -le $last ) {
                     $return = $return[$first..$last]
-                    $return
+
+                    if ( $Raw -eq $true ) {
+                        $return
+                    }
+                    else {
+                        $return |
+                            Format-RyverChannelObject
+                    }
                 }
                 else {
                     $return = $null
