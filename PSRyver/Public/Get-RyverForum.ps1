@@ -52,27 +52,46 @@ function Get-RyverForum {
     #>
     [CmdletBinding(
         HelpUri = 'https://tlindsay42.github.io/PSRyver/Public/Get-RyverForum/',
+        DefaultParameterSetName = 'ID',
         SupportsPaging = $true
     )]
     [OutputType( [PSCustomObject[]] )]
     [OutputType( [PSCustomObject] )]
     param (
+        # Specifies the public forum channel ID.
+        [Parameter(
+            ParameterSetName = 'ID',
+            Position = 0,
+            ValueFromPipeline = $true,
+            ValueFromPipelineByPropertyName = $true
+        )]
+        [UInt64]
+        $ID,
+
         # Specifies the public forum channel name.  Case insensitive.
         [Parameter(
+            ParameterSetName = 'Name',
             Position = 0,
-            ValueFromPipeline = $true
+            ValueFromPipeline = $true,
+            ValueFromPipelineByPropertyName = $true
         )]
         [SupportsWildcards()]
         [String]
         $Name,
 
         # Specifies whether to retrieve additional details about each object.
-        [Parameter( Position = 1 )]
+        [Parameter(
+            Position = 1,
+            ValueFromPipelineByPropertyName = $true
+        )]
         [Switch]
         $Detailed,
 
         # Specifies that objects should not be formatted.
-        [Parameter( Position = 2 )]
+        [Parameter(
+            Position = 2,
+            ValueFromPipelineByPropertyName = $true
+        )]
         [Switch]
         $Raw,
 
@@ -112,7 +131,7 @@ function Get-RyverForum {
             ( $PSBoundParameters | Remove-SensitiveData | Format-Table -AutoSize -Wrap | Out-String )
         )
 
-        Write-Verbose -Message "First: ${first}"
+        Write-Verbose -Message "First index position: '${first}'."
 
         if ( $PSBoundParameters.ContainsKey( 'Credential' ) ) {
             $Script:PSRyver.Authorization = ConvertTo-Authorization -Credential $Credential
@@ -131,18 +150,22 @@ function Get-RyverForum {
         #region init
         $skip = 0
         $count = [UInt64]::MaxValue
-        $urlEncodedName = [System.Web.HttpUtility]::UrlEncodeUnicode( $Name )
         $objects = @()
         #endregion
 
         #region Build the URI path
-        $path = '/forums?'
+        if ( $PSBoundParameters.ContainsKey( 'ID' ) ) {
+            $path = "/forums(${ID})?"
+        }
+        else {
+            $path = '/forums?'
 
-        if ( $Name ) {
-            $path += "`$search=$urlEncodedName"
+            if ( $PSBoundParameters.ContainsKey( 'Name' ) ) {
+                $path += "`$search=$( [System.Web.HttpUtility]::UrlEncodeUnicode( $Name ) )&"
+            }
         }
 
-        $path += '&$select=*'
+        $path += '$select=*'
 
         if ( $Detailed -eq $true ) {
             $path += (
@@ -167,7 +190,7 @@ function Get-RyverForum {
 
         while ( $return.Count -lt $last -and $skip -lt $count ) {
             $response = Invoke-RyverRestMethod @splat
-            $count = $response.D.__Count
+            [UInt64] $count = $response.D.__Count
 
             Write-Verbose -Message "Found '${count}' objects."
             Write-Verbose -Message "Queried for objects '${skip}-$( $skip + $Script:PSRyver.MaxPageSize )'."
@@ -207,7 +230,7 @@ function Get-RyverForum {
             }
             else {
                 $last = $first + [Math]::Min( $PSCmdlet.PagingParameters.First, $count - $PSCmdlet.PagingParameters.Skip ) - 1
-                Write-Verbose -Message "Last: ${last}"
+                Write-Verbose -Message "Last index position: '${last}'."
 
                 if ( $first -le $last ) {
                     $return = $return[$first..$last]
@@ -226,8 +249,9 @@ function Get-RyverForum {
             }
         }
 
+        $count = ( $return | Measure-Object ).Count
+        Write-Verbose -Message "Returned '${count}' objects."
         if ( $PSCmdlet.PagingParameters.IncludeTotalCount ) {
-            $count = ( $return | Measure-Object ).Count
             $PSCmdlet.PagingParameters.NewTotalCount( $count, 1.0 )
         }
 
