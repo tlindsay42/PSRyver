@@ -92,15 +92,15 @@ function Format-RyverChannelObject {
                 ShareTasks          = $object.ShareTasks
                 TagDefs             = $object.TagDefs |
                     ForEach-Object -Process {
-                    [PSCustomObject] @{
-                        Name   = $_.Name
-                        Colors = [PSCustomObject] @{
-                            Text       = $_.Colors.Text
-                            Background = $_.Colors.Background
-                            Border     = $_.Colors.Border
+                        [PSCustomObject] @{
+                            Name   = $_.Name
+                            Colors = [PSCustomObject] @{
+                                Text       = $_.Colors.Text
+                                Background = $_.Colors.Background
+                                Border     = $_.Colors.Border
+                            }
                         }
                     }
-                }
                 Settings            = $object.Settings
                 Tabs                = $object.Tabs
                 Descriptor          = $object.__Descriptor
@@ -109,6 +109,7 @@ function Format-RyverChannelObject {
                 Subscribed          = $object.__Subscribed
                 Subscription        = $object.__Subscription
                 CreateUser          = [PSCustomObject] @{
+                    PSTypeName              = "PSRyver.$( $object.CreateUser.__Metadata.Type )"
                     Metadata                = [PSCustomObject] @{
                         Uri  = $object.CreateUser.__Metadata.Uri
                         Type = $object.CreateUser.__Metadata.Type
@@ -158,6 +159,7 @@ function Format-RyverChannelObject {
                     Tasks                   = $object.CreateUser.Tasks.__Deferred.Uri
                 }
                 ModifyUser          = [PSCustomObject] @{
+                    PSTypeName              = "PSRyver.$( $object.ModifyUser.__Metadata.Type )"
                     Metadata                = [PSCustomObject] @{
                         Uri  = $object.ModifyUser.__Metadata.Uri
                         Type = $object.ModifyUser.__Metadata.Type
@@ -207,6 +209,7 @@ function Format-RyverChannelObject {
                     Tasks                   = $object.ModifyUser.Tasks.__Deferred.Uri
                 }
                 SecurityGroup       = [PSCustomObject] @{
+                    PSTypeName   = "PSRyver.$( $object.SecurityGroup.__Metadata.Type )"
                     Metadata     = [PSCustomObject] @{
                         Uri  = $object.SecurityGroup.__Metadata.Uri
                         Type = $object.SecurityGroup.__Metadata.Type
@@ -228,6 +231,7 @@ function Format-RyverChannelObject {
                     Users        = $object.SecurityGroup.Users.__Deferred.Uri
                 }
                 AdministratorsGroup = [PSCustomObject] @{
+                    PSTypeName   = "PSRyver.$( $object.AdministratorsGroup.__Metadata.Type )"
                     Metadata     = [PSCustomObject] @{
                         Uri  = $object.AdministratorsGroup.__Metadata.Uri
                         Type = $object.AdministratorsGroup.__Metadata.Type
@@ -249,6 +253,7 @@ function Format-RyverChannelObject {
                     Users        = $object.AdministratorsGroup.Users.__Deferred.Uri
                 }
                 ModeratorsGroup     = [PSCustomObject] @{
+                    PSTypeName   = "PSRyver.$( $object.ModeratorsGroup.__Metadata.Type )"
                     Metadata     = [PSCustomObject] @{
                         Uri  = $object.ModeratorsGroup.__Metadata.Uri
                         Type = $object.ModeratorsGroup.__Metadata.Type
@@ -274,37 +279,39 @@ function Format-RyverChannelObject {
                 }
                 Members             = $object.Members.Results |
                     ForEach-Object -Process {
-                    [PSCustomObject] @{
-                        Metadata     = [PSCustomObject] @{
-                            Uri  = $_.__Metadata.Uri
-                            Type = $_.__Metadata.Type
-                            ETag = $_.__Metadata.ETag
+                        [PSCustomObject] @{
+                            PSTypeName   = "PSRyver.$( $_.__Metadata.Type )"
+                            Metadata     = [PSCustomObject] @{
+                                Uri  = $_.__Metadata.Uri
+                                Type = $_.__Metadata.Type
+                                ETag = $_.__Metadata.ETag
+                            }
+                            ID           = $_.ID
+                            CreateDate   = $_.CreateDate
+                            ModifyDate   = $_.ModifyDate
+                            CreateSource = $_.CreateSource
+                            ModifySource = $_.ModifySource
+                            Descriptor   = $_.__Descriptor
+                            Role         = $_.Role
+                            Extras       = [PSCustomObject] @{
+                                DisplayName = $_.Extras.DisplayName
+                            }
+                            Roles        = @(
+                                $_.Roles
+                            )
+                            CreateUser   = $_.CreateUser.__Deferred.Uri
+                            ModifyUser   = $_.ModifyUser.__Deferred.Uri
+                            WorkRoom     = $_.WorkRoom.__Deferred.Uri
+                            Member       = $_.Member.__Deferred.Uri
                         }
-                        ID           = $_.ID
-                        CreateDate   = $_.CreateDate
-                        ModifyDate   = $_.ModifyDate
-                        CreateSource = $_.CreateSource
-                        ModifySource = $_.ModifySource
-                        Descriptor   = $_.__Descriptor
-                        Role         = $_.Role
-                        Extras       = [PSCustomObject] @{
-                            DisplayName = $_.Extras.DisplayName
-                        }
-                        Roles        = @(
-                            $_.Roles
-                        )
-                        CreateUser   = $_.CreateUser.__Deferred.Uri
-                        ModifyUser   = $_.ModifyUser.__Deferred.Uri
-                        WorkRoom     = $_.WorkRoom.__Deferred.Uri
-                        Member       = $_.Member.__Deferred.Uri
                     }
-                }
                 Acl                 = [PSCustomObject] @{
-                    Metadata = [PSCustomObject] @{
+                    PSTypeName = "PSRyver.$( $object.Acl.__Metadata.Type )"
+                    Metadata   = [PSCustomObject] @{
                         Uri  = $object.Acl.__Metadata.Uri
                         Type = $object.Acl.__Metadata.Type
                     }
-                    ID       = $object.Acl.ID
+                    ID         = $object.Acl.ID
                 }
                 ExternalLinks       = @(
                     $object.ExternalLinks.Results
