@@ -91,6 +91,7 @@ pages:
   - Get-PSRyverConfig: 'Public/Get-PSRyverConfig.md'
   - Get-PSRyverConfigPath: 'Public/Get-PSRyverConfigPath.md'
   - Get-RyverForum: 'Public/Get-RyverForum.md'
+  - Get-RyverHistory: 'Public/Get-RyverHistory.md'
   - Get-RyverTeam: 'Public/Get-RyverTeam.md'
   - Import-PSRyverConfig: 'Public/Import-PSRyverConfig.md'
   - Initialize-PSRyverConfig: 'Public/Initialize-PSRyverConfig.md'

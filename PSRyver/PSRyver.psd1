@@ -63,15 +63,16 @@ PowerShellVersion = '3.0'
 # TypesToProcess = @()
 
 # Format files (.ps1xml) to be loaded when importing this module
-FormatsToProcess = @()
+FormatsToProcess = 'Formats\Forum.Format.ps1xml', 'Formats\Team.Format.ps1xml'
 
 # Modules to import as nested modules of the module specified in RootModule/ModuleToProcess
 # NestedModules = @()
 
 # Functions to export from this module, for best performance, do not use wildcards and do not delete the entry, use an empty array if there are no functions to export.
 FunctionsToExport = 'Export-PSRyverConfig', 'Get-PSRyverConfig', 'Get-PSRyverConfigPath',
-               'Get-RyverForum', 'Get-RyverTeam', 'Import-PSRyverConfig',
-               'Invoke-RyverRestMethod', 'Initialize-PSRyverConfig', 'Read-PSRyverConfig',
+               'Get-RyverForum', 'Get-RyverHistory', 'Get-RyverTeam',
+               'Import-PSRyverConfig', 'Initialize-PSRyverConfig',
+               'Invoke-RyverRestMethod', 'Read-PSRyverConfig',
                'Remove-PSRyverConfig', 'Set-PSRyverConfig', 'Set-PSRyverConfigPath'
 
 # Cmdlets to export from this module, for best performance, do not use wildcards and do not delete the entry, use an empty array if there are no cmdlets to export.
@@ -90,7 +91,7 @@ AliasesToExport = @()
 # ModuleList = @()
 
 # List of all files packaged with this module
-FileList = 'PSRyver.Format.ps1xml', 'PSRyver.psd1', 'PSRyver.psm1',
+FileList = 'PSRyver.psd1', 'PSRyver.psm1',
                'Private\Assert-RyverApiConfig.ps1',
                'Private\Convert-ColorToHexTriplet.ps1',
                'Private\ConvertFrom-UnixTime.ps1',
@@ -99,12 +100,12 @@ FileList = 'PSRyver.Format.ps1xml', 'PSRyver.psd1', 'PSRyver.psm1',
                'Private\Format-RyverChannelObject.ps1',
                'Private\Format-RyverMessageObject.ps1',
                'Private\Remove-SensitiveData.ps1', 'Private\Test-IsWindows.ps1',
-               'Private\Get-RyverUserFromID.ps1',
-               'Public\Export-PSRyverConfig',
-               'Public\Get-PSRyverConfig.ps1', 'Public\Get-PSRyverConfigPath.ps1',
-               'Public\Get-RyverForum.ps1', 'Public\Get-RyverTeam.ps1',
-               'Public\Invoke-RyverRestMethod.ps1', 'Public\Import-PSRyverConfig',
-               'Public\Initialize-PSRyverConfig',
+               'Public\Export-PSRyverConfig.ps1', 'Public\Get-PSRyverConfig.ps1',
+               'Public\Get-PSRyverConfigPath.ps1', 'Public\Get-RyverForum.ps1',
+               'Public\Get-RyverHistory.ps1', 'Public\Get-RyverTeam.ps1',
+               'Public\Import-PSRyverConfig.ps1',
+               'Public\Initialize-PSRyverConfig.ps1',
+               'Public\Invoke-RyverRestMethod.ps1',
                'Public\Read-PSRyverConfig.ps1', 'Public\Remove-PSRyverConfig.ps1',
                'Public\Set-PSRyverConfig.ps1', 'Public\Set-PSRyverConfigPath.ps1'
 
