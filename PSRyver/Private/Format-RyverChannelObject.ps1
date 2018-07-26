@@ -316,6 +316,19 @@ function Format-RyverChannelObject {
                 ExternalLinks       = @(
                     $object.ExternalLinks.Results
                 )
+                Type                = switch ( $object.__Metadata.Type ) {
+                    'Entity.Forum' {
+                        'Forum'
+                    }
+
+                    'Entity.Workroom' {
+                        'Team'
+                    }
+
+                    default {
+                        ''
+                    }
+                }
             }
         }
     }
