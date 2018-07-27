@@ -63,14 +63,14 @@ PowerShellVersion = '3.0'
 # TypesToProcess = @()
 
 # Format files (.ps1xml) to be loaded when importing this module
-FormatsToProcess = 'Formats\Forum.Format.ps1xml', 'Formats\Team.Format.ps1xml'
+FormatsToProcess = @()
 
 # Modules to import as nested modules of the module specified in RootModule/ModuleToProcess
 # NestedModules = @()
 
 # Functions to export from this module, for best performance, do not use wildcards and do not delete the entry, use an empty array if there are no functions to export.
 FunctionsToExport = 'Export-PSRyverConfig', 'Get-PSRyverConfig', 'Get-PSRyverConfigPath',
-               'Get-RyverForum', 'Get-RyverHistory', 'Get-RyverTeam',
+               'Get-RyverForum', 'Get-RyverHistory', 'Get-RyverTeam', 'Get-RyverUser',
                'Import-PSRyverConfig', 'Initialize-PSRyverConfig',
                'Invoke-RyverRestMethod', 'Read-PSRyverConfig',
                'Remove-PSRyverConfig', 'Set-PSRyverConfig', 'Set-PSRyverConfigPath'
@@ -99,11 +99,12 @@ FileList = 'PSRyver.psd1', 'PSRyver.psm1',
                'Private\ConvertTo-UnixTime.ps1',
                'Private\Format-RyverChannelObject.ps1',
                'Private\Format-RyverMessageObject.ps1',
+               'Private\Format-RyverUserObject.ps1',
                'Private\Remove-SensitiveData.ps1', 'Private\Test-IsWindows.ps1',
                'Public\Export-PSRyverConfig.ps1', 'Public\Get-PSRyverConfig.ps1',
                'Public\Get-PSRyverConfigPath.ps1', 'Public\Get-RyverForum.ps1',
                'Public\Get-RyverHistory.ps1', 'Public\Get-RyverTeam.ps1',
-               'Public\Import-PSRyverConfig.ps1',
+               'Public\Get-RyverUser.ps1', 'Public\Import-PSRyverConfig.ps1',
                'Public\Initialize-PSRyverConfig.ps1',
                'Public\Invoke-RyverRestMethod.ps1',
                'Public\Read-PSRyverConfig.ps1', 'Public\Remove-PSRyverConfig.ps1',
