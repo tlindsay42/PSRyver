@@ -175,7 +175,7 @@ function Get-RyverTeam {
         #endregion
 
         #region Build the URI path
-        if ( $PSBoundParameters.ContainsKey( 'ID' ) ) {
+        if ( $ID ) {
             $path = "/workrooms(${ID})?"
         }
         else {
@@ -225,7 +225,7 @@ function Get-RyverTeam {
 
                 $tempObjects = $tempObjects |
                     Where-Object -FilterScript {
-                    $_.Name -like $Name
+                    $_.__Descriptor -like $Name
                 }
 
                 Write-Verbose -Message "Filtered to '$( ( $tempObjects | Measure-Object ).Count )' objects after client-side filtering."
