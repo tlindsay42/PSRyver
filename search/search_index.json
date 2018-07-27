@@ -327,7 +327,7 @@
         },
         {
             "location": "/Public/Get-RyverForum/",
-            "text": "Get-RyverForum\n\u00b6\n\n\nSYNOPSIS\n\u00b6\n\n\nQuery for Ryver public forum channels.\n\n\nSYNTAX\n\u00b6\n\n\nGet-RyverForum [[-Name] <String>] [-Detailed] [-Raw] [[-Credential] <PSCredential>] [-IncludeTotalCount]\n [-Skip <UInt64>] [-First <UInt64>] [<CommonParameters>]\n\n\n\n\nDESCRIPTION\n\u00b6\n\n\nQuery for Ryver public forum channels.\n\n\nEXAMPLES\n\u00b6\n\n\nEXAMPLE 1\n\u00b6\n\n\nGet-RyverForum -Name 'All Hands'\n\n\n\n\nQueries for the 'All Hands' public forum channel.\n\n\nEXAMPLE 2\n\u00b6\n\n\nGet-RyverForum -Name 'All Hand*' -Credential ( Get-Credential )\n\n\n\n\nUpdates the $Script:PSRyver.Authorization value storing the basic\nauthentication authorization header to use for all requests and then queries\nfor all public forum channels starting with the string 'All Hand', such as\n'All Hands' and 'All handsome guys like that Troy fellow'.\n=D\n\n\nEXAMPLE 3\n\u00b6\n\n\n'All Hands' | Get-RyverForum -Detailed\n\n\n\n\nQueries for detailed information about the 'All Hands' public forum channel via\nthe pipeline.\n\n\nEXAMPLE 4\n\u00b6\n\n\n'*and*' | Get-RyverForum -Raw\n\n\n\n\nQueries for all public forum channels containing the string 'and', such as\n'All Hands' and 'The Land of Magical Unicorns' and returns the raw, unformatted\noutput.\n\n\nEXAMPLE 5\n\u00b6\n\n\nGet-RyverForum 'All Hands' $true $true\n\n\n\n\nQueries for detailed information about the 'All Hands' public forum channel via\npositional parameters and returns the raw, unformatted output.\n\n\nPARAMETERS\n\u00b6\n\n\n-Credential\n\u00b6\n\n\nCredentials to use for the Ryver API.\n\n\nDefault value is the value set by Set-PSRyverConfig.\n\n\nType\n:\n \nPSCredential\n\n\nParameter Sets\n:\n \n(All)\n\n\nAliases\n:\n\n\n\nRequired\n:\n \nFalse\n\n\nPosition\n:\n \n4\n\n\nDefault value\n:\n \nNone\n\n\nAccept pipeline input\n:\n \nFalse\n\n\nAccept wildcard characters\n:\n \nFalse\n\n\n\n\n\n-Detailed\n\u00b6\n\n\nSpecifies whether to retrieve additional details about each object.\n\n\nType\n:\n \nSwitchParameter\n\n\nParameter Sets\n:\n \n(All)\n\n\nAliases\n:\n\n\n\nRequired\n:\n \nFalse\n\n\nPosition\n:\n \n2\n\n\nDefault value\n:\n \nFalse\n\n\nAccept pipeline input\n:\n \nFalse\n\n\nAccept wildcard characters\n:\n \nFalse\n\n\n\n\n\n-First\n\u00b6\n\n\n{{Fill First Description}}\n\n\nType\n:\n \nUInt64\n\n\nParameter Sets\n:\n \n(All)\n\n\nAliases\n:\n\n\n\nRequired\n:\n \nFalse\n\n\nPosition\n:\n \nNamed\n\n\nDefault value\n:\n \nNone\n\n\nAccept pipeline input\n:\n \nFalse\n\n\nAccept wildcard characters\n:\n \nFalse\n\n\n\n\n\n-IncludeTotalCount\n\u00b6\n\n\n{{Fill IncludeTotalCount Description}}\n\n\nType\n:\n \nSwitchParameter\n\n\nParameter Sets\n:\n \n(All)\n\n\nAliases\n:\n\n\n\nRequired\n:\n \nFalse\n\n\nPosition\n:\n \nNamed\n\n\nDefault value\n:\n \nNone\n\n\nAccept pipeline input\n:\n \nFalse\n\n\nAccept wildcard characters\n:\n \nFalse\n\n\n\n\n\n-Name\n\u00b6\n\n\nSpecifies the public forum channel name. \nCase insensitive.\n\n\nType\n:\n \nString\n\n\nParameter Sets\n:\n \n(All)\n\n\nAliases\n:\n\n\n\nRequired\n:\n \nFalse\n\n\nPosition\n:\n \n1\n\n\nDefault value\n:\n \nNone\n\n\nAccept pipeline input\n:\n \nTrue (ByValue)\n\n\nAccept wildcard characters\n:\n \nTrue\n\n\n\n\n\n-Raw\n\u00b6\n\n\nSpecifies that objects should not be formatted.\n\n\nType\n:\n \nSwitchParameter\n\n\nParameter Sets\n:\n \n(All)\n\n\nAliases\n:\n\n\n\nRequired\n:\n \nFalse\n\n\nPosition\n:\n \n3\n\n\nDefault value\n:\n \nFalse\n\n\nAccept pipeline input\n:\n \nFalse\n\n\nAccept wildcard characters\n:\n \nFalse\n\n\n\n\n\n-Skip\n\u00b6\n\n\n{{Fill Skip Description}}\n\n\nType\n:\n \nUInt64\n\n\nParameter Sets\n:\n \n(All)\n\n\nAliases\n:\n\n\n\nRequired\n:\n \nFalse\n\n\nPosition\n:\n \nNamed\n\n\nDefault value\n:\n \nNone\n\n\nAccept pipeline input\n:\n \nFalse\n\n\nAccept wildcard characters\n:\n \nFalse\n\n\n\n\n\nCommonParameters\n\u00b6\n\n\nThis cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.\nFor more information, see about_CommonParameters (\nhttp://go.microsoft.com/fwlink/?LinkID=113216\n).\n\n\nINPUTS\n\u00b6\n\n\nSystem.String\n\u00b6\n\n\nOUTPUTS\n\u00b6\n\n\nSystem.Management.Automation.PSObject[]\n\u00b6\n\n\nSystem.Management.Automation.PSObject\n\u00b6\n\n\nNOTES\n\u00b6\n\n\n\n\nTroy Lindsay\n\n\nTwitter: @troylindsay42\n\n\nGitHub: tlindsay42\n\n\n\n\nRELATED LINKS\n\u00b6\n\n\nhttps://tlindsay42.github.io/PSRyver/Public/Get-RyverForum/\n\n\nhttps://github.com/PSRyver/blob/master/PSRyver/Public/Get-RyverForum.ps1",
+            "text": "Get-RyverForum\n\u00b6\n\n\nSYNOPSIS\n\u00b6\n\n\nQuery for Ryver public forum channels.\n\n\nSYNTAX\n\u00b6\n\n\nID (Default)\n\u00b6\n\n\nGet-RyverForum [[-ID] <UInt64>] [-Detailed] [-Raw] [[-Credential] <PSCredential>] [-IncludeTotalCount]\n [-Skip <UInt64>] [-First <UInt64>] [<CommonParameters>]\n\n\n\n\nName\n\u00b6\n\n\nGet-RyverForum [[-Name] <String>] [-Detailed] [-Raw] [[-Credential] <PSCredential>] [-IncludeTotalCount]\n [-Skip <UInt64>] [-First <UInt64>] [<CommonParameters>]\n\n\n\n\nDESCRIPTION\n\u00b6\n\n\nQuery for Ryver public forum channels.\n\n\nEXAMPLES\n\u00b6\n\n\nEXAMPLE 1\n\u00b6\n\n\nGet-RyverForum -ID 12345678\n\n\n\n\nQueries for the public forum channel with ID 12345678.\n\n\nEXAMPLE 2\n\u00b6\n\n\n12345678 | Get-RyverForum\n\n\n\n\nQueries for the public forum channel with ID 12345678 via pipeline value.\n\n\nEXAMPLE 3\n\u00b6\n\n\nGet-RyverForum 12345678\n\n\n\n\nQueries for the public forum channel with ID 12345678 via positional parameter.\n\n\nEXAMPLE 4\n\u00b6\n\n\nGet-RyverForum -Name 'All Hands'\n\n\n\n\nQueries for the 'All Hands' public forum channel.\n\n\nEXAMPLE 5\n\u00b6\n\n\nGet-RyverForum -Name 'All Hand*' -Credential ( Get-Credential )\n\n\n\n\nUpdates the $Script:PSRyver.Authorization value storing the basic\nauthentication authorization header to use for all requests and then queries\nfor all public forum channels starting with the string 'All Hand', such as\n'All Hands' and 'All handsome guys like that Troy fellow'.\n=D\n\n\nEXAMPLE 6\n\u00b6\n\n\n'All Hands' | Get-RyverForum -Detailed\n\n\n\n\nQueries for detailed information about the 'All Hands' public forum channel via\nthe pipeline.\n\n\nEXAMPLE 7\n\u00b6\n\n\n'*and*' | Get-RyverForum -Raw\n\n\n\n\nQueries for all public forum channels containing the string 'and', such as\n'All Hands' and 'The Land of Magical Unicorns' and returns the raw, unformatted\noutput.\n\n\nEXAMPLE 8\n\u00b6\n\n\nGet-RyverForum 'All Hands' $true $true\n\n\n\n\nQueries for detailed information about the 'All Hands' public forum channel via\npositional parameters and returns the raw, unformatted output.\n\n\nEXAMPLE 9\n\u00b6\n\n\n[PSCustomObject] @{ ID = [UInt64] 12345678 } | Get-RyverForum\n\n\n\n\nQueries for the public forum channel with ID 12345678 via pipeline parameter\nname.\n\n\nEXAMPLE 10\n\u00b6\n\n\n[PSCustomObject] @{ Name = 'All Hands' } | Get-RyverForum\n\n\n\n\nQueries for the 'All Hands' public forum channel via pipeline parameter name.\n\n\nPARAMETERS\n\u00b6\n\n\n-Credential\n\u00b6\n\n\nCredentials to use for the Ryver API.\n\n\nDefault value is the value set by Set-PSRyverConfig.\n\n\nType\n:\n \nPSCredential\n\n\nParameter Sets\n:\n \n(All)\n\n\nAliases\n:\n\n\n\nRequired\n:\n \nFalse\n\n\nPosition\n:\n \n4\n\n\nDefault value\n:\n \nNone\n\n\nAccept pipeline input\n:\n \nFalse\n\n\nAccept wildcard characters\n:\n \nFalse\n\n\n\n\n\n-Detailed\n\u00b6\n\n\nSpecifies whether to retrieve additional details about each object.\n\n\nType\n:\n \nSwitchParameter\n\n\nParameter Sets\n:\n \n(All)\n\n\nAliases\n:\n\n\n\nRequired\n:\n \nFalse\n\n\nPosition\n:\n \n2\n\n\nDefault value\n:\n \nFalse\n\n\nAccept pipeline input\n:\n \nTrue (ByPropertyName)\n\n\nAccept wildcard characters\n:\n \nFalse\n\n\n\n\n\n-First\n\u00b6\n\n\nGets only the first 'n' objects.\n\n\nType\n:\n \nUInt64\n\n\nParameter Sets\n:\n \n(All)\n\n\nAliases\n:\n\n\n\nRequired\n:\n \nFalse\n\n\nPosition\n:\n \nNamed\n\n\nDefault value\n:\n \nNone\n\n\nAccept pipeline input\n:\n \nFalse\n\n\nAccept wildcard characters\n:\n \nFalse\n\n\n\n\n\n-ID\n\u00b6\n\n\nSpecifies the public forum channel ID.\n\n\nType\n:\n \nUInt64\n\n\nParameter Sets\n:\n \nID\n\n\nAliases\n:\n\n\n\nRequired\n:\n \nFalse\n\n\nPosition\n:\n \n1\n\n\nDefault value\n:\n \n0\n\n\nAccept pipeline input\n:\n \nTrue (ByPropertyName, ByValue)\n\n\nAccept wildcard characters\n:\n \nFalse\n\n\n\n\n\n-IncludeTotalCount\n\u00b6\n\n\nReports the number of objects in the data set (an integer) followed by the objects. If\nthe cmdlet cannot determine the total count, it returns \"Unknown total count\".\n\n\nType\n:\n \nSwitchParameter\n\n\nParameter Sets\n:\n \n(All)\n\n\nAliases\n:\n\n\n\nRequired\n:\n \nFalse\n\n\nPosition\n:\n \nNamed\n\n\nDefault value\n:\n \nNone\n\n\nAccept pipeline input\n:\n \nFalse\n\n\nAccept wildcard characters\n:\n \nFalse\n\n\n\n\n\n-Name\n\u00b6\n\n\nSpecifies the public forum channel name. \nCase insensitive.\n\n\nType\n:\n \nString\n\n\nParameter Sets\n:\n \nName\n\n\nAliases\n:\n\n\n\nRequired\n:\n \nFalse\n\n\nPosition\n:\n \n1\n\n\nDefault value\n:\n \nNone\n\n\nAccept pipeline input\n:\n \nTrue (ByPropertyName, ByValue)\n\n\nAccept wildcard characters\n:\n \nTrue\n\n\n\n\n\n-Raw\n\u00b6\n\n\nSpecifies that objects should not be formatted.\n\n\nType\n:\n \nSwitchParameter\n\n\nParameter Sets\n:\n \n(All)\n\n\nAliases\n:\n\n\n\nRequired\n:\n \nFalse\n\n\nPosition\n:\n \n3\n\n\nDefault value\n:\n \nFalse\n\n\nAccept pipeline input\n:\n \nTrue (ByPropertyName)\n\n\nAccept wildcard characters\n:\n \nFalse\n\n\n\n\n\n-Skip\n\u00b6\n\n\nIgnores the first 'n' objects and then gets the remaining objects.\n\n\nType\n:\n \nUInt64\n\n\nParameter Sets\n:\n \n(All)\n\n\nAliases\n:\n\n\n\nRequired\n:\n \nFalse\n\n\nPosition\n:\n \nNamed\n\n\nDefault value\n:\n \nNone\n\n\nAccept pipeline input\n:\n \nFalse\n\n\nAccept wildcard characters\n:\n \nFalse\n\n\n\n\n\nCommonParameters\n\u00b6\n\n\nThis cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.\nFor more information, see about_CommonParameters (\nhttp://go.microsoft.com/fwlink/?LinkID=113216\n).\n\n\nINPUTS\n\u00b6\n\n\nSystem.String\n\u00b6\n\n\nOUTPUTS\n\u00b6\n\n\nSystem.Management.Automation.PSObject[]\n\u00b6\n\n\nSystem.Management.Automation.PSObject\n\u00b6\n\n\nNOTES\n\u00b6\n\n\n\n\nTroy Lindsay\n\n\nTwitter: @troylindsay42\n\n\nGitHub: tlindsay42\n\n\n\n\nRELATED LINKS\n\u00b6\n\n\nhttps://tlindsay42.github.io/PSRyver/Public/Get-RyverForum/\n\n\nhttps://github.com/PSRyver/blob/master/PSRyver/Public/Get-RyverForum.ps1",
             "title": "Get-RyverForum"
         },
         {
@@ -342,8 +342,18 @@
         },
         {
             "location": "/Public/Get-RyverForum/#syntax",
-            "text": "Get-RyverForum [[-Name] <String>] [-Detailed] [-Raw] [[-Credential] <PSCredential>] [-IncludeTotalCount]\n [-Skip <UInt64>] [-First <UInt64>] [<CommonParameters>]",
+            "text": "",
             "title": "SYNTAX"
+        },
+        {
+            "location": "/Public/Get-RyverForum/#id-default",
+            "text": "Get-RyverForum [[-ID] <UInt64>] [-Detailed] [-Raw] [[-Credential] <PSCredential>] [-IncludeTotalCount]\n [-Skip <UInt64>] [-First <UInt64>] [<CommonParameters>]",
+            "title": "ID (Default)"
+        },
+        {
+            "location": "/Public/Get-RyverForum/#name",
+            "text": "Get-RyverForum [[-Name] <String>] [-Detailed] [-Raw] [[-Credential] <PSCredential>] [-IncludeTotalCount]\n [-Skip <UInt64>] [-First <UInt64>] [<CommonParameters>]",
+            "title": "Name"
         },
         {
             "location": "/Public/Get-RyverForum/#description",
@@ -357,28 +367,53 @@
         },
         {
             "location": "/Public/Get-RyverForum/#example-1",
-            "text": "Get-RyverForum -Name 'All Hands'  Queries for the 'All Hands' public forum channel.",
+            "text": "Get-RyverForum -ID 12345678  Queries for the public forum channel with ID 12345678.",
             "title": "EXAMPLE 1"
         },
         {
             "location": "/Public/Get-RyverForum/#example-2",
-            "text": "Get-RyverForum -Name 'All Hand*' -Credential ( Get-Credential )  Updates the $Script:PSRyver.Authorization value storing the basic\nauthentication authorization header to use for all requests and then queries\nfor all public forum channels starting with the string 'All Hand', such as\n'All Hands' and 'All handsome guys like that Troy fellow'.\n=D",
+            "text": "12345678 | Get-RyverForum  Queries for the public forum channel with ID 12345678 via pipeline value.",
             "title": "EXAMPLE 2"
         },
         {
             "location": "/Public/Get-RyverForum/#example-3",
-            "text": "'All Hands' | Get-RyverForum -Detailed  Queries for detailed information about the 'All Hands' public forum channel via\nthe pipeline.",
+            "text": "Get-RyverForum 12345678  Queries for the public forum channel with ID 12345678 via positional parameter.",
             "title": "EXAMPLE 3"
         },
         {
             "location": "/Public/Get-RyverForum/#example-4",
-            "text": "'*and*' | Get-RyverForum -Raw  Queries for all public forum channels containing the string 'and', such as\n'All Hands' and 'The Land of Magical Unicorns' and returns the raw, unformatted\noutput.",
+            "text": "Get-RyverForum -Name 'All Hands'  Queries for the 'All Hands' public forum channel.",
             "title": "EXAMPLE 4"
         },
         {
             "location": "/Public/Get-RyverForum/#example-5",
-            "text": "Get-RyverForum 'All Hands' $true $true  Queries for detailed information about the 'All Hands' public forum channel via\npositional parameters and returns the raw, unformatted output.",
+            "text": "Get-RyverForum -Name 'All Hand*' -Credential ( Get-Credential )  Updates the $Script:PSRyver.Authorization value storing the basic\nauthentication authorization header to use for all requests and then queries\nfor all public forum channels starting with the string 'All Hand', such as\n'All Hands' and 'All handsome guys like that Troy fellow'.\n=D",
             "title": "EXAMPLE 5"
+        },
+        {
+            "location": "/Public/Get-RyverForum/#example-6",
+            "text": "'All Hands' | Get-RyverForum -Detailed  Queries for detailed information about the 'All Hands' public forum channel via\nthe pipeline.",
+            "title": "EXAMPLE 6"
+        },
+        {
+            "location": "/Public/Get-RyverForum/#example-7",
+            "text": "'*and*' | Get-RyverForum -Raw  Queries for all public forum channels containing the string 'and', such as\n'All Hands' and 'The Land of Magical Unicorns' and returns the raw, unformatted\noutput.",
+            "title": "EXAMPLE 7"
+        },
+        {
+            "location": "/Public/Get-RyverForum/#example-8",
+            "text": "Get-RyverForum 'All Hands' $true $true  Queries for detailed information about the 'All Hands' public forum channel via\npositional parameters and returns the raw, unformatted output.",
+            "title": "EXAMPLE 8"
+        },
+        {
+            "location": "/Public/Get-RyverForum/#example-9",
+            "text": "[PSCustomObject] @{ ID = [UInt64] 12345678 } | Get-RyverForum  Queries for the public forum channel with ID 12345678 via pipeline parameter\nname.",
+            "title": "EXAMPLE 9"
+        },
+        {
+            "location": "/Public/Get-RyverForum/#example-10",
+            "text": "[PSCustomObject] @{ Name = 'All Hands' } | Get-RyverForum  Queries for the 'All Hands' public forum channel via pipeline parameter name.",
+            "title": "EXAMPLE 10"
         },
         {
             "location": "/Public/Get-RyverForum/#parameters",
@@ -392,32 +427,37 @@
         },
         {
             "location": "/Public/Get-RyverForum/#-detailed",
-            "text": "Specifies whether to retrieve additional details about each object.  Type :   SwitchParameter  Parameter Sets :   (All)  Aliases :  Required :   False  Position :   2  Default value :   False  Accept pipeline input :   False  Accept wildcard characters :   False",
+            "text": "Specifies whether to retrieve additional details about each object.  Type :   SwitchParameter  Parameter Sets :   (All)  Aliases :  Required :   False  Position :   2  Default value :   False  Accept pipeline input :   True (ByPropertyName)  Accept wildcard characters :   False",
             "title": "-Detailed"
         },
         {
             "location": "/Public/Get-RyverForum/#-first",
-            "text": "{{Fill First Description}}  Type :   UInt64  Parameter Sets :   (All)  Aliases :  Required :   False  Position :   Named  Default value :   None  Accept pipeline input :   False  Accept wildcard characters :   False",
+            "text": "Gets only the first 'n' objects.  Type :   UInt64  Parameter Sets :   (All)  Aliases :  Required :   False  Position :   Named  Default value :   None  Accept pipeline input :   False  Accept wildcard characters :   False",
             "title": "-First"
         },
         {
+            "location": "/Public/Get-RyverForum/#-id",
+            "text": "Specifies the public forum channel ID.  Type :   UInt64  Parameter Sets :   ID  Aliases :  Required :   False  Position :   1  Default value :   0  Accept pipeline input :   True (ByPropertyName, ByValue)  Accept wildcard characters :   False",
+            "title": "-ID"
+        },
+        {
             "location": "/Public/Get-RyverForum/#-includetotalcount",
-            "text": "{{Fill IncludeTotalCount Description}}  Type :   SwitchParameter  Parameter Sets :   (All)  Aliases :  Required :   False  Position :   Named  Default value :   None  Accept pipeline input :   False  Accept wildcard characters :   False",
+            "text": "Reports the number of objects in the data set (an integer) followed by the objects. If\nthe cmdlet cannot determine the total count, it returns \"Unknown total count\".  Type :   SwitchParameter  Parameter Sets :   (All)  Aliases :  Required :   False  Position :   Named  Default value :   None  Accept pipeline input :   False  Accept wildcard characters :   False",
             "title": "-IncludeTotalCount"
         },
         {
             "location": "/Public/Get-RyverForum/#-name",
-            "text": "Specifies the public forum channel name. \nCase insensitive.  Type :   String  Parameter Sets :   (All)  Aliases :  Required :   False  Position :   1  Default value :   None  Accept pipeline input :   True (ByValue)  Accept wildcard characters :   True",
+            "text": "Specifies the public forum channel name. \nCase insensitive.  Type :   String  Parameter Sets :   Name  Aliases :  Required :   False  Position :   1  Default value :   None  Accept pipeline input :   True (ByPropertyName, ByValue)  Accept wildcard characters :   True",
             "title": "-Name"
         },
         {
             "location": "/Public/Get-RyverForum/#-raw",
-            "text": "Specifies that objects should not be formatted.  Type :   SwitchParameter  Parameter Sets :   (All)  Aliases :  Required :   False  Position :   3  Default value :   False  Accept pipeline input :   False  Accept wildcard characters :   False",
+            "text": "Specifies that objects should not be formatted.  Type :   SwitchParameter  Parameter Sets :   (All)  Aliases :  Required :   False  Position :   3  Default value :   False  Accept pipeline input :   True (ByPropertyName)  Accept wildcard characters :   False",
             "title": "-Raw"
         },
         {
             "location": "/Public/Get-RyverForum/#-skip",
-            "text": "{{Fill Skip Description}}  Type :   UInt64  Parameter Sets :   (All)  Aliases :  Required :   False  Position :   Named  Default value :   None  Accept pipeline input :   False  Accept wildcard characters :   False",
+            "text": "Ignores the first 'n' objects and then gets the remaining objects.  Type :   UInt64  Parameter Sets :   (All)  Aliases :  Required :   False  Position :   Named  Default value :   None  Accept pipeline input :   False  Accept wildcard characters :   False",
             "title": "-Skip"
         },
         {
@@ -461,8 +501,138 @@
             "title": "RELATED LINKS"
         },
         {
+            "location": "/Public/Get-RyverHistory/",
+            "text": "Get-RyverHistory\n\u00b6\n\n\nSYNOPSIS\n\u00b6\n\n\nGet history from a Ryver public forum or private team channel.\n\n\nSYNTAX\n\u00b6\n\n\nGet-RyverHistory [-ID] <UInt64> [-Type] <Object> [-Raw] [[-Credential] <PSCredential>] [-IncludeTotalCount]\n [-Skip <UInt64>] [-First <UInt64>] [<CommonParameters>]\n\n\n\n\nDESCRIPTION\n\u00b6\n\n\nGet history from a Ryver public forum or private team channel.\n\n\nEXAMPLES\n\u00b6\n\n\nEXAMPLE 1\n\u00b6\n\n\nGet-RyverHistory -ID 12345678 -Type 'Team'\n\n\n\n\nQueries for the chat history of the private team channel with ID 12345678.\n\n\nEXAMPLE 2\n\u00b6\n\n\nGet-RyverHistory -ID 12345678 -Type 'Forum' -Credential ( Get-Credential )\n\n\n\n\nUpdates the $Script:PSRyver.Authorization value storing the basic\nauthentication authorization header to use for all requests and then queries\nfor the chat history of the public forum channel with ID 12345678.\n\n\nEXAMPLE 3\n\u00b6\n\n\n12345678 | Get-RyverHistory -Type 'User' -Raw\n\n\n\n\nQueries for the chat history with the user with ID 12345678 via pipeline value,\nand returns the raw, unformatted output.\n\n\nEXAMPLE 4\n\u00b6\n\n\n[PSCustomObject] @{ ID = 12345678; Type = 'Team' } | Get-RyverHistory\n\n\n\n\nQueries for the chat history with the user with ID 12345678 via pipeline\nparameter names.\n\n\nEXAMPLE 5\n\u00b6\n\n\nGet-RyverHistory 12345678 'Forum' $true\n\n\n\n\nQueries for the chat history of the public forum channel with ID 12345678 via\npositional parameter and returns the raw, unformatted output.\n\n\nPARAMETERS\n\u00b6\n\n\n-Credential\n\u00b6\n\n\nCredentials to use for the Ryver API.\n\n\nDefault value is the value set by Set-PSRyverConfig.\n\n\nType\n:\n \nPSCredential\n\n\nParameter Sets\n:\n \n(All)\n\n\nAliases\n:\n\n\n\nRequired\n:\n \nFalse\n\n\nPosition\n:\n \n4\n\n\nDefault value\n:\n \nNone\n\n\nAccept pipeline input\n:\n \nFalse\n\n\nAccept wildcard characters\n:\n \nFalse\n\n\n\n\n\n-First\n\u00b6\n\n\n{{Fill First Description}}\n\n\nType\n:\n \nUInt64\n\n\nParameter Sets\n:\n \n(All)\n\n\nAliases\n:\n\n\n\nRequired\n:\n \nFalse\n\n\nPosition\n:\n \nNamed\n\n\nDefault value\n:\n \nNone\n\n\nAccept pipeline input\n:\n \nFalse\n\n\nAccept wildcard characters\n:\n \nFalse\n\n\n\n\n\n-ID\n\u00b6\n\n\nID of the public forum, private team, or user direct messages to download history from.\n\n\nType\n:\n \nUInt64\n\n\nParameter Sets\n:\n \n(All)\n\n\nAliases\n:\n\n\n\nRequired\n:\n \nTrue\n\n\nPosition\n:\n \n1\n\n\nDefault value\n:\n \n0\n\n\nAccept pipeline input\n:\n \nTrue (ByPropertyName, ByValue)\n\n\nAccept wildcard characters\n:\n \nFalse\n\n\n\n\n\n-IncludeTotalCount\n\u00b6\n\n\n{{Fill IncludeTotalCount Description}}\n\n\nType\n:\n \nSwitchParameter\n\n\nParameter Sets\n:\n \n(All)\n\n\nAliases\n:\n\n\n\nRequired\n:\n \nFalse\n\n\nPosition\n:\n \nNamed\n\n\nDefault value\n:\n \nNone\n\n\nAccept pipeline input\n:\n \nFalse\n\n\nAccept wildcard characters\n:\n \nFalse\n\n\n\n\n\n-Raw\n\u00b6\n\n\nSpecifies that objects should not be formatted.\n\n\nType\n:\n \nSwitchParameter\n\n\nParameter Sets\n:\n \n(All)\n\n\nAliases\n:\n\n\n\nRequired\n:\n \nFalse\n\n\nPosition\n:\n \n3\n\n\nDefault value\n:\n \nFalse\n\n\nAccept pipeline input\n:\n \nFalse\n\n\nAccept wildcard characters\n:\n \nFalse\n\n\n\n\n\n-Skip\n\u00b6\n\n\n{{Fill Skip Description}}\n\n\nType\n:\n \nUInt64\n\n\nParameter Sets\n:\n \n(All)\n\n\nAliases\n:\n\n\n\nRequired\n:\n \nFalse\n\n\nPosition\n:\n \nNamed\n\n\nDefault value\n:\n \nNone\n\n\nAccept pipeline input\n:\n \nFalse\n\n\nAccept wildcard characters\n:\n \nFalse\n\n\n\n\n\n-Type\n\u00b6\n\n\n{{Fill Type Description}}\n\n\nType\n:\n \nObject\n\n\nParameter Sets\n:\n \n(All)\n\n\nAliases\n:\n\n\n\nRequired\n:\n \nTrue\n\n\nPosition\n:\n \n2\n\n\nDefault value\n:\n \nNone\n\n\nAccept pipeline input\n:\n \nTrue (ByPropertyName)\n\n\nAccept wildcard characters\n:\n \nFalse\n\n\n\n\n\nCommonParameters\n\u00b6\n\n\nThis cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.\nFor more information, see about_CommonParameters (\nhttp://go.microsoft.com/fwlink/?LinkID=113216\n).\n\n\nINPUTS\n\u00b6\n\n\nSystem.UInt64\n\u00b6\n\n\nSystem.Management.Automation.PSCustomObject\n\u00b6\n\n\nOUTPUTS\n\u00b6\n\n\nNOTES\n\u00b6\n\n\n\n\nTroy Lindsay\n\n\nTwitter: @troylindsay42\n\n\nGitHub: tlindsay42\n\n\n\n\nRELATED LINKS\n\u00b6\n\n\nhttps://tlindsay42.github.io/PSRyver/Public/Get-RyverHistory/\n\n\nhttps://github.com/PSRyver/blob/master/PSRyver/Public/Get-RyverHistory.ps1",
+            "title": "Get-RyverHistory"
+        },
+        {
+            "location": "/Public/Get-RyverHistory/#get-ryverhistory",
+            "text": "",
+            "title": "Get-RyverHistory"
+        },
+        {
+            "location": "/Public/Get-RyverHistory/#synopsis",
+            "text": "Get history from a Ryver public forum or private team channel.",
+            "title": "SYNOPSIS"
+        },
+        {
+            "location": "/Public/Get-RyverHistory/#syntax",
+            "text": "Get-RyverHistory [-ID] <UInt64> [-Type] <Object> [-Raw] [[-Credential] <PSCredential>] [-IncludeTotalCount]\n [-Skip <UInt64>] [-First <UInt64>] [<CommonParameters>]",
+            "title": "SYNTAX"
+        },
+        {
+            "location": "/Public/Get-RyverHistory/#description",
+            "text": "Get history from a Ryver public forum or private team channel.",
+            "title": "DESCRIPTION"
+        },
+        {
+            "location": "/Public/Get-RyverHistory/#examples",
+            "text": "",
+            "title": "EXAMPLES"
+        },
+        {
+            "location": "/Public/Get-RyverHistory/#example-1",
+            "text": "Get-RyverHistory -ID 12345678 -Type 'Team'  Queries for the chat history of the private team channel with ID 12345678.",
+            "title": "EXAMPLE 1"
+        },
+        {
+            "location": "/Public/Get-RyverHistory/#example-2",
+            "text": "Get-RyverHistory -ID 12345678 -Type 'Forum' -Credential ( Get-Credential )  Updates the $Script:PSRyver.Authorization value storing the basic\nauthentication authorization header to use for all requests and then queries\nfor the chat history of the public forum channel with ID 12345678.",
+            "title": "EXAMPLE 2"
+        },
+        {
+            "location": "/Public/Get-RyverHistory/#example-3",
+            "text": "12345678 | Get-RyverHistory -Type 'User' -Raw  Queries for the chat history with the user with ID 12345678 via pipeline value,\nand returns the raw, unformatted output.",
+            "title": "EXAMPLE 3"
+        },
+        {
+            "location": "/Public/Get-RyverHistory/#example-4",
+            "text": "[PSCustomObject] @{ ID = 12345678; Type = 'Team' } | Get-RyverHistory  Queries for the chat history with the user with ID 12345678 via pipeline\nparameter names.",
+            "title": "EXAMPLE 4"
+        },
+        {
+            "location": "/Public/Get-RyverHistory/#example-5",
+            "text": "Get-RyverHistory 12345678 'Forum' $true  Queries for the chat history of the public forum channel with ID 12345678 via\npositional parameter and returns the raw, unformatted output.",
+            "title": "EXAMPLE 5"
+        },
+        {
+            "location": "/Public/Get-RyverHistory/#parameters",
+            "text": "",
+            "title": "PARAMETERS"
+        },
+        {
+            "location": "/Public/Get-RyverHistory/#-credential",
+            "text": "Credentials to use for the Ryver API.  Default value is the value set by Set-PSRyverConfig.  Type :   PSCredential  Parameter Sets :   (All)  Aliases :  Required :   False  Position :   4  Default value :   None  Accept pipeline input :   False  Accept wildcard characters :   False",
+            "title": "-Credential"
+        },
+        {
+            "location": "/Public/Get-RyverHistory/#-first",
+            "text": "{{Fill First Description}}  Type :   UInt64  Parameter Sets :   (All)  Aliases :  Required :   False  Position :   Named  Default value :   None  Accept pipeline input :   False  Accept wildcard characters :   False",
+            "title": "-First"
+        },
+        {
+            "location": "/Public/Get-RyverHistory/#-id",
+            "text": "ID of the public forum, private team, or user direct messages to download history from.  Type :   UInt64  Parameter Sets :   (All)  Aliases :  Required :   True  Position :   1  Default value :   0  Accept pipeline input :   True (ByPropertyName, ByValue)  Accept wildcard characters :   False",
+            "title": "-ID"
+        },
+        {
+            "location": "/Public/Get-RyverHistory/#-includetotalcount",
+            "text": "{{Fill IncludeTotalCount Description}}  Type :   SwitchParameter  Parameter Sets :   (All)  Aliases :  Required :   False  Position :   Named  Default value :   None  Accept pipeline input :   False  Accept wildcard characters :   False",
+            "title": "-IncludeTotalCount"
+        },
+        {
+            "location": "/Public/Get-RyverHistory/#-raw",
+            "text": "Specifies that objects should not be formatted.  Type :   SwitchParameter  Parameter Sets :   (All)  Aliases :  Required :   False  Position :   3  Default value :   False  Accept pipeline input :   False  Accept wildcard characters :   False",
+            "title": "-Raw"
+        },
+        {
+            "location": "/Public/Get-RyverHistory/#-skip",
+            "text": "{{Fill Skip Description}}  Type :   UInt64  Parameter Sets :   (All)  Aliases :  Required :   False  Position :   Named  Default value :   None  Accept pipeline input :   False  Accept wildcard characters :   False",
+            "title": "-Skip"
+        },
+        {
+            "location": "/Public/Get-RyverHistory/#-type",
+            "text": "{{Fill Type Description}}  Type :   Object  Parameter Sets :   (All)  Aliases :  Required :   True  Position :   2  Default value :   None  Accept pipeline input :   True (ByPropertyName)  Accept wildcard characters :   False",
+            "title": "-Type"
+        },
+        {
+            "location": "/Public/Get-RyverHistory/#commonparameters",
+            "text": "This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.\nFor more information, see about_CommonParameters ( http://go.microsoft.com/fwlink/?LinkID=113216 ).",
+            "title": "CommonParameters"
+        },
+        {
+            "location": "/Public/Get-RyverHistory/#inputs",
+            "text": "",
+            "title": "INPUTS"
+        },
+        {
+            "location": "/Public/Get-RyverHistory/#systemuint64",
+            "text": "",
+            "title": "System.UInt64"
+        },
+        {
+            "location": "/Public/Get-RyverHistory/#systemmanagementautomationpscustomobject",
+            "text": "",
+            "title": "System.Management.Automation.PSCustomObject"
+        },
+        {
+            "location": "/Public/Get-RyverHistory/#outputs",
+            "text": "",
+            "title": "OUTPUTS"
+        },
+        {
+            "location": "/Public/Get-RyverHistory/#notes",
+            "text": "Troy Lindsay  Twitter: @troylindsay42  GitHub: tlindsay42",
+            "title": "NOTES"
+        },
+        {
+            "location": "/Public/Get-RyverHistory/#related-links",
+            "text": "https://tlindsay42.github.io/PSRyver/Public/Get-RyverHistory/  https://github.com/PSRyver/blob/master/PSRyver/Public/Get-RyverHistory.ps1",
+            "title": "RELATED LINKS"
+        },
+        {
             "location": "/Public/Get-RyverTeam/",
-            "text": "Get-RyverTeam\n\u00b6\n\n\nSYNOPSIS\n\u00b6\n\n\nQuery for Ryver private team channels.\n\n\nSYNTAX\n\u00b6\n\n\nGet-RyverTeam [[-Name] <String>] [-Detailed] [-Raw] [[-Credential] <PSCredential>] [-IncludeTotalCount]\n [-Skip <UInt64>] [-First <UInt64>] [<CommonParameters>]\n\n\n\n\nDESCRIPTION\n\u00b6\n\n\nQuery for Ryver private team channels.\n\n\nEXAMPLES\n\u00b6\n\n\nEXAMPLE 1\n\u00b6\n\n\nGet-RyverTeam -Name 'Members Only!'\n\n\n\n\nQueries for the 'Members Only!' private team channel.\n\n\nEXAMPLE 2\n\u00b6\n\n\nGet-RyverTeam -Name '*Only*' -Credential ( Get-Credential )\n\n\n\n\nUpdates the $Script:PSRyver.Authorization value storing the basic\nauthentication authorization header to use for all requests and then queries\nfor all private team channels containing the string 'Only', such as\n'Members Only!' and 'Ninjas only'.\n\n\nEXAMPLE 3\n\u00b6\n\n\n'Members Only!' | Get-RyverTeam -Raw\n\n\n\n\nQueries for the 'Members Only!' private team channel via the pipeline and\nreturns the raw, unformatted output.\n\n\nEXAMPLE 4\n\u00b6\n\n\n'*Member*' | Get-RyverTeam -Detailed\n\n\n\n\nQueries for detailed information about all private team channels containing the\nstring 'Member', such as 'Members Only!' and 'Illuminati Membership Committee'.\n\n\nEXAMPLE 5\n\u00b6\n\n\nGet-RyverTeam 'Members Only!' $true $true\n\n\n\n\nQueries for detailed information about the 'Members Only!' private team channel\nvia positional parameters and returns the raw, unformatted output.\n\n\nPARAMETERS\n\u00b6\n\n\n-Credential\n\u00b6\n\n\nCredentials to use for the Ryver API.\n\n\nDefault value is the value set by Set-PSRyverConfig.\n\n\nType\n:\n \nPSCredential\n\n\nParameter Sets\n:\n \n(All)\n\n\nAliases\n:\n\n\n\nRequired\n:\n \nFalse\n\n\nPosition\n:\n \n4\n\n\nDefault value\n:\n \nNone\n\n\nAccept pipeline input\n:\n \nFalse\n\n\nAccept wildcard characters\n:\n \nFalse\n\n\n\n\n\n-Detailed\n\u00b6\n\n\nSpecifies whether to retrieve additional details about each object.\n\n\nType\n:\n \nSwitchParameter\n\n\nParameter Sets\n:\n \n(All)\n\n\nAliases\n:\n\n\n\nRequired\n:\n \nFalse\n\n\nPosition\n:\n \n2\n\n\nDefault value\n:\n \nFalse\n\n\nAccept pipeline input\n:\n \nFalse\n\n\nAccept wildcard characters\n:\n \nFalse\n\n\n\n\n\n-First\n\u00b6\n\n\n{{Fill First Description}}\n\n\nType\n:\n \nUInt64\n\n\nParameter Sets\n:\n \n(All)\n\n\nAliases\n:\n\n\n\nRequired\n:\n \nFalse\n\n\nPosition\n:\n \nNamed\n\n\nDefault value\n:\n \nNone\n\n\nAccept pipeline input\n:\n \nFalse\n\n\nAccept wildcard characters\n:\n \nFalse\n\n\n\n\n\n-IncludeTotalCount\n\u00b6\n\n\n{{Fill IncludeTotalCount Description}}\n\n\nType\n:\n \nSwitchParameter\n\n\nParameter Sets\n:\n \n(All)\n\n\nAliases\n:\n\n\n\nRequired\n:\n \nFalse\n\n\nPosition\n:\n \nNamed\n\n\nDefault value\n:\n \nNone\n\n\nAccept pipeline input\n:\n \nFalse\n\n\nAccept wildcard characters\n:\n \nFalse\n\n\n\n\n\n-Name\n\u00b6\n\n\nPrivate team channel name. \nCase insensitive.\n\n\nType\n:\n \nString\n\n\nParameter Sets\n:\n \n(All)\n\n\nAliases\n:\n\n\n\nRequired\n:\n \nFalse\n\n\nPosition\n:\n \n1\n\n\nDefault value\n:\n \nNone\n\n\nAccept pipeline input\n:\n \nTrue (ByValue)\n\n\nAccept wildcard characters\n:\n \nTrue\n\n\n\n\n\n-Raw\n\u00b6\n\n\nSpecifies that objects should not be formatted.\n\n\nType\n:\n \nSwitchParameter\n\n\nParameter Sets\n:\n \n(All)\n\n\nAliases\n:\n\n\n\nRequired\n:\n \nFalse\n\n\nPosition\n:\n \n3\n\n\nDefault value\n:\n \nFalse\n\n\nAccept pipeline input\n:\n \nFalse\n\n\nAccept wildcard characters\n:\n \nFalse\n\n\n\n\n\n-Skip\n\u00b6\n\n\n{{Fill Skip Description}}\n\n\nType\n:\n \nUInt64\n\n\nParameter Sets\n:\n \n(All)\n\n\nAliases\n:\n\n\n\nRequired\n:\n \nFalse\n\n\nPosition\n:\n \nNamed\n\n\nDefault value\n:\n \nNone\n\n\nAccept pipeline input\n:\n \nFalse\n\n\nAccept wildcard characters\n:\n \nFalse\n\n\n\n\n\nCommonParameters\n\u00b6\n\n\nThis cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.\nFor more information, see about_CommonParameters (\nhttp://go.microsoft.com/fwlink/?LinkID=113216\n).\n\n\nINPUTS\n\u00b6\n\n\nSystem.String\n\u00b6\n\n\nOUTPUTS\n\u00b6\n\n\nSystem.Management.Automation.PSObject[]\n\u00b6\n\n\nSystem.Management.Automation.PSObject\n\u00b6\n\n\nNOTES\n\u00b6\n\n\n\n\nTroy Lindsay\n\n\nTwitter: @troylindsay42\n\n\nGitHub: tlindsay42\n\n\n\n\nRELATED LINKS\n\u00b6\n\n\nhttps://tlindsay42.github.io/PSRyver/Public/Get-RyverTeam/\n\n\nhttps://github.com/PSRyver/blob/master/PSRyver/Public/Get-RyverTeam.ps1",
+            "text": "Get-RyverTeam\n\u00b6\n\n\nSYNOPSIS\n\u00b6\n\n\nQuery for Ryver private team channels.\n\n\nSYNTAX\n\u00b6\n\n\nID (Default)\n\u00b6\n\n\nGet-RyverTeam [[-ID] <UInt64>] [-Detailed] [-Raw] [[-Credential] <PSCredential>] [-IncludeTotalCount]\n [-Skip <UInt64>] [-First <UInt64>] [<CommonParameters>]\n\n\n\n\nName\n\u00b6\n\n\nGet-RyverTeam [[-Name] <String>] [-Detailed] [-Raw] [[-Credential] <PSCredential>] [-IncludeTotalCount]\n [-Skip <UInt64>] [-First <UInt64>] [<CommonParameters>]\n\n\n\n\nDESCRIPTION\n\u00b6\n\n\nQuery for Ryver private team channels.\n\n\nEXAMPLES\n\u00b6\n\n\nEXAMPLE 1\n\u00b6\n\n\nGet-RyverTeam -ID 12345678\n\n\n\n\nQueries for the private team channel with ID 12345678.\n\n\nEXAMPLE 2\n\u00b6\n\n\n12345678 | Get-RyverTeam\n\n\n\n\nQueries for the private team channel with ID 12345678 via pipeline value.\n\n\nEXAMPLE 3\n\u00b6\n\n\nGet-RyverTeam 12345678\n\n\n\n\nQueries for the private team channel with ID 12345678 via positional parameter.\n\n\nEXAMPLE 4\n\u00b6\n\n\nGet-RyverTeam -Name 'Members Only!'\n\n\n\n\nQueries for the 'Members Only!' private team channel.\n\n\nEXAMPLE 5\n\u00b6\n\n\nGet-RyverTeam -Name '*Only*' -Credential ( Get-Credential )\n\n\n\n\nUpdates the $Script:PSRyver.Authorization value storing the basic\nauthentication authorization header to use for all requests and then queries\nfor all private team channels containing the string 'Only', such as\n'Members Only!' and 'Ninjas only'.\n\n\nEXAMPLE 6\n\u00b6\n\n\n'Members Only!' | Get-RyverTeam -Raw\n\n\n\n\nQueries for the 'Members Only!' private team channel via the pipeline and\nreturns the raw, unformatted output.\n\n\nEXAMPLE 7\n\u00b6\n\n\n'*Member*' | Get-RyverTeam -Detailed\n\n\n\n\nQueries for detailed information about all private team channels containing the\nstring 'Member', such as 'Members Only!' and 'Illuminati Membership Committee'.\n\n\nEXAMPLE 8\n\u00b6\n\n\nGet-RyverTeam 'Members Only!' $true $true\n\n\n\n\nQueries for detailed information about the 'Members Only!' private team channel\nvia positional parameters and returns the raw, unformatted output.\n\n\nEXAMPLE 9\n\u00b6\n\n\n[PSCustomObject] @{ ID = [UInt64] 12345678 } | Get-RyverTeam\n\n\n\n\nQueries for the private team channel with ID 12345678 via pipeline parameter\nname.\n\n\nEXAMPLE 10\n\u00b6\n\n\n[PSCustomObject] @{ Name = 'Members Only!' } | Get-RyverTeam\n\n\n\n\nQueries for the 'Members Only!' private team channel via pipeline parameter\nname.\n\n\nPARAMETERS\n\u00b6\n\n\n-Credential\n\u00b6\n\n\nCredentials to use for the Ryver API.\n\n\nDefault value is the value set by Set-PSRyverConfig.\n\n\nType\n:\n \nPSCredential\n\n\nParameter Sets\n:\n \n(All)\n\n\nAliases\n:\n\n\n\nRequired\n:\n \nFalse\n\n\nPosition\n:\n \n4\n\n\nDefault value\n:\n \nNone\n\n\nAccept pipeline input\n:\n \nFalse\n\n\nAccept wildcard characters\n:\n \nFalse\n\n\n\n\n\n-Detailed\n\u00b6\n\n\nSpecifies whether to retrieve additional details about each object.\n\n\nType\n:\n \nSwitchParameter\n\n\nParameter Sets\n:\n \n(All)\n\n\nAliases\n:\n\n\n\nRequired\n:\n \nFalse\n\n\nPosition\n:\n \n2\n\n\nDefault value\n:\n \nFalse\n\n\nAccept pipeline input\n:\n \nTrue (ByPropertyName)\n\n\nAccept wildcard characters\n:\n \nFalse\n\n\n\n\n\n-First\n\u00b6\n\n\nGets only the first 'n' objects.\n\n\nType\n:\n \nUInt64\n\n\nParameter Sets\n:\n \n(All)\n\n\nAliases\n:\n\n\n\nRequired\n:\n \nFalse\n\n\nPosition\n:\n \nNamed\n\n\nDefault value\n:\n \nNone\n\n\nAccept pipeline input\n:\n \nFalse\n\n\nAccept wildcard characters\n:\n \nFalse\n\n\n\n\n\n-ID\n\u00b6\n\n\nSpecifies the public forum channel ID.\n\n\nType\n:\n \nUInt64\n\n\nParameter Sets\n:\n \nID\n\n\nAliases\n:\n\n\n\nRequired\n:\n \nFalse\n\n\nPosition\n:\n \n1\n\n\nDefault value\n:\n \n0\n\n\nAccept pipeline input\n:\n \nTrue (ByPropertyName, ByValue)\n\n\nAccept wildcard characters\n:\n \nFalse\n\n\n\n\n\n-IncludeTotalCount\n\u00b6\n\n\nReports the number of objects in the data set (an integer) followed by the objects. If\nthe cmdlet cannot determine the total count, it returns \"Unknown total count\".\n\n\nType\n:\n \nSwitchParameter\n\n\nParameter Sets\n:\n \n(All)\n\n\nAliases\n:\n\n\n\nRequired\n:\n \nFalse\n\n\nPosition\n:\n \nNamed\n\n\nDefault value\n:\n \nNone\n\n\nAccept pipeline input\n:\n \nFalse\n\n\nAccept wildcard characters\n:\n \nFalse\n\n\n\n\n\n-Name\n\u00b6\n\n\nPrivate team channel name. \nCase insensitive.\n\n\nType\n:\n \nString\n\n\nParameter Sets\n:\n \nName\n\n\nAliases\n:\n\n\n\nRequired\n:\n \nFalse\n\n\nPosition\n:\n \n1\n\n\nDefault value\n:\n \nNone\n\n\nAccept pipeline input\n:\n \nTrue (ByPropertyName, ByValue)\n\n\nAccept wildcard characters\n:\n \nTrue\n\n\n\n\n\n-Raw\n\u00b6\n\n\nSpecifies that objects should not be formatted.\n\n\nType\n:\n \nSwitchParameter\n\n\nParameter Sets\n:\n \n(All)\n\n\nAliases\n:\n\n\n\nRequired\n:\n \nFalse\n\n\nPosition\n:\n \n3\n\n\nDefault value\n:\n \nFalse\n\n\nAccept pipeline input\n:\n \nTrue (ByPropertyName)\n\n\nAccept wildcard characters\n:\n \nFalse\n\n\n\n\n\n-Skip\n\u00b6\n\n\nIgnores the first 'n' objects and then gets the remaining objects.\n\n\nType\n:\n \nUInt64\n\n\nParameter Sets\n:\n \n(All)\n\n\nAliases\n:\n\n\n\nRequired\n:\n \nFalse\n\n\nPosition\n:\n \nNamed\n\n\nDefault value\n:\n \nNone\n\n\nAccept pipeline input\n:\n \nFalse\n\n\nAccept wildcard characters\n:\n \nFalse\n\n\n\n\n\nCommonParameters\n\u00b6\n\n\nThis cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.\nFor more information, see about_CommonParameters (\nhttp://go.microsoft.com/fwlink/?LinkID=113216\n).\n\n\nINPUTS\n\u00b6\n\n\nSystem.String\n\u00b6\n\n\nOUTPUTS\n\u00b6\n\n\nSystem.Management.Automation.PSObject[]\n\u00b6\n\n\nSystem.Management.Automation.PSObject\n\u00b6\n\n\nNOTES\n\u00b6\n\n\n\n\nTroy Lindsay\n\n\nTwitter: @troylindsay42\n\n\nGitHub: tlindsay42\n\n\n\n\nRELATED LINKS\n\u00b6\n\n\nhttps://tlindsay42.github.io/PSRyver/Public/Get-RyverTeam/\n\n\nhttps://github.com/PSRyver/blob/master/PSRyver/Public/Get-RyverTeam.ps1",
             "title": "Get-RyverTeam"
         },
         {
@@ -477,8 +647,18 @@
         },
         {
             "location": "/Public/Get-RyverTeam/#syntax",
-            "text": "Get-RyverTeam [[-Name] <String>] [-Detailed] [-Raw] [[-Credential] <PSCredential>] [-IncludeTotalCount]\n [-Skip <UInt64>] [-First <UInt64>] [<CommonParameters>]",
+            "text": "",
             "title": "SYNTAX"
+        },
+        {
+            "location": "/Public/Get-RyverTeam/#id-default",
+            "text": "Get-RyverTeam [[-ID] <UInt64>] [-Detailed] [-Raw] [[-Credential] <PSCredential>] [-IncludeTotalCount]\n [-Skip <UInt64>] [-First <UInt64>] [<CommonParameters>]",
+            "title": "ID (Default)"
+        },
+        {
+            "location": "/Public/Get-RyverTeam/#name",
+            "text": "Get-RyverTeam [[-Name] <String>] [-Detailed] [-Raw] [[-Credential] <PSCredential>] [-IncludeTotalCount]\n [-Skip <UInt64>] [-First <UInt64>] [<CommonParameters>]",
+            "title": "Name"
         },
         {
             "location": "/Public/Get-RyverTeam/#description",
@@ -492,28 +672,53 @@
         },
         {
             "location": "/Public/Get-RyverTeam/#example-1",
-            "text": "Get-RyverTeam -Name 'Members Only!'  Queries for the 'Members Only!' private team channel.",
+            "text": "Get-RyverTeam -ID 12345678  Queries for the private team channel with ID 12345678.",
             "title": "EXAMPLE 1"
         },
         {
             "location": "/Public/Get-RyverTeam/#example-2",
-            "text": "Get-RyverTeam -Name '*Only*' -Credential ( Get-Credential )  Updates the $Script:PSRyver.Authorization value storing the basic\nauthentication authorization header to use for all requests and then queries\nfor all private team channels containing the string 'Only', such as\n'Members Only!' and 'Ninjas only'.",
+            "text": "12345678 | Get-RyverTeam  Queries for the private team channel with ID 12345678 via pipeline value.",
             "title": "EXAMPLE 2"
         },
         {
             "location": "/Public/Get-RyverTeam/#example-3",
-            "text": "'Members Only!' | Get-RyverTeam -Raw  Queries for the 'Members Only!' private team channel via the pipeline and\nreturns the raw, unformatted output.",
+            "text": "Get-RyverTeam 12345678  Queries for the private team channel with ID 12345678 via positional parameter.",
             "title": "EXAMPLE 3"
         },
         {
             "location": "/Public/Get-RyverTeam/#example-4",
-            "text": "'*Member*' | Get-RyverTeam -Detailed  Queries for detailed information about all private team channels containing the\nstring 'Member', such as 'Members Only!' and 'Illuminati Membership Committee'.",
+            "text": "Get-RyverTeam -Name 'Members Only!'  Queries for the 'Members Only!' private team channel.",
             "title": "EXAMPLE 4"
         },
         {
             "location": "/Public/Get-RyverTeam/#example-5",
-            "text": "Get-RyverTeam 'Members Only!' $true $true  Queries for detailed information about the 'Members Only!' private team channel\nvia positional parameters and returns the raw, unformatted output.",
+            "text": "Get-RyverTeam -Name '*Only*' -Credential ( Get-Credential )  Updates the $Script:PSRyver.Authorization value storing the basic\nauthentication authorization header to use for all requests and then queries\nfor all private team channels containing the string 'Only', such as\n'Members Only!' and 'Ninjas only'.",
             "title": "EXAMPLE 5"
+        },
+        {
+            "location": "/Public/Get-RyverTeam/#example-6",
+            "text": "'Members Only!' | Get-RyverTeam -Raw  Queries for the 'Members Only!' private team channel via the pipeline and\nreturns the raw, unformatted output.",
+            "title": "EXAMPLE 6"
+        },
+        {
+            "location": "/Public/Get-RyverTeam/#example-7",
+            "text": "'*Member*' | Get-RyverTeam -Detailed  Queries for detailed information about all private team channels containing the\nstring 'Member', such as 'Members Only!' and 'Illuminati Membership Committee'.",
+            "title": "EXAMPLE 7"
+        },
+        {
+            "location": "/Public/Get-RyverTeam/#example-8",
+            "text": "Get-RyverTeam 'Members Only!' $true $true  Queries for detailed information about the 'Members Only!' private team channel\nvia positional parameters and returns the raw, unformatted output.",
+            "title": "EXAMPLE 8"
+        },
+        {
+            "location": "/Public/Get-RyverTeam/#example-9",
+            "text": "[PSCustomObject] @{ ID = [UInt64] 12345678 } | Get-RyverTeam  Queries for the private team channel with ID 12345678 via pipeline parameter\nname.",
+            "title": "EXAMPLE 9"
+        },
+        {
+            "location": "/Public/Get-RyverTeam/#example-10",
+            "text": "[PSCustomObject] @{ Name = 'Members Only!' } | Get-RyverTeam  Queries for the 'Members Only!' private team channel via pipeline parameter\nname.",
+            "title": "EXAMPLE 10"
         },
         {
             "location": "/Public/Get-RyverTeam/#parameters",
@@ -527,32 +732,37 @@
         },
         {
             "location": "/Public/Get-RyverTeam/#-detailed",
-            "text": "Specifies whether to retrieve additional details about each object.  Type :   SwitchParameter  Parameter Sets :   (All)  Aliases :  Required :   False  Position :   2  Default value :   False  Accept pipeline input :   False  Accept wildcard characters :   False",
+            "text": "Specifies whether to retrieve additional details about each object.  Type :   SwitchParameter  Parameter Sets :   (All)  Aliases :  Required :   False  Position :   2  Default value :   False  Accept pipeline input :   True (ByPropertyName)  Accept wildcard characters :   False",
             "title": "-Detailed"
         },
         {
             "location": "/Public/Get-RyverTeam/#-first",
-            "text": "{{Fill First Description}}  Type :   UInt64  Parameter Sets :   (All)  Aliases :  Required :   False  Position :   Named  Default value :   None  Accept pipeline input :   False  Accept wildcard characters :   False",
+            "text": "Gets only the first 'n' objects.  Type :   UInt64  Parameter Sets :   (All)  Aliases :  Required :   False  Position :   Named  Default value :   None  Accept pipeline input :   False  Accept wildcard characters :   False",
             "title": "-First"
         },
         {
+            "location": "/Public/Get-RyverTeam/#-id",
+            "text": "Specifies the public forum channel ID.  Type :   UInt64  Parameter Sets :   ID  Aliases :  Required :   False  Position :   1  Default value :   0  Accept pipeline input :   True (ByPropertyName, ByValue)  Accept wildcard characters :   False",
+            "title": "-ID"
+        },
+        {
             "location": "/Public/Get-RyverTeam/#-includetotalcount",
-            "text": "{{Fill IncludeTotalCount Description}}  Type :   SwitchParameter  Parameter Sets :   (All)  Aliases :  Required :   False  Position :   Named  Default value :   None  Accept pipeline input :   False  Accept wildcard characters :   False",
+            "text": "Reports the number of objects in the data set (an integer) followed by the objects. If\nthe cmdlet cannot determine the total count, it returns \"Unknown total count\".  Type :   SwitchParameter  Parameter Sets :   (All)  Aliases :  Required :   False  Position :   Named  Default value :   None  Accept pipeline input :   False  Accept wildcard characters :   False",
             "title": "-IncludeTotalCount"
         },
         {
             "location": "/Public/Get-RyverTeam/#-name",
-            "text": "Private team channel name. \nCase insensitive.  Type :   String  Parameter Sets :   (All)  Aliases :  Required :   False  Position :   1  Default value :   None  Accept pipeline input :   True (ByValue)  Accept wildcard characters :   True",
+            "text": "Private team channel name. \nCase insensitive.  Type :   String  Parameter Sets :   Name  Aliases :  Required :   False  Position :   1  Default value :   None  Accept pipeline input :   True (ByPropertyName, ByValue)  Accept wildcard characters :   True",
             "title": "-Name"
         },
         {
             "location": "/Public/Get-RyverTeam/#-raw",
-            "text": "Specifies that objects should not be formatted.  Type :   SwitchParameter  Parameter Sets :   (All)  Aliases :  Required :   False  Position :   3  Default value :   False  Accept pipeline input :   False  Accept wildcard characters :   False",
+            "text": "Specifies that objects should not be formatted.  Type :   SwitchParameter  Parameter Sets :   (All)  Aliases :  Required :   False  Position :   3  Default value :   False  Accept pipeline input :   True (ByPropertyName)  Accept wildcard characters :   False",
             "title": "-Raw"
         },
         {
             "location": "/Public/Get-RyverTeam/#-skip",
-            "text": "{{Fill Skip Description}}  Type :   UInt64  Parameter Sets :   (All)  Aliases :  Required :   False  Position :   Named  Default value :   None  Accept pipeline input :   False  Accept wildcard characters :   False",
+            "text": "Ignores the first 'n' objects and then gets the remaining objects.  Type :   UInt64  Parameter Sets :   (All)  Aliases :  Required :   False  Position :   Named  Default value :   None  Accept pipeline input :   False  Accept wildcard characters :   False",
             "title": "-Skip"
         },
         {
@@ -593,6 +803,181 @@
         {
             "location": "/Public/Get-RyverTeam/#related-links",
             "text": "https://tlindsay42.github.io/PSRyver/Public/Get-RyverTeam/  https://github.com/PSRyver/blob/master/PSRyver/Public/Get-RyverTeam.ps1",
+            "title": "RELATED LINKS"
+        },
+        {
+            "location": "/Public/Get-RyverUser/",
+            "text": "Get-RyverUser\n\u00b6\n\n\nSYNOPSIS\n\u00b6\n\n\nQuery for Ryver users.\n\n\nSYNTAX\n\u00b6\n\n\nID (Default)\n\u00b6\n\n\nGet-RyverUser [[-ID] <UInt64>] [-Detailed] [-Raw] [[-Credential] <PSCredential>] [-IncludeTotalCount]\n [-Skip <UInt64>] [-First <UInt64>] [<CommonParameters>]\n\n\n\n\nName\n\u00b6\n\n\nGet-RyverUser [[-Name] <String>] [-Detailed] [-Raw] [[-Credential] <PSCredential>] [-IncludeTotalCount]\n [-Skip <UInt64>] [-First <UInt64>] [<CommonParameters>]\n\n\n\n\nDESCRIPTION\n\u00b6\n\n\nQuery for users in this Ryver instance.\n\n\nEXAMPLES\n\u00b6\n\n\nEXAMPLE 1\n\u00b6\n\n\nGet-RyverUser -ID 12345678\n\n\n\n\nQueries for the user account with ID 12345678.\n\n\nEXAMPLE 2\n\u00b6\n\n\n12345678 | Get-RyverUser\n\n\n\n\nQueries for the user account with ID 12345678 via pipeline value.\n\n\nEXAMPLE 3\n\u00b6\n\n\nGet-RyverUser 12345678\n\n\n\n\nQueries for the user account with ID 12345678 via positional parameter.\n\n\nEXAMPLE 4\n\u00b6\n\n\nGet-RyverUser -Name 'Eddy Bot'\n\n\n\n\nQueries for the 'Eddy Bot' user account.\n\n\nEXAMPLE 5\n\u00b6\n\n\nGet-RyverUser -Name 'Eddy*' -Credential ( Get-Credential )\n\n\n\n\nUpdates the $Script:PSRyver.Authorization value storing the basic\nauthentication authorization header to use for all requests and then queries\nfor all users starting with the string 'Eddy', such as 'Eddy Bot' and\n'Eddy Munster'.\n\n\nEXAMPLE 6\n\u00b6\n\n\n'Eddy Bot' | Get-RyverUser -Detailed\n\n\n\n\nQueries for detailed information about the 'Eddy Bot' user account via the\npipeline.\n\n\nEXAMPLE 7\n\u00b6\n\n\n'*Bot*' | Get-RyverUser -Raw\n\n\n\n\nQueries for all user accounts containing the string '\nBot\n', such as 'Eddy Bot'\nand \"Don't Bother Me!\" and returns the raw, unformatted output.\n\n\nEXAMPLE 8\n\u00b6\n\n\nGet-RyverUser 'Eddy Bot' $true $true\n\n\n\n\nQueries for detailed information about the 'Eddy Bot' user account via\npositional parameters and returns the raw, unformatted output.\n\n\nEXAMPLE 9\n\u00b6\n\n\n[PSCustomObject] @{ ID = [UInt64] 12345678 } | Get-RyverUser\n\n\n\n\nQueries for the user account with ID 12345678 via pipeline parameter name.\n\n\nEXAMPLE 10\n\u00b6\n\n\n[PSCustomObject] @{ Name = 'Eddy Bot' } | Get-RyverUser\n\n\n\n\nQueries for the 'Eddy Bot' user account via pipeline parameter name.\n\n\nPARAMETERS\n\u00b6\n\n\n-Credential\n\u00b6\n\n\nCredentials to use for the Ryver API.\n\n\nDefault value is the value set by Set-PSRyverConfig.\n\n\nType\n:\n \nPSCredential\n\n\nParameter Sets\n:\n \n(All)\n\n\nAliases\n:\n\n\n\nRequired\n:\n \nFalse\n\n\nPosition\n:\n \n4\n\n\nDefault value\n:\n \nNone\n\n\nAccept pipeline input\n:\n \nFalse\n\n\nAccept wildcard characters\n:\n \nFalse\n\n\n\n\n\n-Detailed\n\u00b6\n\n\nSpecifies whether to retrieve additional details about each object.\n\n\nType\n:\n \nSwitchParameter\n\n\nParameter Sets\n:\n \n(All)\n\n\nAliases\n:\n\n\n\nRequired\n:\n \nFalse\n\n\nPosition\n:\n \n2\n\n\nDefault value\n:\n \nFalse\n\n\nAccept pipeline input\n:\n \nTrue (ByPropertyName)\n\n\nAccept wildcard characters\n:\n \nFalse\n\n\n\n\n\n-First\n\u00b6\n\n\nGets only the first 'n' objects.\n\n\nType\n:\n \nUInt64\n\n\nParameter Sets\n:\n \n(All)\n\n\nAliases\n:\n\n\n\nRequired\n:\n \nFalse\n\n\nPosition\n:\n \nNamed\n\n\nDefault value\n:\n \nNone\n\n\nAccept pipeline input\n:\n \nFalse\n\n\nAccept wildcard characters\n:\n \nFalse\n\n\n\n\n\n-ID\n\u00b6\n\n\nSpecifies the public forum channel ID.\n\n\nType\n:\n \nUInt64\n\n\nParameter Sets\n:\n \nID\n\n\nAliases\n:\n\n\n\nRequired\n:\n \nFalse\n\n\nPosition\n:\n \n1\n\n\nDefault value\n:\n \n0\n\n\nAccept pipeline input\n:\n \nTrue (ByPropertyName, ByValue)\n\n\nAccept wildcard characters\n:\n \nFalse\n\n\n\n\n\n-IncludeTotalCount\n\u00b6\n\n\nReports the number of objects in the data set (an integer) followed by the objects. If\nthe cmdlet cannot determine the total count, it returns \"Unknown total count\".\n\n\nType\n:\n \nSwitchParameter\n\n\nParameter Sets\n:\n \n(All)\n\n\nAliases\n:\n\n\n\nRequired\n:\n \nFalse\n\n\nPosition\n:\n \nNamed\n\n\nDefault value\n:\n \nNone\n\n\nAccept pipeline input\n:\n \nFalse\n\n\nAccept wildcard characters\n:\n \nFalse\n\n\n\n\n\n-Name\n\u00b6\n\n\nSpecifies the public forum channel name. \nCase insensitive.\n\n\nType\n:\n \nString\n\n\nParameter Sets\n:\n \nName\n\n\nAliases\n:\n\n\n\nRequired\n:\n \nFalse\n\n\nPosition\n:\n \n1\n\n\nDefault value\n:\n \nNone\n\n\nAccept pipeline input\n:\n \nTrue (ByPropertyName, ByValue)\n\n\nAccept wildcard characters\n:\n \nTrue\n\n\n\n\n\n-Raw\n\u00b6\n\n\nSpecifies that objects should not be formatted.\n\n\nType\n:\n \nSwitchParameter\n\n\nParameter Sets\n:\n \n(All)\n\n\nAliases\n:\n\n\n\nRequired\n:\n \nFalse\n\n\nPosition\n:\n \n3\n\n\nDefault value\n:\n \nFalse\n\n\nAccept pipeline input\n:\n \nTrue (ByPropertyName)\n\n\nAccept wildcard characters\n:\n \nFalse\n\n\n\n\n\n-Skip\n\u00b6\n\n\nIgnores the first 'n' objects and then gets the remaining objects.\n\n\nType\n:\n \nUInt64\n\n\nParameter Sets\n:\n \n(All)\n\n\nAliases\n:\n\n\n\nRequired\n:\n \nFalse\n\n\nPosition\n:\n \nNamed\n\n\nDefault value\n:\n \nNone\n\n\nAccept pipeline input\n:\n \nFalse\n\n\nAccept wildcard characters\n:\n \nFalse\n\n\n\n\n\nCommonParameters\n\u00b6\n\n\nThis cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.\nFor more information, see about_CommonParameters (\nhttp://go.microsoft.com/fwlink/?LinkID=113216\n).\n\n\nINPUTS\n\u00b6\n\n\nSystem.String\n\u00b6\n\n\nOUTPUTS\n\u00b6\n\n\nSystem.Management.Automation.PSObject[]\n\u00b6\n\n\nSystem.Management.Automation.PSObject\n\u00b6\n\n\nNOTES\n\u00b6\n\n\n\n\nTroy Lindsay\n\n\nTwitter: @troylindsay42\n\n\nGitHub: tlindsay42\n\n\n\n\nRELATED LINKS\n\u00b6\n\n\nhttps://tlindsay42.github.io/PSRyver/Public/Get-RyverUser/\n\n\nhttps://github.com/PSRyver/blob/master/PSRyver/Public/Get-RyverUser.ps1",
+            "title": "Get-RyverUser"
+        },
+        {
+            "location": "/Public/Get-RyverUser/#get-ryveruser",
+            "text": "",
+            "title": "Get-RyverUser"
+        },
+        {
+            "location": "/Public/Get-RyverUser/#synopsis",
+            "text": "Query for Ryver users.",
+            "title": "SYNOPSIS"
+        },
+        {
+            "location": "/Public/Get-RyverUser/#syntax",
+            "text": "",
+            "title": "SYNTAX"
+        },
+        {
+            "location": "/Public/Get-RyverUser/#id-default",
+            "text": "Get-RyverUser [[-ID] <UInt64>] [-Detailed] [-Raw] [[-Credential] <PSCredential>] [-IncludeTotalCount]\n [-Skip <UInt64>] [-First <UInt64>] [<CommonParameters>]",
+            "title": "ID (Default)"
+        },
+        {
+            "location": "/Public/Get-RyverUser/#name",
+            "text": "Get-RyverUser [[-Name] <String>] [-Detailed] [-Raw] [[-Credential] <PSCredential>] [-IncludeTotalCount]\n [-Skip <UInt64>] [-First <UInt64>] [<CommonParameters>]",
+            "title": "Name"
+        },
+        {
+            "location": "/Public/Get-RyverUser/#description",
+            "text": "Query for users in this Ryver instance.",
+            "title": "DESCRIPTION"
+        },
+        {
+            "location": "/Public/Get-RyverUser/#examples",
+            "text": "",
+            "title": "EXAMPLES"
+        },
+        {
+            "location": "/Public/Get-RyverUser/#example-1",
+            "text": "Get-RyverUser -ID 12345678  Queries for the user account with ID 12345678.",
+            "title": "EXAMPLE 1"
+        },
+        {
+            "location": "/Public/Get-RyverUser/#example-2",
+            "text": "12345678 | Get-RyverUser  Queries for the user account with ID 12345678 via pipeline value.",
+            "title": "EXAMPLE 2"
+        },
+        {
+            "location": "/Public/Get-RyverUser/#example-3",
+            "text": "Get-RyverUser 12345678  Queries for the user account with ID 12345678 via positional parameter.",
+            "title": "EXAMPLE 3"
+        },
+        {
+            "location": "/Public/Get-RyverUser/#example-4",
+            "text": "Get-RyverUser -Name 'Eddy Bot'  Queries for the 'Eddy Bot' user account.",
+            "title": "EXAMPLE 4"
+        },
+        {
+            "location": "/Public/Get-RyverUser/#example-5",
+            "text": "Get-RyverUser -Name 'Eddy*' -Credential ( Get-Credential )  Updates the $Script:PSRyver.Authorization value storing the basic\nauthentication authorization header to use for all requests and then queries\nfor all users starting with the string 'Eddy', such as 'Eddy Bot' and\n'Eddy Munster'.",
+            "title": "EXAMPLE 5"
+        },
+        {
+            "location": "/Public/Get-RyverUser/#example-6",
+            "text": "'Eddy Bot' | Get-RyverUser -Detailed  Queries for detailed information about the 'Eddy Bot' user account via the\npipeline.",
+            "title": "EXAMPLE 6"
+        },
+        {
+            "location": "/Public/Get-RyverUser/#example-7",
+            "text": "'*Bot*' | Get-RyverUser -Raw  Queries for all user accounts containing the string ' Bot ', such as 'Eddy Bot'\nand \"Don't Bother Me!\" and returns the raw, unformatted output.",
+            "title": "EXAMPLE 7"
+        },
+        {
+            "location": "/Public/Get-RyverUser/#example-8",
+            "text": "Get-RyverUser 'Eddy Bot' $true $true  Queries for detailed information about the 'Eddy Bot' user account via\npositional parameters and returns the raw, unformatted output.",
+            "title": "EXAMPLE 8"
+        },
+        {
+            "location": "/Public/Get-RyverUser/#example-9",
+            "text": "[PSCustomObject] @{ ID = [UInt64] 12345678 } | Get-RyverUser  Queries for the user account with ID 12345678 via pipeline parameter name.",
+            "title": "EXAMPLE 9"
+        },
+        {
+            "location": "/Public/Get-RyverUser/#example-10",
+            "text": "[PSCustomObject] @{ Name = 'Eddy Bot' } | Get-RyverUser  Queries for the 'Eddy Bot' user account via pipeline parameter name.",
+            "title": "EXAMPLE 10"
+        },
+        {
+            "location": "/Public/Get-RyverUser/#parameters",
+            "text": "",
+            "title": "PARAMETERS"
+        },
+        {
+            "location": "/Public/Get-RyverUser/#-credential",
+            "text": "Credentials to use for the Ryver API.  Default value is the value set by Set-PSRyverConfig.  Type :   PSCredential  Parameter Sets :   (All)  Aliases :  Required :   False  Position :   4  Default value :   None  Accept pipeline input :   False  Accept wildcard characters :   False",
+            "title": "-Credential"
+        },
+        {
+            "location": "/Public/Get-RyverUser/#-detailed",
+            "text": "Specifies whether to retrieve additional details about each object.  Type :   SwitchParameter  Parameter Sets :   (All)  Aliases :  Required :   False  Position :   2  Default value :   False  Accept pipeline input :   True (ByPropertyName)  Accept wildcard characters :   False",
+            "title": "-Detailed"
+        },
+        {
+            "location": "/Public/Get-RyverUser/#-first",
+            "text": "Gets only the first 'n' objects.  Type :   UInt64  Parameter Sets :   (All)  Aliases :  Required :   False  Position :   Named  Default value :   None  Accept pipeline input :   False  Accept wildcard characters :   False",
+            "title": "-First"
+        },
+        {
+            "location": "/Public/Get-RyverUser/#-id",
+            "text": "Specifies the public forum channel ID.  Type :   UInt64  Parameter Sets :   ID  Aliases :  Required :   False  Position :   1  Default value :   0  Accept pipeline input :   True (ByPropertyName, ByValue)  Accept wildcard characters :   False",
+            "title": "-ID"
+        },
+        {
+            "location": "/Public/Get-RyverUser/#-includetotalcount",
+            "text": "Reports the number of objects in the data set (an integer) followed by the objects. If\nthe cmdlet cannot determine the total count, it returns \"Unknown total count\".  Type :   SwitchParameter  Parameter Sets :   (All)  Aliases :  Required :   False  Position :   Named  Default value :   None  Accept pipeline input :   False  Accept wildcard characters :   False",
+            "title": "-IncludeTotalCount"
+        },
+        {
+            "location": "/Public/Get-RyverUser/#-name",
+            "text": "Specifies the public forum channel name. \nCase insensitive.  Type :   String  Parameter Sets :   Name  Aliases :  Required :   False  Position :   1  Default value :   None  Accept pipeline input :   True (ByPropertyName, ByValue)  Accept wildcard characters :   True",
+            "title": "-Name"
+        },
+        {
+            "location": "/Public/Get-RyverUser/#-raw",
+            "text": "Specifies that objects should not be formatted.  Type :   SwitchParameter  Parameter Sets :   (All)  Aliases :  Required :   False  Position :   3  Default value :   False  Accept pipeline input :   True (ByPropertyName)  Accept wildcard characters :   False",
+            "title": "-Raw"
+        },
+        {
+            "location": "/Public/Get-RyverUser/#-skip",
+            "text": "Ignores the first 'n' objects and then gets the remaining objects.  Type :   UInt64  Parameter Sets :   (All)  Aliases :  Required :   False  Position :   Named  Default value :   None  Accept pipeline input :   False  Accept wildcard characters :   False",
+            "title": "-Skip"
+        },
+        {
+            "location": "/Public/Get-RyverUser/#commonparameters",
+            "text": "This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.\nFor more information, see about_CommonParameters ( http://go.microsoft.com/fwlink/?LinkID=113216 ).",
+            "title": "CommonParameters"
+        },
+        {
+            "location": "/Public/Get-RyverUser/#inputs",
+            "text": "",
+            "title": "INPUTS"
+        },
+        {
+            "location": "/Public/Get-RyverUser/#systemstring",
+            "text": "",
+            "title": "System.String"
+        },
+        {
+            "location": "/Public/Get-RyverUser/#outputs",
+            "text": "",
+            "title": "OUTPUTS"
+        },
+        {
+            "location": "/Public/Get-RyverUser/#systemmanagementautomationpsobject",
+            "text": "",
+            "title": "System.Management.Automation.PSObject[]"
+        },
+        {
+            "location": "/Public/Get-RyverUser/#systemmanagementautomationpsobject_1",
+            "text": "",
+            "title": "System.Management.Automation.PSObject"
+        },
+        {
+            "location": "/Public/Get-RyverUser/#notes",
+            "text": "Troy Lindsay  Twitter: @troylindsay42  GitHub: tlindsay42",
+            "title": "NOTES"
+        },
+        {
+            "location": "/Public/Get-RyverUser/#related-links",
+            "text": "https://tlindsay42.github.io/PSRyver/Public/Get-RyverUser/  https://github.com/PSRyver/blob/master/PSRyver/Public/Get-RyverUser.ps1",
             "title": "RELATED LINKS"
         },
         {
@@ -702,7 +1087,7 @@
         },
         {
             "location": "/Public/Initialize-PSRyverConfig/",
-            "text": "Initialize-PSRyverConfig\n\u00b6\n\n\nSYNOPSIS\n\u00b6\n\n\nInitialize the PSRyver module configuration parameters.\n\n\nSYNTAX\n\u00b6\n\n\nInitialize-PSRyverConfig [[-RestApiBaseUri] <String>] [[-Credential] <PSCredential>]\n [[-IncomingWebhookUri] <String>] [[-Proxy] <String>] [-MapUser] [-ForceVerbose] [[-MaxPageSize] <UInt16>]\n [-WhatIf] [-Confirm] [<CommonParameters>]\n\n\n\n\nDESCRIPTION\n\u00b6\n\n\nInitialize the PSRyver module configuration parameters stored in the\n$Script:PSRyver variable.\n\n\nEXAMPLES\n\u00b6\n\n\nEXAMPLE 1\n\u00b6\n\n\nInitialize-PSRyverConfig\n\n\n\n\nInitializes the $Script:PSRyver variable with all module configuration settings\nset to their default values.\n\n\nEXAMPLE 2\n\u00b6\n\n\nInitialize-PSRyverConfig https://example.ryver.com/api/1/odata.svc ( Get-Credential )\n\n\n\n\nUses positional parameters to set the $Script:PSRyver.RestApiBaseUri value\nstoring the default REST API URI and the $Script:PSRyver.Authorization value\nstoring the basic authentication authorization header to use for all requests.\n\n\nThe values of all other settings initialized with their default values.\n\n\nEXAMPLE 3\n\u00b6\n\n\nInitialize-PSRyverConfig -IncomingWebhookUri https://example.ryver.com/application/webhook/4z-_G76nj7Fic-M\n\n\n\n\nSets the $Script:PSRyver.IncomingWebhookUri value storing the default\nincoming webhook URI to use for all requests.\n\n\nThe values of all other settings initialized with their default values.\n\n\nEXAMPLE 4\n\u00b6\n\n\n[PSCustomObject] @{ Proxy = 'https://192.168.1.1/'; MapUser = $true; ForceVerbose = $true } | Initialize-PSRyverConfig\n\n\n\n\nConfigures the default proxy, enables user mapping, and prevents sensitive\nvalues from being redacted.\n\n\nThe values of all other settings initialized with their default values.\n\n\nPARAMETERS\n\u00b6\n\n\n-Credential\n\u00b6\n\n\nSpecify the Credentials to use for basic authentication.\n\n\nOnly serialized to disk as the base64 encoded authorization header value on\nWindows via DPAPI.\n\n\nType\n:\n \nPSCredential\n\n\nParameter Sets\n:\n \n(All)\n\n\nAliases\n:\n\n\n\nRequired\n:\n \nFalse\n\n\nPosition\n:\n \n2\n\n\nDefault value\n:\n \nNone\n\n\nAccept pipeline input\n:\n \nTrue (ByPropertyName)\n\n\nAccept wildcard characters\n:\n \nFalse\n\n\n\n\n\n-ForceVerbose\n\u00b6\n\n\nPrevents sensitive property values from being redacted for troubleshooting\npurposes.\n\n\n*** WARNING ***\nThis will expose your sensitive property values.\n\n\nType\n:\n \nSwitchParameter\n\n\nParameter Sets\n:\n \n(All)\n\n\nAliases\n:\n\n\n\nRequired\n:\n \nFalse\n\n\nPosition\n:\n \n6\n\n\nDefault value\n:\n \nFalse\n\n\nAccept pipeline input\n:\n \nTrue (ByPropertyName)\n\n\nAccept wildcard characters\n:\n \nFalse\n\n\n\n\n\n-IncomingWebhookUri\n\u00b6\n\n\nSpecifies the incoming webhook URI. \nOnly serialized to disk on Windows via DPAPI.\n\n\nType\n:\n \nString\n\n\nParameter Sets\n:\n \n(All)\n\n\nAliases\n:\n\n\n\nRequired\n:\n \nFalse\n\n\nPosition\n:\n \n3\n\n\nDefault value\n:\n \nNone\n\n\nAccept pipeline input\n:\n \nTrue (ByPropertyName)\n\n\nAccept wildcard characters\n:\n \nFalse\n\n\n\n\n\n-MapUser\n\u00b6\n\n\nSpecifies whether to generate a map of Ryver user ID to name on module load,\nfor use in Ryver File commands.\n\n\nType\n:\n \nSwitchParameter\n\n\nParameter Sets\n:\n \n(All)\n\n\nAliases\n:\n\n\n\nRequired\n:\n \nFalse\n\n\nPosition\n:\n \n5\n\n\nDefault value\n:\n \nFalse\n\n\nAccept pipeline input\n:\n \nTrue (ByPropertyName)\n\n\nAccept wildcard characters\n:\n \nFalse\n\n\n\n\n\n-MaxPageSize\n\u00b6\n\n\nMaximum number of results per query.\n\n\nType\n:\n \nUInt16\n\n\nParameter Sets\n:\n \n(All)\n\n\nAliases\n:\n\n\n\nRequired\n:\n \nFalse\n\n\nPosition\n:\n \n7\n\n\nDefault value\n:\n \n25\n\n\nAccept pipeline input\n:\n \nTrue (ByPropertyName)\n\n\nAccept wildcard characters\n:\n \nFalse\n\n\n\n\n\n-Proxy\n\u00b6\n\n\nProxy to use with Invoke-RestMethod\n\n\nType\n:\n \nString\n\n\nParameter Sets\n:\n \n(All)\n\n\nAliases\n:\n\n\n\nRequired\n:\n \nFalse\n\n\nPosition\n:\n \n4\n\n\nDefault value\n:\n \nNone\n\n\nAccept pipeline input\n:\n \nTrue (ByPropertyName)\n\n\nAccept wildcard characters\n:\n \nFalse\n\n\n\n\n\n-RestApiBaseUri\n\u00b6\n\n\nSpecifies the REST API URI. \nOnly serialized to disk on Windows via DPAPI.\n\n\nType\n:\n \nString\n\n\nParameter Sets\n:\n \n(All)\n\n\nAliases\n:\n\n\n\nRequired\n:\n \nFalse\n\n\nPosition\n:\n \n1\n\n\nDefault value\n:\n \nNone\n\n\nAccept pipeline input\n:\n \nTrue (ByPropertyName)\n\n\nAccept wildcard characters\n:\n \nFalse\n\n\n\n\n\n-Confirm\n\u00b6\n\n\nPrompts you for confirmation before running the cmdlet.\n\n\nType\n:\n \nSwitchParameter\n\n\nParameter Sets\n:\n \n(All)\n\n\nAliases\n:\n \ncf\n\n\n\nRequired\n:\n \nFalse\n\n\nPosition\n:\n \nNamed\n\n\nDefault value\n:\n \nNone\n\n\nAccept pipeline input\n:\n \nFalse\n\n\nAccept wildcard characters\n:\n \nFalse\n\n\n\n\n\n-WhatIf\n\u00b6\n\n\nShows what would happen if the cmdlet runs.\nThe cmdlet is not run.\n\n\nType\n:\n \nSwitchParameter\n\n\nParameter Sets\n:\n \n(All)\n\n\nAliases\n:\n \nwi\n\n\n\nRequired\n:\n \nFalse\n\n\nPosition\n:\n \nNamed\n\n\nDefault value\n:\n \nNone\n\n\nAccept pipeline input\n:\n \nFalse\n\n\nAccept wildcard characters\n:\n \nFalse\n\n\n\n\n\nCommonParameters\n\u00b6\n\n\nThis cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.\nFor more information, see about_CommonParameters (\nhttp://go.microsoft.com/fwlink/?LinkID=113216\n).\n\n\nINPUTS\n\u00b6\n\n\nNone\n\u00b6\n\n\nYou cannot pipe input to this cmdlet.\n\n\n\n\n\nOUTPUTS\n\u00b6\n\n\nSystem.Void\n\u00b6\n\n\nNOTES\n\u00b6\n\n\n\n\nTroy Lindsay\n\n\nTwitter: @troylindsay42\n\n\nGitHub: tlindsay42\n\n\n\n\nRELATED LINKS\n\u00b6\n\n\nhttps://tlindsay42.github.io/PSRyver/Public/Initialize-PSRyverConfig/\n\n\nhttps://github.com/PSRyver/blob/master/PSRyver/Public/Initialize-PSRyverConfig.ps1\n\n\nGet-PSRyverConfig\n\n\nSet-PSRyverConfig\n\n\nRemove-PSRyverConfig\n\n\nExport-PSRyverConfig\n\n\nImport-PSRyverConfig",
+            "text": "Initialize-PSRyverConfig\n\u00b6\n\n\nSYNOPSIS\n\u00b6\n\n\nInitialize the PSRyver module configuration parameters.\n\n\nSYNTAX\n\u00b6\n\n\nInitialize-PSRyverConfig [[-RestApiBaseUri] <String>] [[-Credential] <PSCredential>]\n [[-IncomingWebhookUri] <String>] [[-Proxy] <String>] [-MapUser] [-ForceVerbose] [[-MaxPageSize] <UInt16>]\n [-WhatIf] [-Confirm] [<CommonParameters>]\n\n\n\n\nDESCRIPTION\n\u00b6\n\n\nInitialize the PSRyver module configuration parameters stored in the\n$Script:PSRyver variable.\n\n\nEXAMPLES\n\u00b6\n\n\nEXAMPLE 1\n\u00b6\n\n\nInitialize-PSRyverConfig\n\n\n\n\nInitializes the $Script:PSRyver variable with all module configuration settings\nset to their default values.\n\n\nEXAMPLE 2\n\u00b6\n\n\nInitialize-PSRyverConfig https://example.ryver.com/api/1/odata.svc ( Get-Credential )\n\n\n\n\nUses positional parameters to set the $Script:PSRyver.RestApiBaseUri value\nstoring the default REST API URI and the $Script:PSRyver.Authorization value\nstoring the basic authentication authorization header to use for all requests.\n\n\nThe values of all other settings initialized with their default values.\n\n\nEXAMPLE 3\n\u00b6\n\n\nInitialize-PSRyverConfig -IncomingWebhookUri https://example.ryver.com/application/webhook/4z-_G76nj7Fic-M\n\n\n\n\nSets the $Script:PSRyver.IncomingWebhookUri value storing the default\nincoming webhook URI to use for all requests.\n\n\nThe values of all other settings initialized with their default values.\n\n\nEXAMPLE 4\n\u00b6\n\n\n[PSCustomObject] @{ Proxy = 'https://192.168.1.1/'; MapUser = $true; ForceVerbose = $true } | Initialize-PSRyverConfig\n\n\n\n\nConfigures the default proxy, enables user mapping, and prevents sensitive\nvalues from being redacted.\n\n\nThe values of all other settings initialized with their default values.\n\n\nPARAMETERS\n\u00b6\n\n\n-Credential\n\u00b6\n\n\nSpecify the Credentials to use for basic authentication.\n\n\nOnly serialized to disk as the base64 encoded authorization header value on\nWindows via DPAPI.\n\n\nType\n:\n \nPSCredential\n\n\nParameter Sets\n:\n \n(All)\n\n\nAliases\n:\n\n\n\nRequired\n:\n \nFalse\n\n\nPosition\n:\n \n2\n\n\nDefault value\n:\n \nNone\n\n\nAccept pipeline input\n:\n \nTrue (ByPropertyName)\n\n\nAccept wildcard characters\n:\n \nFalse\n\n\n\n\n\n-ForceVerbose\n\u00b6\n\n\nPrevents sensitive property values from being redacted for troubleshooting\npurposes.\n\n\n*** WARNING ***\nThis will expose your sensitive property values.\n\n\nType\n:\n \nSwitchParameter\n\n\nParameter Sets\n:\n \n(All)\n\n\nAliases\n:\n\n\n\nRequired\n:\n \nFalse\n\n\nPosition\n:\n \n6\n\n\nDefault value\n:\n \nFalse\n\n\nAccept pipeline input\n:\n \nTrue (ByPropertyName)\n\n\nAccept wildcard characters\n:\n \nFalse\n\n\n\n\n\n-IncomingWebhookUri\n\u00b6\n\n\nSpecifies the incoming webhook URI. \nOnly serialized to disk on Windows via DPAPI.\n\n\nType\n:\n \nString\n\n\nParameter Sets\n:\n \n(All)\n\n\nAliases\n:\n\n\n\nRequired\n:\n \nFalse\n\n\nPosition\n:\n \n3\n\n\nDefault value\n:\n \nNone\n\n\nAccept pipeline input\n:\n \nTrue (ByPropertyName)\n\n\nAccept wildcard characters\n:\n \nFalse\n\n\n\n\n\n-MapUser\n\u00b6\n\n\nSpecifies whether to generate a map of Ryver user ID to name on module load,\nfor use in Ryver File commands.\n\n\nType\n:\n \nSwitchParameter\n\n\nParameter Sets\n:\n \n(All)\n\n\nAliases\n:\n\n\n\nRequired\n:\n \nFalse\n\n\nPosition\n:\n \n5\n\n\nDefault value\n:\n \nFalse\n\n\nAccept pipeline input\n:\n \nTrue (ByPropertyName)\n\n\nAccept wildcard characters\n:\n \nFalse\n\n\n\n\n\n-MaxPageSize\n\u00b6\n\n\nMaximum number of results per query.\n\n\nType\n:\n \nUInt16\n\n\nParameter Sets\n:\n \n(All)\n\n\nAliases\n:\n\n\n\nRequired\n:\n \nFalse\n\n\nPosition\n:\n \n7\n\n\nDefault value\n:\n \n25\n\n\nAccept pipeline input\n:\n \nTrue (ByPropertyName)\n\n\nAccept wildcard characters\n:\n \nFalse\n\n\n\n\n\n-Proxy\n\u00b6\n\n\nProxy to use with Invoke-RestMethod\n\n\nType\n:\n \nString\n\n\nParameter Sets\n:\n \n(All)\n\n\nAliases\n:\n\n\n\nRequired\n:\n \nFalse\n\n\nPosition\n:\n \n4\n\n\nDefault value\n:\n \nNone\n\n\nAccept pipeline input\n:\n \nTrue (ByPropertyName)\n\n\nAccept wildcard characters\n:\n \nFalse\n\n\n\n\n\n-RestApiBaseUri\n\u00b6\n\n\nSpecifies the REST API URI. \nOnly serialized to disk on Windows via DPAPI.\n\n\nType\n:\n \nString\n\n\nParameter Sets\n:\n \n(All)\n\n\nAliases\n:\n\n\n\nRequired\n:\n \nFalse\n\n\nPosition\n:\n \n1\n\n\nDefault value\n:\n \nNone\n\n\nAccept pipeline input\n:\n \nTrue (ByPropertyName)\n\n\nAccept wildcard characters\n:\n \nFalse\n\n\n\n\n\n-Confirm\n\u00b6\n\n\nPrompts you for confirmation before running the cmdlet.\n\n\nType\n:\n \nSwitchParameter\n\n\nParameter Sets\n:\n \n(All)\n\n\nAliases\n:\n \ncf\n\n\n\nRequired\n:\n \nFalse\n\n\nPosition\n:\n \nNamed\n\n\nDefault value\n:\n \nNone\n\n\nAccept pipeline input\n:\n \nFalse\n\n\nAccept wildcard characters\n:\n \nFalse\n\n\n\n\n\n-WhatIf\n\u00b6\n\n\nShows what would happen if the cmdlet runs.\nThe cmdlet is not run.\n\n\nType\n:\n \nSwitchParameter\n\n\nParameter Sets\n:\n \n(All)\n\n\nAliases\n:\n \nwi\n\n\n\nRequired\n:\n \nFalse\n\n\nPosition\n:\n \nNamed\n\n\nDefault value\n:\n \nNone\n\n\nAccept pipeline input\n:\n \nFalse\n\n\nAccept wildcard characters\n:\n \nFalse\n\n\n\n\n\nCommonParameters\n\u00b6\n\n\nThis cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.\nFor more information, see about_CommonParameters (\nhttp://go.microsoft.com/fwlink/?LinkID=113216\n).\n\n\nINPUTS\n\u00b6\n\n\nSystem.Management.Automation.PSCustomObject\n\u00b6\n\n\nOUTPUTS\n\u00b6\n\n\nSystem.Void\n\u00b6\n\n\nNOTES\n\u00b6\n\n\n\n\nTroy Lindsay\n\n\nTwitter: @troylindsay42\n\n\nGitHub: tlindsay42\n\n\n\n\nRELATED LINKS\n\u00b6\n\n\nhttps://tlindsay42.github.io/PSRyver/Public/Initialize-PSRyverConfig/\n\n\nhttps://github.com/PSRyver/blob/master/PSRyver/Public/Initialize-PSRyverConfig.ps1\n\n\nGet-PSRyverConfig\n\n\nSet-PSRyverConfig\n\n\nRemove-PSRyverConfig\n\n\nExport-PSRyverConfig\n\n\nImport-PSRyverConfig",
             "title": "Initialize-PSRyverConfig"
         },
         {
@@ -811,9 +1196,9 @@
             "title": "INPUTS"
         },
         {
-            "location": "/Public/Initialize-PSRyverConfig/#none",
-            "text": "You cannot pipe input to this cmdlet.",
-            "title": "None"
+            "location": "/Public/Initialize-PSRyverConfig/#systemmanagementautomationpscustomobject",
+            "text": "",
+            "title": "System.Management.Automation.PSCustomObject"
         },
         {
             "location": "/Public/Initialize-PSRyverConfig/#outputs",
@@ -1786,103 +2171,303 @@
             "title": "RELATED LINKS"
         },
         {
-            "location": "/Private/Format-RyverV1ChannelObject/",
-            "text": "Format-RyverV1ChannelObject\n\u00b6\n\n\nSYNOPSIS\n\u00b6\n\n\nParse forum & team channel objects.\n\n\nSYNTAX\n\u00b6\n\n\nFormat-RyverV1ChannelObject [-InputObject] <PSObject[]> [<CommonParameters>]\n\n\n\n\nDESCRIPTION\n\u00b6\n\n\nParse public forum & private team channel objects.\n\n\nEXAMPLES\n\u00b6\n\n\nEXAMPLE 1\n\u00b6\n\n\nFormat-RyverV1ChannelObject -InputObject $objects\n\n\n\n\nParses the forum or team channel objects.\n\n\nEXAMPLE 2\n\u00b6\n\n\n$objects | Format-RyverV1ChannelObject\n\n\n\n\nParses the forum or team channel objects via the pipeline.\n\n\nEXAMPLE 3\n\u00b6\n\n\nFormat-RyverV1ChannelObject $objects\n\n\n\n\nParses the forum or team channel objects via positional parameter.\n\n\nPARAMETERS\n\u00b6\n\n\n-InputObject\n\u00b6\n\n\nThe public forum or private team channel objects to parse.\n\n\nType\n:\n \nPSObject[]\n\n\nParameter Sets\n:\n \n(All)\n\n\nAliases\n:\n\n\n\nRequired\n:\n \nTrue\n\n\nPosition\n:\n \n1\n\n\nDefault value\n:\n \nNone\n\n\nAccept pipeline input\n:\n \nTrue (ByValue)\n\n\nAccept wildcard characters\n:\n \nFalse\n\n\n\n\n\nCommonParameters\n\u00b6\n\n\nThis cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.\nFor more information, see about_CommonParameters (\nhttp://go.microsoft.com/fwlink/?LinkID=113216\n).\n\n\nINPUTS\n\u00b6\n\n\nSystem.Management.Automation.PSCustomObject[]\n\u00b6\n\n\nSystem.Management.Automation.PSCustomObject\n\u00b6\n\n\nOUTPUTS\n\u00b6\n\n\nSystem.Management.Automation.PSObject[]\n\u00b6\n\n\nSystem.Management.Automation.PSObject\n\u00b6\n\n\nNOTES\n\u00b6\n\n\n\n\nTroy Lindsay\n\n\nTwitter: @troylindsay42\n\n\nGitHub: tlindsay42\n\n\n\n\nRELATED LINKS\n\u00b6\n\n\nhttps://tlindsay42.github.io/PSRyver/Private/Format-RyverV1ChannelObject/\n\n\nhttps://github.com/PSRyver/blob/master/PSRyver/Private/Format-RyverV1ChannelObject.ps1",
-            "title": "Format-RyverV1ChannelObject"
+            "location": "/Private/Format-RyverChannelObject/",
+            "text": "Format-RyverChannelObject\n\u00b6\n\n\nSYNOPSIS\n\u00b6\n\n\nParse forum & team channel objects.\n\n\nSYNTAX\n\u00b6\n\n\nFormat-RyverChannelObject [-InputObject] <PSObject[]> [<CommonParameters>]\n\n\n\n\nDESCRIPTION\n\u00b6\n\n\nParse public forum & private team channel objects.\n\n\nEXAMPLES\n\u00b6\n\n\nEXAMPLE 1\n\u00b6\n\n\nFormat-RyverChannelObject -InputObject $objects\n\n\n\n\nParses the forum or team channel objects.\n\n\nEXAMPLE 2\n\u00b6\n\n\n$objects | Format-RyverChannelObject\n\n\n\n\nParses the forum or team channel objects via the pipeline.\n\n\nEXAMPLE 3\n\u00b6\n\n\nFormat-RyverChannelObject $objects\n\n\n\n\nParses the forum or team channel objects via positional parameter.\n\n\nPARAMETERS\n\u00b6\n\n\n-InputObject\n\u00b6\n\n\nThe public forum or private team channel objects to parse.\n\n\nType\n:\n \nPSObject[]\n\n\nParameter Sets\n:\n \n(All)\n\n\nAliases\n:\n\n\n\nRequired\n:\n \nTrue\n\n\nPosition\n:\n \n1\n\n\nDefault value\n:\n \nNone\n\n\nAccept pipeline input\n:\n \nTrue (ByValue)\n\n\nAccept wildcard characters\n:\n \nFalse\n\n\n\n\n\nCommonParameters\n\u00b6\n\n\nThis cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.\nFor more information, see about_CommonParameters (\nhttp://go.microsoft.com/fwlink/?LinkID=113216\n).\n\n\nINPUTS\n\u00b6\n\n\nSystem.Management.Automation.PSCustomObject[]\n\u00b6\n\n\nSystem.Management.Automation.PSCustomObject\n\u00b6\n\n\nOUTPUTS\n\u00b6\n\n\nSystem.Management.Automation.PSObject[]\n\u00b6\n\n\nSystem.Management.Automation.PSObject\n\u00b6\n\n\nNOTES\n\u00b6\n\n\n\n\nTroy Lindsay\n\n\nTwitter: @troylindsay42\n\n\nGitHub: tlindsay42\n\n\n\n\nRELATED LINKS\n\u00b6\n\n\nhttps://tlindsay42.github.io/PSRyver/Private/Format-RyverChannelObject/\n\n\nhttps://github.com/PSRyver/blob/master/PSRyver/Private/Format-RyverChannelObject.ps1",
+            "title": "Format-RyverChannelObject"
         },
         {
-            "location": "/Private/Format-RyverV1ChannelObject/#format-ryverv1channelobject",
+            "location": "/Private/Format-RyverChannelObject/#format-ryverchannelobject",
             "text": "",
-            "title": "Format-RyverV1ChannelObject"
+            "title": "Format-RyverChannelObject"
         },
         {
-            "location": "/Private/Format-RyverV1ChannelObject/#synopsis",
+            "location": "/Private/Format-RyverChannelObject/#synopsis",
             "text": "Parse forum & team channel objects.",
             "title": "SYNOPSIS"
         },
         {
-            "location": "/Private/Format-RyverV1ChannelObject/#syntax",
-            "text": "Format-RyverV1ChannelObject [-InputObject] <PSObject[]> [<CommonParameters>]",
+            "location": "/Private/Format-RyverChannelObject/#syntax",
+            "text": "Format-RyverChannelObject [-InputObject] <PSObject[]> [<CommonParameters>]",
             "title": "SYNTAX"
         },
         {
-            "location": "/Private/Format-RyverV1ChannelObject/#description",
+            "location": "/Private/Format-RyverChannelObject/#description",
             "text": "Parse public forum & private team channel objects.",
             "title": "DESCRIPTION"
         },
         {
-            "location": "/Private/Format-RyverV1ChannelObject/#examples",
+            "location": "/Private/Format-RyverChannelObject/#examples",
             "text": "",
             "title": "EXAMPLES"
         },
         {
-            "location": "/Private/Format-RyverV1ChannelObject/#example-1",
-            "text": "Format-RyverV1ChannelObject -InputObject $objects  Parses the forum or team channel objects.",
+            "location": "/Private/Format-RyverChannelObject/#example-1",
+            "text": "Format-RyverChannelObject -InputObject $objects  Parses the forum or team channel objects.",
             "title": "EXAMPLE 1"
         },
         {
-            "location": "/Private/Format-RyverV1ChannelObject/#example-2",
-            "text": "$objects | Format-RyverV1ChannelObject  Parses the forum or team channel objects via the pipeline.",
+            "location": "/Private/Format-RyverChannelObject/#example-2",
+            "text": "$objects | Format-RyverChannelObject  Parses the forum or team channel objects via the pipeline.",
             "title": "EXAMPLE 2"
         },
         {
-            "location": "/Private/Format-RyverV1ChannelObject/#example-3",
-            "text": "Format-RyverV1ChannelObject $objects  Parses the forum or team channel objects via positional parameter.",
+            "location": "/Private/Format-RyverChannelObject/#example-3",
+            "text": "Format-RyverChannelObject $objects  Parses the forum or team channel objects via positional parameter.",
             "title": "EXAMPLE 3"
         },
         {
-            "location": "/Private/Format-RyverV1ChannelObject/#parameters",
+            "location": "/Private/Format-RyverChannelObject/#parameters",
             "text": "",
             "title": "PARAMETERS"
         },
         {
-            "location": "/Private/Format-RyverV1ChannelObject/#-inputobject",
+            "location": "/Private/Format-RyverChannelObject/#-inputobject",
             "text": "The public forum or private team channel objects to parse.  Type :   PSObject[]  Parameter Sets :   (All)  Aliases :  Required :   True  Position :   1  Default value :   None  Accept pipeline input :   True (ByValue)  Accept wildcard characters :   False",
             "title": "-InputObject"
         },
         {
-            "location": "/Private/Format-RyverV1ChannelObject/#commonparameters",
+            "location": "/Private/Format-RyverChannelObject/#commonparameters",
             "text": "This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.\nFor more information, see about_CommonParameters ( http://go.microsoft.com/fwlink/?LinkID=113216 ).",
             "title": "CommonParameters"
         },
         {
-            "location": "/Private/Format-RyverV1ChannelObject/#inputs",
+            "location": "/Private/Format-RyverChannelObject/#inputs",
             "text": "",
             "title": "INPUTS"
         },
         {
-            "location": "/Private/Format-RyverV1ChannelObject/#systemmanagementautomationpscustomobject",
+            "location": "/Private/Format-RyverChannelObject/#systemmanagementautomationpscustomobject",
             "text": "",
             "title": "System.Management.Automation.PSCustomObject[]"
         },
         {
-            "location": "/Private/Format-RyverV1ChannelObject/#systemmanagementautomationpscustomobject_1",
+            "location": "/Private/Format-RyverChannelObject/#systemmanagementautomationpscustomobject_1",
             "text": "",
             "title": "System.Management.Automation.PSCustomObject"
         },
         {
-            "location": "/Private/Format-RyverV1ChannelObject/#outputs",
+            "location": "/Private/Format-RyverChannelObject/#outputs",
             "text": "",
             "title": "OUTPUTS"
         },
         {
-            "location": "/Private/Format-RyverV1ChannelObject/#systemmanagementautomationpsobject",
+            "location": "/Private/Format-RyverChannelObject/#systemmanagementautomationpsobject",
             "text": "",
             "title": "System.Management.Automation.PSObject[]"
         },
         {
-            "location": "/Private/Format-RyverV1ChannelObject/#systemmanagementautomationpsobject_1",
+            "location": "/Private/Format-RyverChannelObject/#systemmanagementautomationpsobject_1",
             "text": "",
             "title": "System.Management.Automation.PSObject"
         },
         {
-            "location": "/Private/Format-RyverV1ChannelObject/#notes",
+            "location": "/Private/Format-RyverChannelObject/#notes",
             "text": "Troy Lindsay  Twitter: @troylindsay42  GitHub: tlindsay42",
             "title": "NOTES"
         },
         {
-            "location": "/Private/Format-RyverV1ChannelObject/#related-links",
-            "text": "https://tlindsay42.github.io/PSRyver/Private/Format-RyverV1ChannelObject/  https://github.com/PSRyver/blob/master/PSRyver/Private/Format-RyverV1ChannelObject.ps1",
+            "location": "/Private/Format-RyverChannelObject/#related-links",
+            "text": "https://tlindsay42.github.io/PSRyver/Private/Format-RyverChannelObject/  https://github.com/PSRyver/blob/master/PSRyver/Private/Format-RyverChannelObject.ps1",
+            "title": "RELATED LINKS"
+        },
+        {
+            "location": "/Private/Format-RyverMessageObject/",
+            "text": "Format-RyverMessageObject\n\u00b6\n\n\nSYNOPSIS\n\u00b6\n\n\nParse message objects.\n\n\nSYNTAX\n\u00b6\n\n\nFormat-RyverMessageObject [-InputObject] <PSObject[]> [<CommonParameters>]\n\n\n\n\nDESCRIPTION\n\u00b6\n\n\nParse message objects.\n\n\nEXAMPLES\n\u00b6\n\n\nEXAMPLE 1\n\u00b6\n\n\nFormat-RyverMessageObject -InputObject $objects\n\n\n\n\nParses the message objects.\n\n\nEXAMPLE 2\n\u00b6\n\n\n$objects | Format-RyverMessageObject\n\n\n\n\nParses the message objects via the pipeline.\n\n\nEXAMPLE 3\n\u00b6\n\n\nFormat-RyverMessageObject $objects\n\n\n\n\nParses the message objects via positional parameter.\n\n\nPARAMETERS\n\u00b6\n\n\n-InputObject\n\u00b6\n\n\nThe public forum or private team channel objects to parse.\n\n\nType\n:\n \nPSObject[]\n\n\nParameter Sets\n:\n \n(All)\n\n\nAliases\n:\n\n\n\nRequired\n:\n \nTrue\n\n\nPosition\n:\n \n1\n\n\nDefault value\n:\n \nNone\n\n\nAccept pipeline input\n:\n \nTrue (ByValue)\n\n\nAccept wildcard characters\n:\n \nFalse\n\n\n\n\n\nCommonParameters\n\u00b6\n\n\nThis cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.\nFor more information, see about_CommonParameters (\nhttp://go.microsoft.com/fwlink/?LinkID=113216\n).\n\n\nINPUTS\n\u00b6\n\n\nSystem.Management.Automation.PSCustomObject[]\n\u00b6\n\n\nSystem.Management.Automation.PSCustomObject\n\u00b6\n\n\nOUTPUTS\n\u00b6\n\n\nSystem.Management.Automation.PSObject[]\n\u00b6\n\n\nSystem.Management.Automation.PSObject\n\u00b6\n\n\nNOTES\n\u00b6\n\n\n\n\nTroy Lindsay\n\n\nTwitter: @troylindsay42\n\n\nGitHub: tlindsay42\n\n\n\n\nRELATED LINKS\n\u00b6\n\n\nhttps://tlindsay42.github.io/PSRyver/Private/Format-RyverMessageObject/\n\n\nhttps://github.com/PSRyver/blob/master/PSRyver/Private/Format-RyverMessageObject.ps1",
+            "title": "Format-RyverMessageObject"
+        },
+        {
+            "location": "/Private/Format-RyverMessageObject/#format-ryvermessageobject",
+            "text": "",
+            "title": "Format-RyverMessageObject"
+        },
+        {
+            "location": "/Private/Format-RyverMessageObject/#synopsis",
+            "text": "Parse message objects.",
+            "title": "SYNOPSIS"
+        },
+        {
+            "location": "/Private/Format-RyverMessageObject/#syntax",
+            "text": "Format-RyverMessageObject [-InputObject] <PSObject[]> [<CommonParameters>]",
+            "title": "SYNTAX"
+        },
+        {
+            "location": "/Private/Format-RyverMessageObject/#description",
+            "text": "Parse message objects.",
+            "title": "DESCRIPTION"
+        },
+        {
+            "location": "/Private/Format-RyverMessageObject/#examples",
+            "text": "",
+            "title": "EXAMPLES"
+        },
+        {
+            "location": "/Private/Format-RyverMessageObject/#example-1",
+            "text": "Format-RyverMessageObject -InputObject $objects  Parses the message objects.",
+            "title": "EXAMPLE 1"
+        },
+        {
+            "location": "/Private/Format-RyverMessageObject/#example-2",
+            "text": "$objects | Format-RyverMessageObject  Parses the message objects via the pipeline.",
+            "title": "EXAMPLE 2"
+        },
+        {
+            "location": "/Private/Format-RyverMessageObject/#example-3",
+            "text": "Format-RyverMessageObject $objects  Parses the message objects via positional parameter.",
+            "title": "EXAMPLE 3"
+        },
+        {
+            "location": "/Private/Format-RyverMessageObject/#parameters",
+            "text": "",
+            "title": "PARAMETERS"
+        },
+        {
+            "location": "/Private/Format-RyverMessageObject/#-inputobject",
+            "text": "The public forum or private team channel objects to parse.  Type :   PSObject[]  Parameter Sets :   (All)  Aliases :  Required :   True  Position :   1  Default value :   None  Accept pipeline input :   True (ByValue)  Accept wildcard characters :   False",
+            "title": "-InputObject"
+        },
+        {
+            "location": "/Private/Format-RyverMessageObject/#commonparameters",
+            "text": "This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.\nFor more information, see about_CommonParameters ( http://go.microsoft.com/fwlink/?LinkID=113216 ).",
+            "title": "CommonParameters"
+        },
+        {
+            "location": "/Private/Format-RyverMessageObject/#inputs",
+            "text": "",
+            "title": "INPUTS"
+        },
+        {
+            "location": "/Private/Format-RyverMessageObject/#systemmanagementautomationpscustomobject",
+            "text": "",
+            "title": "System.Management.Automation.PSCustomObject[]"
+        },
+        {
+            "location": "/Private/Format-RyverMessageObject/#systemmanagementautomationpscustomobject_1",
+            "text": "",
+            "title": "System.Management.Automation.PSCustomObject"
+        },
+        {
+            "location": "/Private/Format-RyverMessageObject/#outputs",
+            "text": "",
+            "title": "OUTPUTS"
+        },
+        {
+            "location": "/Private/Format-RyverMessageObject/#systemmanagementautomationpsobject",
+            "text": "",
+            "title": "System.Management.Automation.PSObject[]"
+        },
+        {
+            "location": "/Private/Format-RyverMessageObject/#systemmanagementautomationpsobject_1",
+            "text": "",
+            "title": "System.Management.Automation.PSObject"
+        },
+        {
+            "location": "/Private/Format-RyverMessageObject/#notes",
+            "text": "Troy Lindsay  Twitter: @troylindsay42  GitHub: tlindsay42",
+            "title": "NOTES"
+        },
+        {
+            "location": "/Private/Format-RyverMessageObject/#related-links",
+            "text": "https://tlindsay42.github.io/PSRyver/Private/Format-RyverMessageObject/  https://github.com/PSRyver/blob/master/PSRyver/Private/Format-RyverMessageObject.ps1",
+            "title": "RELATED LINKS"
+        },
+        {
+            "location": "/Private/Format-RyverUserObject/",
+            "text": "Format-RyverUserObject\n\u00b6\n\n\nSYNOPSIS\n\u00b6\n\n\nParse user objects.\n\n\nSYNTAX\n\u00b6\n\n\nFormat-RyverUserObject [-InputObject] <PSObject[]> [<CommonParameters>]\n\n\n\n\nDESCRIPTION\n\u00b6\n\n\nParse user objects.\n\n\nEXAMPLES\n\u00b6\n\n\nEXAMPLE 1\n\u00b6\n\n\nFormat-RyverUserObject -InputObject $objects\n\n\n\n\nParses user objects.\n\n\nEXAMPLE 2\n\u00b6\n\n\n$objects | Format-RyverUserObject\n\n\n\n\nParses user objects via the pipeline.\n\n\nEXAMPLE 3\n\u00b6\n\n\nFormat-RyverChannelObject $objects\n\n\n\n\nParses user objects via positional parameter.\n\n\nPARAMETERS\n\u00b6\n\n\n-InputObject\n\u00b6\n\n\n{{Fill InputObject Description}}\n\n\nType\n:\n \nPSObject[]\n\n\nParameter Sets\n:\n \n(All)\n\n\nAliases\n:\n\n\n\nRequired\n:\n \nTrue\n\n\nPosition\n:\n \n1\n\n\nDefault value\n:\n \nNone\n\n\nAccept pipeline input\n:\n \nTrue (ByValue)\n\n\nAccept wildcard characters\n:\n \nFalse\n\n\n\n\n\nCommonParameters\n\u00b6\n\n\nThis cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.\nFor more information, see about_CommonParameters (\nhttp://go.microsoft.com/fwlink/?LinkID=113216\n).\n\n\nINPUTS\n\u00b6\n\n\nSystem.Management.Automation.PSCustomObject[]\n\u00b6\n\n\nSystem.Management.Automation.PSCustomObject\n\u00b6\n\n\nOUTPUTS\n\u00b6\n\n\nSystem.Management.Automation.PSObject[]\n\u00b6\n\n\nSystem.Management.Automation.PSObject\n\u00b6\n\n\nNOTES\n\u00b6\n\n\n\n\nTroy Lindsay\n\n\nTwitter: @troylindsay42\n\n\nGitHub: tlindsay42\n\n\n\n\nRELATED LINKS\n\u00b6\n\n\nhttps://tlindsay42.github.io/PSRyver/Private/Format-RyverUserObject/\n\n\nhttps://github.com/PSRyver/blob/master/PSRyver/Private/Format-RyverUserObject.ps1",
+            "title": "Format-RyverUserObject"
+        },
+        {
+            "location": "/Private/Format-RyverUserObject/#format-ryveruserobject",
+            "text": "",
+            "title": "Format-RyverUserObject"
+        },
+        {
+            "location": "/Private/Format-RyverUserObject/#synopsis",
+            "text": "Parse user objects.",
+            "title": "SYNOPSIS"
+        },
+        {
+            "location": "/Private/Format-RyverUserObject/#syntax",
+            "text": "Format-RyverUserObject [-InputObject] <PSObject[]> [<CommonParameters>]",
+            "title": "SYNTAX"
+        },
+        {
+            "location": "/Private/Format-RyverUserObject/#description",
+            "text": "Parse user objects.",
+            "title": "DESCRIPTION"
+        },
+        {
+            "location": "/Private/Format-RyverUserObject/#examples",
+            "text": "",
+            "title": "EXAMPLES"
+        },
+        {
+            "location": "/Private/Format-RyverUserObject/#example-1",
+            "text": "Format-RyverUserObject -InputObject $objects  Parses user objects.",
+            "title": "EXAMPLE 1"
+        },
+        {
+            "location": "/Private/Format-RyverUserObject/#example-2",
+            "text": "$objects | Format-RyverUserObject  Parses user objects via the pipeline.",
+            "title": "EXAMPLE 2"
+        },
+        {
+            "location": "/Private/Format-RyverUserObject/#example-3",
+            "text": "Format-RyverChannelObject $objects  Parses user objects via positional parameter.",
+            "title": "EXAMPLE 3"
+        },
+        {
+            "location": "/Private/Format-RyverUserObject/#parameters",
+            "text": "",
+            "title": "PARAMETERS"
+        },
+        {
+            "location": "/Private/Format-RyverUserObject/#-inputobject",
+            "text": "{{Fill InputObject Description}}  Type :   PSObject[]  Parameter Sets :   (All)  Aliases :  Required :   True  Position :   1  Default value :   None  Accept pipeline input :   True (ByValue)  Accept wildcard characters :   False",
+            "title": "-InputObject"
+        },
+        {
+            "location": "/Private/Format-RyverUserObject/#commonparameters",
+            "text": "This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.\nFor more information, see about_CommonParameters ( http://go.microsoft.com/fwlink/?LinkID=113216 ).",
+            "title": "CommonParameters"
+        },
+        {
+            "location": "/Private/Format-RyverUserObject/#inputs",
+            "text": "",
+            "title": "INPUTS"
+        },
+        {
+            "location": "/Private/Format-RyverUserObject/#systemmanagementautomationpscustomobject",
+            "text": "",
+            "title": "System.Management.Automation.PSCustomObject[]"
+        },
+        {
+            "location": "/Private/Format-RyverUserObject/#systemmanagementautomationpscustomobject_1",
+            "text": "",
+            "title": "System.Management.Automation.PSCustomObject"
+        },
+        {
+            "location": "/Private/Format-RyverUserObject/#outputs",
+            "text": "",
+            "title": "OUTPUTS"
+        },
+        {
+            "location": "/Private/Format-RyverUserObject/#systemmanagementautomationpsobject",
+            "text": "",
+            "title": "System.Management.Automation.PSObject[]"
+        },
+        {
+            "location": "/Private/Format-RyverUserObject/#systemmanagementautomationpsobject_1",
+            "text": "",
+            "title": "System.Management.Automation.PSObject"
+        },
+        {
+            "location": "/Private/Format-RyverUserObject/#notes",
+            "text": "Troy Lindsay  Twitter: @troylindsay42  GitHub: tlindsay42",
+            "title": "NOTES"
+        },
+        {
+            "location": "/Private/Format-RyverUserObject/#related-links",
+            "text": "https://tlindsay42.github.io/PSRyver/Private/Format-RyverUserObject/  https://github.com/PSRyver/blob/master/PSRyver/Private/Format-RyverUserObject.ps1",
             "title": "RELATED LINKS"
         },
         {

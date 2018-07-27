@@ -2,107 +2,127 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
      <loc>https://tlindsay42.github.io/PSRyver/</loc>
-     <lastmod>2018-07-23</lastmod>
+     <lastmod>2018-07-27</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>https://tlindsay42.github.io/PSRyver/Public/Export-PSRyverConfig/</loc>
-     <lastmod>2018-07-23</lastmod>
+     <lastmod>2018-07-27</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>https://tlindsay42.github.io/PSRyver/Public/Get-PSRyverConfig/</loc>
-     <lastmod>2018-07-23</lastmod>
+     <lastmod>2018-07-27</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>https://tlindsay42.github.io/PSRyver/Public/Get-PSRyverConfigPath/</loc>
-     <lastmod>2018-07-23</lastmod>
+     <lastmod>2018-07-27</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>https://tlindsay42.github.io/PSRyver/Public/Get-RyverForum/</loc>
-     <lastmod>2018-07-23</lastmod>
+     <lastmod>2018-07-27</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>https://tlindsay42.github.io/PSRyver/Public/Get-RyverHistory/</loc>
+     <lastmod>2018-07-27</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>https://tlindsay42.github.io/PSRyver/Public/Get-RyverTeam/</loc>
-     <lastmod>2018-07-23</lastmod>
+     <lastmod>2018-07-27</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>https://tlindsay42.github.io/PSRyver/Public/Get-RyverUser/</loc>
+     <lastmod>2018-07-27</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>https://tlindsay42.github.io/PSRyver/Public/Import-PSRyverConfig/</loc>
-     <lastmod>2018-07-23</lastmod>
+     <lastmod>2018-07-27</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>https://tlindsay42.github.io/PSRyver/Public/Initialize-PSRyverConfig/</loc>
-     <lastmod>2018-07-23</lastmod>
+     <lastmod>2018-07-27</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>https://tlindsay42.github.io/PSRyver/Public/Invoke-RyverRestMethod/</loc>
-     <lastmod>2018-07-23</lastmod>
+     <lastmod>2018-07-27</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>https://tlindsay42.github.io/PSRyver/Public/Read-PSRyverConfig/</loc>
-     <lastmod>2018-07-23</lastmod>
+     <lastmod>2018-07-27</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>https://tlindsay42.github.io/PSRyver/Public/Remove-PSRyverConfig/</loc>
-     <lastmod>2018-07-23</lastmod>
+     <lastmod>2018-07-27</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>https://tlindsay42.github.io/PSRyver/Public/Set-PSRyverConfig/</loc>
-     <lastmod>2018-07-23</lastmod>
+     <lastmod>2018-07-27</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>https://tlindsay42.github.io/PSRyver/Public/Set-PSRyverConfigPath/</loc>
-     <lastmod>2018-07-23</lastmod>
+     <lastmod>2018-07-27</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>https://tlindsay42.github.io/PSRyver/Private/Assert-RyverApiConfig/</loc>
-     <lastmod>2018-07-23</lastmod>
+     <lastmod>2018-07-27</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>https://tlindsay42.github.io/PSRyver/Private/Convert-ColorToHexTriplet/</loc>
-     <lastmod>2018-07-23</lastmod>
+     <lastmod>2018-07-27</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>https://tlindsay42.github.io/PSRyver/Private/ConvertFrom-UnixTime/</loc>
-     <lastmod>2018-07-23</lastmod>
+     <lastmod>2018-07-27</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>https://tlindsay42.github.io/PSRyver/Private/ConvertTo-Authorization/</loc>
-     <lastmod>2018-07-23</lastmod>
+     <lastmod>2018-07-27</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>https://tlindsay42.github.io/PSRyver/Private/ConvertTo-UnixTime/</loc>
-     <lastmod>2018-07-23</lastmod>
+     <lastmod>2018-07-27</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
-     <loc>https://tlindsay42.github.io/PSRyver/Private/Format-RyverV1ChannelObject/</loc>
-     <lastmod>2018-07-23</lastmod>
+     <loc>https://tlindsay42.github.io/PSRyver/Private/Format-RyverChannelObject/</loc>
+     <lastmod>2018-07-27</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>https://tlindsay42.github.io/PSRyver/Private/Format-RyverMessageObject/</loc>
+     <lastmod>2018-07-27</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>https://tlindsay42.github.io/PSRyver/Private/Format-RyverUserObject/</loc>
+     <lastmod>2018-07-27</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>https://tlindsay42.github.io/PSRyver/Private/Remove-SensitiveData/</loc>
-     <lastmod>2018-07-23</lastmod>
+     <lastmod>2018-07-27</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>https://tlindsay42.github.io/PSRyver/Private/Test-IsWindows/</loc>
-     <lastmod>2018-07-23</lastmod>
+     <lastmod>2018-07-27</lastmod>
      <changefreq>daily</changefreq>
     </url>
 </urlset>
