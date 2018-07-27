@@ -42,7 +42,7 @@ function Import-PSRyverConfig {
         https://tlindsay42.github.io/PSRyver/Public/Import-PSRyverConfig/
 
     .LINK
-        https://github.com/PSRyver/blob/master/PSRyver/Public/Import-PSRyverConfig.ps1
+        https://github.com/tlindsay42/PSRyver/blob/master/PSRyver/Public/Import-PSRyverConfig.ps1
 
     .LINK
         Export-PSRyverConfig

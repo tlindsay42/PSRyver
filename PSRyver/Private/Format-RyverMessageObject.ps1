@@ -33,7 +33,7 @@ function Format-RyverMessageObject {
         https://tlindsay42.github.io/PSRyver/Private/Format-RyverMessageObject/
 
     .LINK
-        https://github.com/PSRyver/blob/master/PSRyver/Private/Format-RyverMessageObject.ps1
+        https://github.com/tlindsay42/PSRyver/blob/master/PSRyver/Private/Format-RyverMessageObject.ps1
 
     .FUNCTIONALITY
         Ryver

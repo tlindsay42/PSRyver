@@ -77,5 +77,5 @@ For more information, see about_CommonParameters (http://go.microsoft.com/fwlink
 
 [https://tlindsay42.github.io/PSRyver/Private/Format-RyverChannelObject/](https://tlindsay42.github.io/PSRyver/Private/Format-RyverChannelObject/)
 
-[https://github.com/PSRyver/blob/master/PSRyver/Private/Format-RyverChannelObject.ps1](https://github.com/PSRyver/blob/master/PSRyver/Private/Format-RyverChannelObject.ps1)
+[https://github.com/tlindsay42/PSRyver/blob/master/PSRyver/Private/Format-RyverChannelObject.ps1](https://github.com/tlindsay42/PSRyver/blob/master/PSRyver/Private/Format-RyverChannelObject.ps1)
 

@@ -49,5 +49,5 @@ For more information, see about_CommonParameters (http://go.microsoft.com/fwlink
 
 [https://tlindsay42.github.io/PSRyver/Private/Assert-RyverApiConfig/](https://tlindsay42.github.io/PSRyver/Private/Assert-RyverApiConfig/)
 
-[https://github.com/PSRyver/blob/master/PSRyver/Private/Assert-RyverApiConfig.ps1](https://github.com/PSRyver/blob/master/PSRyver/Private/Assert-RyverApiConfig.ps1)
+[https://github.com/tlindsay42/PSRyver/blob/master/PSRyver/Private/Assert-RyverApiConfig.ps1](https://github.com/tlindsay42/PSRyver/blob/master/PSRyver/Private/Assert-RyverApiConfig.ps1)
 

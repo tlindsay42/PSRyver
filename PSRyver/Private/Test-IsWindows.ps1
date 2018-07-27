@@ -23,7 +23,7 @@ function Test-IsWindows {
         https://tlindsay42.github.io/PSRyver/Private/Test-IsWindows/
 
     .LINK
-        https://github.com/PSRyver/blob/master/PSRyver/Private/Test-IsWindows.ps1
+        https://github.com/tlindsay42/PSRyver/blob/master/PSRyver/Private/Test-IsWindows.ps1
 
     .FUNCTIONALITY
         PowerShell Language

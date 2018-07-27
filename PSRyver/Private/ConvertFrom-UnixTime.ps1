@@ -32,7 +32,7 @@ function ConvertFrom-UnixTime {
         https://tlindsay42.github.io/PSRyver/Private/ConvertFrom-UnixTime/
 
     .LINK
-        https://github.com/PSRyver/blob/master/PSRyver/Private/ConvertFrom-UnixTime.ps1
+        https://github.com/tlindsay42/PSRyver/blob/master/PSRyver/Private/ConvertFrom-UnixTime.ps1
 
     .LINK
         http://powershell.com/cs/blogs/tips/archive/2012/03/09/converting-unix-time.aspx

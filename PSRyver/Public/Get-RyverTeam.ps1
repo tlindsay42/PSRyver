@@ -66,7 +66,7 @@ function Get-RyverTeam {
         https://tlindsay42.github.io/PSRyver/Public/Get-RyverTeam/
 
     .LINK
-        https://github.com/PSRyver/blob/master/PSRyver/Public/Get-RyverTeam.ps1
+        https://github.com/tlindsay42/PSRyver/blob/master/PSRyver/Public/Get-RyverTeam.ps1
 
     .FUNCTIONALITY
         Ryver

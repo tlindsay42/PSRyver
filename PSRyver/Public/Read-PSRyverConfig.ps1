@@ -44,7 +44,7 @@ function Read-PSRyverConfig {
         https://tlindsay42.github.io/PSRyver/Public/Read-PSRyverConfig/
 
     .LINK
-        https://github.com/PSRyver/blob/master/PSRyver/Public/Read-PSRyverConfig.ps1
+        https://github.com/tlindsay42/PSRyver/blob/master/PSRyver/Public/Read-PSRyverConfig.ps1
 
     .LINK
         Import-PSRyverConfig

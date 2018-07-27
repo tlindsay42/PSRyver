@@ -35,7 +35,7 @@ function Invoke-RyverRestMethod {
         https://tlindsay42.github.io/PSRyver/Public/Invoke-RyverRestMethod/
 
     .LINK
-        https://github.com/PSRyver/blob/master/PSRyver/Public/Invoke-RyverRestMethod.ps1
+        https://github.com/tlindsay42/PSRyver/blob/master/PSRyver/Public/Invoke-RyverRestMethod.ps1
 
     .FUNCTIONALITY
         Ryver

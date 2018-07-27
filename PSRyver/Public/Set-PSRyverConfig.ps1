@@ -41,7 +41,7 @@ function Set-PSRyverConfig {
         https://tlindsay42.github.io/PSRyver/Public/Set-PSRyverConfig/
 
     .LINK
-        https://github.com/PSRyver/blob/master/PSRyver/Public/Set-PSRyverConfig.ps1
+        https://github.com/tlindsay42/PSRyver/blob/master/PSRyver/Public/Set-PSRyverConfig.ps1
 
     .LINK
         Get-PSRyverConfig

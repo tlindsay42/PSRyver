@@ -33,7 +33,7 @@ function Format-RyverUserObject {
         https://tlindsay42.github.io/PSRyver/Private/Format-RyverUserObject/
 
     .LINK
-        https://github.com/PSRyver/blob/master/PSRyver/Private/Format-RyverUserObject.ps1
+        https://github.com/tlindsay42/PSRyver/blob/master/PSRyver/Private/Format-RyverUserObject.ps1
 
     .FUNCTIONALITY
         Ryver

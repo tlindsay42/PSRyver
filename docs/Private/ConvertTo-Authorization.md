@@ -77,5 +77,5 @@ For more information, see about_CommonParameters (http://go.microsoft.com/fwlink
 
 [https://tlindsay42.github.io/PSRyver/Private/ConvertTo-Authorization/](https://tlindsay42.github.io/PSRyver/Private/ConvertTo-Authorization/)
 
-[https://github.com/PSRyver/blob/master/PSRyver/Private/ConvertTo-Authorization.ps1](https://github.com/PSRyver/blob/master/PSRyver/Private/ConvertTo-Authorization.ps1)
+[https://github.com/tlindsay42/PSRyver/blob/master/PSRyver/Private/ConvertTo-Authorization.ps1](https://github.com/tlindsay42/PSRyver/blob/master/PSRyver/Private/ConvertTo-Authorization.ps1)
 

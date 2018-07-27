@@ -30,7 +30,7 @@ function Set-PSRyverConfigPath {
         https://tlindsay42.github.io/PSRyver/Public/Set-PSRyverConfigPath/
 
     .LINK
-        https://github.com/PSRyver/blob/master/PSRyver/Public/Set-PSRyverConfigPath.ps1
+        https://github.com/tlindsay42/PSRyver/blob/master/PSRyver/Public/Set-PSRyverConfigPath.ps1
 
     .LINK
         Get-PSRyverConfigPath

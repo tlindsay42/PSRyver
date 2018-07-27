@@ -91,7 +91,7 @@ For more information, see about_CommonParameters (http://go.microsoft.com/fwlink
 
 [https://tlindsay42.github.io/PSRyver/Public/Read-PSRyverConfig/](https://tlindsay42.github.io/PSRyver/Public/Read-PSRyverConfig/)
 
-[https://github.com/PSRyver/blob/master/PSRyver/Public/Read-PSRyverConfig.ps1](https://github.com/PSRyver/blob/master/PSRyver/Public/Read-PSRyverConfig.ps1)
+[https://github.com/tlindsay42/PSRyver/blob/master/PSRyver/Public/Read-PSRyverConfig.ps1](https://github.com/tlindsay42/PSRyver/blob/master/PSRyver/Public/Read-PSRyverConfig.ps1)
 
 [Import-PSRyverConfig]()
 

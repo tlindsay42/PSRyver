@@ -27,7 +27,7 @@ function Assert-RyverApiConfig {
         https://tlindsay42.github.io/PSRyver/Private/Assert-RyverApiConfig/
 
     .LINK
-        https://github.com/PSRyver/blob/master/PSRyver/Private/Assert-RyverApiConfig.ps1
+        https://github.com/tlindsay42/PSRyver/blob/master/PSRyver/Private/Assert-RyverApiConfig.ps1
 
     .FUNCTIONALITY
         Ryver

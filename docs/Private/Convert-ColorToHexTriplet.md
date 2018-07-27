@@ -74,7 +74,7 @@ For more information, see about_CommonParameters (http://go.microsoft.com/fwlink
 
 [https://tlindsay42.github.io/PSRyver/Private/Convert-ColorToHexTriplet/](https://tlindsay42.github.io/PSRyver/Private/Convert-ColorToHexTriplet/)
 
-[https://github.com/PSRyver/blob/master/PSRyver/Private/Convert-ColorToHexTriplet.ps1](https://github.com/PSRyver/blob/master/PSRyver/Private/Convert-ColorToHexTriplet.ps1)
+[https://github.com/tlindsay42/PSRyver/blob/master/PSRyver/Private/Convert-ColorToHexTriplet.ps1](https://github.com/tlindsay42/PSRyver/blob/master/PSRyver/Private/Convert-ColorToHexTriplet.ps1)
 
 [https://en.wikipedia.org/wiki/Web_colors#Hex_triplet](https://en.wikipedia.org/wiki/Web_colors#Hex_triplet)
 

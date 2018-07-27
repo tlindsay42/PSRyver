@@ -225,7 +225,7 @@ For more information, see about_CommonParameters (http://go.microsoft.com/fwlink
 
 [https://tlindsay42.github.io/PSRyver/Public/Initialize-PSRyverConfig/](https://tlindsay42.github.io/PSRyver/Public/Initialize-PSRyverConfig/)
 
-[https://github.com/PSRyver/blob/master/PSRyver/Public/Initialize-PSRyverConfig.ps1](https://github.com/PSRyver/blob/master/PSRyver/Public/Initialize-PSRyverConfig.ps1)
+[https://github.com/tlindsay42/PSRyver/blob/master/PSRyver/Public/Initialize-PSRyverConfig.ps1](https://github.com/tlindsay42/PSRyver/blob/master/PSRyver/Public/Initialize-PSRyverConfig.ps1)
 
 [Get-PSRyverConfig]()
 

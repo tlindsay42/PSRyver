@@ -129,5 +129,5 @@ For more information, see about_CommonParameters (http://go.microsoft.com/fwlink
 
 [https://tlindsay42.github.io/PSRyver/Public/Invoke-RyverRestMethod/](https://tlindsay42.github.io/PSRyver/Public/Invoke-RyverRestMethod/)
 
-[https://github.com/PSRyver/blob/master/PSRyver/Public/Invoke-RyverRestMethod.ps1](https://github.com/PSRyver/blob/master/PSRyver/Public/Invoke-RyverRestMethod.ps1)
+[https://github.com/tlindsay42/PSRyver/blob/master/PSRyver/Public/Invoke-RyverRestMethod.ps1](https://github.com/tlindsay42/PSRyver/blob/master/PSRyver/Public/Invoke-RyverRestMethod.ps1)
 

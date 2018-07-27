@@ -120,7 +120,7 @@ For more information, see about_CommonParameters (http://go.microsoft.com/fwlink
 
 [https://tlindsay42.github.io/PSRyver/Public/Import-PSRyverConfig/](https://tlindsay42.github.io/PSRyver/Public/Import-PSRyverConfig/)
 
-[https://github.com/PSRyver/blob/master/PSRyver/Public/Import-PSRyverConfig.ps1](https://github.com/PSRyver/blob/master/PSRyver/Public/Import-PSRyverConfig.ps1)
+[https://github.com/tlindsay42/PSRyver/blob/master/PSRyver/Public/Import-PSRyverConfig.ps1](https://github.com/tlindsay42/PSRyver/blob/master/PSRyver/Public/Import-PSRyverConfig.ps1)
 
 [Export-PSRyverConfig]()
 

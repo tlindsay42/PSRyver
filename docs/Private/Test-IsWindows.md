@@ -45,5 +45,5 @@ For more information, see about_CommonParameters (http://go.microsoft.com/fwlink
 
 [https://tlindsay42.github.io/PSRyver/Private/Test-IsWindows/](https://tlindsay42.github.io/PSRyver/Private/Test-IsWindows/)
 
-[https://github.com/PSRyver/blob/master/PSRyver/Private/Test-IsWindows.ps1](https://github.com/PSRyver/blob/master/PSRyver/Private/Test-IsWindows.ps1)
+[https://github.com/tlindsay42/PSRyver/blob/master/PSRyver/Private/Test-IsWindows.ps1](https://github.com/tlindsay42/PSRyver/blob/master/PSRyver/Private/Test-IsWindows.ps1)
 

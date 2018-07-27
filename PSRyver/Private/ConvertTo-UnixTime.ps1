@@ -30,7 +30,7 @@ function ConvertTo-UnixTime {
         https://tlindsay42.github.io/PSRyver/Private/ConvertTo-UnixTime/
 
     .LINK
-        https://github.com/PSRyver/blob/master/PSRyver/Private/ConvertTo-UnixTime.ps1
+        https://github.com/tlindsay42/PSRyver/blob/master/PSRyver/Private/ConvertTo-UnixTime.ps1
     #>
     [CmdletBinding(
         HelpUri = 'https://tlindsay42.github.io/PSRyver/Private/ConvertTo-UnixTime/'

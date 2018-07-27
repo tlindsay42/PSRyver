@@ -40,7 +40,7 @@ function Export-PSRyverConfig {
         https://tlindsay42.github.io/PSRyver/Public/Export-PSRyverConfig/
 
     .LINK
-        https://github.com/PSRyver/blob/master/PSRyver/Public/Export-PSRyverConfig.ps1
+        https://github.com/tlindsay42/PSRyver/blob/master/PSRyver/Public/Export-PSRyverConfig.ps1
 
     .LINK
         Import-PSRyverConfig
