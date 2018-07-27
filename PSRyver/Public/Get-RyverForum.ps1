@@ -15,6 +15,18 @@ function Get-RyverForum {
         - GitHub: tlindsay42
 
     .EXAMPLE
+        Get-RyverForum -ID 12345678
+        Queries for the public forum channel with ID 12345678.
+
+    .EXAMPLE
+        12345678 | Get-RyverForum
+        Queries for the public forum channel with ID 12345678 via pipeline value.
+
+    .EXAMPLE
+        Get-RyverForum 12345678
+        Queries for the public forum channel with ID 12345678 via positional parameter.
+
+    .EXAMPLE
         Get-RyverForum -Name 'All Hands'
         Queries for the 'All Hands' public forum channel.
 
@@ -40,6 +52,15 @@ function Get-RyverForum {
         Get-RyverForum 'All Hands' $true $true
         Queries for detailed information about the 'All Hands' public forum channel via
         positional parameters and returns the raw, unformatted output.
+
+    .EXAMPLE
+        [PSCustomObject] @{ ID = [UInt64] 12345678 } | Get-RyverForum
+        Queries for the public forum channel with ID 12345678 via pipeline parameter
+        name.
+
+    .EXAMPLE
+        [PSCustomObject] @{ Name = 'All Hands' } | Get-RyverForum
+        Queries for the 'All Hands' public forum channel via pipeline parameter name.
 
     .LINK
         https://tlindsay42.github.io/PSRyver/Public/Get-RyverForum/

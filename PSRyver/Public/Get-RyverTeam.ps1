@@ -15,6 +15,18 @@ function Get-RyverTeam {
         - GitHub: tlindsay42
 
     .EXAMPLE
+        Get-RyverTeam -ID 12345678
+        Queries for the private team channel with ID 12345678.
+
+    .EXAMPLE
+        12345678 | Get-RyverTeam
+        Queries for the private team channel with ID 12345678 via pipeline value.
+
+    .EXAMPLE
+        Get-RyverTeam 12345678
+        Queries for the private team channel with ID 12345678 via positional parameter.
+
+    .EXAMPLE
         Get-RyverTeam -Name 'Members Only!'
         Queries for the 'Members Only!' private team channel.
 
@@ -39,6 +51,16 @@ function Get-RyverTeam {
         Get-RyverTeam 'Members Only!' $true $true
         Queries for detailed information about the 'Members Only!' private team channel
         via positional parameters and returns the raw, unformatted output.
+
+    .EXAMPLE
+        [PSCustomObject] @{ ID = [UInt64] 12345678 } | Get-RyverTeam
+        Queries for the private team channel with ID 12345678 via pipeline parameter
+        name.
+
+    .EXAMPLE
+        [PSCustomObject] @{ Name = 'Members Only!' } | Get-RyverTeam
+        Queries for the 'Members Only!' private team channel via pipeline parameter
+        name.
 
     .LINK
         https://tlindsay42.github.io/PSRyver/Public/Get-RyverTeam/

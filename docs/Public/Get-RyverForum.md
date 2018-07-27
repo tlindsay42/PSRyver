@@ -5,6 +5,13 @@ Query for Ryver public forum channels.
 
 ## SYNTAX
 
+### ID (Default)
+```
+Get-RyverForum [[-ID] <UInt64>] [-Detailed] [-Raw] [[-Credential] <PSCredential>] [-IncludeTotalCount]
+ [-Skip <UInt64>] [-First <UInt64>] [<CommonParameters>]
+```
+
+### Name
 ```
 Get-RyverForum [[-Name] <String>] [-Detailed] [-Raw] [[-Credential] <PSCredential>] [-IncludeTotalCount]
  [-Skip <UInt64>] [-First <UInt64>] [<CommonParameters>]
@@ -17,12 +24,33 @@ Query for Ryver public forum channels.
 
 ### EXAMPLE 1
 ```
+Get-RyverForum -ID 12345678
+```
+
+Queries for the public forum channel with ID 12345678.
+
+### EXAMPLE 2
+```
+12345678 | Get-RyverForum
+```
+
+Queries for the public forum channel with ID 12345678 via pipeline value.
+
+### EXAMPLE 3
+```
+Get-RyverForum 12345678
+```
+
+Queries for the public forum channel with ID 12345678 via positional parameter.
+
+### EXAMPLE 4
+```
 Get-RyverForum -Name 'All Hands'
 ```
 
 Queries for the 'All Hands' public forum channel.
 
-### EXAMPLE 2
+### EXAMPLE 5
 ```
 Get-RyverForum -Name 'All Hand*' -Credential ( Get-Credential )
 ```
@@ -33,7 +61,7 @@ for all public forum channels starting with the string 'All Hand', such as
 'All Hands' and 'All handsome guys like that Troy fellow'.
 =D
 
-### EXAMPLE 3
+### EXAMPLE 6
 ```
 'All Hands' | Get-RyverForum -Detailed
 ```
@@ -41,7 +69,7 @@ for all public forum channels starting with the string 'All Hand', such as
 Queries for detailed information about the 'All Hands' public forum channel via
 the pipeline.
 
-### EXAMPLE 4
+### EXAMPLE 7
 ```
 '*and*' | Get-RyverForum -Raw
 ```
@@ -50,13 +78,28 @@ Queries for all public forum channels containing the string 'and', such as
 'All Hands' and 'The Land of Magical Unicorns' and returns the raw, unformatted
 output.
 
-### EXAMPLE 5
+### EXAMPLE 8
 ```
 Get-RyverForum 'All Hands' $true $true
 ```
 
 Queries for detailed information about the 'All Hands' public forum channel via
 positional parameters and returns the raw, unformatted output.
+
+### EXAMPLE 9
+```
+[PSCustomObject] @{ ID = [UInt64] 12345678 } | Get-RyverForum
+```
+
+Queries for the public forum channel with ID 12345678 via pipeline parameter
+name.
+
+### EXAMPLE 10
+```
+[PSCustomObject] @{ Name = 'All Hands' } | Get-RyverForum
+```
+
+Queries for the 'All Hands' public forum channel via pipeline parameter name.
 
 ## PARAMETERS
 
@@ -88,7 +131,7 @@ Aliases:
 Required: False
 Position: 2
 Default value: False
-Accept pipeline input: False
+Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
@@ -104,6 +147,21 @@ Required: False
 Position: Named
 Default value: None
 Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -ID
+Specifies the public forum channel ID.
+
+```yaml
+Type: UInt64
+Parameter Sets: ID
+Aliases:
+
+Required: False
+Position: 1
+Default value: 0
+Accept pipeline input: True (ByPropertyName, ByValue)
 Accept wildcard characters: False
 ```
 
@@ -129,13 +187,13 @@ Case insensitive.
 
 ```yaml
 Type: String
-Parameter Sets: (All)
+Parameter Sets: Name
 Aliases:
 
 Required: False
 Position: 1
 Default value: None
-Accept pipeline input: True (ByValue)
+Accept pipeline input: True (ByPropertyName, ByValue)
 Accept wildcard characters: True
 ```
 
@@ -150,7 +208,7 @@ Aliases:
 Required: False
 Position: 3
 Default value: False
-Accept pipeline input: False
+Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
