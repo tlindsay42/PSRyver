@@ -154,7 +154,7 @@ function Get-RyverHistory {
             '/Chat.History()?' +
             "&`$top=$( $Script:PSRyver.MaxPageSize )" +
             "&`$skip=${skip}" +
-            '&$orderby=when+desc' +
+            '&$orderby=when+asc' +
             '&$inlinecount=allpages'
         )
         #endregion
