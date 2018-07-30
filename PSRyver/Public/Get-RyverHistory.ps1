@@ -56,7 +56,10 @@ function Get-RyverHistory {
         SupportsPaging = $true
     )]
     param (
-        # ID of the public forum, private team, or user direct messages to download history from.
+        <#
+        Specifies the ID of the public forum channel, private team channel, or user
+        direct message to download the chat history from.
+        #>
         [Parameter(
             Mandatory = $true,
             Position = 0,
@@ -66,12 +69,19 @@ function Get-RyverHistory {
         [UInt64]
         $ID,
 
+        <#
+        Specifies the type of channel to post the message in:
+        - Public forum
+        - Private team
+        - User direct message
+        #>
         [Parameter(
             Mandatory = $true,
             Position = 1,
             ValueFromPipelineByPropertyName = $true
         )]
         [ValidateSet( 'Forum', 'Team', 'User' )]
+        [String]
         $Type,
 
         # Specifies that objects should not be formatted.
@@ -127,15 +137,15 @@ function Get-RyverHistory {
 
         switch ( $Type ) {
             'Forum' {
-                $path += "forums($ID)"
+                $path += "forums(${ID})"
             }
 
             'Team' {
-                $path += "workrooms($ID)"
+                $path += "workrooms(${ID})"
             }
 
             'User' {
-                $path += "users($ID)"
+                $path += "users(${ID})"
             }
         }
 
