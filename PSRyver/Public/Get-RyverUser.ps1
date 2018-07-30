@@ -66,6 +66,9 @@ function Get-RyverUser {
     .LINK
         https://github.com/tlindsay42/PSRyver/blob/master/PSRyver/Public/Get-RyverUser.ps1
 
+    .LINK
+        https://api.ryver.com/ryvrest_api_examples.html#get-organization-users
+
     .FUNCTIONALITY
         Ryver
     #>
