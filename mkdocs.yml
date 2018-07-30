@@ -99,6 +99,7 @@ pages:
   - Invoke-RyverRestMethod: 'Public/Invoke-RyverRestMethod.md'
   - Read-PSRyverConfig: 'Public/Read-PSRyverConfig.md'
   - Remove-PSRyverConfig: 'Public/Remove-PSRyverConfig.md'
+  - Send-RyverMessage: 'Public/Send-RyverMessage.md'
   - Set-PSRyverConfig: 'Public/Set-PSRyverConfig.md'
   - Set-PSRyverConfigPath: 'Public/Set-PSRyverConfigPath.md'
 - Private Functions:

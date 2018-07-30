@@ -24,7 +24,7 @@ GUID = '97326651-95ea-4b1a-a5a2-c9282b8e900b'
 Author = 'Troy Lindsay, Warren F.'
 
 # Company or vendor of this module
-CompanyName = ''
+# CompanyName = ''
 
 # Copyright statement for this module
 Copyright = '©2018 Troy Lindsay. All rights reserved.  ©2016-2018 Warren F. All rights reserved.'
@@ -73,7 +73,8 @@ FunctionsToExport = 'Export-PSRyverConfig', 'Get-PSRyverConfig', 'Get-PSRyverCon
                'Get-RyverForum', 'Get-RyverHistory', 'Get-RyverTeam', 'Get-RyverUser',
                'Import-PSRyverConfig', 'Initialize-PSRyverConfig',
                'Invoke-RyverRestMethod', 'Read-PSRyverConfig',
-               'Remove-PSRyverConfig', 'Set-PSRyverConfig', 'Set-PSRyverConfigPath'
+               'Remove-PSRyverConfig', 'Set-PSRyverConfig', 'Send-RyverMessage',
+               'Set-PSRyverConfigPath'
 
 # Cmdlets to export from this module, for best performance, do not use wildcards and do not delete the entry, use an empty array if there are no cmdlets to export.
 CmdletsToExport = @()
@@ -108,7 +109,8 @@ FileList = 'PSRyver.psd1', 'PSRyver.psm1',
                'Public\Initialize-PSRyverConfig.ps1',
                'Public\Invoke-RyverRestMethod.ps1',
                'Public\Read-PSRyverConfig.ps1', 'Public\Remove-PSRyverConfig.ps1',
-               'Public\Set-PSRyverConfig.ps1', 'Public\Set-PSRyverConfigPath.ps1'
+               'Public\Set-PSRyverConfig.ps1', 'Public\Send-RyverMessage.ps1',
+               'Public\Set-PSRyverConfigPath.ps1'
 
 # Private data to pass to the module specified in RootModule/ModuleToProcess. This may also contain a PSData hashtable with additional module metadata used by PowerShell.
 PrivateData = @{
