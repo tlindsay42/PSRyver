@@ -73,6 +73,22 @@ Get-RyverUser -ID 12345678 | Send-RyverMessage -Message 'Hello!'
 
 Queries for the user with ID 12345678 and sends the message 'Hello!'.
 
+### EXAMPLE 7
+```
+'All your base are belong to us.', 'You have no chance to survive make your time.' | Send-RyverMessage -ID 12345678 -Type 'Forum' -FromDisplayName 'CATS' -FromAvatar 'https://upload.wikimedia.org/wikipedia/en/0/03/Aybabtu.png'
+```
+
+Posts 'All your base are belong to us.' and 'You have not chance to survive
+make your time.' in the Ryver public forum channel with the display name of
+CATS and the Zero Wing CATS avatar image.
+
+### EXAMPLE 8
+```
+Send-RyverMessage 12345678 'User' 'Test'
+```
+
+Posts the message 'Test' in a direct message to user 12345678.
+
 ## PARAMETERS
 
 ### -Credential
