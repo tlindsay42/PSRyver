@@ -641,6 +641,18 @@
 
 
   <li class="md-nav__item">
+    <a href="../Send-RyverMessage/" title="Send-RyverMessage" class="md-nav__link">
+      Send-RyverMessage
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
     <a href="../Set-PSRyverConfig/" title="Set-PSRyverConfig" class="md-nav__link">
       Set-PSRyverConfig
     </a>
@@ -1037,7 +1049,7 @@
 <h2 id="synopsis">SYNOPSIS<a class="headerlink" href="#synopsis" title="Permanent link">&para;</a></h2>
 <p>Get history from a Ryver public forum or private team channel.</p>
 <h2 id="syntax">SYNTAX<a class="headerlink" href="#syntax" title="Permanent link">&para;</a></h2>
-<div class="codehilite"><pre><span></span>Get-RyverHistory [-ID] &lt;UInt64&gt; [-Type] &lt;Object&gt; [-Raw] [[-Credential] &lt;PSCredential&gt;] [-IncludeTotalCount]
+<div class="codehilite"><pre><span></span>Get-RyverHistory [-ID] &lt;UInt64&gt; [-Type] &lt;String&gt; [-Raw] [[-Credential] &lt;PSCredential&gt;] [-IncludeTotalCount]
  [-Skip &lt;UInt64&gt;] [-First &lt;UInt64&gt;] [&lt;CommonParameters&gt;]
 </pre></div>
 
@@ -1103,7 +1115,8 @@ positional parameter and returns the raw, unformatted output.</p>
 </pre></div>
 
 <h3 id="-id">-ID<a class="headerlink" href="#-id" title="Permanent link">&para;</a></h3>
-<p>ID of the public forum, private team, or user direct messages to download history from.</p>
+<p>Specifies the ID of the public forum channel, private team channel, or user
+direct message to download the chat history from.</p>
 <div class="codehilite"><pre><span></span><span class="l l-Scalar l-Scalar-Plain">Type</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">UInt64</span>
 <span class="l l-Scalar l-Scalar-Plain">Parameter Sets</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">(All)</span>
 <span class="l l-Scalar l-Scalar-Plain">Aliases</span><span class="p p-Indicator">:</span>
@@ -1155,8 +1168,11 @@ positional parameter and returns the raw, unformatted output.</p>
 </pre></div>
 
 <h3 id="-type">-Type<a class="headerlink" href="#-type" title="Permanent link">&para;</a></h3>
-<p>{{Fill Type Description}}</p>
-<div class="codehilite"><pre><span></span><span class="l l-Scalar l-Scalar-Plain">Type</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">Object</span>
+<p>Specifies the type of channel to post the message in:
+- Public forum
+- Private team
+- User direct message</p>
+<div class="codehilite"><pre><span></span><span class="l l-Scalar l-Scalar-Plain">Type</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">String</span>
 <span class="l l-Scalar l-Scalar-Plain">Parameter Sets</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">(All)</span>
 <span class="l l-Scalar l-Scalar-Plain">Aliases</span><span class="p p-Indicator">:</span>
 
