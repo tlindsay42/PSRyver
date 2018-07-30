@@ -249,3 +249,5 @@ For more information, see about_CommonParameters (http://go.microsoft.com/fwlink
 
 [https://github.com/tlindsay42/PSRyver/blob/master/PSRyver/Public/Get-RyverUser.ps1](https://github.com/tlindsay42/PSRyver/blob/master/PSRyver/Public/Get-RyverUser.ps1)
 
+[https://api.ryver.com/ryvrest_api_examples.html#get-organization-users](https://api.ryver.com/ryvrest_api_examples.html#get-organization-users)
+

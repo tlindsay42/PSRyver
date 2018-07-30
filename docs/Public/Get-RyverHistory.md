@@ -6,7 +6,7 @@ Get history from a Ryver public forum or private team channel.
 ## SYNTAX
 
 ```
-Get-RyverHistory [-ID] <UInt64> [-Type] <Object> [-Raw] [[-Credential] <PSCredential>] [-IncludeTotalCount]
+Get-RyverHistory [-ID] <UInt64> [-Type] <String> [-Raw] [[-Credential] <PSCredential>] [-IncludeTotalCount]
  [-Skip <UInt64>] [-First <UInt64>] [<CommonParameters>]
 ```
 
@@ -90,7 +90,8 @@ Accept wildcard characters: False
 ```
 
 ### -ID
-ID of the public forum, private team, or user direct messages to download history from.
+Specifies the ID of the public forum channel, private team channel, or user
+direct message to download the chat history from.
 
 ```yaml
 Type: UInt64
@@ -150,10 +151,13 @@ Accept wildcard characters: False
 ```
 
 ### -Type
-{{Fill Type Description}}
+Specifies the type of channel to post the message in:
+- Public forum
+- Private team
+- User direct message
 
 ```yaml
-Type: Object
+Type: String
 Parameter Sets: (All)
 Aliases:
 
