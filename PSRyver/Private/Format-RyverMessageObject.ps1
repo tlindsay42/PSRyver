@@ -76,7 +76,7 @@ function Format-RyverMessageObject {
                     Avatar      = $object.CreateSource.Avatar
                 }
                 ModifySource = $object.ModifySource
-                To = [PSCustomObject] @{
+                To           = [PSCustomObject] @{
                     PSTypeName = "PSRyver.$( $object.From.__Metadata.Type )"
                     Metadata   = [PSCustomObject] @{
                         Type = $object.To.__Metadata.Type
@@ -85,7 +85,7 @@ function Format-RyverMessageObject {
                     Descriptor = $object.To.__Descriptor
                     JID        = $object.To.JID
                 }
-                From = [PSCustomObject] @{
+                From         = [PSCustomObject] @{
                     PSTypeName = "PSRyver.$( $object.From.__Metadata.Type )"
                     Metadata   = [PSCustomObject] @{
                         Type = $object.From.__Metadata.Type
@@ -94,8 +94,9 @@ function Format-RyverMessageObject {
                     Descriptor = $object.From.__Descriptor
                     JID        = $object.From.JID
                 }
-                Reactions      = $object.__Reactions
-                Embeds         = $object.Embeds
+                Body         = $object.Body
+                Reactions    = $object.__Reactions
+                Embeds       = $object.Embeds
             }
         }
     }
