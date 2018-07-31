@@ -68,7 +68,10 @@ function Send-RyverMessage {
     .FUNCTIONALITY
         Ryver
     #>
-    [CmdletBinding( DefaultParameterSetName = 'IncomingWebhookUri' )]
+    [CmdletBinding(
+        HelpUri = 'https://tlindsay42.github.io/PSRyver/Public/Send-RyverMessage/',
+        DefaultParameterSetName = 'IncomingWebhookUri'
+    )]
     [OutputType( [PSCustomObject[]], [PSCustomObject], ParameterSetName = 'ID' )]
     [OutputType( [Void], ParameterSetName = 'IncomingWebhookUri' )]
     param (
@@ -77,8 +80,8 @@ function Send-RyverMessage {
         direct message where the chat message will be posted.
         #>
         [Parameter(
-            Mandatory = $true,
             ParameterSetName = 'ID',
+            Mandatory = $true,
             Position = 0,
             ValueFromPipelineByPropertyName = $true
         )]
@@ -92,8 +95,8 @@ function Send-RyverMessage {
         - User direct message
         #>
         [Parameter(
-            Mandatory = $true,
             ParameterSetName = 'ID',
+            Mandatory = $true,
             Position = 1,
             ValueFromPipelineByPropertyName = $true
         )]
