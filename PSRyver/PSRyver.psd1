@@ -72,8 +72,8 @@ FormatsToProcess = @()
 FunctionsToExport = 'Export-PSRyverConfig', 'Get-PSRyverConfig', 'Get-PSRyverConfigPath',
                'Get-RyverForum', 'Get-RyverHistory', 'Get-RyverTeam', 'Get-RyverUser',
                'Import-PSRyverConfig', 'Initialize-PSRyverConfig',
-               'Invoke-RyverRestMethod', 'Read-PSRyverConfig',
-               'Remove-PSRyverConfig', 'Set-PSRyverConfig', 'Send-RyverMessage',
+               'Invoke-RyverRestMethod', 'Read-PSRyverConfig', 'Remove-PSRyverConfig',
+               'Remove-RyverMessage', 'Set-PSRyverConfig', 'Send-RyverMessage',
                'Set-PSRyverConfigPath'
 
 # Cmdlets to export from this module, for best performance, do not use wildcards and do not delete the entry, use an empty array if there are no cmdlets to export.
@@ -109,6 +109,7 @@ FileList = 'PSRyver.psd1', 'PSRyver.psm1',
                'Public\Initialize-PSRyverConfig.ps1',
                'Public\Invoke-RyverRestMethod.ps1',
                'Public\Read-PSRyverConfig.ps1', 'Public\Remove-PSRyverConfig.ps1',
+               'Public\Remove-RyverMessage.ps1',
                'Public\Set-PSRyverConfig.ps1', 'Public\Send-RyverMessage.ps1',
                'Public\Set-PSRyverConfigPath.ps1'
 
