@@ -91,6 +91,7 @@ function Format-RyverChannelObject {
                 SharePosts          = $object.SharePosts
                 ShareTasks          = $object.ShareTasks
                 TagDefs             = $object.TagDefs |
+                    Where-Object -FilterScript { $null -ne $_ } |
                     ForEach-Object -Process {
                         [PSCustomObject] @{
                             Name   = $_.Name
@@ -182,6 +183,7 @@ function Format-RyverChannelObject {
                     Uri = $object.Board.__Deferred.Uri
                 }
                 Members             = $object.Members.Results |
+                    Where-Object -FilterScript { $null -ne $_ } |
                     ForEach-Object -Process {
                         [PSCustomObject] @{
                             PSTypeName   = "PSRyver.$( $_.__Metadata.Type )"

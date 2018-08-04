@@ -71,10 +71,14 @@ function Format-RyverMessageObject {
                 MessageType  = $object.MessageType
                 CreateDate   = $object.When
                 ModifyDate   = $object.ModifyDate
-                CreateSource = [PSCustomObject] @{
-                    DisplayName = $object.CreateSource.DisplayName
-                    Avatar      = $object.CreateSource.Avatar
-                }
+                CreateSource = $object.CreateSource |
+                    Where-Object -FilterScript { $null -ne $_ } |
+                    ForEach-Object -Process {
+                        [PSCustomObject] @{
+                            DisplayName = $_.DisplayName
+                            Avatar      = $_.Avatar
+                        }
+                    }
                 ModifySource = $object.ModifySource
                 To           = [PSCustomObject] @{
                     PSTypeName = "PSRyver.$( $object.From.__Metadata.Type )"
