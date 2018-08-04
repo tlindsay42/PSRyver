@@ -13,7 +13,7 @@
         <meta name="description" content="Community PowerShell module for the Ryver API.">
       
       
-        <link rel="canonical" href="https://tlindsay42.github.io/PSRyver/Public/Send-RyverMessage/">
+        <link rel="canonical" href="https://tlindsay42.github.io/PSRyver/Public/Remove-RyverMessage/">
       
       
         <meta name="author" content="Troy Lindsay">
@@ -42,7 +42,7 @@
     
     
       
-        <title>Send-RyverMessage - PSRyver</title>
+        <title>Remove-RyverMessage - PSRyver</title>
       
     
     
@@ -104,7 +104,7 @@
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
     <label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
     
-      <a href="#send-ryvermessage" tabindex="1" class="md-skip">
+      <a href="#remove-ryvermessage" tabindex="1" class="md-skip">
         Skip to content
       </a>
     
@@ -130,7 +130,7 @@
                 PSRyver
               </span>
               <span class="md-header-nav__topic">
-                Send-RyverMessage
+                Remove-RyverMessage
               </span>
             
           
@@ -434,18 +434,6 @@
           
           
 
-
-  <li class="md-nav__item">
-    <a href="../Remove-RyverMessage/" title="Remove-RyverMessage" class="md-nav__link">
-      Remove-RyverMessage
-    </a>
-  </li>
-
-        
-          
-          
-          
-
   
 
 
@@ -457,11 +445,11 @@
     
     
       <label class="md-nav__link md-nav__link--active" for="__toc">
-        Send-RyverMessage
+        Remove-RyverMessage
       </label>
     
-    <a href="./" title="Send-RyverMessage" class="md-nav__link md-nav__link--active">
-      Send-RyverMessage
+    <a href="./" title="Remove-RyverMessage" class="md-nav__link md-nav__link--active">
+      Remove-RyverMessage
     </a>
     
       
@@ -485,26 +473,6 @@
   <a href="#syntax" title="SYNTAX" class="md-nav__link">
     SYNTAX
   </a>
-  
-    <nav class="md-nav">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#incomingwebhookuri-default" title="IncomingWebhookUri (Default)" class="md-nav__link">
-    IncomingWebhookUri (Default)
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#id" title="ID" class="md-nav__link">
-    ID
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
@@ -551,34 +519,6 @@
   
 </li>
         
-          <li class="md-nav__item">
-  <a href="#example-5" title="EXAMPLE 5" class="md-nav__link">
-    EXAMPLE 5
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#example-6" title="EXAMPLE 6" class="md-nav__link">
-    EXAMPLE 6
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#example-7" title="EXAMPLE 7" class="md-nav__link">
-    EXAMPLE 7
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#example-8" title="EXAMPLE 8" class="md-nav__link">
-    EXAMPLE 8
-  </a>
-  
-</li>
-        
       </ul>
     </nav>
   
@@ -593,29 +533,8 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#-credential" title="-Credential" class="md-nav__link">
-    -Credential
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#-ephemeral" title="-Ephemeral" class="md-nav__link">
-    -Ephemeral
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#-fromavatar" title="-FromAvatar" class="md-nav__link">
-    -FromAvatar
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#-fromdisplayname" title="-FromDisplayName" class="md-nav__link">
-    -FromDisplayName
+  <a href="#-channelid" title="-ChannelID" class="md-nav__link">
+    -ChannelID
   </a>
   
 </li>
@@ -628,29 +547,22 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#-incomingwebhookuri" title="-IncomingWebhookUri" class="md-nav__link">
-    -IncomingWebhookUri
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#-message" title="-Message" class="md-nav__link">
-    -Message
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#-raw" title="-Raw" class="md-nav__link">
-    -Raw
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
   <a href="#-type" title="-Type" class="md-nav__link">
     -Type
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#-confirm" title="-Confirm" class="md-nav__link">
+    -Confirm
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#-whatif" title="-WhatIf" class="md-nav__link">
+    -WhatIf
   </a>
   
 </li>
@@ -696,20 +608,6 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#systemmanagementautomationpsobject" title="System.Management.Automation.PSObject[]" class="md-nav__link">
-    System.Management.Automation.PSObject[]
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#systemmanagementautomationpsobject_1" title="System.Management.Automation.PSObject" class="md-nav__link">
-    System.Management.Automation.PSObject
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
   <a href="#systemvoid" title="System.Void" class="md-nav__link">
     System.Void
   </a>
@@ -743,6 +641,18 @@
   
 </nav>
     
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Send-RyverMessage/" title="Send-RyverMessage" class="md-nav__link">
+      Send-RyverMessage
+    </a>
   </li>
 
         
@@ -951,26 +861,6 @@
     SYNTAX
   </a>
   
-    <nav class="md-nav">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#incomingwebhookuri-default" title="IncomingWebhookUri (Default)" class="md-nav__link">
-    IncomingWebhookUri (Default)
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#id" title="ID" class="md-nav__link">
-    ID
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
 </li>
       
         <li class="md-nav__item">
@@ -1016,34 +906,6 @@
   
 </li>
         
-          <li class="md-nav__item">
-  <a href="#example-5" title="EXAMPLE 5" class="md-nav__link">
-    EXAMPLE 5
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#example-6" title="EXAMPLE 6" class="md-nav__link">
-    EXAMPLE 6
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#example-7" title="EXAMPLE 7" class="md-nav__link">
-    EXAMPLE 7
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#example-8" title="EXAMPLE 8" class="md-nav__link">
-    EXAMPLE 8
-  </a>
-  
-</li>
-        
       </ul>
     </nav>
   
@@ -1058,29 +920,8 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#-credential" title="-Credential" class="md-nav__link">
-    -Credential
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#-ephemeral" title="-Ephemeral" class="md-nav__link">
-    -Ephemeral
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#-fromavatar" title="-FromAvatar" class="md-nav__link">
-    -FromAvatar
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#-fromdisplayname" title="-FromDisplayName" class="md-nav__link">
-    -FromDisplayName
+  <a href="#-channelid" title="-ChannelID" class="md-nav__link">
+    -ChannelID
   </a>
   
 </li>
@@ -1093,29 +934,22 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#-incomingwebhookuri" title="-IncomingWebhookUri" class="md-nav__link">
-    -IncomingWebhookUri
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#-message" title="-Message" class="md-nav__link">
-    -Message
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#-raw" title="-Raw" class="md-nav__link">
-    -Raw
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
   <a href="#-type" title="-Type" class="md-nav__link">
     -Type
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#-confirm" title="-Confirm" class="md-nav__link">
+    -Confirm
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#-whatif" title="-WhatIf" class="md-nav__link">
+    -WhatIf
   </a>
   
 </li>
@@ -1161,20 +995,6 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#systemmanagementautomationpsobject" title="System.Management.Automation.PSObject[]" class="md-nav__link">
-    System.Management.Automation.PSObject[]
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#systemmanagementautomationpsobject_1" title="System.Management.Automation.PSObject" class="md-nav__link">
-    System.Management.Automation.PSObject
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
   <a href="#systemvoid" title="System.Void" class="md-nav__link">
     System.Void
   </a>
@@ -1216,187 +1036,69 @@
             <article class="md-content__inner md-typeset">
               
                 
-                  <a href="https://github.com/tlindsay42/PSRyver/blob/master/docs/Public/Send-RyverMessage.md" title="Edit this page" class="md-icon md-content__icon">&#xE3C9;</a>
+                  <a href="https://github.com/tlindsay42/PSRyver/blob/master/docs/Public/Remove-RyverMessage.md" title="Edit this page" class="md-icon md-content__icon">&#xE3C9;</a>
                 
                 
-                <h1 id="send-ryvermessage">Send-RyverMessage<a class="headerlink" href="#send-ryvermessage" title="Permanent link">&para;</a></h1>
+                <h1 id="remove-ryvermessage">Remove-RyverMessage<a class="headerlink" href="#remove-ryvermessage" title="Permanent link">&para;</a></h1>
 <h2 id="synopsis">SYNOPSIS<a class="headerlink" href="#synopsis" title="Permanent link">&para;</a></h2>
-<p>Send a Ryver message.</p>
+<p>Delete a Ryver message.</p>
 <h2 id="syntax">SYNTAX<a class="headerlink" href="#syntax" title="Permanent link">&para;</a></h2>
-<h3 id="incomingwebhookuri-default">IncomingWebhookUri (Default)<a class="headerlink" href="#incomingwebhookuri-default" title="Permanent link">&para;</a></h3>
-<div class="codehilite"><pre><span></span>Send-RyverMessage [[-IncomingWebhookUri] &lt;Uri&gt;] [-Message] &lt;String&gt; [-Ephemeral] [[-FromDisplayName] &lt;String&gt;]
- [[-FromAvatar] &lt;Uri&gt;] [-Raw] [&lt;CommonParameters&gt;]
-</pre></div>
-
-<h3 id="id">ID<a class="headerlink" href="#id" title="Permanent link">&para;</a></h3>
-<div class="codehilite"><pre><span></span>Send-RyverMessage [-ID] &lt;UInt64&gt; [-Type] &lt;String&gt; [-Message] &lt;String&gt; [-Ephemeral]
- [[-FromDisplayName] &lt;String&gt;] [[-FromAvatar] &lt;Uri&gt;] [-Raw] [[-Credential] &lt;PSCredential&gt;] [&lt;CommonParameters&gt;]
+<div class="codehilite"><pre><span></span>Remove-RyverMessage [-ID] &lt;UInt64&gt; [-ChannelID] &lt;UInt64&gt; [-Type] &lt;String&gt; [-WhatIf] [-Confirm]
+ [&lt;CommonParameters&gt;]
 </pre></div>
 
 <h2 id="description">DESCRIPTION<a class="headerlink" href="#description" title="Permanent link">&para;</a></h2>
-<p>Send a Ryver message.</p>
+<p>Delete a Ryver message.</p>
 <h2 id="examples">EXAMPLES<a class="headerlink" href="#examples" title="Permanent link">&para;</a></h2>
 <h3 id="example-1">EXAMPLE 1<a class="headerlink" href="#example-1" title="Permanent link">&para;</a></h3>
-<div class="codehilite"><pre><span></span>Send-RyverMessage -Message &#39;Test&#39;
+<div class="codehilite"><pre><span></span>Remove-RyverMessage -ID 001234567890123456789 -ChannelID 12345678 -Type &#39;Forum&#39;
 </pre></div>
 
-<p>If the default incoming webhook URI is set in the running configuration
-(available via Get-PSRyverConfig), then the message 'Test' is posted in the
-configured channel; otherwise, it will generate an invalid request error.</p>
+<p>Deletes message with ID 001234567890123456789 in the public forum channel with
+ID 12345678.</p>
 <h3 id="example-2">EXAMPLE 2<a class="headerlink" href="#example-2" title="Permanent link">&para;</a></h3>
-<div class="codehilite"><pre><span></span>Send-RyverMessage -ID 12345678 -Type &#39;Team&#39; -Message &#39;Test&#39;
+<div class="codehilite"><pre><span></span>001234567890123456789 | Remove-RyverMessage -ChannelID 12345678 -Type &#39;Team&#39;
 </pre></div>
 
-<p>Posts the message 'Test' in private team channel 12345678.</p>
+<p>Deletes message with ID 001234567890123456789 in the private team channel with
+ID 12345678 via pipeline value.</p>
 <h3 id="example-3">EXAMPLE 3<a class="headerlink" href="#example-3" title="Permanent link">&para;</a></h3>
-<div class="codehilite"><pre><span></span>Send-RyverMessage -IncomingWebhookUri &#39;https://example.ryver.com/application/webhook/4z-_G76nj7Fic-M&#39; -Message &#39;Test&#39;
+<div class="codehilite"><pre><span></span>Remove-RyverMessage 001234567890123456789 12345678 &#39;User&#39;
 </pre></div>
 
-<p>Posts the message 'Test' to the channel configured in the specified incoming
-webhook URI.</p>
+<p>Deletes message with ID 001234567890123456789 in the public forum with ID
+12345678 via positional parameter.</p>
 <h3 id="example-4">EXAMPLE 4<a class="headerlink" href="#example-4" title="Permanent link">&para;</a></h3>
-<div class="codehilite"><pre><span></span>Send-RyverMessage -ID 12345678 -Type &#39;Forum&#39; -Message &#39;Test&#39; -FromDisplayName &#39;PSRyver&#39; -FromAvatar &#39;https://pbs.twimg.com/profile_images/825987046992814080/7VZkFQA9_400x400.jpg&#39;
+<div class="codehilite"><pre><span></span>[PSCustomObject] @{ ID = 001234567890123456789; ChannelID = 12345678; Type = &#39;Forum&#39; } | Remove-RyverMessage
 </pre></div>
 
-<p>Posts the message 'Test' to public forum channel 12345678 with a display name
-override of 'PSRyver', and an avatar override defined by the URI.</p>
-<h3 id="example-5">EXAMPLE 5<a class="headerlink" href="#example-5" title="Permanent link">&para;</a></h3>
-<div class="codehilite"><pre><span></span>Send-RyverMessage -ID 12345678 -Type &#39;Forum&#39; -Message &#39;Test&#39; -Ephemeral -Raw -Credential ( Get-Credential )
-</pre></div>
-
-<p>Updates the $Script:PSRyver.Authorization value storing the basic
-authentication authorization header to use for all requests and then posts the
-temporary message 'Test' in public forum channel 12345678, and the resultant
-output will not be formatted. 
-The temporary message will disappear for each
-user after he or she reads the message and refresh.</p>
-<h3 id="example-6">EXAMPLE 6<a class="headerlink" href="#example-6" title="Permanent link">&para;</a></h3>
-<div class="codehilite"><pre><span></span>Get-RyverUser -ID 12345678 | Send-RyverMessage -Message &#39;Hello!&#39;
-</pre></div>
-
-<p>Queries for the user with ID 12345678 and sends the message 'Hello!'.</p>
-<h3 id="example-7">EXAMPLE 7<a class="headerlink" href="#example-7" title="Permanent link">&para;</a></h3>
-<div class="codehilite"><pre><span></span>&#39;All your base are belong to us.&#39;, &#39;You have no chance to survive make your time.&#39; | Send-RyverMessage -ID 12345678 -Type &#39;Forum&#39; -FromDisplayName &#39;CATS&#39; -FromAvatar &#39;https://upload.wikimedia.org/wikipedia/en/0/03/Aybabtu.png&#39;
-</pre></div>
-
-<p>Posts 'All your base are belong to us.' and 'You have not chance to survive
-make your time.' in the Ryver public forum channel with the display name of
-CATS and the Zero Wing CATS avatar image.</p>
-<h3 id="example-8">EXAMPLE 8<a class="headerlink" href="#example-8" title="Permanent link">&para;</a></h3>
-<div class="codehilite"><pre><span></span>Send-RyverMessage 12345678 &#39;User&#39; &#39;Test&#39;
-</pre></div>
-
-<p>Posts the message 'Test' in a direct message to user 12345678.</p>
+<p>Deletes message with ID 001234567890123456789 in the public forum with ID
+12345678 via the pipeline by parameter name.</p>
 <h2 id="parameters">PARAMETERS<a class="headerlink" href="#parameters" title="Permanent link">&para;</a></h2>
-<h3 id="-credential">-Credential<a class="headerlink" href="#-credential" title="Permanent link">&para;</a></h3>
-<p>Credentials to use for the Ryver API.</p>
-<p>Default value is the value set by Set-PSRyverConfig.</p>
-<div class="codehilite"><pre><span></span><span class="l l-Scalar l-Scalar-Plain">Type</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">PSCredential</span>
-<span class="l l-Scalar l-Scalar-Plain">Parameter Sets</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">ID</span>
-<span class="l l-Scalar l-Scalar-Plain">Aliases</span><span class="p p-Indicator">:</span>
-
-<span class="l l-Scalar l-Scalar-Plain">Required</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">False</span>
-<span class="l l-Scalar l-Scalar-Plain">Position</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">8</span>
-<span class="l l-Scalar l-Scalar-Plain">Default value</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">None</span>
-<span class="l l-Scalar l-Scalar-Plain">Accept pipeline input</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">False</span>
-<span class="l l-Scalar l-Scalar-Plain">Accept wildcard characters</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">False</span>
-</pre></div>
-
-<h3 id="-ephemeral">-Ephemeral<a class="headerlink" href="#-ephemeral" title="Permanent link">&para;</a></h3>
-<p>Optional flag to indicate that you want the message to be ephemeral, meaning it
-will be displayed to people in the Ryver client when the message comes in, but
-the message will not be stored in chat history.
-Once a user refreshes, the
-message will go away.</p>
-<div class="codehilite"><pre><span></span><span class="l l-Scalar l-Scalar-Plain">Type</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">SwitchParameter</span>
-<span class="l l-Scalar l-Scalar-Plain">Parameter Sets</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">(All)</span>
-<span class="l l-Scalar l-Scalar-Plain">Aliases</span><span class="p p-Indicator">:</span>
-
-<span class="l l-Scalar l-Scalar-Plain">Required</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">False</span>
-<span class="l l-Scalar l-Scalar-Plain">Position</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">3</span>
-<span class="l l-Scalar l-Scalar-Plain">Default value</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">False</span>
-<span class="l l-Scalar l-Scalar-Plain">Accept pipeline input</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">False</span>
-<span class="l l-Scalar l-Scalar-Plain">Accept wildcard characters</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">False</span>
-</pre></div>
-
-<h3 id="-fromavatar">-FromAvatar<a class="headerlink" href="#-fromavatar" title="Permanent link">&para;</a></h3>
-<p>Specifies the From avatar displayed for the message.</p>
-<div class="codehilite"><pre><span></span><span class="l l-Scalar l-Scalar-Plain">Type</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">Uri</span>
-<span class="l l-Scalar l-Scalar-Plain">Parameter Sets</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">(All)</span>
-<span class="l l-Scalar l-Scalar-Plain">Aliases</span><span class="p p-Indicator">:</span>
-
-<span class="l l-Scalar l-Scalar-Plain">Required</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">False</span>
-<span class="l l-Scalar l-Scalar-Plain">Position</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">5</span>
-<span class="l l-Scalar l-Scalar-Plain">Default value</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">None</span>
-<span class="l l-Scalar l-Scalar-Plain">Accept pipeline input</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">False</span>
-<span class="l l-Scalar l-Scalar-Plain">Accept wildcard characters</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">False</span>
-</pre></div>
-
-<h3 id="-fromdisplayname">-FromDisplayName<a class="headerlink" href="#-fromdisplayname" title="Permanent link">&para;</a></h3>
-<p>Specifies the From name displayed for the message.</p>
-<p>Anyone that clicks on the from name or reviews the chat history will see the
-actual user account's display name.</p>
-<div class="codehilite"><pre><span></span><span class="l l-Scalar l-Scalar-Plain">Type</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">String</span>
-<span class="l l-Scalar l-Scalar-Plain">Parameter Sets</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">(All)</span>
-<span class="l l-Scalar l-Scalar-Plain">Aliases</span><span class="p p-Indicator">:</span>
-
-<span class="l l-Scalar l-Scalar-Plain">Required</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">False</span>
-<span class="l l-Scalar l-Scalar-Plain">Position</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">4</span>
-<span class="l l-Scalar l-Scalar-Plain">Default value</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">None</span>
-<span class="l l-Scalar l-Scalar-Plain">Accept pipeline input</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">False</span>
-<span class="l l-Scalar l-Scalar-Plain">Accept wildcard characters</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">False</span>
-</pre></div>
-
-<h3 id="-id">-ID<a class="headerlink" href="#-id" title="Permanent link">&para;</a></h3>
+<h3 id="-channelid">-ChannelID<a class="headerlink" href="#-channelid" title="Permanent link">&para;</a></h3>
 <p>Specifies the ID of the public forum channel, private team channel, or user
 direct message where the chat message will be posted.</p>
 <div class="codehilite"><pre><span></span><span class="l l-Scalar l-Scalar-Plain">Type</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">UInt64</span>
-<span class="l l-Scalar l-Scalar-Plain">Parameter Sets</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">ID</span>
-<span class="l l-Scalar l-Scalar-Plain">Aliases</span><span class="p p-Indicator">:</span>
-
-<span class="l l-Scalar l-Scalar-Plain">Required</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">True</span>
-<span class="l l-Scalar l-Scalar-Plain">Position</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">1</span>
-<span class="l l-Scalar l-Scalar-Plain">Default value</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">0</span>
-<span class="l l-Scalar l-Scalar-Plain">Accept pipeline input</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">True (ByPropertyName)</span>
-<span class="l l-Scalar l-Scalar-Plain">Accept wildcard characters</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">False</span>
-</pre></div>
-
-<h3 id="-incomingwebhookuri">-IncomingWebhookUri<a class="headerlink" href="#-incomingwebhookuri" title="Permanent link">&para;</a></h3>
-<p>{{Fill IncomingWebhookUri Description}}</p>
-<div class="codehilite"><pre><span></span><span class="l l-Scalar l-Scalar-Plain">Type</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">Uri</span>
-<span class="l l-Scalar l-Scalar-Plain">Parameter Sets</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">IncomingWebhookUri</span>
-<span class="l l-Scalar l-Scalar-Plain">Aliases</span><span class="p p-Indicator">:</span>
-
-<span class="l l-Scalar l-Scalar-Plain">Required</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">False</span>
-<span class="l l-Scalar l-Scalar-Plain">Position</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">1</span>
-<span class="l l-Scalar l-Scalar-Plain">Default value</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">$Script:PSRyver.IncomingWebhookUri</span>
-<span class="l l-Scalar l-Scalar-Plain">Accept pipeline input</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">True (ByPropertyName)</span>
-<span class="l l-Scalar l-Scalar-Plain">Accept wildcard characters</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">False</span>
-</pre></div>
-
-<h3 id="-message">-Message<a class="headerlink" href="#-message" title="Permanent link">&para;</a></h3>
-<p>Specifies the message content to post.</p>
-<div class="codehilite"><pre><span></span><span class="l l-Scalar l-Scalar-Plain">Type</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">String</span>
 <span class="l l-Scalar l-Scalar-Plain">Parameter Sets</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">(All)</span>
 <span class="l l-Scalar l-Scalar-Plain">Aliases</span><span class="p p-Indicator">:</span>
 
 <span class="l l-Scalar l-Scalar-Plain">Required</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">True</span>
 <span class="l l-Scalar l-Scalar-Plain">Position</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">2</span>
-<span class="l l-Scalar l-Scalar-Plain">Default value</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">None</span>
-<span class="l l-Scalar l-Scalar-Plain">Accept pipeline input</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">True (ByPropertyName, ByValue)</span>
+<span class="l l-Scalar l-Scalar-Plain">Default value</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">0</span>
+<span class="l l-Scalar l-Scalar-Plain">Accept pipeline input</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">True (ByPropertyName)</span>
 <span class="l l-Scalar l-Scalar-Plain">Accept wildcard characters</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">False</span>
 </pre></div>
 
-<h3 id="-raw">-Raw<a class="headerlink" href="#-raw" title="Permanent link">&para;</a></h3>
-<p>Specifies that objects should not be formatted.</p>
-<div class="codehilite"><pre><span></span><span class="l l-Scalar l-Scalar-Plain">Type</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">SwitchParameter</span>
+<h3 id="-id">-ID<a class="headerlink" href="#-id" title="Permanent link">&para;</a></h3>
+<p>Specifies the ID of the message that will be deleted.</p>
+<div class="codehilite"><pre><span></span><span class="l l-Scalar l-Scalar-Plain">Type</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">UInt64</span>
 <span class="l l-Scalar l-Scalar-Plain">Parameter Sets</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">(All)</span>
 <span class="l l-Scalar l-Scalar-Plain">Aliases</span><span class="p p-Indicator">:</span>
 
-<span class="l l-Scalar l-Scalar-Plain">Required</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">False</span>
-<span class="l l-Scalar l-Scalar-Plain">Position</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">6</span>
-<span class="l l-Scalar l-Scalar-Plain">Default value</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">False</span>
-<span class="l l-Scalar l-Scalar-Plain">Accept pipeline input</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">False</span>
+<span class="l l-Scalar l-Scalar-Plain">Required</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">True</span>
+<span class="l l-Scalar l-Scalar-Plain">Position</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">1</span>
+<span class="l l-Scalar l-Scalar-Plain">Default value</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">0</span>
+<span class="l l-Scalar l-Scalar-Plain">Accept pipeline input</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">True (ByPropertyName, ByValue)</span>
 <span class="l l-Scalar l-Scalar-Plain">Accept wildcard characters</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">False</span>
 </pre></div>
 
@@ -1406,13 +1108,40 @@ direct message where the chat message will be posted.</p>
 - Private team
 - User direct message</p>
 <div class="codehilite"><pre><span></span><span class="l l-Scalar l-Scalar-Plain">Type</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">String</span>
-<span class="l l-Scalar l-Scalar-Plain">Parameter Sets</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">ID</span>
+<span class="l l-Scalar l-Scalar-Plain">Parameter Sets</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">(All)</span>
 <span class="l l-Scalar l-Scalar-Plain">Aliases</span><span class="p p-Indicator">:</span>
 
 <span class="l l-Scalar l-Scalar-Plain">Required</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">True</span>
-<span class="l l-Scalar l-Scalar-Plain">Position</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">2</span>
+<span class="l l-Scalar l-Scalar-Plain">Position</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">3</span>
 <span class="l l-Scalar l-Scalar-Plain">Default value</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">None</span>
 <span class="l l-Scalar l-Scalar-Plain">Accept pipeline input</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">True (ByPropertyName)</span>
+<span class="l l-Scalar l-Scalar-Plain">Accept wildcard characters</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">False</span>
+</pre></div>
+
+<h3 id="-confirm">-Confirm<a class="headerlink" href="#-confirm" title="Permanent link">&para;</a></h3>
+<p>Prompts you for confirmation before running the cmdlet.</p>
+<div class="codehilite"><pre><span></span><span class="l l-Scalar l-Scalar-Plain">Type</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">SwitchParameter</span>
+<span class="l l-Scalar l-Scalar-Plain">Parameter Sets</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">(All)</span>
+<span class="l l-Scalar l-Scalar-Plain">Aliases</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">cf</span>
+
+<span class="l l-Scalar l-Scalar-Plain">Required</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">False</span>
+<span class="l l-Scalar l-Scalar-Plain">Position</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">Named</span>
+<span class="l l-Scalar l-Scalar-Plain">Default value</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">None</span>
+<span class="l l-Scalar l-Scalar-Plain">Accept pipeline input</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">False</span>
+<span class="l l-Scalar l-Scalar-Plain">Accept wildcard characters</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">False</span>
+</pre></div>
+
+<h3 id="-whatif">-WhatIf<a class="headerlink" href="#-whatif" title="Permanent link">&para;</a></h3>
+<p>Shows what would happen if the cmdlet runs.
+The cmdlet is not run.</p>
+<div class="codehilite"><pre><span></span><span class="l l-Scalar l-Scalar-Plain">Type</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">SwitchParameter</span>
+<span class="l l-Scalar l-Scalar-Plain">Parameter Sets</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">(All)</span>
+<span class="l l-Scalar l-Scalar-Plain">Aliases</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">wi</span>
+
+<span class="l l-Scalar l-Scalar-Plain">Required</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">False</span>
+<span class="l l-Scalar l-Scalar-Plain">Position</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">Named</span>
+<span class="l l-Scalar l-Scalar-Plain">Default value</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">None</span>
+<span class="l l-Scalar l-Scalar-Plain">Accept pipeline input</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">False</span>
 <span class="l l-Scalar l-Scalar-Plain">Accept wildcard characters</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">False</span>
 </pre></div>
 
@@ -1422,8 +1151,6 @@ For more information, see about_CommonParameters (<a href="http://go.microsoft.c
 <h2 id="inputs">INPUTS<a class="headerlink" href="#inputs" title="Permanent link">&para;</a></h2>
 <h3 id="systemstring">System.String<a class="headerlink" href="#systemstring" title="Permanent link">&para;</a></h3>
 <h2 id="outputs">OUTPUTS<a class="headerlink" href="#outputs" title="Permanent link">&para;</a></h2>
-<h3 id="systemmanagementautomationpsobject">System.Management.Automation.PSObject[]<a class="headerlink" href="#systemmanagementautomationpsobject" title="Permanent link">&para;</a></h3>
-<h3 id="systemmanagementautomationpsobject_1">System.Management.Automation.PSObject<a class="headerlink" href="#systemmanagementautomationpsobject_1" title="Permanent link">&para;</a></h3>
 <h3 id="systemvoid">System.Void<a class="headerlink" href="#systemvoid" title="Permanent link">&para;</a></h3>
 <h2 id="notes">NOTES<a class="headerlink" href="#notes" title="Permanent link">&para;</a></h2>
 <ul>
@@ -1432,9 +1159,8 @@ For more information, see about_CommonParameters (<a href="http://go.microsoft.c
 <li>GitHub: tlindsay42</li>
 </ul>
 <h2 id="related-links">RELATED LINKS<a class="headerlink" href="#related-links" title="Permanent link">&para;</a></h2>
-<p><a href="https://tlindsay42.github.io/PSRyver/Public/Send-RyverMessage/">https://tlindsay42.github.io/PSRyver/Public/Send-RyverMessage/</a></p>
-<p><a href="https://github.com/tlindsay42/PSRyver/blob/master/PSRyver/Public/Send-RyverMessage.ps1">https://github.com/tlindsay42/PSRyver/blob/master/PSRyver/Public/Send-RyverMessage.ps1</a></p>
-<p><a href="https://api.ryver.com/ryvrest_api_examples.html#create-chat-message">https://api.ryver.com/ryvrest_api_examples.html#create-chat-message</a></p>
+<p><a href="https://tlindsay42.github.io/PSRyver/Public/Remove-RyverMessage/">https://tlindsay42.github.io/PSRyver/Public/Remove-RyverMessage/</a></p>
+<p><a href="https://github.com/tlindsay42/PSRyver/blob/master/PSRyver/Public/Remove-RyverMessage.ps1">https://github.com/tlindsay42/PSRyver/blob/master/PSRyver/Public/Remove-RyverMessage.ps1</a></p>
                 
                   
                 
@@ -1455,7 +1181,7 @@ For more information, see about_CommonParameters (<a href="http://go.microsoft.c
     <div class="md-footer-nav">
       <nav class="md-footer-nav__inner md-grid">
         
-          <a href="../Remove-RyverMessage/" title="Remove-RyverMessage" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+          <a href="../Remove-PSRyverConfig/" title="Remove-PSRyverConfig" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
             <div class="md-flex__cell md-flex__cell--shrink">
               <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
             </div>
@@ -1464,19 +1190,19 @@ For more information, see about_CommonParameters (<a href="http://go.microsoft.c
                 <span class="md-footer-nav__direction">
                   Previous
                 </span>
-                Remove-RyverMessage
+                Remove-PSRyverConfig
               </span>
             </div>
           </a>
         
         
-          <a href="../Set-PSRyverConfig/" title="Set-PSRyverConfig" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+          <a href="../Send-RyverMessage/" title="Send-RyverMessage" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
             <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
               <span class="md-flex__ellipsis">
                 <span class="md-footer-nav__direction">
                   Next
                 </span>
-                Set-PSRyverConfig
+                Send-RyverMessage
               </span>
             </div>
             <div class="md-flex__cell md-flex__cell--shrink">
