@@ -20,7 +20,7 @@ function Find-RyverMessage {
         - GitHub: tlindsay42
 
     .EXAMPLE
-        Find-RyverMessage -SearchText 'Hello world!' -Credential ( Get-Cre )
+        Find-RyverMessage -SearchText 'Hello world!' -Credential ( Get-Credential )
         Updates the $Script:PSRyver.Authorization value storing the basic
         authentication authorization header to use for all requests and then queries
         all chat messages containing the text 'Hello world!' in all public forums &

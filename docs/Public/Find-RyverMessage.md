@@ -19,7 +19,7 @@ messages that the matching the search text.
 
 ### EXAMPLE 1
 ```
-Find-RyverMessage -SearchText 'Hello world!' -Credential ( Get-Cre )
+Find-RyverMessage -SearchText 'Hello world!' -Credential ( Get-Credential )
 ```
 
 Updates the $Script:PSRyver.Authorization value storing the basic
