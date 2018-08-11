@@ -13,7 +13,7 @@
         <meta name="description" content="Community PowerShell module for the Ryver API.">
       
       
-        <link rel="canonical" href="https://tlindsay42.github.io/PSRyver/Private/Format-RyverV1MessageObject/">
+        <link rel="canonical" href="https://tlindsay42.github.io/PSRyver/Public/Find-RyverTopic/">
       
       
         <meta name="author" content="Troy Lindsay">
@@ -42,7 +42,7 @@
     
     
       
-        <title>Format-RyverV1MessageObject - PSRyver</title>
+        <title>Find-RyverTopic - PSRyver</title>
       
     
     
@@ -104,7 +104,7 @@
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
     <label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
     
-      <a href="../../#format-ryverv1messageobject" tabindex="1" class="md-skip">
+      <a href="../../#find-ryvertopic" tabindex="1" class="md-skip">
         Skip to content
       </a>
     
@@ -130,7 +130,7 @@
                 PSRyver
               </span>
               <span class="md-header-nav__topic">
-                Format-RyverV1MessageObject
+                Find-RyverTopic
               </span>
             
           
@@ -257,10 +257,12 @@
       
       
 
+  
 
-  <li class="md-nav__item md-nav__item--nested">
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2" type="checkbox" id="nav-2">
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2" type="checkbox" id="nav-2" checked>
     
     <label class="md-nav__link" for="nav-2">
       Cmdlet Documentation
@@ -278,7 +280,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../Public/Export-PSRyverConfig/" title="Export-PSRyverConfig" class="md-nav__link">
+    <a href="../Export-PSRyverConfig/" title="Export-PSRyverConfig" class="md-nav__link">
       Export-PSRyverConfig
     </a>
   </li>
@@ -290,7 +292,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../Public/Find-RyverMessage/" title="Find-RyverMessage" class="md-nav__link">
+    <a href="../Find-RyverMessage/" title="Find-RyverMessage" class="md-nav__link">
       Find-RyverMessage
     </a>
   </li>
@@ -300,9 +302,244 @@
           
           
 
+  
+
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+      
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        Find-RyverTopic
+      </label>
+    
+    <a href="./" title="Find-RyverTopic" class="md-nav__link md-nav__link--active">
+      Find-RyverTopic
+    </a>
+    
+      
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#synopsis" title="SYNOPSIS" class="md-nav__link">
+    SYNOPSIS
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#syntax" title="SYNTAX" class="md-nav__link">
+    SYNTAX
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#description" title="DESCRIPTION" class="md-nav__link">
+    DESCRIPTION
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#examples" title="EXAMPLES" class="md-nav__link">
+    EXAMPLES
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#example-1" title="EXAMPLE 1" class="md-nav__link">
+    EXAMPLE 1
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#example-2" title="EXAMPLE 2" class="md-nav__link">
+    EXAMPLE 2
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#example-3" title="EXAMPLE 3" class="md-nav__link">
+    EXAMPLE 3
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#example-4" title="EXAMPLE 4" class="md-nav__link">
+    EXAMPLE 4
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#parameters" title="PARAMETERS" class="md-nav__link">
+    PARAMETERS
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#-credential" title="-Credential" class="md-nav__link">
+    -Credential
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#-raw" title="-Raw" class="md-nav__link">
+    -Raw
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#-searchtext" title="-SearchText" class="md-nav__link">
+    -SearchText
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#-includetotalcount" title="-IncludeTotalCount" class="md-nav__link">
+    -IncludeTotalCount
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#-skip" title="-Skip" class="md-nav__link">
+    -Skip
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#-first" title="-First" class="md-nav__link">
+    -First
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#commonparameters" title="CommonParameters" class="md-nav__link">
+    CommonParameters
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#inputs" title="INPUTS" class="md-nav__link">
+    INPUTS
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#systemstring" title="System.String" class="md-nav__link">
+    System.String
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#systemmanagementautomationpscustomobject" title="System.Management.Automation.PSCustomObject" class="md-nav__link">
+    System.Management.Automation.PSCustomObject
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#outputs" title="OUTPUTS" class="md-nav__link">
+    OUTPUTS
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#systemmanagementautomationpsobject" title="System.Management.Automation.PSObject[]" class="md-nav__link">
+    System.Management.Automation.PSObject[]
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#systemmanagementautomationpsobject_1" title="System.Management.Automation.PSObject" class="md-nav__link">
+    System.Management.Automation.PSObject
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#notes" title="NOTES" class="md-nav__link">
+    NOTES
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#related-links" title="RELATED LINKS" class="md-nav__link">
+    RELATED LINKS
+  </a>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+    
+  </li>
+
+        
+          
+          
+          
+
 
   <li class="md-nav__item">
-    <a href="../../Public/Get-PSRyverConfig/" title="Get-PSRyverConfig" class="md-nav__link">
+    <a href="../Get-PSRyverConfig/" title="Get-PSRyverConfig" class="md-nav__link">
       Get-PSRyverConfig
     </a>
   </li>
@@ -314,7 +551,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../Public/Get-PSRyverConfigPath/" title="Get-PSRyverConfigPath" class="md-nav__link">
+    <a href="../Get-PSRyverConfigPath/" title="Get-PSRyverConfigPath" class="md-nav__link">
       Get-PSRyverConfigPath
     </a>
   </li>
@@ -326,7 +563,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../Public/Get-RyverForum/" title="Get-RyverForum" class="md-nav__link">
+    <a href="../Get-RyverForum/" title="Get-RyverForum" class="md-nav__link">
       Get-RyverForum
     </a>
   </li>
@@ -338,7 +575,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../Public/Get-RyverHistory/" title="Get-RyverHistory" class="md-nav__link">
+    <a href="../Get-RyverHistory/" title="Get-RyverHistory" class="md-nav__link">
       Get-RyverHistory
     </a>
   </li>
@@ -350,7 +587,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../Public/Get-RyverTeam/" title="Get-RyverTeam" class="md-nav__link">
+    <a href="../Get-RyverTeam/" title="Get-RyverTeam" class="md-nav__link">
       Get-RyverTeam
     </a>
   </li>
@@ -362,7 +599,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../Public/Get-RyverUser/" title="Get-RyverUser" class="md-nav__link">
+    <a href="../Get-RyverUser/" title="Get-RyverUser" class="md-nav__link">
       Get-RyverUser
     </a>
   </li>
@@ -374,7 +611,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../Public/Import-PSRyverConfig/" title="Import-PSRyverConfig" class="md-nav__link">
+    <a href="../Import-PSRyverConfig/" title="Import-PSRyverConfig" class="md-nav__link">
       Import-PSRyverConfig
     </a>
   </li>
@@ -386,7 +623,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../Public/Initialize-PSRyverConfig/" title="Initialize-PSRyverConfig" class="md-nav__link">
+    <a href="../Initialize-PSRyverConfig/" title="Initialize-PSRyverConfig" class="md-nav__link">
       Initialize-PSRyverConfig
     </a>
   </li>
@@ -398,7 +635,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../Public/Invoke-RyverRestMethod/" title="Invoke-RyverRestMethod" class="md-nav__link">
+    <a href="../Invoke-RyverRestMethod/" title="Invoke-RyverRestMethod" class="md-nav__link">
       Invoke-RyverRestMethod
     </a>
   </li>
@@ -410,7 +647,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../Public/Read-PSRyverConfig/" title="Read-PSRyverConfig" class="md-nav__link">
+    <a href="../Read-PSRyverConfig/" title="Read-PSRyverConfig" class="md-nav__link">
       Read-PSRyverConfig
     </a>
   </li>
@@ -422,7 +659,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../Public/Remove-PSRyverConfig/" title="Remove-PSRyverConfig" class="md-nav__link">
+    <a href="../Remove-PSRyverConfig/" title="Remove-PSRyverConfig" class="md-nav__link">
       Remove-PSRyverConfig
     </a>
   </li>
@@ -434,7 +671,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../Public/Remove-RyverMessage/" title="Remove-RyverMessage" class="md-nav__link">
+    <a href="../Remove-RyverMessage/" title="Remove-RyverMessage" class="md-nav__link">
       Remove-RyverMessage
     </a>
   </li>
@@ -446,7 +683,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../Public/Send-RyverMessage/" title="Send-RyverMessage" class="md-nav__link">
+    <a href="../Send-RyverMessage/" title="Send-RyverMessage" class="md-nav__link">
       Send-RyverMessage
     </a>
   </li>
@@ -458,7 +695,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../Public/Set-PSRyverConfig/" title="Set-PSRyverConfig" class="md-nav__link">
+    <a href="../Set-PSRyverConfig/" title="Set-PSRyverConfig" class="md-nav__link">
       Set-PSRyverConfig
     </a>
   </li>
@@ -470,7 +707,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../Public/Set-PSRyverConfigPath/" title="Set-PSRyverConfigPath" class="md-nav__link">
+    <a href="../Set-PSRyverConfigPath/" title="Set-PSRyverConfigPath" class="md-nav__link">
       Set-PSRyverConfigPath
     </a>
   </li>
@@ -506,7 +743,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../Assert-RyverApiConfig/" title="Assert-RyverApiConfig" class="md-nav__link">
+    <a href="../../Private/Assert-RyverApiConfig/" title="Assert-RyverApiConfig" class="md-nav__link">
       Assert-RyverApiConfig
     </a>
   </li>
@@ -518,7 +755,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../Convert-ColorToHexTriplet/" title="Convert-ColorToHexTriplet" class="md-nav__link">
+    <a href="../../Private/Convert-ColorToHexTriplet/" title="Convert-ColorToHexTriplet" class="md-nav__link">
       Convert-ColorToHexTriplet
     </a>
   </li>
@@ -530,7 +767,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../ConvertFrom-UnixTime/" title="ConvertFrom-UnixTime" class="md-nav__link">
+    <a href="../../Private/ConvertFrom-UnixTime/" title="ConvertFrom-UnixTime" class="md-nav__link">
       ConvertFrom-UnixTime
     </a>
   </li>
@@ -542,7 +779,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../ConvertTo-Authorization/" title="ConvertTo-Authorization" class="md-nav__link">
+    <a href="../../Private/ConvertTo-Authorization/" title="ConvertTo-Authorization" class="md-nav__link">
       ConvertTo-Authorization
     </a>
   </li>
@@ -554,7 +791,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../ConvertTo-UnixTime/" title="ConvertTo-UnixTime" class="md-nav__link">
+    <a href="../../Private/ConvertTo-UnixTime/" title="ConvertTo-UnixTime" class="md-nav__link">
       ConvertTo-UnixTime
     </a>
   </li>
@@ -566,7 +803,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../Format-RyverChannelObject/" title="Format-RyverChannelObject" class="md-nav__link">
+    <a href="../../Private/Format-RyverChannelObject/" title="Format-RyverChannelObject" class="md-nav__link">
       Format-RyverChannelObject
     </a>
   </li>
@@ -578,7 +815,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../Format-RyverMessageObject/" title="Format-RyverMessageObject" class="md-nav__link">
+    <a href="../../Private/Format-RyverMessageObject/" title="Format-RyverMessageObject" class="md-nav__link">
       Format-RyverMessageObject
     </a>
   </li>
@@ -590,7 +827,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../Format-RyverUserObject/" title="Format-RyverUserObject" class="md-nav__link">
+    <a href="../../Private/Format-RyverUserObject/" title="Format-RyverUserObject" class="md-nav__link">
       Format-RyverUserObject
     </a>
   </li>
@@ -602,7 +839,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../Remove-SensitiveData/" title="Remove-SensitiveData" class="md-nav__link">
+    <a href="../../Private/Remove-SensitiveData/" title="Remove-SensitiveData" class="md-nav__link">
       Remove-SensitiveData
     </a>
   </li>
@@ -614,7 +851,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../Test-IsWindows/" title="Test-IsWindows" class="md-nav__link">
+    <a href="../../Private/Test-IsWindows/" title="Test-IsWindows" class="md-nav__link">
       Test-IsWindows
     </a>
   </li>
@@ -681,6 +918,27 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#example-2" title="EXAMPLE 2" class="md-nav__link">
+    EXAMPLE 2
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#example-3" title="EXAMPLE 3" class="md-nav__link">
+    EXAMPLE 3
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#example-4" title="EXAMPLE 4" class="md-nav__link">
+    EXAMPLE 4
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -695,15 +953,43 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#-inputobject" title="-InputObject" class="md-nav__link">
-    -InputObject
+  <a href="#-credential" title="-Credential" class="md-nav__link">
+    -Credential
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#-match" title="-Match" class="md-nav__link">
-    -Match
+  <a href="#-raw" title="-Raw" class="md-nav__link">
+    -Raw
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#-searchtext" title="-SearchText" class="md-nav__link">
+    -SearchText
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#-includetotalcount" title="-IncludeTotalCount" class="md-nav__link">
+    -IncludeTotalCount
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#-skip" title="-Skip" class="md-nav__link">
+    -Skip
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#-first" title="-First" class="md-nav__link">
+    -First
   </a>
   
 </li>
@@ -729,14 +1015,14 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#systemmanagementautomationpscustomobject" title="System.Management.Automation.PSCustomObject[]" class="md-nav__link">
-    System.Management.Automation.PSCustomObject[]
+  <a href="#systemstring" title="System.String" class="md-nav__link">
+    System.String
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#systemmanagementautomationpscustomobject_1" title="System.Management.Automation.PSCustomObject" class="md-nav__link">
+  <a href="#systemmanagementautomationpscustomobject" title="System.Management.Automation.PSCustomObject" class="md-nav__link">
     System.Management.Automation.PSCustomObject
   </a>
   
@@ -804,39 +1090,67 @@
             <article class="md-content__inner md-typeset">
               
                 
-                  <a href="https://github.com/tlindsay42/PSRyver/blob/master/docs/Private/Format-RyverV1MessageObject.md" title="Edit this page" class="md-icon md-content__icon">&#xE3C9;</a>
+                  <a href="https://github.com/tlindsay42/PSRyver/blob/master/docs/Public/Find-RyverTopic.md" title="Edit this page" class="md-icon md-content__icon">&#xE3C9;</a>
                 
                 
-                <h1 id="format-ryverv1messageobject">Format-RyverV1MessageObject<a class="headerlink" href="#format-ryverv1messageobject" title="Permanent link">&para;</a></h1>
+                <h1 id="find-ryvertopic">Find-RyverTopic<a class="headerlink" href="#find-ryvertopic" title="Permanent link">&para;</a></h1>
 <h2 id="synopsis">SYNOPSIS<a class="headerlink" href="#synopsis" title="Permanent link">&para;</a></h2>
-<p>Parse message objects.</p>
+<p>Find Ryver topics.</p>
 <h2 id="syntax">SYNTAX<a class="headerlink" href="#syntax" title="Permanent link">&para;</a></h2>
-<div class="codehilite"><pre><span></span>Format-RyverV1MessageObject [-InputObject] &lt;Object&gt; [-Match] [&lt;CommonParameters&gt;]
+<div class="codehilite"><pre><span></span>Find-RyverTopic [-SearchText] &lt;String&gt; [-Raw] [[-Credential] &lt;PSCredential&gt;] [-IncludeTotalCount]
+ [-Skip &lt;UInt64&gt;] [-First &lt;UInt64&gt;] [&lt;CommonParameters&gt;]
 </pre></div>
 
 <h2 id="description">DESCRIPTION<a class="headerlink" href="#description" title="Permanent link">&para;</a></h2>
-<p>Parse message objects.</p>
+<p>Queries for the specified search text in the topics in all public forums &amp;
+private teams that the user is a member of, as well as all direct message
+topics that match the search text.</p>
 <h2 id="examples">EXAMPLES<a class="headerlink" href="#examples" title="Permanent link">&para;</a></h2>
 <h3 id="example-1">EXAMPLE 1<a class="headerlink" href="#example-1" title="Permanent link">&para;</a></h3>
-<div class="codehilite"><pre><span></span>
+<div class="codehilite"><pre><span></span>Find-RyverTopic -SearchText &#39;Hello world!&#39; -Credential ( Get-Credential )
 </pre></div>
 
+<p>Updates the $Script:PSRyver.Authorization value storing the basic
+authorization header to use for all requests and then queries all topics
+containing the text 'Hello world!' in all public forums &amp; private teams that
+the user is a member of, as well as all direct messages.</p>
+<h3 id="example-2">EXAMPLE 2<a class="headerlink" href="#example-2" title="Permanent link">&para;</a></h3>
+<div class="codehilite"><pre><span></span>&#39;Hello world!&#39; | Find-RyverTopic -Raw
+</pre></div>
+
+<p>Queries all topics containing the text 'Hello world!' via the pipeline in all
+public forums &amp; private teams that the user is a member of, as well as all
+direct messages, and returns the raw, unformatted output.</p>
+<h3 id="example-3">EXAMPLE 3<a class="headerlink" href="#example-3" title="Permanent link">&para;</a></h3>
+<div class="codehilite"><pre><span></span>[PSCustomObject] @{ SearchText = &#39;Hello world!&#39; } | Find-RyverTopic
+</pre></div>
+
+<p>Queries all topics containing the text 'Hello world!' via the pipeline by
+parameter name in all public forums &amp; private teams that the user is a member
+of, as well as all direct messages.</p>
+<h3 id="example-4">EXAMPLE 4<a class="headerlink" href="#example-4" title="Permanent link">&para;</a></h3>
+<div class="codehilite"><pre><span></span>Find-RyverTopic &#39;Hello world!&#39;
+</pre></div>
+
+<p>Queries for all topics containing the text 'Hello world!' via positional
+parameter.</p>
 <h2 id="parameters">PARAMETERS<a class="headerlink" href="#parameters" title="Permanent link">&para;</a></h2>
-<h3 id="-inputobject">-InputObject<a class="headerlink" href="#-inputobject" title="Permanent link">&para;</a></h3>
-<p>{{Fill InputObject Description}}</p>
-<div class="codehilite"><pre><span></span><span class="l l-Scalar l-Scalar-Plain">Type</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">Object</span>
+<h3 id="-credential">-Credential<a class="headerlink" href="#-credential" title="Permanent link">&para;</a></h3>
+<p>Credentials to use for the Ryver API.</p>
+<p>Default value is the value set by Set-PSRyverConfig.</p>
+<div class="codehilite"><pre><span></span><span class="l l-Scalar l-Scalar-Plain">Type</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">PSCredential</span>
 <span class="l l-Scalar l-Scalar-Plain">Parameter Sets</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">(All)</span>
 <span class="l l-Scalar l-Scalar-Plain">Aliases</span><span class="p p-Indicator">:</span>
 
-<span class="l l-Scalar l-Scalar-Plain">Required</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">True</span>
-<span class="l l-Scalar l-Scalar-Plain">Position</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">1</span>
+<span class="l l-Scalar l-Scalar-Plain">Required</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">False</span>
+<span class="l l-Scalar l-Scalar-Plain">Position</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">3</span>
 <span class="l l-Scalar l-Scalar-Plain">Default value</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">None</span>
-<span class="l l-Scalar l-Scalar-Plain">Accept pipeline input</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">True (ByValue)</span>
+<span class="l l-Scalar l-Scalar-Plain">Accept pipeline input</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">False</span>
 <span class="l l-Scalar l-Scalar-Plain">Accept wildcard characters</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">False</span>
 </pre></div>
 
-<h3 id="-match">-Match<a class="headerlink" href="#-match" title="Permanent link">&para;</a></h3>
-<p>{{Fill Match Description}}</p>
+<h3 id="-raw">-Raw<a class="headerlink" href="#-raw" title="Permanent link">&para;</a></h3>
+<p>Specifies that objects should not be formatted.</p>
 <div class="codehilite"><pre><span></span><span class="l l-Scalar l-Scalar-Plain">Type</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">SwitchParameter</span>
 <span class="l l-Scalar l-Scalar-Plain">Parameter Sets</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">(All)</span>
 <span class="l l-Scalar l-Scalar-Plain">Aliases</span><span class="p p-Indicator">:</span>
@@ -848,12 +1162,65 @@
 <span class="l l-Scalar l-Scalar-Plain">Accept wildcard characters</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">False</span>
 </pre></div>
 
+<h3 id="-searchtext">-SearchText<a class="headerlink" href="#-searchtext" title="Permanent link">&para;</a></h3>
+<p>Specifies the text to search for.</p>
+<div class="codehilite"><pre><span></span><span class="l l-Scalar l-Scalar-Plain">Type</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">String</span>
+<span class="l l-Scalar l-Scalar-Plain">Parameter Sets</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">(All)</span>
+<span class="l l-Scalar l-Scalar-Plain">Aliases</span><span class="p p-Indicator">:</span>
+
+<span class="l l-Scalar l-Scalar-Plain">Required</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">True</span>
+<span class="l l-Scalar l-Scalar-Plain">Position</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">1</span>
+<span class="l l-Scalar l-Scalar-Plain">Default value</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">None</span>
+<span class="l l-Scalar l-Scalar-Plain">Accept pipeline input</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">True (ByPropertyName, ByValue)</span>
+<span class="l l-Scalar l-Scalar-Plain">Accept wildcard characters</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">True</span>
+</pre></div>
+
+<h3 id="-includetotalcount">-IncludeTotalCount<a class="headerlink" href="#-includetotalcount" title="Permanent link">&para;</a></h3>
+<p>Reports the number of objects in the data set (an integer) followed by the objects.
+If the cmdlet cannot determine the total count, it returns 'Unknown total count'.</p>
+<div class="codehilite"><pre><span></span><span class="l l-Scalar l-Scalar-Plain">Type</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">SwitchParameter</span>
+<span class="l l-Scalar l-Scalar-Plain">Parameter Sets</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">(All)</span>
+<span class="l l-Scalar l-Scalar-Plain">Aliases</span><span class="p p-Indicator">:</span>
+
+<span class="l l-Scalar l-Scalar-Plain">Required</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">False</span>
+<span class="l l-Scalar l-Scalar-Plain">Position</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">Named</span>
+<span class="l l-Scalar l-Scalar-Plain">Default value</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">None</span>
+<span class="l l-Scalar l-Scalar-Plain">Accept pipeline input</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">False</span>
+<span class="l l-Scalar l-Scalar-Plain">Accept wildcard characters</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">False</span>
+</pre></div>
+
+<h3 id="-skip">-Skip<a class="headerlink" href="#-skip" title="Permanent link">&para;</a></h3>
+<p>Ignores the first 'n' objects and then gets the remaining objects.</p>
+<div class="codehilite"><pre><span></span><span class="l l-Scalar l-Scalar-Plain">Type</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">UInt64</span>
+<span class="l l-Scalar l-Scalar-Plain">Parameter Sets</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">(All)</span>
+<span class="l l-Scalar l-Scalar-Plain">Aliases</span><span class="p p-Indicator">:</span>
+
+<span class="l l-Scalar l-Scalar-Plain">Required</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">False</span>
+<span class="l l-Scalar l-Scalar-Plain">Position</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">Named</span>
+<span class="l l-Scalar l-Scalar-Plain">Default value</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">None</span>
+<span class="l l-Scalar l-Scalar-Plain">Accept pipeline input</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">False</span>
+<span class="l l-Scalar l-Scalar-Plain">Accept wildcard characters</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">False</span>
+</pre></div>
+
+<h3 id="-first">-First<a class="headerlink" href="#-first" title="Permanent link">&para;</a></h3>
+<p>Gets only the first 'n' objects.</p>
+<div class="codehilite"><pre><span></span><span class="l l-Scalar l-Scalar-Plain">Type</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">UInt64</span>
+<span class="l l-Scalar l-Scalar-Plain">Parameter Sets</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">(All)</span>
+<span class="l l-Scalar l-Scalar-Plain">Aliases</span><span class="p p-Indicator">:</span>
+
+<span class="l l-Scalar l-Scalar-Plain">Required</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">False</span>
+<span class="l l-Scalar l-Scalar-Plain">Position</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">Named</span>
+<span class="l l-Scalar l-Scalar-Plain">Default value</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">None</span>
+<span class="l l-Scalar l-Scalar-Plain">Accept pipeline input</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">False</span>
+<span class="l l-Scalar l-Scalar-Plain">Accept wildcard characters</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">False</span>
+</pre></div>
+
 <h3 id="commonparameters">CommonParameters<a class="headerlink" href="#commonparameters" title="Permanent link">&para;</a></h3>
 <p>This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.
 For more information, see about_CommonParameters (<a href="http://go.microsoft.com/fwlink/?LinkID=113216">http://go.microsoft.com/fwlink/?LinkID=113216</a>).</p>
 <h2 id="inputs">INPUTS<a class="headerlink" href="#inputs" title="Permanent link">&para;</a></h2>
-<h3 id="systemmanagementautomationpscustomobject">System.Management.Automation.PSCustomObject[]<a class="headerlink" href="#systemmanagementautomationpscustomobject" title="Permanent link">&para;</a></h3>
-<h3 id="systemmanagementautomationpscustomobject_1">System.Management.Automation.PSCustomObject<a class="headerlink" href="#systemmanagementautomationpscustomobject_1" title="Permanent link">&para;</a></h3>
+<h3 id="systemstring">System.String<a class="headerlink" href="#systemstring" title="Permanent link">&para;</a></h3>
+<h3 id="systemmanagementautomationpscustomobject">System.Management.Automation.PSCustomObject<a class="headerlink" href="#systemmanagementautomationpscustomobject" title="Permanent link">&para;</a></h3>
 <h2 id="outputs">OUTPUTS<a class="headerlink" href="#outputs" title="Permanent link">&para;</a></h2>
 <h3 id="systemmanagementautomationpsobject">System.Management.Automation.PSObject[]<a class="headerlink" href="#systemmanagementautomationpsobject" title="Permanent link">&para;</a></h3>
 <h3 id="systemmanagementautomationpsobject_1">System.Management.Automation.PSObject<a class="headerlink" href="#systemmanagementautomationpsobject_1" title="Permanent link">&para;</a></h3>
@@ -864,8 +1231,8 @@ For more information, see about_CommonParameters (<a href="http://go.microsoft.c
 <li>GitHub: tlindsay42</li>
 </ul>
 <h2 id="related-links">RELATED LINKS<a class="headerlink" href="#related-links" title="Permanent link">&para;</a></h2>
-<p><a href="https://tlindsay42.github.io/PSRyver/Private/Format-RyverV1MessageObject/">https://tlindsay42.github.io/PSRyver/Private/Format-RyverV1MessageObject/</a></p>
-<p><a href="https://github.com/tlindsay42/PSRyver/blob/master/PSRyver/Private/Format-RyverV1MessageObject.ps1">https://github.com/tlindsay42/PSRyver/blob/master/PSRyver/Private/Format-RyverV1MessageObject.ps1</a></p>
+<p><a href="https://tlindsay42.github.io/PSRyver/Public/Find-RyverTopic/">https://tlindsay42.github.io/PSRyver/Public/Find-RyverTopic/</a></p>
+<p><a href="https://github.com/tlindsay42/PSRyver/blob/master/PSRyver/Public/Find-RyverTopic.ps1">https://github.com/tlindsay42/PSRyver/blob/master/PSRyver/Public/Find-RyverTopic.ps1</a></p>
                 
                   
                 
@@ -882,6 +1249,41 @@ For more information, see about_CommonParameters (<a href="http://go.microsoft.c
       
         
 <footer class="md-footer">
+  
+    <div class="md-footer-nav">
+      <nav class="md-footer-nav__inner md-grid">
+        
+          <a href="../Find-RyverMessage/" title="Find-RyverMessage" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
+            </div>
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Previous
+                </span>
+                Find-RyverMessage
+              </span>
+            </div>
+          </a>
+        
+        
+          <a href="../Get-PSRyverConfig/" title="Get-PSRyverConfig" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Next
+                </span>
+                Get-PSRyverConfig
+              </span>
+            </div>
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-forward md-footer-nav__button"></i>
+            </div>
+          </a>
+        
+      </nav>
+    </div>
   
   <div class="md-footer-meta md-typeset">
     <div class="md-footer-meta__inner md-grid">
