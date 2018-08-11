@@ -1,6 +1,6 @@
 ﻿Deploy 'Module' {
     By 'PSGalleryModule' {
-        FromSource $Global:CI_MODULE_NAME
+        FromSource $Env:BHProjectName
         To 'PSGallery'
         WithOptions @{
             ApiKey = $Env:NUGET_API_KEY
