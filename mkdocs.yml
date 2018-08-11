@@ -89,6 +89,7 @@ pages:
 - Cmdlet Documentation:
   - Export-PSRyverConfig: 'Public/Export-PSRyverConfig.md'
   - Find-RyverMessage: 'Public/Find-RyverMessage.md'
+  - Find-RyverTopic: 'Public/Find-RyverTopic.md'
   - Get-PSRyverConfig: 'Public/Get-PSRyverConfig.md'
   - Get-PSRyverConfigPath: 'Public/Get-PSRyverConfigPath.md'
   - Get-RyverForum: 'Public/Get-RyverForum.md'
