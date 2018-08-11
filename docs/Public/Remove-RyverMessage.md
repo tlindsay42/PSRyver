@@ -136,11 +136,9 @@ For more information, see about_CommonParameters (http://go.microsoft.com/fwlink
 ## INPUTS
 
 ### System.String
-
 ## OUTPUTS
 
 ### System.Void
-
 ## NOTES
 - Troy Lindsay
 - Twitter: @troylindsay42

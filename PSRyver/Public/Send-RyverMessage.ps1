@@ -104,6 +104,11 @@ function Send-RyverMessage {
         [String]
         $Type,
 
+        <#
+        Specifies the Ryver format chat message incoming webhook URI.
+
+        https://api.ryver.com/ryvhooks_simple_incoming.html#chat-message
+        #>
         [Parameter(
             ParameterSetName = 'IncomingWebhookUri',
             Position = 0,

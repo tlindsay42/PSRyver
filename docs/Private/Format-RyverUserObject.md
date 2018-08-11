@@ -38,7 +38,7 @@ Parses user objects via positional parameter.
 ## PARAMETERS
 
 ### -InputObject
-{{Fill InputObject Description}}
+The user objects to parse.
 
 ```yaml
 Type: PSObject[]
@@ -59,15 +59,11 @@ For more information, see about_CommonParameters (http://go.microsoft.com/fwlink
 ## INPUTS
 
 ### System.Management.Automation.PSCustomObject[]
-
 ### System.Management.Automation.PSCustomObject
-
 ## OUTPUTS
 
 ### System.Management.Automation.PSObject[]
-
 ### System.Management.Automation.PSObject
-
 ## NOTES
 - Troy Lindsay
 - Twitter: @troylindsay42

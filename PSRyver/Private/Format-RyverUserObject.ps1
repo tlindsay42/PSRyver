@@ -44,6 +44,7 @@ function Format-RyverUserObject {
     [OutputType( [PSCustomObject[]] )]
     [OutputType( [PSCustomObject] )]
     param (
+        # The user objects to parse.
         [Parameter(
             Mandatory = $true,
             Position = 0,

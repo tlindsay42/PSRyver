@@ -203,11 +203,9 @@ For more information, see about_CommonParameters (http://go.microsoft.com/fwlink
 ## INPUTS
 
 ### System.Management.Automation.PSCustomObject
-
 ## OUTPUTS
 
 ### System.Void
-
 ## NOTES
 - Troy Lindsay
 - Twitter: @troylindsay42

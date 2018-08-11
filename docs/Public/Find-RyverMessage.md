@@ -13,7 +13,7 @@ Find-RyverMessage [-SearchText] <String> [-Raw] [[-Credential] <PSCredential>] [
 ## DESCRIPTION
 Queries for the specified search text in the chat messages in all public
 forums & private teams that the user is a member of, as well as all direct
-messages that the matching the search text.
+messages that match the search text.
 
 ## EXAMPLES
 
@@ -72,37 +72,6 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -First
-Gets only the first 'n' objects.
-
-```yaml
-Type: UInt64
-Parameter Sets: (All)
-Aliases:
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -IncludeTotalCount
-Reports the number of objects in the data set (an integer) followed by the objects. If
-the cmdlet cannot determine the total count, it returns "Unknown total count".
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases:
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
 ### -Raw
 Specifies that objects should not be formatted.
 
@@ -133,8 +102,39 @@ Accept pipeline input: True (ByPropertyName, ByValue)
 Accept wildcard characters: True
 ```
 
+### -IncludeTotalCount
+Reports the number of objects in the data set (an integer) followed by the objects.
+If the cmdlet cannot determine the total count, it returns 'Unknown total count'.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -Skip
 Ignores the first 'n' objects and then gets the remaining objects.
+
+```yaml
+Type: UInt64
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -First
+Gets only the first 'n' objects.
 
 ```yaml
 Type: UInt64
@@ -155,15 +155,11 @@ For more information, see about_CommonParameters (http://go.microsoft.com/fwlink
 ## INPUTS
 
 ### System.String
-
 ### System.Management.Automation.PSCustomObject
-
 ## OUTPUTS
 
 ### System.Management.Automation.PSObject[]
-
 ### System.Management.Automation.PSObject
-
 ## NOTES
 - Troy Lindsay
 - Twitter: @troylindsay42

@@ -30,12 +30,10 @@ For more information, see about_CommonParameters (http://go.microsoft.com/fwlink
 ## INPUTS
 
 ### None
-    You cannot pipe input to this cmdlet.
-
+###     You cannot pipe input to this cmdlet.
 ## OUTPUTS
 
 ### System.IO.FileInfo
-
 ## NOTES
 - Troy Lindsay
 - Twitter: @troylindsay42

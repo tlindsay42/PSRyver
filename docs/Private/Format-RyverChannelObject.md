@@ -59,15 +59,11 @@ For more information, see about_CommonParameters (http://go.microsoft.com/fwlink
 ## INPUTS
 
 ### System.Management.Automation.PSCustomObject[]
-
 ### System.Management.Automation.PSCustomObject
-
 ## OUTPUTS
 
 ### System.Management.Automation.PSObject[]
-
 ### System.Management.Automation.PSObject
-
 ## NOTES
 - Troy Lindsay
 - Twitter: @troylindsay42

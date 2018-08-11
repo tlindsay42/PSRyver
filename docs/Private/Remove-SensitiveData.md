@@ -114,15 +114,11 @@ For more information, see about_CommonParameters (http://go.microsoft.com/fwlink
 ## INPUTS
 
 ### System.Object[]
-
 ### System.Object
-
 ## OUTPUTS
 
 ### System.Object[]
-
 ### System.Object
-
 ## NOTES
 - Troy Lindsay
 - Twitter: @troylindsay42

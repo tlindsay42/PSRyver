@@ -177,7 +177,9 @@ Accept wildcard characters: False
 ```
 
 ### -IncomingWebhookUri
-{{Fill IncomingWebhookUri Description}}
+Specifies the Ryver format chat message incoming webhook URI.
+
+https://api.ryver.com/ryvhooks_simple_incoming.html#chat-message
 
 ```yaml
 Type: Uri
@@ -246,15 +248,11 @@ For more information, see about_CommonParameters (http://go.microsoft.com/fwlink
 ## INPUTS
 
 ### System.String
-
 ## OUTPUTS
 
 ### System.Management.Automation.PSObject[]
-
 ### System.Management.Automation.PSObject
-
 ### System.Void
-
 ## NOTES
 - Troy Lindsay
 - Twitter: @troylindsay42

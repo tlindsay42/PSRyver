@@ -6,7 +6,7 @@ function Find-RyverMessage {
     .DESCRIPTION
         Queries for the specified search text in the chat messages in all public
         forums & private teams that the user is a member of, as well as all direct
-        messages that the matching the search text.
+        messages that match the search text.
 
     .INPUTS
         System.String
