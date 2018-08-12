@@ -113,6 +113,7 @@ pages:
   - ConvertTo-UnixTime: 'Private/ConvertTo-UnixTime.md'
   - Format-RyverChannelObject: 'Private/Format-RyverChannelObject.md'
   - Format-RyverMessageObject: 'Private/Format-RyverMessageObject.md'
+  - Format-RyverTopicObject: 'Private/Format-RyverTopicObject.md'
   - Format-RyverUserObject: 'Private/Format-RyverUserObject.md'
   - Remove-SensitiveData: 'Private/Remove-SensitiveData.md'
   - Test-IsWindows: 'Private/Test-IsWindows.md'
