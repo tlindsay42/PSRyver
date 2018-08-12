@@ -71,7 +71,7 @@ function Read-PSRyverConfig {
         $function = $MyInvocation.MyCommand.Name
         Write-Verbose -Message "Beginning: '${function}'."
 
-        $isWindows = Test-IsWindows
+        $isWindowsOS = Test-IsWindows
         $messageTemplate = "Skipping reading the value of '{0}' to the config file because the Data Protection API (DPAPI) is not available for decrypting it on '$( $PSVersionTable.OS )'."
 
         function Unprotect-SecureString {
@@ -99,7 +99,7 @@ function Read-PSRyverConfig {
             @{
                 Name       = 'RestApiBaseUri'
                 Expression = {
-                    if ( $isWindows -eq $true ) {
+                    if ( $isWindowsOS -eq $true ) {
                         Unprotect-SecureString -SecureString $_.RestApiBaseUri
                     }
                     else {
@@ -110,7 +110,7 @@ function Read-PSRyverConfig {
             @{
                 Name       = 'Authorization'
                 Expression = {
-                    if ( $isWindows -eq $true ) {
+                    if ( $isWindowsOS -eq $true ) {
                         Unprotect-SecureString -SecureString $_.Authorization
                     }
                     else {
@@ -121,7 +121,7 @@ function Read-PSRyverConfig {
             @{
                 Name       = 'IncomingWebhookUri'
                 Expression = {
-                    if ( $isWindows -eq $true ) {
+                    if ( $isWindowsOS -eq $true ) {
                         Unprotect-SecureString -SecureString $_.IncomingWebhookUri
                     }
                     else {

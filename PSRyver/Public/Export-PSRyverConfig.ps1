@@ -85,7 +85,7 @@ function Export-PSRyverConfig {
         $function = $MyInvocation.MyCommand.Name
         Write-Verbose -Message "Beginning: '${function}'."
 
-        $isWindows = Test-IsWindows
+        $isWindowsOS = Test-IsWindows
         $messageTemplate = "Skipping writing the value of '{0}' to the config file because the Data Protection API (DPAPI) is not available for encrypting it on '$( $PSVersionTable.OS )'."
     }
 
@@ -106,7 +106,7 @@ function Export-PSRyverConfig {
                 @{
                     Name       = 'RestApiBaseUri'
                     Expression = {
-                        if ( $isWindows -eq $true ) {
+                        if ( $isWindowsOS -eq $true ) {
                             ConvertTo-SecureString -String $_.RestApiBaseUri -AsPlainText -Force -ErrorAction 'Stop'
                         }
                         else {
@@ -117,7 +117,7 @@ function Export-PSRyverConfig {
                 @{
                     Name       = 'Authorization'
                     Expression = {
-                        if ( $isWindows -eq $true ) {
+                        if ( $isWindowsOS -eq $true ) {
                             ConvertTo-SecureString -String $_.Authorization -AsPlainText -Force -ErrorAction 'Stop'
                         }
                         else {
@@ -128,7 +128,7 @@ function Export-PSRyverConfig {
                 @{
                     Name       = 'IncomingWebhookUri'
                     Expression = {
-                        if ( $isWindows -eq $true ) {
+                        if ( $isWindowsOS -eq $true ) {
                             ConvertTo-SecureString -String $_.IncomingWebhookUri -AsPlainText -Force -ErrorAction 'Stop'
                         }
                         else {
