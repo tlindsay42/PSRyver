@@ -154,7 +154,7 @@ function Get-RyverHistory {
         #region Build the URI path
         $path += (
             '/Chat.History()?' +
-            "&`$top=$( $Script:PSRyver.MaxPageSize )" +
+            "`$top=$( $Script:PSRyver.MaxPageSize )" +
             "&`$skip=${skip}" +
             '&$orderby=when+asc' +
             '&$inlinecount=allpages'

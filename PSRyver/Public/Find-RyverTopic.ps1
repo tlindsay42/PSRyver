@@ -130,7 +130,7 @@ function Find-RyverTopic {
                 "type='Entity.Post'," +
                 'highlight=false'
             ) + ')?' +
-            "&`$top=$( $Script:PSRyver.MaxPageSize )" +
+            "`$top=$( $Script:PSRyver.MaxPageSize )" +
             "&`$skip=${skip}" +
             '&$inlinecount=allpages'
         )
