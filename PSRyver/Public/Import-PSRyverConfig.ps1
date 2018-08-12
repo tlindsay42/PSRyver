@@ -84,14 +84,15 @@ function Import-PSRyverConfig {
 
     begin {
         $function = $MyInvocation.MyCommand.Name
-
-        Write-Verbose -Message (
-            "Beginning: '${function}' with ParameterSetName '$( $PSCmdlet.ParameterSetName )' and Parameters: " +
-            ( $PSBoundParameters | Remove-SensitiveData | Format-Table -AutoSize | Out-String )
-        )
+        Write-Verbose -Message "Beginning: '${function}'."
     }
 
     process {
+        Write-Verbose -Message (
+            "Processing: '${function}' with ParameterSetName '$( $PSCmdlet.ParameterSetName )' and Parameters: " +
+            ( $PSBoundParameters | Remove-SensitiveData | Format-Table -AutoSize | Out-String )
+        )
+
         $proceed = $true
         if ( $Script:PSRyver ) {
             $proceed = $PSCmdlet.ShouldProcess( '$Script:PSRyver', 'Overwrite the existing PSRyver config' )

@@ -127,8 +127,10 @@ function Get-RyverTeam {
     )
 
     begin {
-        #region init
         $function = $MyInvocation.MyCommand.Name
+        Write-Verbose -Message "Beginning: '${function}'."
+
+        #region init
         $return = @()
         $detailedProperties = @(
             'board/id',
@@ -147,11 +149,6 @@ function Get-RyverTeam {
         $last = $first + $PSCmdlet.PagingParameters.First
         #endregion
 
-        Write-Verbose -Message (
-            "Beginning: '${function}' with ParameterSetName '$( $PSCmdlet.ParameterSetName )' and Parameters: " +
-            ( $PSBoundParameters | Remove-SensitiveData | Format-Table -AutoSize -Wrap | Out-String )
-        )
-
         Write-Verbose -Message "First index position: '${first}'."
 
         if ( $PSBoundParameters.ContainsKey( 'Credential' ) ) {
@@ -168,6 +165,11 @@ function Get-RyverTeam {
     }
 
     process {
+        Write-Verbose -Message (
+            "Processing: '${function}' with ParameterSetName '$( $PSCmdlet.ParameterSetName )' and Parameters: " +
+            ( $PSBoundParameters | Remove-SensitiveData | Format-Table -AutoSize -Wrap | Out-String )
+        )
+
         #region init
         $skip = 0
         $count = [UInt64]::MaxValue

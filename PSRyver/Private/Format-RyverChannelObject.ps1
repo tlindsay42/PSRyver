@@ -56,14 +56,15 @@ function Format-RyverChannelObject {
 
     begin {
         $function = $MyInvocation.MyCommand.Name
-
-        Write-Verbose -Message (
-            "Beginning: '${function}' with ParameterSetName '$( $PSCmdlet.ParameterSetName )' and Parameters: " +
-            ( $PSBoundParameters | Remove-SensitiveData | Format-Table -AutoSize | Out-String )
-        )
+        Write-Verbose -Message "Beginning: '${function}'."
     }
 
     process {
+        Write-Verbose -Message (
+            "Processing: '${function}' with ParameterSetName '$( $PSCmdlet.ParameterSetName )' and Parameters: " +
+            ( $PSBoundParameters | Remove-SensitiveData | Format-Table -AutoSize | Out-String )
+        )
+
         foreach ( $object in $InputObject ) {
             [PSCustomObject] @{
                 PSTypeName          = "PSRyver.$( $object.__Metadata.Type )"

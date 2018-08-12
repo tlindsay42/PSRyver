@@ -56,16 +56,22 @@ function Format-RyverUserObject {
 
     begin {
         $function = $MyInvocation.MyCommand.Name
-
-        Write-Verbose -Message (
-            "Beginning: '${function}' with ParameterSetName '$( $PSCmdlet.ParameterSetName )' and Parameters: " +
-            ( $PSBoundParameters | Remove-SensitiveData | Format-Table -AutoSize | Out-String )
-        )
+        Write-Verbose -Message "Beginning: '${function}'."
     }
 
     process {
+        Write-Verbose -Message (
+            "Processing: '${function}' with ParameterSetName '$( $PSCmdlet.ParameterSetName )' and Parameters: " +
+            ( $PSBoundParameters | Remove-SensitiveData | Format-Table -AutoSize | Out-String )
+        )
+
         foreach ( $object in $InputObject ) {
             $IsDetailedObject = $null -ne (
+                $object |
+                    Select-Object -ExpandProperty 'CreateDate' -ErrorAction 'SilentlyContinue'
+            )
+
+            $IsBasicObject = $null -ne (
                 $object |
                     Select-Object -ExpandProperty 'DisplayName' -ErrorAction 'SilentlyContinue'
             )
@@ -84,7 +90,7 @@ function Format-RyverUserObject {
                         Type = $object.__Metadata.Type
                         ETag = $object.__Metadata.ETag
                     }
-                    ID                      = $object.ID
+                    ID                      = $object.ID.ToUInt64( $null )
                     CreateDate              = $object.CreateDate
                     ModifyDate              = $object.ModifyDate
                     CreateSource            = $object.CreateSource
@@ -127,6 +133,19 @@ function Format-RyverUserObject {
                     DefaultPublicWriteAcl   = $object.DefaultPublicWriteAcl
                     Groups                  = $object.Groups
                     Tasks                   = $object.Tasks
+                }
+            }
+            elseif ( $IsBasicObject -eq $true ) {
+                [PSCustomObject] @{
+                    PSTypeName  = "PSRyver.$( $object.__Metadata.Type )"
+                    Metadata    = [PSCustomObject] @{
+                        Type = $object.__Metadata.Type
+                    }
+                    ID          = $object.ID.ToUInt64( $null )
+                    Descriptor  = $object.__Descriptor
+                    DisplayName = $object.DisplayName
+                    UserName    = $object.UserName
+                    Type        = 'User'
                 }
             }
             elseif ( $IsSimpleObject -eq $true ) {

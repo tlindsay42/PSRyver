@@ -56,14 +56,15 @@ function ConvertTo-Authorization {
 
     begin {
         $function = $MyInvocation.MyCommand.Name
-
-        Write-Verbose -Message (
-            "Beginning: '${function}' with ParameterSetName '$( $PSCmdlet.ParameterSetName )' and Parameters: " +
-            ( $PSBoundParameters | Remove-SensitiveData | Format-Table -AutoSize | Out-String )
-        )
+        Write-Verbose -Message "Beginning: '${function}'."
     }
 
     process {
+        Write-Verbose -Message (
+            "Processing: '${function}' with ParameterSetName '$( $PSCmdlet.ParameterSetName )' and Parameters: " +
+            ( $PSBoundParameters | Remove-SensitiveData | Format-Table -AutoSize | Out-String )
+        )
+
         'Basic ' + [System.Convert]::ToBase64String(
             [System.Text.Encoding]::ASCII.GetBytes(
                 "$( $Credential.UserName ):$( $Credential.GetNetworkCredential().Password )"

@@ -216,11 +216,7 @@ function Send-RyverMessage {
 
     begin {
         $function = $MyInvocation.MyCommand.Name
-
-        Write-Verbose -Message (
-            "Beginning: '${function}' with ParameterSetName '$( $PSCmdlet.ParameterSetName )' and Parameters: " +
-            ( $PSBoundParameters | Remove-SensitiveData | Format-Table -AutoSize | Out-String )
-        )
+        Write-Verbose -Message "Beginning: '${function}'."
 
         if ( $PSBoundParameters.ContainsKey( 'Credential' ) ) {
             $Script:PSRyver.Authorization = ConvertTo-Authorization -Credential $Credential
@@ -229,6 +225,11 @@ function Send-RyverMessage {
     }
 
     process {
+        Write-Verbose -Message (
+            "Processing: '${function}' with ParameterSetName '$( $PSCmdlet.ParameterSetName )' and Parameters: " +
+            ( $PSBoundParameters | Remove-SensitiveData | Format-Table -AutoSize | Out-String )
+        )
+
         #region Build Body
         $body = @{
             # Key names are case sensitive

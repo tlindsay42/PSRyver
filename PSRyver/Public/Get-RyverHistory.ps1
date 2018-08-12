@@ -100,17 +100,14 @@ function Get-RyverHistory {
     )
 
     begin {
-        #region init
         $function = $MyInvocation.MyCommand.Name
+        Write-Verbose -Message "Beginning: '${function}'."
+
+        #region init
         $return = @()
         $first = $PSCmdlet.PagingParameters.Skip
         $last = $first + $PSCmdlet.PagingParameters.First
         #endregion
-
-        Write-Verbose -Message (
-            "Beginning: '${function}' with ParameterSetName '$( $PSCmdlet.ParameterSetName )' and Parameters: " +
-            ( $PSBoundParameters | Remove-SensitiveData | Format-Table -AutoSize -Wrap | Out-String )
-        )
 
         Write-Verbose -Message "First index position: '${first}'."
 
@@ -128,6 +125,11 @@ function Get-RyverHistory {
     }
 
     process {
+        Write-Verbose -Message (
+            "Processing: '${function}' with ParameterSetName '$( $PSCmdlet.ParameterSetName )' and Parameters: " +
+            ( $PSBoundParameters | Remove-SensitiveData | Format-Table -AutoSize -Wrap | Out-String )
+        )
+
         #region init
         $path = '/'
         $skip = 0

@@ -91,18 +91,19 @@ function Remove-SensitiveData {
 
     begin {
         $function = $MyInvocation.MyCommand.Name
+        Write-Verbose -Message "Beginning: '${function}'."
 
         if ( $PSBoundParameters.ContainsKey( 'ForceVerbose' ) -eq $false -and $Script:PSRyver.ForceVerbose -in $true, $false ) {
             $ForceVerbose = $Script:PSRyver.ForceVerbose
         }
-
-        Write-Verbose -Message (
-            "Beginning: '${function}' with ParameterSetName '$( $PSCmdlet.ParameterSetName )' and Parameters: " +
-            ( $PSBoundParameters | Format-Table -AutoSize | Out-String )
-        )
     }
 
     process {
+        Write-Verbose -Message (
+            "Processing: '${function}' with ParameterSetName '$( $PSCmdlet.ParameterSetName )' and Parameters: " +
+            ( $PSBoundParameters | Format-Table -AutoSize | Out-String )
+        )
+
         if ( $ForceVerbose -eq $true ) {
             $InputObject
         }

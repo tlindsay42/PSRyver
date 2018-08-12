@@ -83,17 +83,18 @@ function Export-PSRyverConfig {
 
     begin {
         $function = $MyInvocation.MyCommand.Name
-
-        Write-Verbose -Message (
-            "Beginning: '${function}' with ParameterSetName '$( $PSCmdlet.ParameterSetName )' and Parameters: " +
-            ( $PSBoundParameters | Remove-SensitiveData | Format-Table -AutoSize | Out-String )
-        )
+        Write-Verbose -Message "Beginning: '${function}'."
 
         $isWindows = Test-IsWindows
         $messageTemplate = "Skipping writing the value of '{0}' to the config file because the Data Protection API (DPAPI) is not available for encrypting it on '$( $PSVersionTable.OS )'."
     }
 
     process {
+        Write-Verbose -Message (
+            "Processing: '${function}' with ParameterSetName '$( $PSCmdlet.ParameterSetName )' and Parameters: " +
+            ( $PSBoundParameters | Remove-SensitiveData | Format-Table -AutoSize | Out-String )
+        )
+
         $proceed = $true
         if ( ( Test-Path -Path $Path ) -eq $true ) {
             $proceed = $PSCmdlet.ShouldProcess( $Path, 'Overwrite the existing PSRyver config file' )

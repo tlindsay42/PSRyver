@@ -128,8 +128,10 @@ function Get-RyverUser {
     )
 
     begin {
-        #region init
         $function = $MyInvocation.MyCommand.Name
+        Write-Verbose -Message "Beginning: '${function}'."
+
+        #region init
         $return = @()
         $detailedProperties = @(
             'board/id',
@@ -150,11 +152,6 @@ function Get-RyverUser {
         $last = $first + $PSCmdlet.PagingParameters.First
         #endregion
 
-        Write-Verbose -Message (
-            "Beginning: '${function}' with ParameterSetName '$( $PSCmdlet.ParameterSetName )' and Parameters: " +
-            ( $PSBoundParameters | Remove-SensitiveData | Format-Table -AutoSize -Wrap | Out-String )
-        )
-
         Write-Verbose -Message "First index position: '${first}'."
 
         if ( $PSBoundParameters.ContainsKey( 'Credential' ) ) {
@@ -171,6 +168,11 @@ function Get-RyverUser {
     }
 
     process {
+        Write-Verbose -Message (
+            "Processing: '${function}' with ParameterSetName '$( $PSCmdlet.ParameterSetName )' and Parameters: " +
+            ( $PSBoundParameters | Remove-SensitiveData | Format-Table -AutoSize -Wrap | Out-String )
+        )
+
         #region init
         $skip = 0
         $count = [UInt64]::MaxValue
@@ -198,12 +200,15 @@ function Get-RyverUser {
             )
         }
 
-        $path += (
-            "&`$top=$( $Script:PSRyver.MaxPageSize )" +
-            "&`$skip=${skip}" +
-            '&$orderby=displayName+asc' +
-            '&$inlinecount=allpages'
-        )
+        if ( -not $ID ) {
+            $path += (
+                "&`$top=$( $Script:PSRyver.MaxPageSize )" +
+                "&`$skip=${skip}" +
+                '&$orderby=displayName+asc'
+            )
+        }
+
+        $path += '&$inlinecount=allpages'
         #endregion
 
         $splat = @{

@@ -41,14 +41,15 @@ function Assert-RyverApiConfig {
 
     begin {
         $function = $MyInvocation.MyCommand.Name
-
-        Write-Verbose -Message (
-            "Beginning: '${function}' with ParameterSetName '$( $PSCmdlet.ParameterSetName )' and Parameters: " +
-            ( $PSBoundParameters | Remove-SensitiveData | Format-Table -AutoSize | Out-String )
-        )
+        Write-Verbose -Message "Beginning: '${function}'."
     }
 
     process {
+        Write-Verbose -Message (
+            "Processing: '${function}' with ParameterSetName '$( $PSCmdlet.ParameterSetName )' and Parameters: " +
+            ( $PSBoundParameters | Remove-SensitiveData | Format-Table -AutoSize | Out-String )
+        )
+
         if ( $Script:PSRyver.RestApiBaseUri -notmatch '^https://\w+.ryver.com(?::443)?/api/1/odata.svc$' ) {
             throw "Invalid PSRyver RestApiBaseUri config value: '$( $Script:PSRyver.RestApiBaseUri )'.  Please run 'Set-PSRyverConfig -RestApiBaseUri `$uri'."
         }

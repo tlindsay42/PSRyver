@@ -114,11 +114,7 @@ function Invoke-RyverRestMethod {
 
     begin {
         $function = $MyInvocation.MyCommand.Name
-
-        Write-Verbose -Message (
-            "Beginning: '${function}' with ParameterSetName '$( $PSCmdlet.ParameterSetName )' and Parameters: " +
-            ( $PSBoundParameters | Remove-SensitiveData | Format-Table -AutoSize -Wrap | Out-String )
-        )
+        Write-Verbose -Message "Beginning: '${function}'."
 
         if ( $PSBoundParameters.ContainsKey( 'Credential' ) ) {
             $Script:PSRyver.Authorization = ConvertTo-Authorization -Credential $Credential
@@ -131,6 +127,11 @@ function Invoke-RyverRestMethod {
     }
 
     process {
+        Write-Verbose -Message (
+            "Processing: '${function}' with ParameterSetName '$( $PSCmdlet.ParameterSetName )' and Parameters: " +
+            ( $PSBoundParameters | Remove-SensitiveData | Format-Table -AutoSize -Wrap | Out-String )
+        )
+
         $splat = @{
             Method  = $Method
             Uri     = "$( $Script:PSRyver.RestApiBaseUri )${Path}"

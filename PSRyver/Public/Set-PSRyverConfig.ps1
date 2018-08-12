@@ -149,16 +149,18 @@ function Set-PSRyverConfig {
 
     begin {
         $function = $MyInvocation.MyCommand.Name
+        Write-Verbose -Message "Beginning: '${function}'."
+
         $proceed = $true
         $prompt = 'Overwrite the existing PSRyver config'
-
-        Write-Verbose -Message (
-            "Beginning: '${function}' with ParameterSetName '$( $PSCmdlet.ParameterSetName )' and Parameters: " +
-            ( $PSBoundParameters | Remove-SensitiveData -ForceVerbose:$ForceVerbose | Format-Table -Autosize | Out-String )
-        )
     }
 
     process {
+        Write-Verbose -Message (
+            "Processing: '${function}' with ParameterSetName '$( $PSCmdlet.ParameterSetName )' and Parameters: " +
+            ( $PSBoundParameters | Remove-SensitiveData -ForceVerbose:$ForceVerbose | Format-Table -Autosize | Out-String )
+        )
+
         if ( -not $Script:PSRyver ) {
             $splat = @{
                 Message     = (

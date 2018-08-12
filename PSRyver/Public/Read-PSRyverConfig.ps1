@@ -69,11 +69,7 @@ function Read-PSRyverConfig {
 
     begin {
         $function = $MyInvocation.MyCommand.Name
-
-        Write-Verbose -Message (
-            "Beginning: '${function}' with ParameterSetName '$( $PSCmdlet.ParameterSetName )' and Parameters: " +
-            ( $PSBoundParameters | Remove-SensitiveData | Format-Table -AutoSize | Out-String )
-        )
+        Write-Verbose -Message "Beginning: '${function}'."
 
         $isWindows = Test-IsWindows
         $messageTemplate = "Skipping reading the value of '{0}' to the config file because the Data Protection API (DPAPI) is not available for decrypting it on '$( $PSVersionTable.OS )'."
@@ -93,6 +89,11 @@ function Read-PSRyverConfig {
     }
 
     process {
+        Write-Verbose -Message (
+            "Processing: '${function}' with ParameterSetName '$( $PSCmdlet.ParameterSetName )' and Parameters: " +
+            ( $PSBoundParameters | Remove-SensitiveData | Format-Table -AutoSize | Out-String )
+        )
+
         Import-Clixml -Path $Path -ErrorAction 'Stop' |
             Select-Object -Property @(
             @{
