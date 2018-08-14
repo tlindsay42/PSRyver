@@ -80,5 +80,6 @@ Thumbs.db
 
 # Custom             #
 ######################
+.candidate/
 .vscode/
 site/
