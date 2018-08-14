@@ -84,17 +84,63 @@ function Format-RyverTaskObject {
                             Avatar      = $_.Avatar
                         }
                     }
-                RecordType   = $object.RecordType
                 Subject      = $object.Subject
-                Post         = $object.Post |
+                Body         = $object.Body
+                Position     = $object.Position.ToUInt16( $null )
+                Tags         = $object.Tags |
+                    Where-Object -FilterScript { $null -ne $_ }
+                Short        = $object.Short
+                DueDate      = $object.DueDate
+                CompleteDate = $object.CompleteDate
+                Archived     = [Boolean] $object.Archived
+                Category     = $object.Category |
                     Where-Object -FilterScript { $null -ne $_ } |
                     ForEach-Object -Process {
                         [PSCustomObject] @{
-                            PSTypeName = "PSRyver.$( $_.__Metadata.Type )"
-                            Metadata   = [PSCustomObject] @{
+                            PSTypeName   = "PSRyver.$( $_.__Metadata.Type )"
+                            Metadata     = [PSCustomObject] @{
                                 Type = $_.__Metadata.Type
                             }
-                            ID         = $_.ID.ToUInt64( $null )
+                            ID         = [UInt64] $_.ID
+                            Descriptor = $_.__Descriptor
+                            Name       = $_.Name
+                            Position   = $_.Position
+                            Tasks          = $_.Tasks |
+                                Where-Object -FilterScript { $null -ne $_ } |
+                                ForEach-Object -Process {
+                                    [PSCustomObject] @{
+                                        Results = [PSCustomObject] @{
+                                            Deferred = $_.Results.__Deferred
+                                        }
+                                    }
+                                }
+                        }
+                    }
+                Parent       = $object.Parent |
+                    Where-Object -FilterScript { $null -ne $_ } |
+                    ForEach-Object -Process {
+                        [PSCustomObject] @{
+                            PSTypeName   = "PSRyver.$( $_.__Metadata.Type )"
+                            Metadata     = [PSCustomObject] @{
+                                Type = $_.__Metadata.Type
+                            }
+                            ID         = [UInt64] $_.ID
+                            Descriptor = $_.__Descriptor
+                        }
+                    }
+                Assignees    = $object.Assignees |
+                    Select-Object -ExpandProperty 'Results' -ErrorAction 'SilentlyContinue' |
+                    Where-Object -FilterScript { $null -ne $_ } |
+                    Format-RyverUserObject
+                Board        = $object.Board |
+                    Where-Object -FilterScript { $null -ne $_ } |
+                    ForEach-Object -Process {
+                        [PSCustomObject] @{
+                            PSTypeName   = "PSRyver.$( $_.__Metadata.Type )"
+                            Metadata     = [PSCustomObject] @{
+                                Type = $_.__Metadata.Type
+                            }
+                            ID         = [UInt64] $_.ID
                             Descriptor = $_.__Descriptor
                         }
                     }
