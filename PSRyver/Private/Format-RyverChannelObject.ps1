@@ -114,115 +114,178 @@ function Format-RyverChannelObject {
                     Format-RyverUserObject
                 ModifyUser          = $object.ModifyUser |
                     Format-RyverUserObject
-                SecurityGroup       = [PSCustomObject] @{
-                    PSTypeName   = "PSRyver.$( $object.SecurityGroup.__Metadata.Type )"
-                    Metadata     = [PSCustomObject] @{
-                        Uri  = $object.SecurityGroup.__Metadata.Uri
-                        Type = $object.SecurityGroup.__Metadata.Type
-                        ETag = $object.SecurityGroup.__Metadata.ETag
+                SecurityGroup       = $object.SecurityGroup |
+                    Where-Object -FilterScript { $null -ne $_ } |
+                    ForEach-Object -Process {
+                        if ( $null -ne ( $_ | Select-Object -ExpandProperty '__Deferred' -ErrorAction 'SilentlyContinue' ) ) {
+                            [PSCustomObject] @{
+                                Deferred = [PSCustomObject] @{
+                                    Uri  = $_.__Deferred.Uri
+                                }
+                            }
+                        }
+                        else {
+                            [PSCustomObject] @{
+                                PSTypeName   = "PSRyver.$( $_.__Metadata.Type )"
+                                Metadata     = [PSCustomObject] @{
+                                    Uri  = $_.__Metadata.Uri
+                                    Type = $_.__Metadata.Type
+                                    ETag = $_.__Metadata.ETag
+                                }
+                                ID           = $_.ID.ToUInt64( $null )
+                                CreateDate   = $_.CreateDate
+                                ModifyDate   = $_.ModifyDate
+                                CreateSource = $_.CreateSource
+                                ModifySource = $_.ModifySource
+                                Code         = $_.Code
+                                Name         = $_.Name
+                                Description  = $_.Description
+                                Type         = $_.Type
+                                SubType      = $_.SubType
+                                Descriptor   = $_.__Descriptor
+                                CreateUser   = $_.CreateUser.__Deferred.Uri
+                                ModifyUser   = $_.ModifyUser.__Deferred.Uri
+                                Users        = $_.Users.__Deferred.Uri
+                            }
+                        }
                     }
-                    ID           = $object.SecurityGroup.ID
-                    CreateDate   = $object.SecurityGroup.CreateDate
-                    ModifyDate   = $object.SecurityGroup.ModifyDate
-                    CreateSource = $object.SecurityGroup.CreateSource
-                    ModifySource = $object.SecurityGroup.ModifySource
-                    Code         = $object.SecurityGroup.Code
-                    Name         = $object.SecurityGroup.Name
-                    Description  = $object.SecurityGroup.Description
-                    Type         = $object.SecurityGroup.Type
-                    SubType      = $object.SecurityGroup.SubType
-                    Descriptor   = $object.SecurityGroup.__Descriptor
-                    CreateUser   = $object.SecurityGroup.CreateUser.__Deferred.Uri
-                    ModifyUser   = $object.SecurityGroup.ModifyUser.__Deferred.Uri
-                    Users        = $object.SecurityGroup.Users.__Deferred.Uri
-                }
-                AdministratorsGroup = [PSCustomObject] @{
-                    PSTypeName   = "PSRyver.$( $object.AdministratorsGroup.__Metadata.Type )"
-                    Metadata     = [PSCustomObject] @{
-                        Uri  = $object.AdministratorsGroup.__Metadata.Uri
-                        Type = $object.AdministratorsGroup.__Metadata.Type
-                        ETag = $object.AdministratorsGroup.__Metadata.ETag
+                AdministratorsGroup = $object.AdministratorsGroup |
+                    Where-Object -FilterScript { $null -ne $_ } |
+                    ForEach-Object -Process {
+                        if ( $null -ne ( $_ | Select-Object -ExpandProperty '__Deferred' -ErrorAction 'SilentlyContinue' ) ) {
+                            [PSCustomObject] @{
+                                Deferred = [PSCustomObject] @{
+                                    Uri  = $_.__Deferred.Uri
+                                }
+                            }
+                        }
+                        else {
+                            [PSCustomObject] @{
+                                PSTypeName   = "PSRyver.$( $_.__Metadata.Type )"
+                                Metadata     = [PSCustomObject] @{
+                                    Uri  = $_.__Metadata.Uri
+                                    Type = $_.__Metadata.Type
+                                    ETag = $_.__Metadata.ETag
+                                }
+                                ID           = $_.ID.ToUInt64( $null )
+                                CreateDate   = $_.CreateDate
+                                ModifyDate   = $_.ModifyDate
+                                CreateSource = $_.CreateSource
+                                ModifySource = $_.ModifySource
+                                Code         = $_.Code
+                                Name         = $_.Name
+                                Description  = $_.Description
+                                Type         = $_.Type
+                                SubType      = $_.SubType
+                                Descriptor   = $_.__Descriptor
+                                CreateUser   = $_.CreateUser.__Deferred.Uri
+                                ModifyUser   = $_.ModifyUser.__Deferred.Uri
+                                Users        = $_.Users.__Deferred.Uri
+                            }
+                        }
                     }
-                    ID           = $object.AdministratorsGroup.ID
-                    CreateDate   = $object.AdministratorsGroup.CreateDate
-                    ModifyDate   = $object.AdministratorsGroup.ModifyDate
-                    CreateSource = $object.AdministratorsGroup.CreateSource
-                    ModifySource = $object.AdministratorsGroup.ModifySource
-                    Code         = $object.AdministratorsGroup.Code
-                    Name         = $object.AdministratorsGroup.Name
-                    Description  = $object.AdministratorsGroup.Description
-                    Type         = $object.AdministratorsGroup.Type
-                    SubType      = $object.AdministratorsGroup.SubType
-                    Descriptor   = $object.AdministratorsGroup.__Descriptor
-                    CreateUser   = $object.AdministratorsGroup.CreateUser.__Deferred.Uri
-                    ModifyUser   = $object.AdministratorsGroup.ModifyUser.__Deferred.Uri
-                    Users        = $object.AdministratorsGroup.Users.__Deferred.Uri
-                }
-                ModeratorsGroup     = [PSCustomObject] @{
-                    PSTypeName   = "PSRyver.$( $object.ModeratorsGroup.__Metadata.Type )"
-                    Metadata     = [PSCustomObject] @{
-                        Uri  = $object.ModeratorsGroup.__Metadata.Uri
-                        Type = $object.ModeratorsGroup.__Metadata.Type
-                        ETag = $object.ModeratorsGroup.__Metadata.ETag
+                ModeratorsGroup     = $object.ModeratorsGroup |
+                    Where-Object -FilterScript { $null -ne $_ } |
+                    ForEach-Object -Process {
+                        if ( $null -ne ( $_ | Select-Object -ExpandProperty '__Deferred' -ErrorAction 'SilentlyContinue' ) ) {
+                            [PSCustomObject] @{
+                                Deferred = [PSCustomObject] @{
+                                    Uri = $_.__Deferred.Uri
+                                }
+                            }
+                        }
+                        else {
+                            [PSCustomObject] @{
+                                PSTypeName   = "PSRyver.$( $_.__Metadata.Type )"
+                                Metadata     = [PSCustomObject] @{
+                                    Uri  = $_.__Metadata.Uri
+                                    Type = $_.__Metadata.Type
+                                    ETag = $_.__Metadata.ETag
+                                }
+                                ID           = $_.ID.ToUInt64( $null )
+                                CreateDate   = $_.CreateDate
+                                ModifyDate   = $_.ModifyDate
+                                CreateSource = $_.CreateSource
+                                ModifySource = $_.ModifySource
+                                Code         = $_.Code
+                                Name         = $_.Name
+                                Description  = $_.Description
+                                Type         = $_.Type
+                                SubType      = $_.SubType
+                                Descriptor   = $_.__Descriptor
+                                CreateUser   = $_.CreateUser.__Deferred.Uri
+                                ModifyUser   = $_.ModifyUser.__Deferred.Uri
+                                Users        = $_.Users.__Deferred.Uri
+                            }
+                        }
                     }
-                    ID           = $object.ModeratorsGroup.ID
-                    CreateDate   = $object.ModeratorsGroup.CreateDate
-                    ModifyDate   = $object.ModeratorsGroup.ModifyDate
-                    CreateSource = $object.ModeratorsGroup.CreateSource
-                    ModifySource = $object.ModeratorsGroup.ModifySource
-                    Code         = $object.ModeratorsGroup.Code
-                    Name         = $object.ModeratorsGroup.Name
-                    Description  = $object.ModeratorsGroup.Description
-                    Type         = $object.ModeratorsGroup.Type
-                    SubType      = $object.ModeratorsGroup.SubType
-                    Descriptor   = $object.ModeratorsGroup.__Descriptor
-                    CreateUser   = $object.ModeratorsGroup.CreateUser.__Deferred.Uri
-                    ModifyUser   = $object.ModeratorsGroup.ModifyUser.__Deferred.Uri
-                    Users        = $object.ModeratorsGroup.Users.__Deferred.Uri
-                }
-                Board               = @{
+                Board               = [PSCustomObject] @{
                     Uri = $object.Board.__Deferred.Uri
                 }
                 Members             = $object.Members.Results |
                     Where-Object -FilterScript { $null -ne $_ } |
                     ForEach-Object -Process {
-                        [PSCustomObject] @{
-                            PSTypeName   = "PSRyver.$( $_.__Metadata.Type )"
-                            Metadata     = [PSCustomObject] @{
-                                Uri  = $_.__Metadata.Uri
-                                Type = $_.__Metadata.Type
-                                ETag = $_.__Metadata.ETag
+                        if ( $null -ne ( $_ | Select-Object -ExpandProperty '__Deferred' -ErrorAction 'SilentlyContinue' ) ) {
+                            [PSCustomObject] @{
+                                Deferred = [PSCustomObject] @{
+                                    Uri  = $_.__Deferred.Uri
+                                }
                             }
-                            ID           = $_.ID.ToUInt64( $null )
-                            CreateDate   = $_.CreateDate
-                            ModifyDate   = $_.ModifyDate
-                            CreateSource = $_.CreateSource
-                            ModifySource = $_.ModifySource
-                            Descriptor   = $_.__Descriptor
-                            Role         = $_.Role
-                            Extras       = [PSCustomObject] @{
-                                DisplayName = $_.Extras.DisplayName
+                        }
+                        else {
+                            [PSCustomObject] @{
+                                PSTypeName   = "PSRyver.$( $_.__Metadata.Type )"
+                                Metadata     = [PSCustomObject] @{
+                                    Uri  = $_.__Metadata.Uri
+                                    Type = $_.__Metadata.Type
+                                    ETag = $_.__Metadata.ETag
+                                }
+                                ID           = $_.ID.ToUInt64( $null )
+                                CreateDate   = $_.CreateDate
+                                ModifyDate   = $_.ModifyDate
+                                CreateSource = $_.CreateSource
+                                ModifySource = $_.ModifySource
+                                Descriptor   = $_.__Descriptor
+                                Role         = $_.Role
+                                Extras       = [PSCustomObject] @{
+                                    DisplayName = $_.Extras.DisplayName
+                                }
+                                Roles        = @(
+                                    $_.Roles
+                                )
+                                CreateUser   = $_.CreateUser.__Deferred.Uri
+                                ModifyUser   = $_.ModifyUser.__Deferred.Uri
+                                WorkRoom     = $_.WorkRoom.__Deferred.Uri
+                                Member       = $_.Member.__Deferred.Uri
                             }
-                            Roles        = @(
-                                $_.Roles
-                            )
-                            CreateUser   = $_.CreateUser.__Deferred.Uri
-                            ModifyUser   = $_.ModifyUser.__Deferred.Uri
-                            WorkRoom     = $_.WorkRoom.__Deferred.Uri
-                            Member       = $_.Member.__Deferred.Uri
                         }
                     }
-                Acl                 = [PSCustomObject] @{
-                    PSTypeName = "PSRyver.$( $object.Acl.__Metadata.Type )"
-                    Metadata   = [PSCustomObject] @{
-                        Uri  = $object.Acl.__Metadata.Uri
-                        Type = $object.Acl.__Metadata.Type
+                Acl                 = $object.Acl |
+                    Where-Object -FilterScript { $null -ne $_ } |
+                    ForEach-Object -Process {
+                        if ( $null -ne ( $_ | Select-Object -ExpandProperty '__Deferred' -ErrorAction 'SilentlyContinue' ) ) {
+                            [PSCustomObject] @{
+                                Deferred = [PSCustomObject] @{
+                                    Uri = $_.__Deferred.Uri
+                                }
+                            }
+                        }
+                        else {
+                            [PSCustomObject] @{
+                                PSTypeName = "PSRyver.$( $_.__Metadata.Type )"
+                                Metadata   = [PSCustomObject] @{
+                                    Uri  = $_.__Metadata.Uri
+                                    Type = $_.__Metadata.Type
+                                }
+                                ID         = $object.Acl.ID.ToUInt64( $null )
+                            }
+                        }
                     }
-                    ID         = $object.Acl.ID.ToUInt64( $null )
-                }
-                ExternalLinks       = @(
-                    $object.ExternalLinks.Results
-                )
+                ExternalLinks       = $object.ExternalLinks.Results |
+                    Where-Object -FilterScript { $null -ne $_ } |
+                    ForEach-Object -Process {
+                        $_
+                    }
                 Type                = switch ( $object.__Metadata.Type ) {
                     'Entity.Forum' {
                         'Forum'
