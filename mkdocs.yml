@@ -89,6 +89,7 @@ pages:
 - Cmdlet Documentation:
   - Export-PSRyverConfig: 'Public/Export-PSRyverConfig.md'
   - Find-RyverMessage: 'Public/Find-RyverMessage.md'
+  - Find-RyverTask: 'Public/Find-RyverTask.md'
   - Find-RyverTopic: 'Public/Find-RyverTopic.md'
   - Get-PSRyverConfig: 'Public/Get-PSRyverConfig.md'
   - Get-PSRyverConfigPath: 'Public/Get-PSRyverConfigPath.md'
@@ -113,6 +114,7 @@ pages:
   - ConvertTo-UnixTime: 'Private/ConvertTo-UnixTime.md'
   - Format-RyverChannelObject: 'Private/Format-RyverChannelObject.md'
   - Format-RyverMessageObject: 'Private/Format-RyverMessageObject.md'
+  - Format-RyverTaskObject: 'Private/Format-RyverTaskObject.md'
   - Format-RyverTopicObject: 'Private/Format-RyverTopicObject.md'
   - Format-RyverUserObject: 'Private/Format-RyverUserObject.md'
   - Remove-SensitiveData: 'Private/Remove-SensitiveData.md'
