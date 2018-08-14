@@ -68,7 +68,7 @@ function Format-RyverMessageObject {
         foreach ( $object in $InputObject ) {
             [PSCustomObject] @{
                 PSTypeName   = 'PSRyver.Entity.Message'
-                ID           = $object.ID
+                ID           = $object.ID.ToUInt64( $null )
                 MessageType  = $object.MessageType
                 CreateDate   = $object.When
                 ModifyDate   = $object.ModifyDate
@@ -86,7 +86,7 @@ function Format-RyverMessageObject {
                     Metadata   = [PSCustomObject] @{
                         Type = $object.To.__Metadata.Type
                     }
-                    ID         = $object.To.ID
+                    ID         = $object.To.ID.ToUInt64( $null )
                     Descriptor = $object.To.__Descriptor
                     JID        = $object.To.JID
                 }
@@ -95,7 +95,7 @@ function Format-RyverMessageObject {
                     Metadata   = [PSCustomObject] @{
                         Type = $object.From.__Metadata.Type
                     }
-                    ID         = $object.From.ID
+                    ID         = $object.From.ID.ToUInt64( $null )
                     Descriptor = $object.From.__Descriptor
                     JID        = $object.From.JID
                 }

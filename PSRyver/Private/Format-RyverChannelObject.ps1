@@ -73,7 +73,7 @@ function Format-RyverChannelObject {
                     Type = $object.__Metadata.Type
                     ETag = $object.__Metadata.ETag
                 }
-                ID                  = $object.ID
+                ID                  = $object.ID.ToUInt64( $null )
                 CreateDate          = $object.CreateDate
                 ModifyDate          = $object.ModifyDate
                 CreateSource        = $object.CreateSource
@@ -193,7 +193,7 @@ function Format-RyverChannelObject {
                                 Type = $_.__Metadata.Type
                                 ETag = $_.__Metadata.ETag
                             }
-                            ID           = $_.ID
+                            ID           = $_.ID.ToUInt64( $null )
                             CreateDate   = $_.CreateDate
                             ModifyDate   = $_.ModifyDate
                             CreateSource = $_.CreateSource
@@ -218,7 +218,7 @@ function Format-RyverChannelObject {
                         Uri  = $object.Acl.__Metadata.Uri
                         Type = $object.Acl.__Metadata.Type
                     }
-                    ID         = $object.Acl.ID
+                    ID         = $object.Acl.ID.ToUInt64( $null )
                 }
                 ExternalLinks       = @(
                     $object.ExternalLinks.Results

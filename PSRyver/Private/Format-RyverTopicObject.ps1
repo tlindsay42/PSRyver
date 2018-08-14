@@ -71,7 +71,7 @@ function Format-RyverTopicObject {
                 Metadata     = [PSCustomObject] @{
                     Type = $object.__Metadata.Type
                 }
-                ID           = $object.ID
+                ID           = $object.ID.ToUInt64( $null )
                 Descriptor   = $object.__Descriptor
                 CreateUser   = $object.CreateUser |
                     Format-RyverUserObject
