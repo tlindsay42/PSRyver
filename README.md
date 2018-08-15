@@ -1,5 +1,8 @@
 # PSRyver
 
+[![Current Version](https://img.shields.io/powershellgallery/v/PSRyver.svg)](https://www.powershellgallery.com/packages/PSRyver)
+[![Total Downloads](https://img.shields.io/powershellgallery/dt/PSRyver.svg)](https://www.powershellgallery.com/packages/PSRyver)
+
 [![Build status](https://ci.appveyor.com/api/projects/status/qwuvmd3cc4iodlc0?svg=true)](https://ci.appveyor.com/project/tlindsay42/psryver)
 
 This is a quick and dirty community module to interact with the Ryver API.
