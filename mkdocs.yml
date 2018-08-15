@@ -88,6 +88,7 @@ pages:
 - Home: 'index.md'
 - Cmdlet Documentation:
   - Export-PSRyverConfig: 'Public/Export-PSRyverConfig.md'
+  - Find-RyverAttachment: 'Public/Find-RyverAttachment.md'
   - Find-RyverMessage: 'Public/Find-RyverMessage.md'
   - Find-RyverTask: 'Public/Find-RyverTask.md'
   - Find-RyverTopic: 'Public/Find-RyverTopic.md'
@@ -112,6 +113,7 @@ pages:
   - ConvertFrom-UnixTime: 'Private/ConvertFrom-UnixTime.md'
   - ConvertTo-Authorization: 'Private/ConvertTo-Authorization.md'
   - ConvertTo-UnixTime: 'Private/ConvertTo-UnixTime.md'
+  - Format-RyverAttachmentObject: 'Private/Format-RyverAttachmentObject.md'
   - Format-RyverChannelObject: 'Private/Format-RyverChannelObject.md'
   - Format-RyverMessageObject: 'Private/Format-RyverMessageObject.md'
   - Format-RyverTaskObject: 'Private/Format-RyverTaskObject.md'
