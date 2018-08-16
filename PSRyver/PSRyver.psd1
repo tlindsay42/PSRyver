@@ -12,7 +12,7 @@
 RootModule = 'PSRyver.psm1'
 
 # Version number of this module.
-ModuleVersion = '0.0.7'
+ModuleVersion = '0.0.8'
 
 # Supported PSEditions
 # CompatiblePSEditions = @()
@@ -70,13 +70,13 @@ PowerShellVersion = '3.0'
 
 # Functions to export from this module, for best performance, do not use wildcards and do not delete the entry, use an empty array if there are no functions to export.
 FunctionsToExport = 'Export-PSRyverConfig', 'Find-RyverAttachment', 'Find-RyverMessage',
-               'Find-RyverTask', 'Find-RyverTopic', 'Find-RyverTopicComment',
-               'Get-PSRyverConfig', 'Get-PSRyverConfigPath', 'Get-RyverForum',
-               'Get-RyverHistory', 'Get-RyverTeam', 'Get-RyverUser', 'Get-RyverUserMap',
-               'Import-PSRyverConfig', 'Initialize-PSRyverConfig',
-               'Invoke-RyverRestMethod', 'Read-PSRyverConfig',
-               'Remove-PSRyverConfig', 'Remove-RyverMessage', 'Send-RyverMessage',
-               'Set-PSRyverConfig', 'Set-PSRyverConfigPath'
+               'Find-RyverTask', 'Find-RyverTaskComment', 'Find-RyverTopic',
+               'Find-RyverTopicComment', 'Get-PSRyverConfig', 'Get-PSRyverConfigPath',
+               'Get-RyverForum', 'Get-RyverHistory', 'Get-RyverTeam', 'Get-RyverUser',
+               'Get-RyverUserMap', 'Import-PSRyverConfig', 'Initialize-PSRyverConfig',
+               'Invoke-RyverRestMethod', 'Read-PSRyverConfig', 'Remove-PSRyverConfig',
+               'Remove-RyverMessage', 'Send-RyverMessage', 'Set-PSRyverConfig',
+               'Set-PSRyverConfigPath'
 
 # Cmdlets to export from this module, for best performance, do not use wildcards and do not delete the entry, use an empty array if there are no cmdlets to export.
 CmdletsToExport = @()
@@ -102,6 +102,7 @@ FileList = 'PSRyver.psd1', 'PSRyver.psm1', 'Private\Assert-RyverApiConfig.ps1',
                'Private\Format-RyverAttachmentObject.ps1',
                'Private\Format-RyverChannelObject.ps1',
                'Private\Format-RyverMessageObject.ps1',
+               'Private\Format-RyverTaskCommentObject.ps1',
                'Private\Format-RyverTaskObject.ps1',
                'Private\Format-RyverTopicObject.ps1',
                'Private\Format-RyverTopicCommentObject.ps1',
@@ -109,8 +110,8 @@ FileList = 'PSRyver.psd1', 'PSRyver.psm1', 'Private\Assert-RyverApiConfig.ps1',
                'Private\Remove-SensitiveData.ps1', 'Private\Test-IsWindows.ps1',
                'Public\Export-PSRyverConfig.ps1',
                'Public\Find-RyverAttachment.ps1', 'Public\Find-RyverMessage.ps1',
-               'Public\Find-RyverTask.ps1', 'Public\Find-RyverTopic.ps1',
-               'Public\Find-RyverTopicComment.ps1',
+               'Public\Find-RyverTask.ps1', 'Public\Find-RyverTaskComment.ps1',
+               'Public\Find-RyverTopic.ps1', 'Public\Find-RyverTopicComment.ps1',
                'Public\Get-PSRyverConfig.ps1', 'Public\Get-PSRyverConfigPath.ps1',
                'Public\Get-RyverForum.ps1', 'Public\Get-RyverHistory.ps1',
                'Public\Get-RyverTeam.ps1', 'Public\Get-RyverUser.ps1',
@@ -139,7 +140,7 @@ PrivateData = @{
         IconUri = 'https://tlindsay42.github.io/PSRyver/img/ryver-favicon1.png'
 
         # ReleaseNotes of this module
-        ReleaseNotes = 'Add Find-RyverTopicComment'
+        ReleaseNotes = 'Add Find-RyverTaskComment'
 
         # Prerelease string of this module
         # Prerelease = ''
