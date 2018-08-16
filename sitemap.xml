@@ -26,6 +26,11 @@
      <changefreq>daily</changefreq>
     </url>
     <url>
+     <loc>https://tlindsay42.github.io/PSRyver/Public/Find-RyverTaskComment/</loc>
+     <lastmod>2018-08-15</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
      <loc>https://tlindsay42.github.io/PSRyver/Public/Find-RyverTopic/</loc>
      <lastmod>2018-08-15</lastmod>
      <changefreq>daily</changefreq>
@@ -147,6 +152,11 @@
     </url>
     <url>
      <loc>https://tlindsay42.github.io/PSRyver/Private/Format-RyverMessageObject/</loc>
+     <lastmod>2018-08-15</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>https://tlindsay42.github.io/PSRyver/Private/Format-RyverTaskCommentObject/</loc>
      <lastmod>2018-08-15</lastmod>
      <changefreq>daily</changefreq>
     </url>

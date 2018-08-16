@@ -13,7 +13,7 @@
         <meta name="description" content="Community PowerShell module for the Ryver API.">
       
       
-        <link rel="canonical" href="https://tlindsay42.github.io/PSRyver/Public/Invoke-RyverRestMethod/">
+        <link rel="canonical" href="https://tlindsay42.github.io/PSRyver/Public/Find-RyverTaskComment/">
       
       
         <meta name="author" content="Troy Lindsay">
@@ -42,7 +42,7 @@
     
     
       
-        <title>Invoke-RyverRestMethod - PSRyver</title>
+        <title>Find-RyverTaskComment - PSRyver</title>
       
     
     
@@ -104,7 +104,7 @@
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
     <label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
     
-      <a href="../../#invoke-ryverrestmethod" tabindex="1" class="md-skip">
+      <a href="../../#find-ryvertaskcomment" tabindex="1" class="md-skip">
         Skip to content
       </a>
     
@@ -130,7 +130,7 @@
                 PSRyver
               </span>
               <span class="md-header-nav__topic">
-                Invoke-RyverRestMethod
+                Find-RyverTaskComment
               </span>
             
           
@@ -326,11 +326,234 @@
           
           
 
+  
 
-  <li class="md-nav__item">
-    <a href="../Find-RyverTaskComment/" title="Find-RyverTaskComment" class="md-nav__link">
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+      
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        Find-RyverTaskComment
+      </label>
+    
+    <a href="./" title="Find-RyverTaskComment" class="md-nav__link md-nav__link--active">
       Find-RyverTaskComment
     </a>
+    
+      
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#synopsis" title="SYNOPSIS" class="md-nav__link">
+    SYNOPSIS
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#syntax" title="SYNTAX" class="md-nav__link">
+    SYNTAX
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#description" title="DESCRIPTION" class="md-nav__link">
+    DESCRIPTION
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#examples" title="EXAMPLES" class="md-nav__link">
+    EXAMPLES
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#example-1" title="EXAMPLE 1" class="md-nav__link">
+    EXAMPLE 1
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#example-2" title="EXAMPLE 2" class="md-nav__link">
+    EXAMPLE 2
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#example-3" title="EXAMPLE 3" class="md-nav__link">
+    EXAMPLE 3
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#example-4" title="EXAMPLE 4" class="md-nav__link">
+    EXAMPLE 4
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#parameters" title="PARAMETERS" class="md-nav__link">
+    PARAMETERS
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#-credential" title="-Credential" class="md-nav__link">
+    -Credential
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#-raw" title="-Raw" class="md-nav__link">
+    -Raw
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#-searchtext" title="-SearchText" class="md-nav__link">
+    -SearchText
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#-includetotalcount" title="-IncludeTotalCount" class="md-nav__link">
+    -IncludeTotalCount
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#-skip" title="-Skip" class="md-nav__link">
+    -Skip
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#-first" title="-First" class="md-nav__link">
+    -First
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#commonparameters" title="CommonParameters" class="md-nav__link">
+    CommonParameters
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#inputs" title="INPUTS" class="md-nav__link">
+    INPUTS
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#systemstring" title="System.String" class="md-nav__link">
+    System.String
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#systemmanagementautomationpscustomobject" title="System.Management.Automation.PSCustomObject" class="md-nav__link">
+    System.Management.Automation.PSCustomObject
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#outputs" title="OUTPUTS" class="md-nav__link">
+    OUTPUTS
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#systemmanagementautomationpsobject" title="System.Management.Automation.PSObject[]" class="md-nav__link">
+    System.Management.Automation.PSObject[]
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#systemmanagementautomationpsobject_1" title="System.Management.Automation.PSObject" class="md-nav__link">
+    System.Management.Automation.PSObject
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#notes" title="NOTES" class="md-nav__link">
+    NOTES
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#related-links" title="RELATED LINKS" class="md-nav__link">
+    RELATED LINKS
+  </a>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+    
   </li>
 
         
@@ -458,199 +681,11 @@
           
           
 
-  
 
-
-  <li class="md-nav__item md-nav__item--active">
-    
-    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
-    
-      
-    
-    
-      <label class="md-nav__link md-nav__link--active" for="__toc">
-        Invoke-RyverRestMethod
-      </label>
-    
-    <a href="./" title="Invoke-RyverRestMethod" class="md-nav__link md-nav__link--active">
+  <li class="md-nav__item">
+    <a href="../Invoke-RyverRestMethod/" title="Invoke-RyverRestMethod" class="md-nav__link">
       Invoke-RyverRestMethod
     </a>
-    
-      
-<nav class="md-nav md-nav--secondary">
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">Table of contents</label>
-    <ul class="md-nav__list" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#synopsis" title="SYNOPSIS" class="md-nav__link">
-    SYNOPSIS
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#syntax" title="SYNTAX" class="md-nav__link">
-    SYNTAX
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#description" title="DESCRIPTION" class="md-nav__link">
-    DESCRIPTION
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#examples" title="EXAMPLES" class="md-nav__link">
-    EXAMPLES
-  </a>
-  
-    <nav class="md-nav">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#example-1" title="EXAMPLE 1" class="md-nav__link">
-    EXAMPLE 1
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#example-2" title="EXAMPLE 2" class="md-nav__link">
-    EXAMPLE 2
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#example-3" title="EXAMPLE 3" class="md-nav__link">
-    EXAMPLE 3
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#parameters" title="PARAMETERS" class="md-nav__link">
-    PARAMETERS
-  </a>
-  
-    <nav class="md-nav">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#-body" title="-Body" class="md-nav__link">
-    -Body
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#-credential" title="-Credential" class="md-nav__link">
-    -Credential
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#-method" title="-Method" class="md-nav__link">
-    -Method
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#-path" title="-Path" class="md-nav__link">
-    -Path
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#commonparameters" title="CommonParameters" class="md-nav__link">
-    CommonParameters
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#inputs" title="INPUTS" class="md-nav__link">
-    INPUTS
-  </a>
-  
-    <nav class="md-nav">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#systemmanagementautomationpscustomobject" title="System.Management.Automation.PSCustomObject" class="md-nav__link">
-    System.Management.Automation.PSCustomObject
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#outputs" title="OUTPUTS" class="md-nav__link">
-    OUTPUTS
-  </a>
-  
-    <nav class="md-nav">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#systemstring" title="System.String" class="md-nav__link">
-    System.String
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#notes" title="NOTES" class="md-nav__link">
-    NOTES
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#related-links" title="RELATED LINKS" class="md-nav__link">
-    RELATED LINKS
-  </a>
-  
-</li>
-      
-      
-      
-      
-      
-    </ul>
-  
-</nav>
-    
   </li>
 
         
@@ -1005,6 +1040,13 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#example-4" title="EXAMPLE 4" class="md-nav__link">
+    EXAMPLE 4
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -1019,13 +1061,6 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#-body" title="-Body" class="md-nav__link">
-    -Body
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
   <a href="#-credential" title="-Credential" class="md-nav__link">
     -Credential
   </a>
@@ -1033,15 +1068,36 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#-method" title="-Method" class="md-nav__link">
-    -Method
+  <a href="#-raw" title="-Raw" class="md-nav__link">
+    -Raw
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#-path" title="-Path" class="md-nav__link">
-    -Path
+  <a href="#-searchtext" title="-SearchText" class="md-nav__link">
+    -SearchText
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#-includetotalcount" title="-IncludeTotalCount" class="md-nav__link">
+    -IncludeTotalCount
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#-skip" title="-Skip" class="md-nav__link">
+    -Skip
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#-first" title="-First" class="md-nav__link">
+    -First
   </a>
   
 </li>
@@ -1067,6 +1123,13 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
+  <a href="#systemstring" title="System.String" class="md-nav__link">
+    System.String
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#systemmanagementautomationpscustomobject" title="System.Management.Automation.PSCustomObject" class="md-nav__link">
     System.Management.Automation.PSCustomObject
   </a>
@@ -1087,8 +1150,15 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#systemstring" title="System.String" class="md-nav__link">
-    System.String
+  <a href="#systemmanagementautomationpsobject" title="System.Management.Automation.PSObject[]" class="md-nav__link">
+    System.Management.Automation.PSObject[]
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#systemmanagementautomationpsobject_1" title="System.Management.Automation.PSObject" class="md-nav__link">
+    System.Management.Automation.PSObject
   </a>
   
 </li>
@@ -1128,53 +1198,51 @@
             <article class="md-content__inner md-typeset">
               
                 
-                  <a href="https://github.com/tlindsay42/PSRyver/blob/master/docs/Public/Invoke-RyverRestMethod.md" title="Edit this page" class="md-icon md-content__icon">&#xE3C9;</a>
+                  <a href="https://github.com/tlindsay42/PSRyver/blob/master/docs/Public/Find-RyverTaskComment.md" title="Edit this page" class="md-icon md-content__icon">&#xE3C9;</a>
                 
                 
-                <h1 id="invoke-ryverrestmethod">Invoke-RyverRestMethod<a class="headerlink" href="#invoke-ryverrestmethod" title="Permanent link">&para;</a></h1>
+                <h1 id="find-ryvertaskcomment">Find-RyverTaskComment<a class="headerlink" href="#find-ryvertaskcomment" title="Permanent link">&para;</a></h1>
 <h2 id="synopsis">SYNOPSIS<a class="headerlink" href="#synopsis" title="Permanent link">&para;</a></h2>
-<p>Send a message to the Ryver API endpoint.</p>
+<p>Find Ryver task comments.</p>
 <h2 id="syntax">SYNTAX<a class="headerlink" href="#syntax" title="Permanent link">&para;</a></h2>
-<div class="codehilite"><pre><span></span>Invoke-RyverRestMethod [-Path] &lt;String&gt; [[-Method] &lt;String&gt;] [[-Body] &lt;String&gt;] [[-Credential] &lt;PSCredential&gt;]
- [&lt;CommonParameters&gt;]
+<div class="codehilite"><pre><span></span>Find-RyverTaskComment [-SearchText] &lt;String&gt; [-Raw] [[-Credential] &lt;PSCredential&gt;] [-IncludeTotalCount]
+ [-Skip &lt;UInt64&gt;] [-First &lt;UInt64&gt;] [&lt;CommonParameters&gt;]
 </pre></div>
 
 <h2 id="description">DESCRIPTION<a class="headerlink" href="#description" title="Permanent link">&para;</a></h2>
-<p>Send a message to the Ryver API endpoint.</p>
-<p>This function is used by other PSRyver functions.
-It's a simple wrapper you could use for calls to the Ryver API</p>
+<p>Queries for the specified search text in the task comments in all public forums &amp;
+private teams that the user is a member of, as well as all direct message
+task comments that match the search text.</p>
 <h2 id="examples">EXAMPLES<a class="headerlink" href="#examples" title="Permanent link">&para;</a></h2>
 <h3 id="example-1">EXAMPLE 1<a class="headerlink" href="#example-1" title="Permanent link">&para;</a></h3>
-<div class="codehilite"><pre><span></span>Invoke-RyverRestMethod -Path &#39;/forums&#39; -Credential ( Get-Credential )
+<div class="codehilite"><pre><span></span>Find-RyverTaskComment -SearchText &#39;Hello world!&#39; -Credential ( Get-Credential )
 </pre></div>
 
-<p>Updates the $Script:PSRyver.Authorization value storing the basic
-authentication authorization header to use for all requests and then queries
-for all public forum channels.</p>
+<p>Updates the $Script:PSRyver.Authorization value storing the basic authorization
+header to use for all requests and then queries all task comments containing
+the text 'Hello world!' in all public forums &amp; private teams that the user is a
+member of, as well as all direct messages.</p>
 <h3 id="example-2">EXAMPLE 2<a class="headerlink" href="#example-2" title="Permanent link">&para;</a></h3>
-<div class="codehilite"><pre><span></span>[PSCustomObject] @{ Path = &#39;/workrooms&#39;; Method = &#39;Get&#39; } | Invoke-RyverRestMethod
+<div class="codehilite"><pre><span></span>&#39;Hello world!&#39; | Find-RyverTaskComment -Raw
 </pre></div>
 
-<p>Queries for all private team channels via the pipeline by property name.</p>
+<p>Queries all task comments containing the text 'Hello world!' via the pipeline
+in all public forums &amp; private teams that the user is a member of, as well as
+all direct messages, and returns the raw, unformatted output.</p>
 <h3 id="example-3">EXAMPLE 3<a class="headerlink" href="#example-3" title="Permanent link">&para;</a></h3>
-<div class="codehilite"><pre><span></span>Invoke-RyverRestMethod &#39;/forums&#39; &#39;Get&#39;
+<div class="codehilite"><pre><span></span>[PSCustomObject] @{ SearchText = &#39;Hello world!&#39; } | Find-RyverTaskComment
 </pre></div>
 
-<p>Queries for all public forum channels via positional parameters.</p>
+<p>Queries all task comments containing the text 'Hello world!' via the pipeline
+by parameter name in all public forums &amp; private teams that the user is a
+member of, as well as all direct messages.</p>
+<h3 id="example-4">EXAMPLE 4<a class="headerlink" href="#example-4" title="Permanent link">&para;</a></h3>
+<div class="codehilite"><pre><span></span>Find-RyverTaskComment &#39;Hello world!&#39;
+</pre></div>
+
+<p>Queries for all task comments containing the text 'Hello world!' via positional
+parameter.</p>
 <h2 id="parameters">PARAMETERS<a class="headerlink" href="#parameters" title="Permanent link">&para;</a></h2>
-<h3 id="-body">-Body<a class="headerlink" href="#-body" title="Permanent link">&para;</a></h3>
-<p>Specifies the body of the request.</p>
-<div class="codehilite"><pre><span></span><span class="l l-Scalar l-Scalar-Plain">Type</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">String</span>
-<span class="l l-Scalar l-Scalar-Plain">Parameter Sets</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">(All)</span>
-<span class="l l-Scalar l-Scalar-Plain">Aliases</span><span class="p p-Indicator">:</span>
-
-<span class="l l-Scalar l-Scalar-Plain">Required</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">False</span>
-<span class="l l-Scalar l-Scalar-Plain">Position</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">3</span>
-<span class="l l-Scalar l-Scalar-Plain">Default value</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">None</span>
-<span class="l l-Scalar l-Scalar-Plain">Accept pipeline input</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">True (ByPropertyName)</span>
-<span class="l l-Scalar l-Scalar-Plain">Accept wildcard characters</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">False</span>
-</pre></div>
-
 <h3 id="-credential">-Credential<a class="headerlink" href="#-credential" title="Permanent link">&para;</a></h3>
 <p>Credentials to use for the Ryver API.</p>
 <p>Default value is the value set by Set-PSRyverConfig.</p>
@@ -1183,29 +1251,27 @@ for all public forum channels.</p>
 <span class="l l-Scalar l-Scalar-Plain">Aliases</span><span class="p p-Indicator">:</span>
 
 <span class="l l-Scalar l-Scalar-Plain">Required</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">False</span>
-<span class="l l-Scalar l-Scalar-Plain">Position</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">4</span>
+<span class="l l-Scalar l-Scalar-Plain">Position</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">3</span>
 <span class="l l-Scalar l-Scalar-Plain">Default value</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">None</span>
 <span class="l l-Scalar l-Scalar-Plain">Accept pipeline input</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">False</span>
 <span class="l l-Scalar l-Scalar-Plain">Accept wildcard characters</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">False</span>
 </pre></div>
 
-<h3 id="-method">-Method<a class="headerlink" href="#-method" title="Permanent link">&para;</a></h3>
-<p>Specifies the method used for the web request.</p>
-<p>The acceptable values for this parameter were gathered from the response
-header: 'Access-Control-Allow-Methods'.</p>
-<div class="codehilite"><pre><span></span><span class="l l-Scalar l-Scalar-Plain">Type</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">String</span>
+<h3 id="-raw">-Raw<a class="headerlink" href="#-raw" title="Permanent link">&para;</a></h3>
+<p>Specifies that objects should not be formatted.</p>
+<div class="codehilite"><pre><span></span><span class="l l-Scalar l-Scalar-Plain">Type</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">SwitchParameter</span>
 <span class="l l-Scalar l-Scalar-Plain">Parameter Sets</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">(All)</span>
 <span class="l l-Scalar l-Scalar-Plain">Aliases</span><span class="p p-Indicator">:</span>
 
 <span class="l l-Scalar l-Scalar-Plain">Required</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">False</span>
 <span class="l l-Scalar l-Scalar-Plain">Position</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">2</span>
-<span class="l l-Scalar l-Scalar-Plain">Default value</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">Get</span>
-<span class="l l-Scalar l-Scalar-Plain">Accept pipeline input</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">True (ByPropertyName)</span>
+<span class="l l-Scalar l-Scalar-Plain">Default value</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">False</span>
+<span class="l l-Scalar l-Scalar-Plain">Accept pipeline input</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">False</span>
 <span class="l l-Scalar l-Scalar-Plain">Accept wildcard characters</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">False</span>
 </pre></div>
 
-<h3 id="-path">-Path<a class="headerlink" href="#-path" title="Permanent link">&para;</a></h3>
-<p>Specifies the Ryver API path to call.</p>
+<h3 id="-searchtext">-SearchText<a class="headerlink" href="#-searchtext" title="Permanent link">&para;</a></h3>
+<p>Specifies the text to search for.</p>
 <div class="codehilite"><pre><span></span><span class="l l-Scalar l-Scalar-Plain">Type</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">String</span>
 <span class="l l-Scalar l-Scalar-Plain">Parameter Sets</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">(All)</span>
 <span class="l l-Scalar l-Scalar-Plain">Aliases</span><span class="p p-Indicator">:</span>
@@ -1213,7 +1279,47 @@ header: 'Access-Control-Allow-Methods'.</p>
 <span class="l l-Scalar l-Scalar-Plain">Required</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">True</span>
 <span class="l l-Scalar l-Scalar-Plain">Position</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">1</span>
 <span class="l l-Scalar l-Scalar-Plain">Default value</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">None</span>
-<span class="l l-Scalar l-Scalar-Plain">Accept pipeline input</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">True (ByPropertyName)</span>
+<span class="l l-Scalar l-Scalar-Plain">Accept pipeline input</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">True (ByPropertyName, ByValue)</span>
+<span class="l l-Scalar l-Scalar-Plain">Accept wildcard characters</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">True</span>
+</pre></div>
+
+<h3 id="-includetotalcount">-IncludeTotalCount<a class="headerlink" href="#-includetotalcount" title="Permanent link">&para;</a></h3>
+<p>Reports the number of objects in the data set (an integer) followed by the objects.
+If the cmdlet cannot determine the total count, it returns 'Unknown total count'.</p>
+<div class="codehilite"><pre><span></span><span class="l l-Scalar l-Scalar-Plain">Type</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">SwitchParameter</span>
+<span class="l l-Scalar l-Scalar-Plain">Parameter Sets</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">(All)</span>
+<span class="l l-Scalar l-Scalar-Plain">Aliases</span><span class="p p-Indicator">:</span>
+
+<span class="l l-Scalar l-Scalar-Plain">Required</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">False</span>
+<span class="l l-Scalar l-Scalar-Plain">Position</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">Named</span>
+<span class="l l-Scalar l-Scalar-Plain">Default value</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">None</span>
+<span class="l l-Scalar l-Scalar-Plain">Accept pipeline input</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">False</span>
+<span class="l l-Scalar l-Scalar-Plain">Accept wildcard characters</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">False</span>
+</pre></div>
+
+<h3 id="-skip">-Skip<a class="headerlink" href="#-skip" title="Permanent link">&para;</a></h3>
+<p>Ignores the first 'n' objects and then gets the remaining objects.</p>
+<div class="codehilite"><pre><span></span><span class="l l-Scalar l-Scalar-Plain">Type</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">UInt64</span>
+<span class="l l-Scalar l-Scalar-Plain">Parameter Sets</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">(All)</span>
+<span class="l l-Scalar l-Scalar-Plain">Aliases</span><span class="p p-Indicator">:</span>
+
+<span class="l l-Scalar l-Scalar-Plain">Required</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">False</span>
+<span class="l l-Scalar l-Scalar-Plain">Position</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">Named</span>
+<span class="l l-Scalar l-Scalar-Plain">Default value</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">None</span>
+<span class="l l-Scalar l-Scalar-Plain">Accept pipeline input</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">False</span>
+<span class="l l-Scalar l-Scalar-Plain">Accept wildcard characters</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">False</span>
+</pre></div>
+
+<h3 id="-first">-First<a class="headerlink" href="#-first" title="Permanent link">&para;</a></h3>
+<p>Gets only the first 'n' objects.</p>
+<div class="codehilite"><pre><span></span><span class="l l-Scalar l-Scalar-Plain">Type</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">UInt64</span>
+<span class="l l-Scalar l-Scalar-Plain">Parameter Sets</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">(All)</span>
+<span class="l l-Scalar l-Scalar-Plain">Aliases</span><span class="p p-Indicator">:</span>
+
+<span class="l l-Scalar l-Scalar-Plain">Required</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">False</span>
+<span class="l l-Scalar l-Scalar-Plain">Position</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">Named</span>
+<span class="l l-Scalar l-Scalar-Plain">Default value</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">None</span>
+<span class="l l-Scalar l-Scalar-Plain">Accept pipeline input</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">False</span>
 <span class="l l-Scalar l-Scalar-Plain">Accept wildcard characters</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">False</span>
 </pre></div>
 
@@ -1221,9 +1327,11 @@ header: 'Access-Control-Allow-Methods'.</p>
 <p>This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.
 For more information, see about_CommonParameters (<a href="http://go.microsoft.com/fwlink/?LinkID=113216">http://go.microsoft.com/fwlink/?LinkID=113216</a>).</p>
 <h2 id="inputs">INPUTS<a class="headerlink" href="#inputs" title="Permanent link">&para;</a></h2>
+<h3 id="systemstring">System.String<a class="headerlink" href="#systemstring" title="Permanent link">&para;</a></h3>
 <h3 id="systemmanagementautomationpscustomobject">System.Management.Automation.PSCustomObject<a class="headerlink" href="#systemmanagementautomationpscustomobject" title="Permanent link">&para;</a></h3>
 <h2 id="outputs">OUTPUTS<a class="headerlink" href="#outputs" title="Permanent link">&para;</a></h2>
-<h3 id="systemstring">System.String<a class="headerlink" href="#systemstring" title="Permanent link">&para;</a></h3>
+<h3 id="systemmanagementautomationpsobject">System.Management.Automation.PSObject[]<a class="headerlink" href="#systemmanagementautomationpsobject" title="Permanent link">&para;</a></h3>
+<h3 id="systemmanagementautomationpsobject_1">System.Management.Automation.PSObject<a class="headerlink" href="#systemmanagementautomationpsobject_1" title="Permanent link">&para;</a></h3>
 <h2 id="notes">NOTES<a class="headerlink" href="#notes" title="Permanent link">&para;</a></h2>
 <ul>
 <li>Troy Lindsay</li>
@@ -1231,8 +1339,8 @@ For more information, see about_CommonParameters (<a href="http://go.microsoft.c
 <li>GitHub: tlindsay42</li>
 </ul>
 <h2 id="related-links">RELATED LINKS<a class="headerlink" href="#related-links" title="Permanent link">&para;</a></h2>
-<p><a href="https://tlindsay42.github.io/PSRyver/Public/Invoke-RyverRestMethod/">https://tlindsay42.github.io/PSRyver/Public/Invoke-RyverRestMethod/</a></p>
-<p><a href="https://github.com/tlindsay42/PSRyver/blob/master/PSRyver/Public/Invoke-RyverRestMethod.ps1">https://github.com/tlindsay42/PSRyver/blob/master/PSRyver/Public/Invoke-RyverRestMethod.ps1</a></p>
+<p><a href="https://tlindsay42.github.io/PSRyver/Public/Find-RyverTaskComment/">https://tlindsay42.github.io/PSRyver/Public/Find-RyverTaskComment/</a></p>
+<p><a href="https://github.com/tlindsay42/PSRyver/blob/master/PSRyver/Public/Find-RyverTaskComment.ps1">https://github.com/tlindsay42/PSRyver/blob/master/PSRyver/Public/Find-RyverTaskComment.ps1</a></p>
                 
                   
                 
@@ -1253,7 +1361,7 @@ For more information, see about_CommonParameters (<a href="http://go.microsoft.c
     <div class="md-footer-nav">
       <nav class="md-footer-nav__inner md-grid">
         
-          <a href="../Initialize-PSRyverConfig/" title="Initialize-PSRyverConfig" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+          <a href="../Find-RyverTask/" title="Find-RyverTask" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
             <div class="md-flex__cell md-flex__cell--shrink">
               <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
             </div>
@@ -1262,19 +1370,19 @@ For more information, see about_CommonParameters (<a href="http://go.microsoft.c
                 <span class="md-footer-nav__direction">
                   Previous
                 </span>
-                Initialize-PSRyverConfig
+                Find-RyverTask
               </span>
             </div>
           </a>
         
         
-          <a href="../Read-PSRyverConfig/" title="Read-PSRyverConfig" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+          <a href="../Find-RyverTopic/" title="Find-RyverTopic" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
             <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
               <span class="md-flex__ellipsis">
                 <span class="md-footer-nav__direction">
                   Next
                 </span>
-                Read-PSRyverConfig
+                Find-RyverTopic
               </span>
             </div>
             <div class="md-flex__cell md-flex__cell--shrink">
