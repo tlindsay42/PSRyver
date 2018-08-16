@@ -310,40 +310,12 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#send-a-richer-ryver-message" title="Send a Richer Ryver Message" class="md-nav__link">
-    Send a Richer Ryver Message
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#send-multiple-ryver-attachments" title="Send Multiple Ryver Attachments" class="md-nav__link">
-    Send Multiple Ryver Attachments
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#send-a-table-of-key-value-pairs" title="Send a Table of Key Value Pairs" class="md-nav__link">
-    Send a Table of Key Value Pairs
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
   <a href="#store-and-retrieve-configs" title="Store and Retrieve Configs" class="md-nav__link">
     Store and Retrieve Configs
   </a>
   
     <nav class="md-nav">
       <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#incoming-webhook-uri" title="Incoming Webhook URI" class="md-nav__link">
-    Incoming Webhook URI
-  </a>
-  
-</li>
         
           <li class="md-nav__item">
   <a href="#credentials" title="Credentials" class="md-nav__link">
@@ -929,40 +901,12 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#send-a-richer-ryver-message" title="Send a Richer Ryver Message" class="md-nav__link">
-    Send a Richer Ryver Message
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#send-multiple-ryver-attachments" title="Send Multiple Ryver Attachments" class="md-nav__link">
-    Send Multiple Ryver Attachments
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#send-a-table-of-key-value-pairs" title="Send a Table of Key Value Pairs" class="md-nav__link">
-    Send a Table of Key Value Pairs
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
   <a href="#store-and-retrieve-configs" title="Store and Retrieve Configs" class="md-nav__link">
     Store and Retrieve Configs
   </a>
   
     <nav class="md-nav">
       <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#incoming-webhook-uri" title="Incoming Webhook URI" class="md-nav__link">
-    Incoming Webhook URI
-  </a>
-  
-</li>
         
           <li class="md-nav__item">
   <a href="#credentials" title="Credentials" class="md-nav__link">
@@ -1017,7 +961,7 @@
 <ul>
 <li>PowerShell 3 or later</li>
 <li>Valid credentials or an incoming webhook URI from Ryver.<ul>
-<li><a href="https://api.ryver.com/ryvhooks_simple_incoming.html">Add an incoming webhook to your team, grab the URI</a></li>
+<li><a href="https://api.ryver.com/ryvhooks_simple_incoming.html">Add an incoming webhook to your organization, grab the URI</a></li>
 </ul>
 </li>
 </ul>
@@ -1043,171 +987,62 @@
     <div class="codehilite"><pre><span></span><span class="nb">Get-Command</span> <span class="n">-Module</span> <span class="s1">&#39;PSRyver&#39;</span>
 </pre></div></li>
 <li>Get help
-    <div class="codehilite"><pre><span></span><span class="nb">Get-Help</span> <span class="n">-Name</span> <span class="s1">&#39;Send-RyverMessage&#39;</span> <span class="n">-Full</span>
-<span class="nb">Get-Help</span> <span class="n">-Name</span> <span class="s1">&#39;about_PSRyver&#39;</span>
+    <div class="codehilite"><pre><span></span><span class="c"># Output the full help content in PowerShell.</span>
+<span class="nb">Get-Help</span> <span class="n">-Name</span> <span class="s1">&#39;Send-RyverMessage&#39;</span> <span class="n">-Full</span>
+
+<span class="c"># Open the help content from the documentation site in a new tab on your default browser.</span>
+<span class="nb">Get-Help</span> <span class="n">-Name</span> <span class="s1">&#39;Send-RyverMessage&#39;</span> <span class="n">-Online</span>
 </pre></div></li>
 </ul>
 <h2 id="examples">Examples<a class="headerlink" href="#examples" title="Permanent link">&para;</a></h2>
 <h3 id="send-a-simple-ryver-message">Send a Simple Ryver Message<a class="headerlink" href="#send-a-simple-ryver-message" title="Permanent link">&para;</a></h3>
 <ul>
 <li>This example shows a crudely crafted message without any attachments, using parameters from <code>Send-RyverMessage</code> to construct the message.
-  NOTE: This assumes that an incoming webhook URI was setup at <code>&quot;https://${yourTeam}.ryver.com/&quot;</code></li>
-<li>Send a direct message to @tlindsay42 (not a channel), parsing the text to linkify usernames and channels
+  NOTE: This assumes that an incoming webhook URI was setup at <code>&quot;https://${yourOrg}.ryver.com/&quot;</code></li>
+<li>Send a message to @tlindsay42 in the channel configured for the webhook
     <div class="codehilite"><pre><span></span><span class="nv">$splat</span> <span class="p">=</span> <span class="p">@{</span>
-    <span class="n">URI</span>     <span class="p">=</span> <span class="s1">&#39;Some incoming webhook URI from Ryver&#39;</span>
-    <span class="n">Channel</span> <span class="p">=</span> <span class="s1">&#39;@tlindsay42&#39;</span>
-    <span class="n">Parse</span>   <span class="p">=</span> <span class="s1">&#39;full&#39;</span>
-    <span class="n">Text</span>    <span class="p">=</span> <span class="s1">&#39;Hello @tlindsay42, join me in #devnull!&#39;</span>
+    <span class="n">IncomingWebhookUri</span> <span class="p">=</span> <span class="s1">&#39;Some incoming webhook URI from Ryver&#39;</span>
+    <span class="n">Message</span>            <span class="p">=</span> <span class="s1">&#39;Hello @tlindsay42, join me in #devnull!&#39;</span>
 <span class="p">}</span>
 <span class="nb">Send-RyverMessage</span> <span class="nv">@splat</span>
 </pre></div></li>
 </ul>
-<!-- ![Simple Send-RyverMessage](/docs/img/SimpleMessage.png) -->
-
 <h3 id="search-for-a-ryver-message">Search for a Ryver Message<a class="headerlink" href="#search-for-a-ryver-message" title="Permanent link">&para;</a></h3>
 <ul>
-<li>Search for a message containing PowerShell, sorting results by timestamp.
-    <div class="codehilite"><pre><span></span><span class="nv">$splat</span> <span class="p">=</span> <span class="p">@{</span>
-    <span class="n">URI</span>    <span class="p">=</span> <span class="s1">&#39;Some incoming webhook URI from Ryver&#39;</span>
-    <span class="n">Query</span>  <span class="p">=</span> <span class="s1">&#39;PowerShell&#39;</span>
-    <span class="n">SortBy</span> <span class="p">=</span> <span class="s1">&#39;timestamp&#39;</span>
-<span class="p">}</span>
-<span class="n">Find-RyverMessage</span> <span class="nv">@splat</span>
-</pre></div></li>
-</ul>
-<!-- ![Find Message](/docs/img/FindMessage.png) -->
-
-<ul>
-<li>Search for a message containing PowerShell</li>
-<li>Results are sorted by best match by default</li>
-<li>Notice the extra properties and previous/next messages
-    <div class="codehilite"><pre><span></span><span class="nv">$splat</span> <span class="p">=</span> <span class="p">@{</span>
-    <span class="n">Token</span>    <span class="p">=</span> <span class="nv">$Token</span>
-    <span class="n">Query</span>    <span class="p">=</span> <span class="s1">&#39;PowerShell&#39;</span>
-    <span class="n">Property</span> <span class="p">=</span> <span class="s1">&#39;*&#39;</span>
-<span class="p">}</span>
-<span class="n">Find-RyverMessage</span> <span class="nv">@splat</span> <span class="p">|</span>
-    <span class="nb">Select-Object</span> <span class="n">-Property</span> <span class="s1">&#39;*&#39;</span>
-</pre></div></li>
-</ul>
-<!-- ![Find Message Select All](/docs/img/FindMessageSelect.png) -->
-
-<p>You could use this simply to search Ryver from the CLI, or in an automated solution that might avoid posting if certain content is already found in Ryver.</p>
-<h3 id="send-a-richer-ryver-message">Send a Richer Ryver Message<a class="headerlink" href="#send-a-richer-ryver-message" title="Permanent link">&para;</a></h3>
-<ul>
-<li>This is a simple example illustrating some common options when constructing a message attachment giving you a richer message
-    <div class="codehilite"><pre><span></span><span class="nv">$splat</span> <span class="p">=</span> <span class="p">@{</span>
-    <span class="n">Color</span>      <span class="p">=</span> <span class="no">[System.Drawing.Color]</span><span class="p">::</span><span class="n">Red</span>
-    <span class="n">Title</span>      <span class="p">=</span> <span class="s1">&#39;The System Is Down&#39;</span>
-    <span class="n">TitleLink</span>  <span class="p">=</span> <span class="s1">&#39;https://www.youtube.com/watch?v=TmpRs7xN06Q&#39;</span>
-    <span class="n">Text</span>       <span class="p">=</span> <span class="s1">&#39;Please Do The Needful&#39;</span>
-    <span class="n">Pretext</span>    <span class="p">=</span> <span class="s1">&#39;Everything is broken&#39;</span>
-    <span class="n">AuthorName</span> <span class="p">=</span> <span class="s1">&#39;SCOM Bot&#39;</span>
-    <span class="n">AuthorIcon</span> <span class="p">=</span> <span class="s1">&#39;https://tlindsay42.github.io/PSRyver/img/wrench.png&#39;</span>
-    <span class="n">Fallback</span>   <span class="p">=</span> <span class="s1">&#39;Your client is bad&#39;</span>
-<span class="p">}</span>
-<span class="nb">New-RyverMessageAttachment</span> <span class="nv">@splat</span> <span class="p">|</span>
-    <span class="nb">New-RyverMessage</span> <span class="n">-Channel</span> <span class="s1">&#39;@tlindsay42&#39;</span> <span class="n">-IconEmoji</span> <span class="s1">&#39;:bomb:&#39;</span> <span class="p">|</span>
-    <span class="nb">Send-RyverMessage</span> <span class="n">-URI</span> <span class="s1">&#39;Some incoming webhook URI from Ryver&#39;</span>
-</pre></div></li>
-</ul>
-<!-- ![Rich messages](/docs/img/RichMessage.png) -->
-
-<p>Notice that the title is clickable.  You might link to:</p>
-<ul>
-<li>The alert in question</li>
-<li>A logging solution query</li>
-<li>A dashboard</li>
-<li>Some other contextual link</li>
-<li>Strongbad</li>
-</ul>
-<h3 id="send-multiple-ryver-attachments">Send Multiple Ryver Attachments<a class="headerlink" href="#send-multiple-ryver-attachments" title="Permanent link">&para;</a></h3>
-<ul>
-<li>This example demonstrates that you can chain new attachments together to form a multi-attachment message.</li>
-</ul>
-<div class="codehilite"><pre><span></span><span class="nv">$attachment1</span> <span class="p">=</span> <span class="p">@{</span>
-    <span class="n">Color</span>     <span class="p">=</span> <span class="nv">$Script:PSRyverColorMap</span><span class="p">.</span><span class="n">Red</span>
-    <span class="n">Title</span>     <span class="p">=</span> <span class="s1">&#39;The System Is Down&#39;</span>
-    <span class="n">TitleLink</span> <span class="p">=</span> <span class="s1">&#39;https://www.youtube.com/watch?v=TmpRs7xN06Q&#39;</span>
-    <span class="n">Text</span>      <span class="p">=</span> <span class="s1">&#39;Everybody panic!&#39;</span>
-    <span class="n">Pretext</span>   <span class="p">=</span> <span class="s1">&#39;Everything is broken&#39;</span>
-    <span class="n">Fallback</span>  <span class="p">=</span> <span class="s1">&#39;Your client is bad&#39;</span>
-<span class="p">}</span>
-<span class="nv">$attachment2</span> <span class="p">=</span> <span class="p">@{</span>
-    <span class="n">Color</span>     <span class="p">=</span> <span class="no">[System.Drawing.Color]</span><span class="p">::</span><span class="n">Orange</span>
-    <span class="n">Title</span>     <span class="p">=</span> <span class="s1">&#39;The Other System Is Down&#39;</span>
-    <span class="n">TitleLink</span> <span class="p">=</span> <span class="s1">&#39;https://www.youtube.com/watch?v=TmpRs7xN06Q&#39;</span>
-    <span class="n">Text</span>      <span class="p">=</span> <span class="s1">&#39;Please Do The Needful&#39;</span>
-    <span class="n">Fallback</span>  <span class="p">=</span> <span class="s1">&#39;Your client is bad&#39;</span>
-<span class="p">}</span>
-<span class="nb">New-RyverMessageAttachment</span> <span class="nv">@attachment1</span> <span class="p">|</span>
-    <span class="nb">New-RyverMessageAttachment</span> <span class="nv">@attachment2</span> <span class="p">|</span>
-    <span class="nb">New-RyverMessage</span> <span class="n">-Channel</span> <span class="s1">&#39;@tlindsay42&#39;</span> <span class="n">-IconEmoji</span> <span class="s1">&#39;:bomb:&#39;</span> <span class="n">-AsUser</span> <span class="n">-Username</span> <span class="s1">&#39;SCOM Bot&#39;</span> <span class="p">|</span>
-    <span class="nb">Send-RyverMessage</span> <span class="n">-URI</span> <span class="s1">&#39;Some incoming webhook URI from Ryver&#39;</span>
-</pre></div>
-
-<!-- ![Multiple Attachments](/docs/img/MultiAttachments.png) -->
-
-<p>Notice that we can chain multiple <code>New-RyverMessageAttachment</code>s together.</p>
-<h3 id="send-a-table-of-key-value-pairs">Send a Table of Key Value Pairs<a class="headerlink" href="#send-a-table-of-key-value-pairs" title="Permanent link">&para;</a></h3>
-<ul>
-<li>This example illustrates a pattern where you might want to send output from a script; you might include errors, successful items, or other output.</li>
 <li>
-<p>Pretend we're in a script, and caught an exception of some sort
-    <div class="codehilite"><pre><span></span><span class="nv">$fail</span> <span class="p">=</span> <span class="no">[PSCustomObject]</span> <span class="p">@{</span>
-    <span class="n">SAMAccountName</span> <span class="p">=</span> <span class="s1">&#39;bob&#39;</span>
-    <span class="n">Operation</span>      <span class="p">=</span> <span class="s1">&#39;Remove privileges&#39;</span>
-    <span class="n">Status</span>         <span class="p">=</span> <span class="s2">&quot;An error message&quot;</span>
-    <span class="n">Timestamp</span>      <span class="p">=</span> <span class="p">(</span> <span class="nb">Get-Date</span> <span class="p">).</span><span class="n">ToString</span><span class="p">()</span>
-<span class="p">}</span>
-
-<span class="c"># Create an array from the properties in our fail object</span>
-<span class="nv">$fields</span> <span class="p">=</span> <span class="p">@()</span>
-<span class="k">foreach</span><span class="p">(</span> <span class="nv">$property</span> <span class="k">in</span> <span class="nv">$fail</span><span class="p">.</span><span class="n">PSObject</span><span class="p">.</span><span class="n">Properties</span><span class="p">.</span><span class="n">Name</span><span class="p">)</span>
-<span class="p">{</span>
-    <span class="nv">$fields</span> <span class="p">+=</span> <span class="p">@{</span>
-        <span class="n">Title</span> <span class="p">=</span> <span class="nv">$property</span>
-        <span class="n">Value</span> <span class="p">=</span> <span class="nv">$fail</span><span class="p">.</span><span class="nv">$property</span>
-        <span class="n">Short</span> <span class="p">=</span> <span class="nv">$true</span>
-    <span class="p">}</span>
-<span class="p">}</span>
-
-<span class="c"># Construct and send the message!</span>
-<span class="nv">$splat</span> <span class="p">=</span> <span class="p">@{</span>
-    <span class="n">Color</span>    <span class="p">=</span> <span class="no">[System.Drawing.Color]</span><span class="p">::</span><span class="n">Orange</span>
-    <span class="n">Title</span>    <span class="p">=</span> <span class="s1">&#39;Failed to process account&#39;</span>
-    <span class="n">Fields</span>   <span class="p">=</span> <span class="nv">$Fields</span>
-    <span class="n">Fallback</span> <span class="p">=</span> <span class="s1">&#39;Your client is bad&#39;</span>
-<span class="p">}</span>
-<span class="nb">New-RyverMessageAttachment</span> <span class="nv">@splat</span> <span class="p">|</span>
-    <span class="nb">New-RyverMessage</span> <span class="n">-Channel</span> <span class="s1">&#39;devnull&#39;</span> <span class="p">|</span>
-    <span class="nb">Send-RyverMessage</span> <span class="n">-URI</span> <span class="s1">&#39;Some incoming webhook URI from Ryver&#39;</span>
+<p>Search for all chat messages containing the word PowerShell.
+    <div class="codehilite"><pre><span></span><span class="n">Find-RyverMessage</span> <span class="n">-SearchText</span> <span class="s1">&#39;PowerShell&#39;</span>
 </pre></div></p>
 </li>
 <li>
-<p>We build up a pretend error object, and send each property to a <code>fields</code> array</p>
+<p>Search for attachments that contain the name PowerShell.
+    <div class="codehilite"><pre><span></span><span class="n">Find-RyverAttachment</span> <span class="n">-SearchText</span> <span class="s1">&#39;PowerShell&#39;</span>
+</pre></div></p>
 </li>
-<li>Creates an attachment with the fields from our error</li>
-<li>Creates a message from that attachment and send it with an incoming webhook URI</li>
 </ul>
-<!-- ![Fields](/docs/img/Fields.png) -->
-
 <h3 id="store-and-retrieve-configs">Store and Retrieve Configs<a class="headerlink" href="#store-and-retrieve-configs" title="Permanent link">&para;</a></h3>
 <ul>
-<li>To save time and typing, you can save your credentials or incoming webhook URI to a config file (protected via DPAPI) and a module variable.</li>
-<li>This is used as the default for commands, and is reloaded if you open a new PowerShell session.</li>
+<li>To save time and typing, you can save your credentials or incoming webhook URI to a config file (protected via DPAPI on Windows) and a module variable.</li>
+<li>This is used as the default for commands, and is loaded automatically when you import the PowerShell module if stored in the default location: <code>&quot;~/.psryver.xml&quot;</code>.</li>
 </ul>
-<h4 id="incoming-webhook-uri">Incoming Webhook URI<a class="headerlink" href="#incoming-webhook-uri" title="Permanent link">&para;</a></h4>
-<div class="codehilite"><pre><span></span><span class="nb">Set-PSRyverConfig</span> <span class="n">-URI</span> <span class="s1">&#39;SomeRyverUri&#39;</span>
+<div class="codehilite"><pre><span></span><span class="c"># Update the current config in memory.</span>
+<span class="nb">Set-PSRyverConfig</span> <span class="n">-RestApiBaseUri</span> <span class="s2">&quot;https://${yourOrg}.ryver.com/api/1/odata.svc&quot;</span> <span class="n">-Credential</span> <span class="p">(</span> <span class="nb">Get-Credential</span> <span class="p">)</span>
 
-<span class="c"># Read the current cofig</span>
+<span class="c"># Read the current config in memory.</span>
 <span class="nb">Get-PSRyverConfig</span>
+
+<span class="c"># Save the current config to file.</span>
+<span class="nb">Export-PSRyverConfig</span>
+
+<span class="c"># Read &amp; decrypt the default config file (if authorized).</span>
+<span class="nb">Read-PSRyverConfig</span>
 </pre></div>
 
 <h4 id="credentials">Credentials<a class="headerlink" href="#credentials" title="Permanent link">&para;</a></h4>
-<div class="codehilite"><pre><span></span><span class="nb">Set-PSRyverConfig</span> <span class="n">-Credential</span> <span class="p">(</span> <span class="nb">Get-Credential</span> <span class="p">)</span>
+<div class="codehilite"><pre><span></span><span class="c"># Update the current config in memory.</span>
+<span class="nb">Set-PSRyverConfig</span> <span class="n">-IncomingWebhookUri</span> <span class="s2">&quot;https://${yourOrg}.ryver.com/application/webhook/${yourWebhookID}&quot;</span>
 
-<span class="c"># Read the current cofig</span>
+<span class="c"># Read the current config in memory.</span>
 <span class="nb">Get-PSRyverConfig</span>
 </pre></div>
 
