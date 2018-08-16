@@ -13,7 +13,7 @@ Pull requests and other contributions would be welcome!
 
 * PowerShell 3 or later
 * Valid credentials or an incoming webhook URI from Ryver.
-    * [Add an incoming webhook to your team, grab the URI](https://api.ryver.com/ryvhooks_simple_incoming.html)
+    * [Add an incoming webhook to your organization, grab the URI](https://api.ryver.com/ryvhooks_simple_incoming.html)
 
 ## Getting Started
 
@@ -34,8 +34,11 @@ Pull requests and other contributions would be welcome!
     ```
 * Get help
     ```powershell
+    # Output the full help content in PowerShell.
     Get-Help -Name 'Send-RyverMessage' -Full
-    Get-Help -Name 'about_PSRyver'
+
+    # Open the help content from the documentation site in a new tab on your default browser.
+    Get-Help -Name 'Send-RyverMessage' -Online
     ```
 
 ## Examples
@@ -43,171 +46,54 @@ Pull requests and other contributions would be welcome!
 ### Send a Simple Ryver Message
 
 * This example shows a crudely crafted message without any attachments, using parameters from `Send-RyverMessage` to construct the message.
-  NOTE: This assumes that an incoming webhook URI was setup at `"https://${yourTeam}.ryver.com/"`
-* Send a direct message to @tlindsay42 (not a channel), parsing the text to linkify usernames and channels
+  NOTE: This assumes that an incoming webhook URI was setup at `"https://${yourOrg}.ryver.com/"`
+* Send a message to @tlindsay42 in the channel configured for the webhook
     ```powershell
     $splat = @{
-        URI     = 'Some incoming webhook URI from Ryver'
-        Channel = '@tlindsay42'
-        Parse   = 'full'
-        Text    = 'Hello @tlindsay42, join me in #devnull!'
+        IncomingWebhookUri = 'Some incoming webhook URI from Ryver'
+        Message            = 'Hello @tlindsay42, join me in #devnull!'
     }
     Send-RyverMessage @splat
     ```
 
-<!-- ![Simple Send-RyverMessage](/docs/img/SimpleMessage.png) -->
-
 ### Search for a Ryver Message
 
-* Search for a message containing PowerShell, sorting results by timestamp.
+* Search for all chat messages containing the word PowerShell.
     ```powershell
-    $splat = @{
-        URI    = 'Some incoming webhook URI from Ryver'
-        Query  = 'PowerShell'
-        SortBy = 'timestamp'
-    }
-    Find-RyverMessage @splat
+    Find-RyverMessage -SearchText 'PowerShell'
     ```
 
-<!-- ![Find Message](/docs/img/FindMessage.png) -->
-
-* Search for a message containing PowerShell
-* Results are sorted by best match by default
-* Notice the extra properties and previous/next messages
+* Search for attachments that contain the name PowerShell.
     ```powershell
-    $splat = @{
-        Token    = $Token
-        Query    = 'PowerShell'
-        Property = '*'
-    }
-    Find-RyverMessage @splat |
-        Select-Object -Property '*'
+    Find-RyverAttachment -SearchText 'PowerShell'
     ```
-
-<!-- ![Find Message Select All](/docs/img/FindMessageSelect.png) -->
-
-You could use this simply to search Ryver from the CLI, or in an automated solution that might avoid posting if certain content is already found in Ryver.
-
-### Send a Richer Ryver Message
-
-* This is a simple example illustrating some common options when constructing a message attachment giving you a richer message
-    ```powershell
-    $splat = @{
-        Color      = [System.Drawing.Color]::Red
-        Title      = 'The System Is Down'
-        TitleLink  = 'https://www.youtube.com/watch?v=TmpRs7xN06Q'
-        Text       = 'Please Do The Needful'
-        Pretext    = 'Everything is broken'
-        AuthorName = 'SCOM Bot'
-        AuthorIcon = 'https://tlindsay42.github.io/PSRyver/img/wrench.png'
-        Fallback   = 'Your client is bad'
-    }
-    New-RyverMessageAttachment @splat |
-        New-RyverMessage -Channel '@tlindsay42' -IconEmoji ':bomb:' |
-        Send-RyverMessage -URI 'Some incoming webhook URI from Ryver'
-    ```
-
-<!-- ![Rich messages](/docs/img/RichMessage.png) -->
-
-Notice that the title is clickable.  You might link to:
-
-* The alert in question
-* A logging solution query
-* A dashboard
-* Some other contextual link
-* Strongbad
-
-### Send Multiple Ryver Attachments
-
-* This example demonstrates that you can chain new attachments together to form a multi-attachment message.
-
-```powershell
-$attachment1 = @{
-    Color     = $Script:PSRyverColorMap.Red
-    Title     = 'The System Is Down'
-    TitleLink = 'https://www.youtube.com/watch?v=TmpRs7xN06Q'
-    Text      = 'Everybody panic!'
-    Pretext   = 'Everything is broken'
-    Fallback  = 'Your client is bad'
-}
-$attachment2 = @{
-    Color     = [System.Drawing.Color]::Orange
-    Title     = 'The Other System Is Down'
-    TitleLink = 'https://www.youtube.com/watch?v=TmpRs7xN06Q'
-    Text      = 'Please Do The Needful'
-    Fallback  = 'Your client is bad'
-}
-New-RyverMessageAttachment @attachment1 |
-    New-RyverMessageAttachment @attachment2 |
-    New-RyverMessage -Channel '@tlindsay42' -IconEmoji ':bomb:' -AsUser -Username 'SCOM Bot' |
-    Send-RyverMessage -URI 'Some incoming webhook URI from Ryver'
-```
-
-<!-- ![Multiple Attachments](/docs/img/MultiAttachments.png) -->
-
-Notice that we can chain multiple `New-RyverMessageAttachment`s together.
-
-### Send a Table of Key Value Pairs
-
-* This example illustrates a pattern where you might want to send output from a script; you might include errors, successful items, or other output.
-* Pretend we're in a script, and caught an exception of some sort
-    ```powershell
-    $fail = [PSCustomObject] @{
-        SAMAccountName = 'bob'
-        Operation      = 'Remove privileges'
-        Status         = "An error message"
-        Timestamp      = ( Get-Date ).ToString()
-    }
-
-    # Create an array from the properties in our fail object
-    $fields = @()
-    foreach( $property in $fail.PSObject.Properties.Name)
-    {
-        $fields += @{
-            Title = $property
-            Value = $fail.$property
-            Short = $true
-        }
-    }
-
-    # Construct and send the message!
-    $splat = @{
-        Color    = [System.Drawing.Color]::Orange
-        Title    = 'Failed to process account'
-        Fields   = $Fields
-        Fallback = 'Your client is bad'
-    }
-    New-RyverMessageAttachment @splat |
-        New-RyverMessage -Channel 'devnull' |
-        Send-RyverMessage -URI 'Some incoming webhook URI from Ryver'
-    ```
-
-* We build up a pretend error object, and send each property to a `fields` array
-* Creates an attachment with the fields from our error
-* Creates a message from that attachment and send it with an incoming webhook URI
-
-<!-- ![Fields](/docs/img/Fields.png) -->
 
 ### Store and Retrieve Configs
 
-* To save time and typing, you can save your credentials or incoming webhook URI to a config file (protected via DPAPI) and a module variable.
-* This is used as the default for commands, and is reloaded if you open a new PowerShell session.
-
-#### Incoming Webhook URI
+* To save time and typing, you can save your credentials or incoming webhook URI to a config file (protected via DPAPI on Windows) and a module variable.
+* This is used as the default for commands, and is loaded automatically when you import the PowerShell module if stored in the default location: `"~/.psryver.xml"`.
 
 ```powershell
-Set-PSRyverConfig -URI 'SomeRyverUri'
+# Update the current config in memory.
+Set-PSRyverConfig -RestApiBaseUri "https://${yourOrg}.ryver.com/api/1/odata.svc" -Credential ( Get-Credential )
 
-# Read the current cofig
+# Read the current config in memory.
 Get-PSRyverConfig
+
+# Save the current config to file.
+Export-PSRyverConfig
+
+# Read & decrypt the default config file (if authorized).
+Read-PSRyverConfig
 ```
 
 #### Credentials
 
 ```powershell
-Set-PSRyverConfig -Credential ( Get-Credential )
+# Update the current config in memory.
+Set-PSRyverConfig -IncomingWebhookUri "https://${yourOrg}.ryver.com/application/webhook/${yourWebhookID}"
 
-# Read the current cofig
+# Read the current config in memory.
 Get-PSRyverConfig
 ```
 
